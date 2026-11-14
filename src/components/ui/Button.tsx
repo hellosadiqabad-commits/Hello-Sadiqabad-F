@@ -50,7 +50,7 @@ export function Button({
     <button
       type={type}
       disabled={disabled || loading}
-      className={`inline-flex items-center justify-center gap-2 font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${VARIANT_CLASSES[variant]} ${SIZE_CLASSES[size]} ${fullWidth ? 'w-full' : ''} ${className}`}
+      className={`hs-pressable inline-flex items-center justify-center gap-2 font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${VARIANT_CLASSES[variant]} ${SIZE_CLASSES[size]} ${fullWidth ? 'w-full' : ''} ${className}`}
       {...rest}
     >
       {loading ? (
@@ -89,7 +89,7 @@ export function IconButton({
       type={type}
       aria-label={label}
       title={label}
-      className={`w-11 h-11 rounded-full inline-flex items-center justify-center shrink-0 transition-colors cursor-pointer disabled:opacity-50 ${styles} ${className}`}
+      className={`hs-pressable w-11 h-11 rounded-full inline-flex items-center justify-center shrink-0 transition-colors cursor-pointer disabled:opacity-50 ${styles} ${className}`}
       {...rest}
     >
       {children}
