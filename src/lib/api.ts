@@ -343,7 +343,7 @@ type GitHubBusinessRecord = {
   website?:string;facebook?:string|null;instagram?:string|null;youtube?:string|null;tiktok?:string|null;
   imageUrl?:string;imageUrls?:string[];logoUrl?:string|null;coverUrl?:string|null;galleryUrls?:string[];
   totalScore?:string|number;reviewsCount?:string|number;"location/lat"?:string|number;"location/lng"?:string|number;
-  placeId?:string;description?:string;descriptionUr?:string|null;servicesEn?:string[];servicesUr?:string[];
+  placeId?:string;databaseId?:string;description?:string;descriptionUr?:string|null;servicesEn?:string[];servicesUr?:string[];
   openingHours?:Array<{day?:string;hours?:string|null}>|BusinessRow["opening_hours"];
   isOpen24h?:boolean;homeDelivery?:boolean;establishedYear?:number|null;planCode?:string;
   isVerified?:boolean;isFeatured?:boolean;tags?:string[];source?:string;createdAt?:string;updatedAt?:string;
@@ -436,7 +436,7 @@ async function loadGitHubBusinesses():Promise<BusinessPublicView[]> {
       synonyms:[],is_active:true,created_at:'',updated_at:''};
     const area={id:'google-area-'+areaSlug,city_id:'',name_en:areaName,name_ur:'',slug:areaSlug,is_active:true,created_at:'',updated_at:''};
     return {
-      id:'github-'+(slugifyDirectoryValue(record.slug||placeId)||String(index+1)),city_id:'',owner_id:null,
+      id:record.databaseId||('github-'+(slugifyDirectoryValue(record.slug||placeId)||String(index+1))),city_id:'',owner_id:null,
       name_en:name,name_ur:record.nameUr||null,
       slug:record.slug||(slugifyDirectoryValue(name)||'business')+'-'+slugifyDirectoryValue(placeId).slice(-10),
       category_id:category.id,area_id:area.id,address_en:record.address||null,address_ur:record.addressUr||null,
