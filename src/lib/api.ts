@@ -464,7 +464,7 @@ async function loadGitHubBusinesses():Promise<BusinessPublicView[]> {
     byKey.set(key,merged);
   }
   const records=[...byKey.values()];
-  githubBusinessCache=records.map((record,index)=>{
+  const staticBusinesses=records.map((record,index)=>{
     const name=record.title?.trim()||'Unnamed business',categoryName=record.categoryName||record['categories/0']||'Other';
     const areaName=record.neighborhood?.trim()||'Sadiqabad',lat=Number(record['location/lat']),lng=Number(record['location/lng']);
     const rating=Number(record.totalScore),ratingCount=Number(record.reviewsCount),placeId=record.placeId||'record-'+(index+1);
@@ -495,6 +495,72 @@ async function loadGitHubBusinesses():Promise<BusinessPublicView[]> {
       created_at:record.createdAt||'',updated_at:record.updatedAt||'',category,area,plan:null,active_offers:[],approved_reviews:[],
     } as unknown as BusinessPublicView;
   });
+
+  const client = getSupabaseClient();
+  if (!client) {
+    githubBusinessCache = staticBusinesses;
+    return githubBusinessCache;
+  }
+
+  // Supabase is the source of truth for moderated/published listings. Keep
+  // crawl-only records as supplemental directory data, but never keep a
+  // database-backed static record when it is no longer publicly published.
+  const { data: databaseRows, error: databaseError } = await client
+    .from('businesses')
+    .select('*')
+    .eq('status', 'published');
+
+  if (databaseError || !databaseRows) {
+    githubBusinessCache = staticBusinesses;
+    return githubBusinessCache;
+  }
+
+  const rows = databaseRows as BusinessRow[];
+  const [categoryResult, areaResult, planResult, offerResult, reviewResult] = await Promise.all([
+    client.from('categories').select('*'),
+    client.from('areas').select('*'),
+    client.from('plans').select('*'),
+    client.from('offers').select('*').eq('status', 'active').lte('valid_from', todayDateStr()).gte('valid_to', todayDateStr()),
+    client.from('reviews').select('*').eq('status', 'approved'),
+  ]);
+
+  const categoryById = new Map(((categoryResult.data ?? []) as CategoryRow[]).map((item) => [item.id, item]));
+  const areaById = new Map(((areaResult.data ?? []) as AreaRow[]).map((item) => [item.id, item]));
+  const planByCode = new Map(((planResult.data ?? []) as PlanRow[]).map((item) => [item.code, item]));
+  const offersByBusiness = new Map<string, OfferRow[]>();
+  for (const offer of (offerResult.data ?? []) as OfferRow[]) {
+    const current = offersByBusiness.get(offer.business_id) ?? [];
+    current.push(offer);
+    offersByBusiness.set(offer.business_id, current);
+  }
+  const reviewsByBusiness = new Map<string, ReviewRow[]>();
+  for (const review of (reviewResult.data ?? []) as ReviewRow[]) {
+    const current = reviewsByBusiness.get(review.business_id) ?? [];
+    current.push(review);
+    reviewsByBusiness.set(review.business_id, current);
+  }
+
+  const staticById = new Map(staticBusinesses.map((business) => [business.id, business]));
+  const databaseBusinessViews = rows.map((row) => {
+    const fallback = staticById.get(row.id);
+    return {
+      ...(fallback ?? {}),
+      ...row,
+      category: categoryById.get(row.category_id) ?? fallback?.category ?? null,
+      area: row.area_id ? areaById.get(row.area_id) ?? fallback?.area ?? null : null,
+      plan: planByCode.get(row.plan_code) ?? null,
+      active_offers: offersByBusiness.get(row.id) ?? [],
+      approved_reviews: reviewsByBusiness.get(row.id) ?? [],
+    } as BusinessPublicView;
+  });
+
+  const databaseIds = new Set(rows.map((business) => business.id));
+  const crawlOnlyBusinesses = staticBusinesses.filter((business) =>
+    !/^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(business.id) &&
+    !databaseIds.has(business.id)
+  );
+
+  githubBusinessCache = [...databaseBusinessViews, ...crawlOnlyBusinesses];
   return githubBusinessCache;
 }
 function matchesGitHubBusiness(business:BusinessPublicView,filters:Partial<SearchFiltersState>):boolean {
