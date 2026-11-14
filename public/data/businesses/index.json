@@ -26,7 +26,7 @@
     "coverUrl",
     "galleryUrls"
   ],
-  "note": "Public listings are loaded from three GitHub-hosted static JSON chunks (deduplicated by normalized business name + address). Google-hosted photos use a same-origin Cloudflare Pages image proxy with edge caching. User/owner private fields are excluded.",
+  "note": "Static chunks provide crawl-only supplemental listings and a sanitized snapshot for local/demo fallback. When Supabase is configured, published business rows are loaded live and replace their snapshot copies; stale database-backed snapshot entries are withheld if publication status cannot be verified. User/owner private fields are excluded.",
   "generatedFrom": [
     "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx",
     "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx",
