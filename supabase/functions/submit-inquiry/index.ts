@@ -55,6 +55,9 @@ Deno.serve(async (req: Request) => {
       return reply(req, { ok: false, error: "Invalid inquiry details" }, 400);
     }
 
+    const phoneDigits = phoneDigits;
+    if (phoneDigits.length < 5) return reply(req, { ok: false, error: "Invalid phone number" }, 400);
+
     const businessId = body.business_id;
     const sessionId = validString(body.session_id, 8, 128) ? body.session_id : "anonymous";
     const phoneIdentity = await hashRateKey(body.phone.replace(/\D/g, ""));
