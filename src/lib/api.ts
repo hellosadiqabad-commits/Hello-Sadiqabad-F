@@ -362,14 +362,14 @@ export async function fetchAllAreas(includeInactive = false): Promise<AreaRow[]>
     .sort((a, b) => a.name_en.localeCompare(b.name_en));
 }
 
-export async function fetchPlans(): Promise<PlanRow[]> {
+export async function fetchPlans(includeInactive = false): Promise<PlanRow[]> {
   const client = getSupabaseClient();
   if (client) {
     const { data, error } = await client.from('plans').select('*').order('sort_order');
     if (error) throw error;
-    return ((data ?? []) as PlanRow[]).filter((plan) => plan.is_active).sort((a, b) => a.sort_order - b.sort_order);
+    return ((data ?? []) as PlanRow[]).filter((plan) => includeInactive || plan.is_active).sort((a, b) => a.sort_order - b.sort_order);
   }
-  return [...SEED_PLANS].filter((plan) => plan.is_active).sort((a, b) => a.sort_order - b.sort_order);
+  return [...SEED_PLANS].filter((plan) => includeInactive || plan.is_active).sort((a, b) => a.sort_order - b.sort_order);
 }
 
 type GitHubBusinessRecord = {
