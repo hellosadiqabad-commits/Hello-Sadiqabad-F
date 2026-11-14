@@ -11,6 +11,7 @@ import type { BusinessPublicView } from '../types/directory';
 import { AppShell } from '../components/layout/AppShell';
 import { BusinessCard } from '../components/directory/BusinessCard';
 import { BusinessCardSkeleton, EmptyState } from '../components/ui/Feedback';
+import { Button } from '../components/ui/Button';
 import { Card, Container } from '../components/ui/Surface';
 
 export function AreaDetail() {
@@ -23,10 +24,17 @@ export function AreaDetail() {
   const [businesses, setBusinesses] = useState<BusinessPublicView[]>([]);
   const [favorites, setFavorites] = useState<string[]>(() => getFavorites());
   const [loading, setLoading] = useState(true);
+  const [metaError, setMetaError] = useState(false);
+  const [loadError, setLoadError] = useState(false);
+  const [metaRetryKey, setMetaRetryKey] = useState(0);
+  const [searchRetryKey, setSearchRetryKey] = useState(0);
 
   useEffect(() => {
+    let active = true;
     setSelectedCategory('');
+    setMetaError(false);
     Promise.all([fetchAllAreas(), fetchAllCategories()]).then(([ar, cats]) => {
+      if (!active) return;
       const found = ar.find((a) => a.slug === slug) ?? null;
       setArea(found);
       setAllAreas(ar);
@@ -38,15 +46,44 @@ export function AreaDetail() {
           canonicalPath: `/area/${found.slug}`,
         });
       }
+    }).catch(() => {
+      if (active) setMetaError(true);
     });
-  }, [slug]);
+    return () => { active = false; };
+  }, [slug, metaRetryKey]);
 
   useEffect(() => {
+    const controller = new AbortController();
     setLoading(true);
-    searchBusinesses({ area: slug, category: selectedCategory }, { limit: 30 })
-      .then((res) => setBusinesses(res.items))
-      .finally(() => setLoading(false));
-  }, [slug, selectedCategory]);
+    setLoadError(false);
+    searchBusinesses({ area: slug, category: selectedCategory }, { limit: 30, signal: controller.signal })
+      .then((res) => {
+        if (!controller.signal.aborted) setBusinesses(res.items);
+      })
+      .catch((error: unknown) => {
+        if (controller.signal.aborted || (error instanceof DOMException && error.name === 'AbortError')) return;
+        setLoadError(true);
+        setBusinesses([]);
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setLoading(false);
+      });
+    return () => controller.abort();
+  }, [slug, selectedCategory, searchRetryKey]);
+
+  if (metaError) {
+    return (
+      <AppShell>
+        <Container className="py-10">
+          <EmptyState
+            title="Couldn't load area details"
+            description="Please check your connection and try again."
+            action={<Button onClick={() => setMetaRetryKey((value) => value + 1)}>Retry</Button>}
+          />
+        </Container>
+      </AppShell>
+    );
+  }
 
   return (
     <AppShell>
@@ -108,7 +145,13 @@ export function AreaDetail() {
           </div>
         </div>
 
-        {loading ? (
+        {loadError ? (
+          <EmptyState
+            title="Couldn't load listings"
+            description="Please check your connection and try again."
+            action={<Button onClick={() => setSearchRetryKey((value) => value + 1)}>Retry</Button>}
+          />
+        ) : loading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[1, 2, 3].map((i) => (
               <BusinessCardSkeleton key={i} />
