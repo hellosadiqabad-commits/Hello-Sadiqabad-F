@@ -3,7 +3,7 @@
 ## Working mode
 - The currently connected GitHub repository, Supabase project, and Cloudflare Pages project are development/testing resources only. Do not treat them as the final production environment.
 - Code changes are committed directly to `main`, as explicitly requested. Do not create pull requests or feature branches unless the user changes this instruction.
-- Main-branch commits can trigger the connected Cloudflare Pages deployment. Supabase schema/data/Auth settings and Cloudflare Worker/R2 infrastructure must not be changed without explicit approval.
+- Main-branch commits can trigger the connected Cloudflare Pages deployment. The owner has explicitly authorized direct-main code changes and additive fixes to the connected testing Supabase project. Do not treat testing resources as production; avoid destructive data changes, baseline replay, new infrastructure, Auth dashboard changes, or Worker/R2 changes unless specifically needed and approved.
 - Never commit secrets, service-role keys, real credentials, or test personal data.
 
 ## Completion standard
@@ -28,8 +28,8 @@ A green build alone is not proof that every user-facing feature works.
 - Add reliable test utilities and quality gates without weakening existing checks.
 - Remove dead/duplicate code only after proving it is unused.
 - Audit every public/admin/owner route and all seven Supabase Edge Functions.
-- Record the owner-update RLS/approval enforcement gap and obtain approval for the required migration before declaring authorization complete.
-- Add role/ownership tests and regression tests for server-side validation.
+- Owner-update RLS gap is fixed in the connected testing project: staff row scoping, protected-column enforcement, owner field allow-list, and database-side private approval enforcement are implemented.
+- Rollback-only database regression checks pass for all six staff types and owner/staff mutation boundaries; make these repeatable in CI and add browser E2E coverage.
 - Acceptance: clean install, lint/type-check, test suite, production build, Deno function checks, and documented baseline.
 
 ### Phase 2 — Public directory experience
@@ -59,7 +59,7 @@ A green build alone is not proof that every user-facing feature works.
 
 ### Phase 6 — Supabase backend integrity
 - Reconcile repository migrations with the actual fresh-project baseline strategy.
-- Add database-level owner-update column restrictions and approval enforcement; see `docs/PHASE1_SECURITY_REVIEW.md`.
+- Database-level owner-update column restrictions and private approval enforcement are implemented and regression-tested; see `docs/PHASE1_SECURITY_REVIEW.md`. Migration-ledger reconciliation and repeatable test automation remain open.
 - Verify table/column/type parity with generated TypeScript types and all frontend queries.
 - Review RLS policies, grants, SECURITY DEFINER functions, triggers, indexes, Edge Function auth/CORS/rate limits, and error contracts.
 - Add repeatable local/test database setup and regression coverage.
