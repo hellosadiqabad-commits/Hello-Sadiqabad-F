@@ -1,0 +1,2057 @@
+{
+  "schemaVersion": 1,
+  "chunk": 4,
+  "businessCount": 50,
+  "businesses": [
+    {
+      "title": "The bright wisdom school rao town Sadiq abad",
+      "categoryName": "General education school",
+      "categories/0": "General education school",
+      "address": "84F9+37R, Street # 03, Rao Town, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Rao Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 3880687",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmu96przY2lCwROD8J-MsSlmkTybyAACbmKKjX6SmSUVNn_iTlFgnOuIPQON-hctBOJeOmUILABtMqP_honmay0zT7qjqgFokcRFD8I_mVXUqDbrbhuFGd2BVwbGSNs08yFVjaBQJNCgtQj=w408-h725-k-no",
+      "imagesCount": "0",
+      "location/lat": "28.3227497",
+      "location/lng": "70.1181377",
+      "placeId": "ChIJJ3mSK0FBNzkRwHcYlx0O1tc",
+      "url": "https://www.google.com/maps/search/?api=1&query=The%20bright%20wisdom%20school%20rao%20town%20Sadiq%20abad&query_place_id=ChIJJ3mSK0FBNzkRwHcYlx0O1tc",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Tech Mech Technical & Mechanical Vocational Training School",
+      "categoryName": "Vocational school",
+      "categories/0": "Vocational school",
+      "address": "Building #01, Dawood Commercial Market, N-5, near Taj Chowk, opposite Zaika Restaurant, Sadiqabad, 64350, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 303 2647448",
+      "website": "https://www.tmtvts.org/",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmnzzgQoEo2gr3OY7Ua7HGsNiLu2w1rsFg1fXK76DBlfxll67BUZBvtT_4tRFhJkrD9tP_2RpHrO7szUjT9roVfatm8K1T11YJMGa4mbRu_ZkNS-xpBeFfJhhoUg2EoxBImbnCs1QcYaKE=w408-h306-k-no",
+      "imagesCount": "28",
+      "totalScore": "4.9",
+      "reviewsCount": "10.0",
+      "location/lat": "28.3097033",
+      "location/lng": "70.0965864",
+      "placeId": "ChIJc-Dxj_deDA0RXxEcjBuRWj0",
+      "url": "https://www.google.com/maps/search/?api=1&query=Tech%20Mech%20Technical%20%26%20Mechanical%20Vocational%20Training%20School&query_place_id=ChIJc-Dxj_deDA0RXxEcjBuRWj0",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "9 AM to 5 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9 AM to 5 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9 AM to 5 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9 AM to 5 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "9 AM to 5 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9 AM to 5 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Ayyan United gramer school",
+      "categoryName": "Middle school",
+      "categories/0": "Middle school",
+      "address": "8489+5RG, Ilyas Colony, Sadiqabad, Pakistan",
+      "neighborhood": "Ilyas Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "location/lat": "28.3154427",
+      "location/lng": "70.1195888",
+      "placeId": "ChIJXZqaLTBBNzkRPhOuK9sZ9kc",
+      "url": "https://www.google.com/maps/search/?api=1&query=Ayyan%20United%20gramer%20school&query_place_id=ChIJXZqaLTBBNzkRPhOuK9sZ9kc",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Al Faisal High School",
+      "categoryName": "High school",
+      "categories/0": "High school",
+      "address": "Grand Trunk Road, Hussainabad, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Hussainabad",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 6730673",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmAMLdvsTIkBoZJlLK3hRgZ6PTdK9_jYGjwip6g3rpzRRqgeYrCPELJZPQBXOz7hkJKq7kE0p_5qFU-U5N8c5zP8S4PnUs8p8gIUr4Q0XwBkG2-p6fkLICQw5IDUam403iwYcyi=w408-h306-k-no",
+      "imagesCount": "79",
+      "location/lat": "28.3080394",
+      "location/lng": "70.1229274",
+      "placeId": "ChIJOTPcPehBNzkR_o0xPaL-VUY",
+      "url": "https://www.google.com/maps/search/?api=1&query=Al%20Faisal%20High%20School&query_place_id=ChIJOTPcPehBNzkR_o0xPaL-VUY",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "7:30 AM to 2:30 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "7:30 AM to 2:30 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "7:30 AM to 2:30 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "7:30 AM to 2:30 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "7:30 AM to 12 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "7:30 AM to 2:30 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Shaheen Public High Schools",
+      "categoryName": "High school",
+      "categories/0": "High school",
+      "address": "KLP Rd, Arif Town, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Arif Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 6700956",
+      "website": "https://www.facebook.com/shaheenschool.sphs.pk/",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl6G_6joiRi3W7zNv82p5xjtkkW5hVOmBl7YqD4uEDGUWRH3CHDK3S3rZP-M07bpEqwxwkLrp-JuIQ4I_klSvajit7ajlBHusF9MiWbZMLv0YeS0Lqgkmnx3m-G9XcqRBH3ojrl=w408-h258-k-no",
+      "imagesCount": "4",
+      "location/lat": "28.3096302",
+      "location/lng": "70.1218938",
+      "placeId": "ChIJa1gI1elBNzkRCOG0RYOHmkE",
+      "url": "https://www.google.com/maps/search/?api=1&query=Shaheen%20Public%20High%20Schools&query_place_id=ChIJa1gI1elBNzkRCOG0RYOHmkE",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "8 AM to 5 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "8 AM to 5 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "8 AM to 5 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "8 AM to 5 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "8 AM to 5 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "8 AM to 5 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Government Elementary school L/E no 1",
+      "categoryName": "Elementary school",
+      "categories/0": "Elementary school",
+      "address": "84CC+QGX, Jamaldin Wali Rd, Satellite Town, Sadiqabad, Pakistan",
+      "neighborhood": "Satellite Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "location/lat": "28.3219811",
+      "location/lng": "70.1213638",
+      "placeId": "ChIJ-fSAr0NBNzkRywwtCYK7-Js",
+      "url": "https://www.google.com/maps/search/?api=1&query=Government%20Elementary%20school%20L%2FE%20no%201&query_place_id=ChIJ-fSAr0NBNzkRywwtCYK7-Js",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Azka Grammer school",
+      "categoryName": "General education school",
+      "categories/0": "General education school",
+      "address": "83GW+6GQ, Pakistan",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "location/lat": "28.3255877",
+      "location/lng": "70.0963485",
+      "placeId": "ChIJcYzGdwBBNzkRXpT0xJltU3s",
+      "url": "https://www.google.com/maps/search/?api=1&query=Azka%20Grammer%20school&query_place_id=ChIJcYzGdwBBNzkRXpT0xJltU3s",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "White Palace Girls High School REGD SDK",
+      "categoryName": "Girls' high school",
+      "categories/0": "Girls' high school",
+      "address": "8459+VPF, Street 7, Arain Colony, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Arain Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 7822314",
+      "imagesCount": "0",
+      "location/lat": "28.309676",
+      "location/lng": "70.1192871",
+      "placeId": "ChIJgcdiblNBNzkRDQlwm1gN-KM",
+      "url": "https://www.google.com/maps/search/?api=1&query=White%20Palace%20Girls%20High%20School%20REGD%20SDK&query_place_id=ChIJgcdiblNBNzkRDQlwm1gN-KM",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "The Knowledge School, Sadiqabad",
+      "categoryName": "Private educational institution",
+      "categories/0": "Private educational institution",
+      "address": "Road, Haq Town, Sadiqabad, Pakistan",
+      "neighborhood": "Haq Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 331 0223321",
+      "website": "http://www.tks.edu.pk/",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnmBqXIyy_NT-EwDJ5rrcV43y_I_z-VwlKsW3fDIAoYSPyuGqbbKGOn76PVmBYN_rnHc-EfdTOwWHLtpajCk0vao3pDEnTbuAx74l_dTKY1cOyozUWnHeV_JAWMVZRFc6ziM9lwCg=w408-h324-k-no",
+      "imagesCount": "8",
+      "location/lat": "28.3018125",
+      "location/lng": "70.1205625",
+      "placeId": "ChIJn74cud1BNzkRcU32C7cqnfc",
+      "url": "https://www.google.com/maps/search/?api=1&query=The%20Knowledge%20School%2C%20Sadiqabad&query_place_id=ChIJn74cud1BNzkRcU32C7cqnfc",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Saib Public High School",
+      "categoryName": "High school",
+      "categories/0": "High school",
+      "address": "848C+RVX, Ilyas Colony, Sadiqabad, Pakistan",
+      "neighborhood": "Ilyas Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 303 0306776",
+      "imagesCount": "0",
+      "location/lat": "28.3171183",
+      "location/lng": "70.1222198",
+      "placeId": "ChIJpwWTpepBNzkRH-jCOuDnjW0",
+      "url": "https://www.google.com/maps/search/?api=1&query=Saib%20Public%20High%20School&query_place_id=ChIJpwWTpepBNzkRH-jCOuDnjW0",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Iq Academy",
+      "categoryName": "Education center",
+      "categories/0": "Education center",
+      "address": "Street:9 Sector no 1, Punjab, Arain Colony, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Arain Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 0990525",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOHCuRjDFTV9ti12LjhnKIwFt1gS5dqDLGpoLZMBfbdpE1h_MyeLj-Eq3nFV3vrDpVlx5AB2PZlITawnGSHz2h2mHlx_WVeQdGYPhO5NMRBPFAWyrAT0y4TIFStY5B0z0UxohvatLAiRfdE=w408-h544-k-no",
+      "imagesCount": "2",
+      "totalScore": "5.0",
+      "reviewsCount": "2.0",
+      "location/lat": "28.3107194",
+      "location/lng": "70.11903",
+      "placeId": "ChIJ5SNdbzhBNzkREiU3r5AubZg",
+      "url": "https://www.google.com/maps/search/?api=1&query=Iq%20Academy&query_place_id=ChIJ5SNdbzhBNzkREiU3r5AubZg",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "2 to 9 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "2 to 9 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "2 to 9 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "2 to 9 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "2 to 9 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "2 to 9 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Star Inn Academy",
+      "categoryName": "Education center",
+      "categories/0": "Education center",
+      "address": "House No, 2 Street 3, near Nashtar Chawk, Block C Arif Town, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Block C Arif Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 345 8050834",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOeJEoZu4MrfIbms5Vj8lCz3GFKVbEcElCFZvv4eQynLUVSuRVAPsko0_ZKKZhR1LDxNqThJiWNp_40g6mg-VkOZcn5nut0pIKIXkicz1SE-xg1e2qZC702nbIvHT-kArGrbGRI=w408-h408-k-no",
+      "imagesCount": "60",
+      "totalScore": "4.9",
+      "reviewsCount": "49.0",
+      "location/lat": "28.3097485",
+      "location/lng": "70.12078",
+      "placeId": "ChIJJ_4gr2ZBNzkRShZxMmSl5fM",
+      "url": "https://www.google.com/maps/search/?api=1&query=Star%20Inn%20Academy&query_place_id=ChIJJ_4gr2ZBNzkRShZxMmSl5fM",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "8 AM to 10 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "8 AM to 10 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "8 AM to 10 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "8 AM to 10 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "8 AM to 10 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "8 AM to 10 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Camford Tech Academy, Sadiqabad",
+      "categoryName": "Education center",
+      "categories/0": "Education center",
+      "address": "Street # 03, Rao Town, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Rao Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 303 3212001",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOcBqSybTXOyMAGFGVSa6Qtwbivbh7GoRVTddB2Uq6KCEoAh3EX-9AVfMRsDqWEXmQoLAyIIsP8Ui_vNMXmxsI9IIfOGzwVZRHr0ivVs34rwbf8FclkzRCUh7DF1P-gKRUMA-Xq=w408-h306-k-no",
+      "imagesCount": "638",
+      "totalScore": "5.0",
+      "reviewsCount": "5.0",
+      "location/lat": "28.3227425",
+      "location/lng": "70.1181389",
+      "placeId": "ChIJrQ_1BOJBNzkRK4g0vwftHSA",
+      "url": "https://www.google.com/maps/search/?api=1&query=Camford%20Tech%20Academy%2C%20Sadiqabad&query_place_id=ChIJrQ_1BOJBNzkRK4g0vwftHSA",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "3:30 to 7 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "3:30 to 7 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "3:30 to 7 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "3:30 to 7 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "3:30 to 7 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "3:30 to 7 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "AzScience Academy SDK",
+      "categoryName": "Education center",
+      "categories/0": "Education center",
+      "address": "GN Marriage Hall, Green View Gate, 2 Road, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Sadiqabad",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 304 3956956",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPM-YDNZwIpF1gL6y1FiU06XAZs547EfF9Kn6g6YjJs6IdM_Mq04grGD0hHDswpCvtSXGnspYViPPJ9uUfw7k9pMy1sWJyPIOSPfn4QPcxTe6-4hpypxJprMIEC20DUNYrUW9mN8e-EBLU=w408-h306-k-no",
+      "imagesCount": "3",
+      "totalScore": "5.0",
+      "reviewsCount": "2.0",
+      "location/lat": "28.3110941",
+      "location/lng": "70.1261227",
+      "placeId": "ChIJgRU_MX5BNzkRcifbBRH2lPY",
+      "url": "https://www.google.com/maps/search/?api=1&query=AzScience%20Academy%20SDK&query_place_id=ChIJgRU_MX5BNzkRcifbBRH2lPY",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "1:30 to 6 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "1:30 to 6 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "1:30 to 6 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "1:30 to 6 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "1:30 to 6 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "1:30 to 6 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "IT Academy",
+      "categoryName": "College",
+      "categories/0": "College",
+      "address": "Street 1, Mujahid Colony, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Mujahid Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 301 7640931",
+      "website": "http://www.ccnaguru.com/",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmN8p5eUFF4q0su2FaVmri7NeL_Kb8_w7ysswxWio2u4aiwVj1YZvniePlgshWJR0eewMgHzFXVOtu8HRUH2MxXK1kcS-9Ux8oTT880zu49O_NajO8xC1WEgIVWkcTZoZtsWlZ07=w408-h726-k-no",
+      "imagesCount": "54",
+      "totalScore": "5.0",
+      "reviewsCount": "7.0",
+      "location/lat": "28.3140817",
+      "location/lng": "70.13056",
+      "placeId": "ChIJQebA1LhBNzkRRSXmtOTn_jc",
+      "url": "https://www.google.com/maps/search/?api=1&query=IT%20Academy&query_place_id=ChIJQebA1LhBNzkRRSXmtOTn_jc",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Closed"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Danish Academy Sadiqabad",
+      "categoryName": "Education center",
+      "categories/0": "Education center",
+      "address": "74XF+XFM, Railway Overpass, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 301 2633800",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPdVewN-TcMMXbIsLLbSNbefVfGvSb70jUQx4TBxAD0Rzbqo0hxPR0Y516d-VM_X3rqJ_m0l6YzpnRkHSvcgCQstQ4tSMrf4oBo3NSqd8Tl4WotGTJsN4XqCVww_C7RQj2D3AI=w426-h240-k-no",
+      "imagesCount": "2",
+      "totalScore": "5.0",
+      "reviewsCount": "3.0",
+      "location/lat": "28.2999502",
+      "location/lng": "70.1236832",
+      "placeId": "ChIJIeRXgDlBNzkRwOmxrdikrt4",
+      "url": "https://www.google.com/maps/search/?api=1&query=Danish%20Academy%20Sadiqabad&query_place_id=ChIJIeRXgDlBNzkRwOmxrdikrt4",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "8:30 AM to 7:30 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "8:30 AM to 7:30 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "8:30 AM to 7:30 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "8:30 AM to 7:30 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "8:30 AM to 7:30 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "8:30 to 11:30 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Student Academy",
+      "categoryName": "Charter school",
+      "categories/0": "Charter school",
+      "address": "845F+65M, Hussainabad, Sadiqabad, Pakistan",
+      "neighborhood": "Hussainabad",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 306 3155400",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPlvt3EoW8iAQ9HZEPuKG-XUMlbNLaACA4ZqJbA6lhckwr-xup2hXRYtX0p5xRm9ss7tG-Obat3CnQOmjgPL2Co7jSFj8QKhJeTDNqeqkWZo20Z9Sc_nLd5kNG1zo102UcNoYq3=w408-h544-k-no",
+      "imagesCount": "1",
+      "location/lat": "28.30809",
+      "location/lng": "70.1229254",
+      "placeId": "ChIJX2crVwpBNzkRswUoMuBeDtA",
+      "url": "https://www.google.com/maps/search/?api=1&query=Student%20Academy&query_place_id=ChIJX2crVwpBNzkRswUoMuBeDtA",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "3 to 7 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "3 to 7 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "3 to 7 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "3 to 7 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "3 to 7 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "3 to 7 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "3 to 7 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Al-Buraq School & Academy Sadiqabad",
+      "categoryName": "School center",
+      "categories/0": "School center",
+      "address": "Shimla Point canal bank, near Kamal medical complex, Sadiqabad, 64350, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 327 7056075",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmO9xpkSJ--m2i63EVMPAuNbEIUXZ-jusdlHNEa31trzaI0uGlh7tO0yLitEzIbdelwlrZ45nOu8xpxlaG1Vn8ue3wATtf7qIhdy4KaodDCM1WJq7rFfbhu2TSufiwFPaKqZShP5JP_mEos=w408-h906-k-no",
+      "imagesCount": "30",
+      "totalScore": "5.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.302756",
+      "location/lng": "70.1226297",
+      "placeId": "ChIJk5yLbbRBNzkRPxRX3aw-5vw",
+      "url": "https://www.google.com/maps/search/?api=1&query=Al-Buraq%20School%20%26%20Academy%20Sadiqabad&query_place_id=ChIJk5yLbbRBNzkRPxRX3aw-5vw",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "8 AM to 5 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "8 AM to 5 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "8 AM to 5 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "8 AM to 5 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "8 AM to 3 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "8 AM to 5 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "THE INSPIRE BUSINESS ACADEMY SADIQABAD",
+      "categoryName": "Educational institution",
+      "categories/0": "Educational institution",
+      "address": "843F+42G شملا پوائنٹ، نیشنل گرامر اسکول کے ساتھ, مین گلی، مہرآباد, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 309 3534289",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPs7JXQzRezIf1vzO5FItJLP5t9onFjt-ywZgOQ0qeyOHoqJDeb32Jv2QkeaYRPyalMfN12OOrFvlIhqTA1bvUpTxL4uE1vE5Ifbl7pIXrjJTV6APGREFJukvd7VZ0hEgwOnRinQXQgvHUR=w412-h240-k-no",
+      "imagesCount": "13",
+      "totalScore": "5.0",
+      "reviewsCount": "5.0",
+      "location/lat": "28.302814",
+      "location/lng": "70.1225884",
+      "placeId": "ChIJC059IABBNzkR8rw0UvIuLmw",
+      "url": "https://www.google.com/maps/search/?api=1&query=THE%20INSPIRE%20BUSINESS%20ACADEMY%20SADIQABAD&query_place_id=ChIJC059IABBNzkR8rw0UvIuLmw",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "9 AM to 8 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9 AM to 8 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9 AM to 8 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9 AM to 8 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "9 AM to 8 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Closed"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Unique Science Academy",
+      "categoryName": "Education center",
+      "categories/0": "Education center",
+      "address": "846Q+CGC, Ali Town, Sadiqabad, Pakistan",
+      "neighborhood": "Ali Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOn7Hu-9-cYy55hhKgtxhSyOBVwOJVTz3aroEIuX3z52WizjvCGSgBvwT4FPZqHhyESbSmA0_R8i7544xMBqXm3L6HBRHl9YKxvcSwnj3_WYj5gb2FQIMarAYaONfqPI21ZwZN_ZZoC4xJQ=w408-h725-k-no",
+      "imagesCount": "0",
+      "totalScore": "4.0",
+      "reviewsCount": "9.0",
+      "location/lat": "28.3110539",
+      "location/lng": "70.1387609",
+      "placeId": "ChIJtbIUzSRBNzkRAQciPBTClI8",
+      "url": "https://www.google.com/maps/search/?api=1&query=Unique%20Science%20Academy&query_place_id=ChIJtbIUzSRBNzkRAQciPBTClI8",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "IDEAS Academy, Sadiqabad",
+      "categoryName": "Educational institution",
+      "categories/0": "Educational institution",
+      "categories/1": "Coaching center",
+      "address": "Street 1, Mujahid Colony, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Mujahid Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 336 6709695",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMp4aZwwc-b02hXF1eNuVc92gAVKR94bprKKZeswjKkCOBq2H9reQmw5eb6uB_CyncRAjKkSIqlh-QqM2ALoeRmG_vVgWsytn8IPNh8Y2hc-1__mTEB24yxuicFN-4SW473oWsOyp9wXXrJ=w541-h240-k-no",
+      "imagesCount": "17",
+      "totalScore": "4.8",
+      "reviewsCount": "6.0",
+      "location/lat": "28.3147867",
+      "location/lng": "70.1316362",
+      "placeId": "ChIJWcpMsrlBNzkR1uQ20GByeUs",
+      "url": "https://www.google.com/maps/search/?api=1&query=IDEAS%20Academy%2C%20Sadiqabad&query_place_id=ChIJWcpMsrlBNzkR1uQ20GByeUs",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "3:30 to 7:30 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "3:30 PM to 12 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "12 to 7:30 AM, 3:30 to 7:30 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "3:30 to 7:30 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "3:30 to 7:30 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "3:30 to 7:30 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Stars Academy Sadiqabad",
+      "categoryName": "Education center",
+      "categories/0": "Education center",
+      "address": "844M+X53, Ali Town, Sadiqabad, Pakistan",
+      "neighborhood": "Ali Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "location/lat": "28.3073927",
+      "location/lng": "70.132908",
+      "placeId": "ChIJ_3QQ7tNBNzkRJVgOjn_z3hI",
+      "url": "https://www.google.com/maps/search/?api=1&query=Stars%20Academy%20Sadiqabad&query_place_id=ChIJ_3QQ7tNBNzkRJVgOjn_z3hI",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Yar Academy",
+      "categoryName": "Kindergarten",
+      "categories/0": "Kindergarten",
+      "address": "74W9+P9R, Main Road, Haq Town, Sadiqabad, Pakistan",
+      "neighborhood": "Haq Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 4715777",
+      "imagesCount": "0",
+      "location/lat": "28.2968537",
+      "location/lng": "70.1183857",
+      "placeId": "ChIJY51y1RdBNzkR7QN_Q4mtZJ8",
+      "url": "https://www.google.com/maps/search/?api=1&query=Yar%20Academy&query_place_id=ChIJY51y1RdBNzkR7QN_Q4mtZJ8",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Prime Computer Academy",
+      "categoryName": "Institute of technology",
+      "categories/0": "Institute of technology",
+      "address": "844Q+FVW, Nehr Kinara, Mohallah Faislabad Sadiqabad, Pakistan",
+      "neighborhood": "Mohallah Faislabad",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 301 5729797",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMXvuPYrHarKKLG8YXB1VGB-nOMt48XhSd5RRODQy4Nbd0teTrmTNaiNIA-wnFocu84CUnTbFa99yYQmL1HJssHgtnDH3B4l2ecbBJjxTn64Vk-Kacgb7SruQtxjO9hjSUomWyk=w408-h544-k-no",
+      "imagesCount": "6",
+      "totalScore": "5.0",
+      "reviewsCount": "14.0",
+      "location/lat": "28.3062353",
+      "location/lng": "70.1397114",
+      "placeId": "ChIJj0mfWeVBNzkRMEtyKZ_C7GQ",
+      "url": "https://www.google.com/maps/search/?api=1&query=Prime%20Computer%20Academy&query_place_id=ChIJj0mfWeVBNzkRMEtyKZ_C7GQ",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Learners Academy",
+      "categoryName": "Teachers college",
+      "categories/0": "Teachers college",
+      "address": "846G+CCQ Jalal Town, Abul Qasim, near Madrissa, Dist, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Dist",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "location/lat": "28.3110941",
+      "location/lng": "70.1261227",
+      "placeId": "ChIJb_-I27NBNzkR2yDMbatgNr8",
+      "url": "https://www.google.com/maps/search/?api=1&query=Learners%20Academy&query_place_id=ChIJb_-I27NBNzkR2yDMbatgNr8",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Quran Institute(Fehm ul Quran Academy)",
+      "categoryName": "Education center",
+      "categories/0": "Education center",
+      "address": "846G+CCQ, Nisar Town, Sadiqabad, Pakistan",
+      "neighborhood": "Nisar Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 333 4876226",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMBP3EvuusKWv1ftKjpQwHyIOovUtD2C20x7NX8GZJVw7doLmSYLmi6CWCZqU9gQae7k2KklgJ3s8MmIOKLaRtTkHW8c9bV38p-KvAiRuTni-wI2Njz3_MicG7SQBM7IPFBsi7r=w426-h240-k-no",
+      "imagesCount": "1",
+      "totalScore": "5.0",
+      "reviewsCount": "2.0",
+      "location/lat": "28.3110941",
+      "location/lng": "70.1261227",
+      "placeId": "ChIJnwruw1VBNzkRGDB3OVeTOss",
+      "url": "https://www.google.com/maps/search/?api=1&query=Quran%20Institute(Fehm%20ul%20Quran%20Academy)&query_place_id=ChIJnwruw1VBNzkRGDB3OVeTOss",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Style Shoes",
+      "categoryName": "Shoe store",
+      "categories/0": "Shoe store",
+      "address": "Faisal Bazar، 1, Sadiqabad, 64350, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 68 5701727",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkbsjmlPtSoYslNTeoB0ZK6C-T2uxdV0cZOAIGnFLJVy2kZKci-uC0GmrQhhbxSLU3Ld1mdwQ20JDwi2IStQyT6X5cukeaJH7eUFETsvWnVuO9Ko9nA2MESyH-KmNdbrjlWB2EIiw=w408-h725-k-no",
+      "imagesCount": "16",
+      "totalScore": "4.0",
+      "reviewsCount": "7.0",
+      "location/lat": "28.301581",
+      "location/lng": "70.131822",
+      "placeId": "ChIJMYnTbuNBNzkR77XojynvABI",
+      "url": "https://www.google.com/maps/search/?api=1&query=Style%20Shoes&query_place_id=ChIJMYnTbuNBNzkR77XojynvABI",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "9:30 AM to 9 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9:30 AM to 9 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9:30 AM to 9 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9:30 AM to 9 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "9:30 AM to 1 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9:30 AM to 9 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9:30 AM to 9 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "City Shoes Sadiqabad",
+      "categoryName": "Shoe store",
+      "categories/0": "Shoe store",
+      "address": "842J+JR3, Faisal Bazar, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 306 7619682",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnOdnHeFf5jCqm9HVdMYLAsTv7KkM5_dP1D7nlVbm7zmhK0Add-qX7_-cqpZm51yzC2gAOXqqRkJQeS6mluifBYT0iolFskGMy-p0b3jgkZeFDciW2Oyab9Wlq2rzSVN15LCVRn-m0Mhlho=w408-h544-k-no",
+      "imagesCount": "12",
+      "totalScore": "5.0",
+      "reviewsCount": "3.0",
+      "location/lat": "28.3015021",
+      "location/lng": "70.1320452",
+      "placeId": "ChIJgWv6NwBBNzkRnJr1_OoO9zA",
+      "url": "https://www.google.com/maps/search/?api=1&query=City%20Shoes%20Sadiqabad&query_place_id=ChIJgWv6NwBBNzkRnJr1_OoO9zA",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Family Shoes Faisal Bazar sadikabad",
+      "categoryName": "Shoe store",
+      "categories/0": "Shoe store",
+      "address": "Faisal Bazar 2, Sadiqabad, 64350, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 8779030",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl7jkyl9AC_MG2Y83u-1l7bE7QC_aAZS3r6fnQxW2z1ag5bM02a6YR1UQT3gUAOzKu1vKtWSKmDgy7rSyanwdqPes54yugljJ0nBpDwi2cLJ68lHXfX_7qe16etWmAfly2AGPay=w532-h240-k-no",
+      "imagesCount": "1",
+      "totalScore": "5.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.3019652",
+      "location/lng": "70.1316476",
+      "placeId": "ChIJ47NBNOdBNzkRBe9QZ4yDgzg",
+      "url": "https://www.google.com/maps/search/?api=1&query=Family%20Shoes%20Faisal%20Bazar%20sadikabad&query_place_id=ChIJ47NBNOdBNzkRBe9QZ4yDgzg",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "Closed"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM to 8 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Fancy Shoes Warehouse",
+      "categoryName": "Shoe store",
+      "categories/0": "Shoe store",
+      "address": "Mian Road Faisalabad (Mohalla, Gharibabad (Mohalla ), Sadiqabad, Pakistan",
+      "neighborhood": "Gharibabad (Mohalla )",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 309 7284388",
+      "imagesCount": "0",
+      "totalScore": "4.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.3013775",
+      "location/lng": "70.1361705",
+      "placeId": "ChIJMQ9cDzNBNzkRGUj_Cf3qhYY",
+      "url": "https://www.google.com/maps/search/?api=1&query=Fancy%20Shoes%20Warehouse&query_place_id=ChIJMQ9cDzNBNzkRGUj_Cf3qhYY",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "Closed"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM to 9 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Khan shoes",
+      "categoryName": "Shoe store",
+      "categories/0": "Shoe store",
+      "address": "843J+9CW, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "totalScore": "5.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.3034895",
+      "location/lng": "70.1310897",
+      "placeId": "ChIJrfTjiwVBNzkREoipficI32o",
+      "url": "https://www.google.com/maps/search/?api=1&query=Khan%20shoes&query_place_id=ChIJrfTjiwVBNzkREoipficI32o",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "shoes N Class",
+      "categoryName": "Store",
+      "categories/0": "Store",
+      "address": "842M+F27, Club Rd, near Smart Shoes, Sadiqabad, 64350, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "totalScore": "4.0",
+      "reviewsCount": "2.0",
+      "location/lat": "28.3011926",
+      "location/lng": "70.1325985",
+      "placeId": "ChIJtcg9DHxBNzkRsX58enXsYIE",
+      "url": "https://www.google.com/maps/search/?api=1&query=shoes%20N%20Class&query_place_id=ChIJtcg9DHxBNzkRsX58enXsYIE",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Roshan Shoes Sadiqabad",
+      "categoryName": "Shoe store",
+      "categories/0": "Shoe store",
+      "address": "Punjab Cinema, Road, near Nehar Kinara, Ghafoorabad, Sadiqabad, Pakistan",
+      "neighborhood": "Ghafoorabad",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 302 5458528",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlKTe19Te9wlxotUIJnMJe00cawzbAwUGqoNqiKQZiNhP1OSG16PJSkn1yLAsLx1XnXbkCxLHMwEkKiEqqL2DB6n29l1LsV4lMa7D2GpxX0chgfKdeDUUY-aGmT6bMwB4p_x4N1=w408-h408-k-no",
+      "imagesCount": "6",
+      "location/lat": "28.3064636",
+      "location/lng": "70.1277939",
+      "placeId": "ChIJNYRN--hBNzkRIK6Jevc5qm0",
+      "url": "https://www.google.com/maps/search/?api=1&query=Roshan%20Shoes%20Sadiqabad&query_place_id=ChIJNYRN--hBNzkRIK6Jevc5qm0",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "8 AM to 8 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "8 AM to 8 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "8 AM to 8 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "8 AM to 8 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "8 AM to 8 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "8 AM to 8 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "8 AM to 8 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Pakistan Shoes",
+      "categoryName": "Shoe store",
+      "categories/0": "Shoe store",
+      "address": "842J+HGX, Faisal Bazar, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 333 7248563",
+      "imagesCount": "0",
+      "location/lat": "28.3014976",
+      "location/lng": "70.1313713",
+      "placeId": "ChIJ9a5KfQBBNzkRjWrwz_npMQ0",
+      "url": "https://www.google.com/maps/search/?api=1&query=Pakistan%20Shoes&query_place_id=ChIJ9a5KfQBBNzkRjWrwz_npMQ0",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "9 AM to 10 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9 AM to 10 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9 AM to 10 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9 AM to 10 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "9 AM to 7 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9 AM to 10 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM to 10 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Bilal mobiles And computers",
+      "categoryName": "Mobile phone repair shop",
+      "categories/0": "Mobile phone repair shop",
+      "address": "84CQ+F4, Karim Town, Sadiqabad, Pakistan",
+      "neighborhood": "Karim Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 326 2635701",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlulnjehw3VKFkfTz3l5mzqpkPuCMN-54CLEwUTVqkm9ugBbdP9zosdfEF9wO8fO0VDDCH5cLoRN1vpUidgv4c9BFpEeW2t9s_5Kbw1rUYXEybX7Wie1ifDnyf1eCwIpxIxl8nItY9G3VU=w408-h724-k-no",
+      "imagesCount": "5",
+      "totalScore": "5.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.3211875",
+      "location/lng": "70.1378125",
+      "placeId": "ChIJc-h4F6JBNzkRhOx8Jyuk9bk",
+      "url": "https://www.google.com/maps/search/?api=1&query=Bilal%20mobiles%20And%20computers&query_place_id=ChIJc-h4F6JBNzkRhOx8Jyuk9bk",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "8 AM to 9 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9:18 AM to 9:18 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9:18 AM to 9:18 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9:18 AM to 9:18 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "9:18 AM to 9:18 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9:18 AM to 9:18 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM to 5 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Pakistan Mobiles",
+      "categoryName": "Mobile phone repair shop",
+      "categories/0": "Mobile phone repair shop",
+      "address": "street no 2, near abdul rasheed kiryana store, Basti Chanawaran, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Basti Chanawaran",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 327 0326355",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmbatTq3SEGveMfhGWnv4-MMEmd00IvM7_5dyO9BH0P6fmRRIxKWTVGhcD9Ck8--HH7ocZar-SM4Gfp_R-96QRB0nClZ4yVPB6xTz-dBvDMSR1Y0OXXSVxxRZ7WosYj49nP6Rs1OvZi580=w408-h612-k-no",
+      "imagesCount": "3",
+      "location/lat": "28.3390317",
+      "location/lng": "70.1313387",
+      "placeId": "ChIJ84X_Xd9BNzkRspnx5YW2d9Y",
+      "url": "https://www.google.com/maps/search/?api=1&query=Pakistan%20Mobiles&query_place_id=ChIJ84X_Xd9BNzkRspnx5YW2d9Y",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "9:30 AM to 12 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "T-Mobile Shop",
+      "categoryName": "Electronics store",
+      "categories/0": "Electronics store",
+      "address": "845M+9F3, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 346 8434193",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl5BDjqmRfPfI30LgJ6LvVoAmc3pmso_YYFUF7almUdDWW4JelJRvGtXXfLoNQ-Y2aAn5RXqXINdWeot7Q3A_F6av39QuaRsLuZ99O-0Ms1vkvaYnNIGCF6JGx_evkfqEb-2V-r=w408-h406-k-no",
+      "imagesCount": "1",
+      "totalScore": "4.3",
+      "reviewsCount": "8.0",
+      "location/lat": "28.3083944",
+      "location/lng": "70.1336834",
+      "placeId": "ChIJAQAAAPBBNzkRAXsd9WtckAM",
+      "url": "https://www.google.com/maps/search/?api=1&query=T-Mobile%20Shop&query_place_id=ChIJAQAAAPBBNzkRAXsd9WtckAM",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "Closed"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM to 9 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "King City Mobile and Repairing Center",
+      "categoryName": "Cell phone store",
+      "categories/0": "Cell phone store",
+      "address": "Railway Rd, Sadiqabad, 64350, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 6745911",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlTMatfqLb_wWm-zSWzKhYysu66-pNeFu2wvJva2nT1Vf5djAwkssEQEi5aZThof_E8iloKJxFD6BJJLaRE9AMNmA-29ulXelIWmSJ2yHzvCKDQynbyRpivPBm0JdWmetEMnoQ=w408-h306-k-no",
+      "imagesCount": "12",
+      "totalScore": "4.0",
+      "reviewsCount": "2.0",
+      "location/lat": "28.3027298",
+      "location/lng": "70.1315469",
+      "placeId": "ChIJs6qa6X9BNzkR6Go24HIRYyw",
+      "url": "https://www.google.com/maps/search/?api=1&query=King%20City%20Mobile%20and%20Repairing%20Center&query_place_id=ChIJs6qa6X9BNzkR6Go24HIRYyw",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "Closed"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9 AM to 9 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM to 9 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Al Makkah Mobile shop",
+      "categoryName": "Cell phone store",
+      "categories/0": "Cell phone store",
+      "address": "Khalid Bazar, Mobile market, Railway Rd, near Ghalla Mandi, Sadiqabad, Pakistan",
+      "neighborhood": "Sadiqabad",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 301 7613791",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkFkUg2Cuz8P3DpeQhfBQHHRHssp0nYgPCuGpAanDdUCgSPxf5WILw5Fqare5nx7fxsgShX_gMs-q94-xFZa4YgnFnT3YGiSm4pO0HK7Th0A8J_87Lq6Pg1ZgUnMIOiw_rBTEdaoC5p0BHt=w408-h906-k-no",
+      "imagesCount": "19",
+      "totalScore": "5.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.3024077",
+      "location/lng": "70.131857",
+      "placeId": "ChIJ8XQL1qJBNzkRYvODAO0mUk0",
+      "url": "https://www.google.com/maps/search/?api=1&query=Al%20Makkah%20Mobile%20shop&query_place_id=ChIJ8XQL1qJBNzkRYvODAO0mUk0",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Closed"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Smart Mobile & Repairing Lab",
+      "categoryName": "Mobile phone repair shop",
+      "categories/0": "Mobile phone repair shop",
+      "address": "842J+VPJ, Khalid bazaar, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 326 2075825",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl0oTRJ0IqumEMnkxlauR3kSzoK_BzOtuqQZPSUKlYqbBLLoCDkX8t-Ry4fyf4WlyPfVLZjaTG0uQ5dMscxoLlMIXJ1aluUwvVUJIMUMA8W4QDw8TFZ87igZ8SfLJNEVQFRqGNeMQrJ5s7a=w408-h544-k-no",
+      "imagesCount": "15",
+      "totalScore": "5.0",
+      "reviewsCount": "8.0",
+      "location/lat": "28.3022089",
+      "location/lng": "70.1317587",
+      "placeId": "ChIJBTnWIABBNzkR0mx2rNMvX5s",
+      "url": "https://www.google.com/maps/search/?api=1&query=Smart%20Mobile%20%26%20Repairing%20Lab&query_place_id=ChIJBTnWIABBNzkR0mx2rNMvX5s",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "9 AM to 10 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9 AM to 10 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9 AM to 10 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9 AM to 10 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "Closed"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9 AM to 10 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM to 10 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Al Rehman Mobile Shop",
+      "categoryName": "Mobile phone repair shop",
+      "categories/0": "Mobile phone repair shop",
+      "address": "847M+963, Main Rd, Faiz Colony Mian Ghulam Rasool Colony, Sadiqabad, Pakistan",
+      "neighborhood": "Faiz Colony Mian Ghulam Rasool Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 307 4204521",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm9aJ6FZYQP-WNXI-Z3pI767IGO3L9dRtDHOPsLMs1TPPuLBQlRIyMRaATeTqkXCW9auT3d_Fn4R7p6Bym0cCiAB6GSoz137GX3zrCRvn06ccztvJvZMxkUR6cwNIzOJgcMcXsiYQ=w408-h544-k-no",
+      "imagesCount": "12",
+      "totalScore": "5.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.3133885",
+      "location/lng": "70.1330355",
+      "placeId": "ChIJoQXnvVFBNzkRwq6fonsGbLk",
+      "url": "https://www.google.com/maps/search/?api=1&query=Al%20Rehman%20Mobile%20Shop&query_place_id=ChIJoQXnvVFBNzkRwq6fonsGbLk",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "8 AM to 9 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "8 AM to 9 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "8 AM to 9 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "8 AM to 9 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "8 AM to 9 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "8 AM to 9 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "8 AM to 9 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Baloch Mobile Shop",
+      "categoryName": "Cell phone store",
+      "categories/0": "Cell phone store",
+      "address": "847G+GRG, KLP Rd, Tipu Sultan Shaheed Colony, Sadiqabad, Pakistan",
+      "neighborhood": "Tipu Sultan Shaheed Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 0032847",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk6pBGjTQpg6w_G8PU_ltpu82fsB6KtvW-jV67xeGhohvUBGaq1oOBtBjWrLgAvW42Q7Bn9WWpfZq3baJKKeFCGDVz7rZ66S3vfWK4u87fZphasZSc-Ao_ypikzJyynI3LuScEyng=w408-h306-k-no",
+      "imagesCount": "4",
+      "totalScore": "5.0",
+      "reviewsCount": "4.0",
+      "location/lat": "28.3138212",
+      "location/lng": "70.1270685",
+      "placeId": "ChIJ6xYeEABBNzkRF8_Y6uySHyc",
+      "url": "https://www.google.com/maps/search/?api=1&query=Baloch%20Mobile%20Shop&query_place_id=ChIJ6xYeEABBNzkRF8_Y6uySHyc",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "10 AM to 11 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "10 AM to 11 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "10 AM to 11 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "10 AM to 11 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "10 AM to 11 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "10 AM to 11 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "10 AM to 11 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Mobile Palace",
+      "categoryName": "Mobile phone repair shop",
+      "categories/0": "Mobile phone repair shop",
+      "address": "Khalid, Shop no.6 Rehan plaza khalid bazar, bazar, Sadiqabad, 64350, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 334 6909401",
+      "website": "https://whatsapp.com/channel/0029Va8jVakAzNc2j3shqU2m",
+      "imagesCount": "0",
+      "totalScore": "5.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.3017605",
+      "location/lng": "70.1313819",
+      "placeId": "ChIJoUr9rK9BNzkRThU1poMltyo",
+      "url": "https://www.google.com/maps/search/?api=1&query=Mobile%20Palace&query_place_id=ChIJoUr9rK9BNzkRThU1poMltyo",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "10 AM to 8 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "10 AM to 8 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "10 AM to 8 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "10 AM to 8 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "11 AM to 1 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "10 AM to 8 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "10 AM to 8 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Online mobile shop",
+      "categoryName": "Cell phone store",
+      "categories/0": "Cell phone store",
+      "address": "843J+5HG, Railway Rd, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 308 9101423",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkAhxXR6PyRE_TG6mmk_DEm8tRATZ3wQNpdRLTtIX7OfSUAWs3BBHTgnxqCDe-_NjD9OBMz-yRqzrCwuIoRcAB2bJiFUbr3n6pMZEPKqlYVHNbfDsT3WxitBJ2UQt36ttm4tB9smf9MMDuf=w408-h544-k-no",
+      "imagesCount": "3",
+      "totalScore": "5.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.3029274",
+      "location/lng": "70.1314606",
+      "placeId": "ChIJtwqKSgBBNzkRginnB57wYnw",
+      "url": "https://www.google.com/maps/search/?api=1&query=Online%20mobile%20shop&query_place_id=ChIJtwqKSgBBNzkRginnB57wYnw",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "10 AM to 10 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "10 AM to 10 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "10 AM to 10 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "10 AM to 10 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "10 AM to 10 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "10 AM to 10 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "10 AM to 10 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Mobile World",
+      "categoryName": "Mobile phone repair shop",
+      "categories/0": "Mobile phone repair shop",
+      "address": "74XH+X3M, Kothi Mohalla, Sadiqabad, Pakistan",
+      "neighborhood": "Kothi Mohalla",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 308 7677849",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlzHuowSAyNSTnM6gCqyVta93HA03Pr7jX0DZp_CmtnRaMrvs382CBo4uRztFTxzr2t8-tMKV2FodF8ma3xluTRj8KdLfpqOL70YtaJEWZRdE1oWGgs7jaLhEvZyTH_vm0_47R2=w408-h725-k-no",
+      "imagesCount": "2",
+      "totalScore": "5.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.2999734",
+      "location/lng": "70.1276847",
+      "placeId": "ChIJvTb3fCtBNzkRCNFsWgR8eHY",
+      "url": "https://www.google.com/maps/search/?api=1&query=Mobile%20World&query_place_id=ChIJvTb3fCtBNzkRCNFsWgR8eHY",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Bismillah Mobile Shop",
+      "categoryName": "Mobile phone repair shop",
+      "categories/0": "Mobile phone repair shop",
+      "address": "848M+H83, Ittefaq Town, Sadiqabad, Pakistan",
+      "neighborhood": "Ittefaq Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "totalScore": "5.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.3163935",
+      "location/lng": "70.1333009",
+      "placeId": "ChIJ-UG6wspBNzkRv8b3aS7QSmQ",
+      "url": "https://www.google.com/maps/search/?api=1&query=Bismillah%20Mobile%20Shop&query_place_id=ChIJ-UG6wspBNzkRv8b3aS7QSmQ",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Mola bux government School",
+      "categoryName": "Government school",
+      "categories/0": "Government school",
+      "address": "85Q3+38H, Goth Joora, Pakistan",
+      "city": "Goth Joora",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "location/lat": "28.3376928",
+      "location/lng": "70.1533619",
+      "placeId": "ChIJ-zRSd1lDNzkR5Y-KSNNbMAs",
+      "url": "https://www.google.com/maps/search/?api=1&query=Mola%20bux%20government%20School&query_place_id=ChIJ-zRSd1lDNzkR5Y-KSNNbMAs",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Govt high boys school hameed ullah bhatti",
+      "categoryName": "High school",
+      "categories/0": "High school",
+      "address": "84HQ+89F, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "location/lat": "28.3283038",
+      "location/lng": "70.1384293",
+      "placeId": "ChIJ230PajRBNzkR-ASHJ2TZA1w",
+      "url": "https://www.google.com/maps/search/?api=1&query=Govt%20high%20boys%20school%20hameed%20ullah%20bhatti&query_place_id=ChIJ230PajRBNzkR-ASHJ2TZA1w",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "The Savvy School (Sadiqabad Campus)",
+      "categoryName": "Combined primary and secondary school",
+      "categories/0": "Combined primary and secondary school",
+      "address": "Sadiqabad Bypass, Privare Colony, Sadiqabad, Pakistan",
+      "neighborhood": "Privare Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 2411152",
+      "website": "http://www.savvyschool.edu.pk/",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWldf2gFpIvp-HEMLcHRHwJfHW1x_v7R9ddpiX_2LPRUYQw1EPiTafuAZzuRy4Je58iwDYVaNU-cWYE6D3zX6uMwfLbK0EK41l9CV_vLc2fA9Op3yP8QGaLCYTcYaH8LNpLtTgmp=w408-h306-k-no",
+      "imagesCount": "3",
+      "location/lat": "28.3336966",
+      "location/lng": "70.1286864",
+      "placeId": "ChIJkVsWHplBNzkRfrRo5s4ONOM",
+      "url": "https://www.google.com/maps/search/?api=1&query=The%20Savvy%20School%20(Sadiqabad%20Campus)&query_place_id=ChIJkVsWHplBNzkRfrRo5s4ONOM",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "7 AM to 4 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "7 AM to 4 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "7 AM to 4 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "7 AM to 4 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "7 AM to 4 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "7 AM to 4 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    },
+    {
+      "title": "Army Public School Chowk Bahadurpur",
+      "categoryName": "General education school",
+      "categories/0": "General education school",
+      "address": "A2 157 Model City Rd, Model City Housing Scheme, Sadiqabad, Pakistan",
+      "neighborhood": "Model City Housing Scheme",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 321 6706202",
+      "imagesCount": "0",
+      "location/lat": "28.3331277",
+      "location/lng": "70.1357069",
+      "placeId": "ChIJWQ_MBQtBNzkR8fU7BtPwu9g",
+      "url": "https://www.google.com/maps/search/?api=1&query=Army%20Public%20School%20Chowk%20Bahadurpur&query_place_id=ChIJWQ_MBQtBNzkR8fU7BtPwu9g",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+      ]
+    }
+  ]
+}
