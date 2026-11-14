@@ -332,11 +332,10 @@ export async function fetchAllCategories(includeInactive = false): Promise<Categ
   const client = getSupabaseClient();
   if (client) {
     const { data, error } = await client.from('categories').select('*').order('sort_order');
-    if (!error && data) {
-      return (data as CategoryRow[])
-        .filter((category) => includeInactive || category.is_active)
-        .sort((a, b) => a.sort_order - b.sort_order || a.name_en.localeCompare(b.name_en));
-    }
+    if (error) throw error;
+    return ((data ?? []) as CategoryRow[])
+      .filter((category) => includeInactive || category.is_active)
+      .sort((a, b) => a.sort_order - b.sort_order || a.name_en.localeCompare(b.name_en));
   }
   const businesses = await fetchGitHubBusinesses();
   const bySlug = new Map<string, CategoryRow>();
@@ -350,11 +349,10 @@ export async function fetchAllAreas(includeInactive = false): Promise<AreaRow[]>
   const client = getSupabaseClient();
   if (client) {
     const { data, error } = await client.from('areas').select('*').order('name_en');
-    if (!error && data) {
-      return (data as AreaRow[])
-        .filter((area) => includeInactive || area.is_active)
-        .sort((a, b) => a.name_en.localeCompare(b.name_en));
-    }
+    if (error) throw error;
+    return ((data ?? []) as AreaRow[])
+      .filter((area) => includeInactive || area.is_active)
+      .sort((a, b) => a.name_en.localeCompare(b.name_en));
   }
   const businesses = await fetchGitHubBusinesses();
   const bySlug = new Map<string, AreaRow>();
@@ -368,9 +366,8 @@ export async function fetchPlans(): Promise<PlanRow[]> {
   const client = getSupabaseClient();
   if (client) {
     const { data, error } = await client.from('plans').select('*').order('sort_order');
-    if (!error && data) {
-      return (data as PlanRow[]).filter((plan) => plan.is_active).sort((a, b) => a.sort_order - b.sort_order);
-    }
+    if (error) throw error;
+    return ((data ?? []) as PlanRow[]).filter((plan) => plan.is_active).sort((a, b) => a.sort_order - b.sort_order);
   }
   return [...SEED_PLANS].filter((plan) => plan.is_active).sort((a, b) => a.sort_order - b.sort_order);
 }
@@ -677,16 +674,15 @@ export async function fetchAnnouncements(activeOnly = true): Promise<Announcemen
   const client = getSupabaseClient();
   if (client) {
     const { data, error } = await client.from('announcements').select('*').order('created_at', { ascending: false });
-    if (!error && data) {
-      const now = Date.now();
-      return (data as AnnouncementRow[])
-        .filter((item) => !activeOnly || (
-          item.is_active &&
-          new Date(item.start_date).getTime() <= now &&
-          new Date(item.end_date).getTime() >= now
-        ))
-        .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
-    }
+    if (error) throw error;
+    const now = Date.now();
+    return ((data ?? []) as AnnouncementRow[])
+      .filter((item) => !activeOnly || (
+        item.is_active &&
+        new Date(item.start_date).getTime() <= now &&
+        new Date(item.end_date).getTime() >= now
+      ))
+      .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
   }
   const now = Date.now();
   return [...SEED_ANNOUNCEMENTS]
@@ -709,7 +705,8 @@ export async function fetchActiveAds(placement?: AdPlacement): Promise<AdRow[]> 
       .order('created_at', { ascending: false });
     if (placement) query = query.eq('placement', placement);
     const { data, error } = await query;
-    if (!error && data) return data as AdRow[];
+    if (error) throw error;
+    return (data ?? []) as AdRow[];
   }
   return [...SEED_ADS]
     .filter((ad) => ad.status === 'active' && ad.start_date <= today && ad.end_date >= today && (!placement || ad.placement === placement));
@@ -720,7 +717,8 @@ export async function fetchPageBySlug(slug: string): Promise<PageRow | null> {
   if (client) {
     const { data, error } = await client.from('pages').select('*')
       .eq('slug', slug).eq('is_published', true).maybeSingle();
-    if (!error) return (data as PageRow | null) ?? null;
+    if (error) throw error;
+    return (data as PageRow | null) ?? null;
   }
   return SEED_PAGES.find((page) => page.slug === slug && page.is_published) ?? null;
 }
@@ -1515,7 +1513,9 @@ export async function findDuplicateBusinesses(
       p_name: name,
       p_area_id: areaId ?? null,
     });
-    if (!error && Array.isArray(data)) return data as BusinessRow[];
+    if (error) throw error;
+    if (!Array.isArray(data)) throw new Error('Duplicate check returned an invalid response.');
+    return data as BusinessRow[];
   }
   const db = loadDemoDb();
   const lower = name.trim().toLowerCase();
@@ -1534,7 +1534,8 @@ export async function fetchBusinessNotes(businessId: string): Promise<BusinessNo
       .select('*')
       .eq('business_id', businessId)
       .order('created_at', { ascending: false });
-    if (!error && data) return data as BusinessNoteRow[];
+    if (error) throw error;
+    return (data ?? []) as BusinessNoteRow[];
   }
   return loadDemoDb().business_notes.filter((n) => n.business_id === businessId);
 }
@@ -1574,7 +1575,8 @@ export async function fetchAllReviewsAdmin(): Promise<ReviewRow[]> {
       .from('reviews')
       .select('*')
       .order('created_at', { ascending: false });
-    if (!error && data) return data as ReviewRow[];
+    if (error) throw error;
+    return (data ?? []) as ReviewRow[];
   }
   return loadDemoDb().reviews;
 }
@@ -1621,7 +1623,8 @@ export async function fetchAllSubmissionsAdmin(): Promise<SubmissionRow[]> {
       .from('submissions')
       .select('*')
       .order('created_at', { ascending: false });
-    if (!error && data) return data as SubmissionRow[];
+    if (error) throw error;
+    return (data ?? []) as SubmissionRow[];
   }
   return loadDemoDb().submissions;
 }
@@ -1765,7 +1768,8 @@ export async function fetchAllInquiriesAdmin(): Promise<InquiryRow[]> {
       .from('inquiries')
       .select('*')
       .order('created_at', { ascending: false });
-    if (!error && data) return data as InquiryRow[];
+    if (error) throw error;
+    return (data ?? []) as InquiryRow[];
   }
   return loadDemoDb().inquiries;
 }
@@ -1777,7 +1781,8 @@ export async function fetchLeads(): Promise<LeadRow[]> {
       .from('leads')
       .select('*')
       .order('updated_at', { ascending: false });
-    if (!error && data) return data as LeadRow[];
+    if (error) throw error;
+    return (data ?? []) as LeadRow[];
   }
   return loadDemoDb().leads;
 }
@@ -1878,13 +1883,13 @@ export async function fetchProfilesAdmin(): Promise<
       client.from('profiles').select('*').order('created_at', { ascending: false }),
       client.from('staff_members').select('*'),
     ]);
-    if (!profRes.error && profRes.data) {
-      const staffRows = (staffRes.data ?? []) as StaffMemberRow[];
-      return (profRes.data as ProfileRow[]).map((p) => ({
-        ...p,
-        staff: staffRows.find((s) => s.user_id === p.id) ?? null,
-      }));
-    }
+    if (profRes.error) throw profRes.error;
+    if (staffRes.error) throw staffRes.error;
+    const staffRows = (staffRes.data ?? []) as StaffMemberRow[];
+    return ((profRes.data ?? []) as ProfileRow[]).map((p) => ({
+      ...p,
+      staff: staffRows.find((s) => s.user_id === p.id) ?? null,
+    }));
   }
   return db.profiles.map((p) => ({
     ...p,
@@ -2056,7 +2061,8 @@ export async function fetchAllAdsAdmin(): Promise<AdRow[]> {
       .from('ads')
       .select('*')
       .order('created_at', { ascending: false });
-    if (!error && data) return data as AdRow[];
+    if (error) throw error;
+    return (data ?? []) as AdRow[];
   }
   return loadDemoDb().ads;
 }
@@ -2314,7 +2320,8 @@ export async function fetchImportBatches(): Promise<ImportBatchRow[]> {
       .from('import_batches')
       .select('*')
       .order('created_at', { ascending: false });
-    if (!error && data) return data as ImportBatchRow[];
+    if (error) throw error;
+    return (data ?? []) as ImportBatchRow[];
   }
   return loadDemoDb().import_batches;
 }
@@ -2357,7 +2364,9 @@ export async function fetchAdminAnalytics(days = 30): Promise<AdminAnalyticsData
   const client = getSupabaseClient();
   if (client) {
     const { data, error } = await client.rpc('admin_analytics', { p_days: days });
-    if (!error && data) return data as AdminAnalyticsData;
+    if (error) throw error;
+    if (!data) throw new Error('Admin analytics could not be loaded.');
+    return data as AdminAnalyticsData;
   }
 
   const db = loadDemoDb();
@@ -2434,7 +2443,8 @@ export async function fetchAllSiteSettingsAdmin(): Promise<SiteSettingRow[]> {
   const client = getSupabaseClient();
   if (client) {
     const { data, error } = await client.from('site_settings').select('*').order('key');
-    if (!error && data) return data as SiteSettingRow[];
+    if (error) throw error;
+    return (data ?? []) as SiteSettingRow[];
   }
   return loadDemoDb().site_settings;
 }
@@ -2460,7 +2470,8 @@ export async function fetchAllPagesAdmin(): Promise<PageRow[]> {
   const client = getSupabaseClient();
   if (client) {
     const { data, error } = await client.from('pages').select('*').order('slug');
-    if (!error && data) return data as PageRow[];
+    if (error) throw error;
+    return (data ?? []) as PageRow[];
   }
   return loadDemoDb().pages;
 }
@@ -2494,7 +2505,8 @@ export async function fetchAuditLogs(limit = 100): Promise<AuditLogRow[]> {
       .select('*')
       .order('created_at', { ascending: false })
       .limit(limit);
-    if (!error && data) return data as AuditLogRow[];
+    if (error) throw error;
+    return (data ?? []) as AuditLogRow[];
   }
   return loadDemoDb().audit_logs.slice(0, limit);
 }
