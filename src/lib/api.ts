@@ -430,7 +430,8 @@ function slugifyDirectoryValue(value: string): string {
 
 async function fetchGitHubBusinesses(): Promise<BusinessPublicView[]> {
   if (githubBusinessCache) return githubBusinessCache;
-  const base = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+  const basePath = import.meta.env.BASE_URL || '/';
+  const base = basePath.endsWith('/') ? basePath : `${basePath}/`;
   const indexResponse = await fetch(`${base}data/businesses/index.json`);
   if (!indexResponse.ok) throw new Error('Unable to load the GitHub business index.');
   const index = (await indexResponse.json()) as GitHubBusinessIndex;
