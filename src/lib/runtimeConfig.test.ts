@@ -11,6 +11,12 @@ describe('resolvePublicRuntimeConfig', () => {
     assert.deepEqual(config.issues, []);
   });
 
+  it('reports missing Supabase settings in a production build', () => {
+    const config = resolvePublicRuntimeConfig({ PROD: true });
+    assert.equal(config.isConfigured, false);
+    assert.equal(config.issues.length, 2);
+  });
+
   it('accepts a valid HTTPS Supabase URL and publishable key', () => {
     const config = resolvePublicRuntimeConfig({
       VITE_SUPABASE_URL: ' https://example.supabase.co/ ',
