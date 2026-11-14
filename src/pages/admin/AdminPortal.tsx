@@ -114,7 +114,7 @@ export function AdminPortal() {
     setLoading(true);
     try {
       const can = (permission: string) => isSuperAdmin || hasPermission(permission);
-      const canViewDashboard = can('business.create') || can('business.publish') ||
+      const canViewDashboard = can('business.create') ||
         can('moderation.review') || can('support.read');
       const emptyCounts: AdminDashboardCounts = {
         pending_businesses: 0,
