@@ -1034,19 +1034,20 @@ export async function updateOwnerBusiness(
   const client = getSupabaseClient();
   if (client) {
     const updatePayload: Record<string, unknown> = { ...safePatch, updated_at: nowIso() };
-    const [{ data: curr }, settings] = await Promise.all([
+    const [{ data: curr, error: currentError }, settings] = await Promise.all([
       client.from('businesses').select('status').eq('id', businessId).single(),
       fetchPublicSiteSettings(),
     ]);
-    if (curr) {
-      if (
-        requestedStatus === 'pending_approval' &&
-        (curr.status === 'draft' || curr.status === 'rejected')
-      ) {
-        updatePayload.status = 'pending_approval';
-      } else if (curr.status === 'published' && settings.owner_edits_require_approval) {
-        updatePayload.status = 'pending_approval';
-      }
+    if (currentError || !curr) {
+      throw new Error('Unable to verify listing status before saving changes.');
+    }
+    if (
+      requestedStatus === 'pending_approval' &&
+      (curr.status === 'draft' || curr.status === 'rejected')
+    ) {
+      updatePayload.status = 'pending_approval';
+    } else if (curr.status === 'published' && settings.owner_edits_require_approval) {
+      updatePayload.status = 'pending_approval';
     }
     const { data, error } = await client
       .from('businesses')
