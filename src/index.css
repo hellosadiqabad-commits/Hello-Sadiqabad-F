@@ -249,3 +249,32 @@
     scroll-behavior: auto !important;
   }
 }
+
+
+/* Lightweight interaction and entrance motion — compositor-friendly properties only. */
+@keyframes hs-page-enter { from { opacity: 0; transform: translate3d(0, 8px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+@keyframes hs-modal-backdrop-enter { from { opacity: 0; } to { opacity: 1; } }
+@keyframes hs-modal-panel-enter { from { opacity: 0; transform: translate3d(0, 12px, 0) scale(.985); } to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); } }
+@keyframes hs-toast-enter { from { opacity: 0; transform: translate3d(0, 8px, 0); } to { opacity: 1; transform: translate3d(0, 0, 0); } }
+@keyframes hs-favorite-pop { 0% { transform: scale(.82); } 65% { transform: scale(1.14); } 100% { transform: scale(1); } }
+
+.hs-page-enter { animation: hs-page-enter 220ms cubic-bezier(.2,.7,.2,1) both; }
+.hs-modal-backdrop { animation: hs-modal-backdrop-enter 160ms ease-out both; }
+.hs-modal-panel { animation: hs-modal-panel-enter 190ms cubic-bezier(.2,.7,.2,1) both; }
+.hs-toast-enter { animation: hs-toast-enter 180ms ease-out both; }
+.hs-card-motion { transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
+@media (hover: hover) and (pointer: fine) {
+  .hs-card-motion:hover { transform: translate3d(0, -3px, 0); box-shadow: 0 10px 24px rgb(15 23 42 / 0.08); }
+}
+.hs-pressable { transition: transform 120ms ease, filter 160ms ease, background-color 160ms ease, color 160ms ease; touch-action: manipulation; }
+.hs-pressable:active { transform: scale(.975); }
+.hs-nav-link { transition: color 160ms ease, background-color 160ms ease; }
+.hs-nav-link:active { transform: scale(.96); }
+.hs-favorite-icon { transition: transform 160ms ease, color 160ms ease; }
+.hs-favorite-icon.is-saved { animation: hs-favorite-pop 220ms ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hs-page-enter, .hs-modal-backdrop, .hs-modal-panel, .hs-toast-enter, .hs-favorite-icon.is-saved { animation: none !important; }
+  .hs-card-motion, .hs-pressable, .hs-nav-link, .hs-favorite-icon { transition: none !important; }
+  .hs-card-motion:hover, .hs-pressable:active, .hs-nav-link:active { transform: none !important; }
+}
