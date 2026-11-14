@@ -33,6 +33,8 @@ A green build alone is not proof that every user-facing feature works.
 
 ### Phase 2 — Public directory experience
 - Home, search, filters, categories, areas, business details, offers, announcements, map, emergency contacts, favorites, add-business, legal/static pages.
+- Public data reads are now wired to Supabase for published businesses, categories, areas, plans, active offers, approved reviews, emergency contacts, announcements, ads, and published pages; crawl-only Google Places records remain supplemental static data.
+- Category, Area, Map, Favorites, Business Profile, Add Business, and Offers now have improved fetch failure, cancellation, and retry behavior. Full journey/device testing remains open.
 - Verify real data loading, pagination/large-directory behavior, no-result states, malformed data, links, phone/WhatsApp/directions actions, and mobile navigation.
 - Verify SEO metadata, canonical URLs, sitemap/robots, structured data where appropriate, and image fallbacks.
 - Acceptance: every public route and action has a tested happy path and failure/empty state.
