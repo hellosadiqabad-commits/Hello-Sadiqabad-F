@@ -3,6 +3,7 @@
 ## Implemented on `phase-1/codebase-foundation`
 
 - Normalized npm package identity to `hello-sadiqabad@1.0.0`; package-lock root metadata is synchronized.
+- Removed unused direct frontend dependencies (`@google/genai`, `express`, `dotenv`, and `@types/express`) after scanning application source imports. AI dependencies will be added when the approved AI features are implemented.
 - Added a pure public-runtime configuration resolver. It validates Supabase URLs, enforces HTTPS for production, permits localhost HTTP only in development, validates the default city slug, normalizes the site URL, and reports missing production settings.
 - Replaced ad-hoc Supabase environment parsing with the shared resolver. Only the public publishable key is accepted by the browser client; service-role credentials are explicitly prohibited from browser environment variables.
 - Added unit tests for missing configuration, valid production configuration, insecure production URLs, local development URLs, missing publishable keys, malformed site/city values, and oversized spreadsheet files.
