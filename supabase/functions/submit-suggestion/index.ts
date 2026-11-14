@@ -77,7 +77,7 @@ Deno.serve(async (req: Request) => {
     if (body.contact_phone !== undefined && body.contact_phone !== null && !validString(body.contact_phone, 5, 30)) {
       return reply(req, { ok: false, error: "Invalid contact phone" }, 400);
     }
-    const contactPhoneDigits = typeof body.contact_phone === "string" ? body.contact_phone.replace(/\\D/g, "") : "";
+    const contactPhoneDigits = typeof body.contact_phone === "string" ? body.contact_phone.replace(/\D/g, "") : "";
     if (typeof body.contact_phone === "string" && contactPhoneDigits.length < 5) {
       return reply(req, { ok: false, error: "Invalid contact phone" }, 400);
     }
@@ -87,7 +87,7 @@ Deno.serve(async (req: Request) => {
     if (!sessionAllowed) return reply(req, { ok: false, error: "Please try again later" }, 429);
 
     if (validString(body.contact_phone, 5, 30)) {
-      const phoneIdentity = await hashRateKey(body.contact_phone.replace(/\D/g, ""));
+      const phoneIdentity = await hashRateKey(contactPhoneDigits);
       if (!await limited(`suggestion:phone:${phoneIdentity}`, 3, 86_400)) {
         return reply(req, { ok: false, error: "Please try again later" }, 429);
       }
