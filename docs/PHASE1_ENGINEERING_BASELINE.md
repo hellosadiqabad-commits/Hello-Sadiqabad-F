@@ -5,7 +5,8 @@
 - Normalized npm package identity to `hello-sadiqabad@1.0.0`; package-lock root metadata is synchronized.
 - Added a pure public-runtime configuration resolver. It validates Supabase URLs, enforces HTTPS for production, permits localhost HTTP only in development, validates the default city slug, normalizes the site URL, and reports missing production settings.
 - Replaced ad-hoc Supabase environment parsing with the shared resolver. Only the public publishable key is accepted by the browser client; service-role credentials are explicitly prohibited from browser environment variables.
-- Added unit tests for missing configuration, valid production configuration, insecure production URLs, local development URLs, missing publishable keys, and malformed site/city values.
+- Added unit tests for missing configuration, valid production configuration, insecure production URLs, local development URLs, missing publishable keys, malformed site/city values, and oversized spreadsheet files.
+- Added a 20 MB upload limit for both CSV and Excel import files before reading them into browser memory.
 - Hardened Supabase auth hydration: missing profile data, permission RPC denial, or profile/permission network failures now fail closed instead of retaining a portal role. Session bootstrap always clears its loading state after failure.
 - Improved the global React error boundary: raw exception messages are no longer shown to visitors; the fallback has accessible alert semantics and both retry and full-reload actions.
 - CI now has read-only repository token permissions, concurrency cancellation, a 15-minute job timeout, an explicit TypeScript check, automated tests, and a production build.
