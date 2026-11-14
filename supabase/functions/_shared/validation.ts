@@ -24,18 +24,41 @@ export async function readJsonObject(
   maxBytes = 16_384,
 ): Promise<Record<string, unknown> | null> {
   const declaredLength = Number(req.headers.get("content-length") ?? 0);
-  if (declaredLength > maxBytes) return null;
+  if (declaredLength > maxBytes) {
+    await req.body?.cancel();
+    return null;
+  }
 
-  let raw: string;
+  const reader = req.body?.getReader();
+  if (!reader) return null;
+  const chunks: Uint8Array[] = [];
+  let totalBytes = 0;
+
   try {
-    raw = await req.text();
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      if (!value) continue;
+      totalBytes += value.byteLength;
+      if (totalBytes > maxBytes) {
+        await reader.cancel();
+        return null;
+      }
+      chunks.push(value);
+    }
   } catch {
     return null;
   }
-  if (new TextEncoder().encode(raw).byteLength > maxBytes) return null;
+
+  const bytes = new Uint8Array(totalBytes);
+  let offset = 0;
+  for (const chunk of chunks) {
+    bytes.set(chunk, offset);
+    offset += chunk.byteLength;
+  }
 
   try {
-    const parsed: unknown = JSON.parse(raw);
+    const parsed: unknown = JSON.parse(new TextDecoder().decode(bytes));
     if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return null;
     return parsed as Record<string, unknown>;
   } catch {
