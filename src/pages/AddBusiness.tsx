@@ -27,6 +27,8 @@ export function AddBusiness() {
   const [areas, setAreas] = useState<AreaRow[]>([]);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [metadataError, setMetadataError] = useState(false);
+  const [metadataRetryKey, setMetadataRetryKey] = useState(0);
 
   const [nameEn, setNameEn] = useState('');
   const [nameUr, setNameUr] = useState('');
@@ -43,18 +45,25 @@ export function AddBusiness() {
   const [hp, setHp] = useState('');
 
   useEffect(() => {
+    let active = true;
     updatePageSeo({
       title: 'Add Your Business Free — Hello Sadiqabad',
       description: 'Submit your shop, clinic, or local service to the Sadiqabad local business directory for free.',
       canonicalPath: '/add-business',
     });
+    setMetadataError(false);
     Promise.all([fetchAllCategories(), fetchAllAreas()]).then(([cats, ar]) => {
+      if (!active) return;
       setCategories(cats);
       setAreas(ar);
       if (cats[0]) setCategoryId(cats[0].id);
       if (ar[0]) setAreaId(ar[0].id);
+      if (cats.length === 0 || ar.length === 0) setMetadataError(true);
+    }).catch(() => {
+      if (active) setMetadataError(true);
     });
-  }, []);
+    return () => { active = false; };
+  }, [metadataRetryKey]);
 
   useEffect(() => {
     if (sameAsPhone) {
@@ -152,6 +161,11 @@ export function AddBusiness() {
       return;
     }
 
+    if (!categoryId || !areaId) {
+      showToast(lang === 'ur' ? 'شعبہ اور علاقہ لوڈ نہیں ہو سکے۔ دوبارہ کوشش کریں۔' : 'Categories and areas are unavailable. Please retry loading the form.', 'error');
+      return;
+    }
+
     setSubmitting(true);
     try {
       const res = await submitPublicSuggestion({
@@ -186,6 +200,11 @@ export function AddBusiness() {
           : 'Business submitted for moderation review!',
         'success'
       );
+    } catch {
+      showToast(
+        lang === 'ur' ? 'درخواست جمع نہیں ہو سکی۔ انٹرنیٹ چیک کر کے دوبارہ کوشش کریں۔' : 'The request could not be sent. Check your connection and try again.',
+        'error'
+      );
     } finally {
       setSubmitting(false);
     }
@@ -217,6 +236,15 @@ export function AddBusiness() {
             </p>
           </div>
         </div>
+
+        {metadataError && (
+          <div role="alert" className="p-3 rounded-xl border border-error/30 bg-error/5 text-sm text-on-surface flex flex-wrap items-center justify-between gap-3">
+            <span>{lang === 'ur' ? 'شعبہ جات یا علاقوں کی فہرست لوڈ نہیں ہو سکی۔' : 'Categories or areas could not be loaded.'}</span>
+            <Button size="sm" variant="outline" onClick={() => setMetadataRetryKey((value) => value + 1)}>
+              {lang === 'ur' ? 'دوبارہ کوشش' : 'Retry'}
+            </Button>
+          </div>
+        )}
 
         {submitted ? (
           <Card className="p-8 text-center space-y-3">
