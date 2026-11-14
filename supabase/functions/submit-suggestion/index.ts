@@ -77,6 +77,10 @@ Deno.serve(async (req: Request) => {
     if (body.contact_phone !== undefined && body.contact_phone !== null && !validString(body.contact_phone, 5, 30)) {
       return reply(req, { ok: false, error: "Invalid contact phone" }, 400);
     }
+    const contactPhoneDigits = typeof body.contact_phone === "string" ? body.contact_phone.replace(/\\D/g, "") : "";
+    if (typeof body.contact_phone === "string" && contactPhoneDigits.length < 5) {
+      return reply(req, { ok: false, error: "Invalid contact phone" }, 400);
+    }
 
     const sessionId = validString(body.session_id, 8, 128) ? body.session_id : "anonymous";
     const sessionAllowed = await limited(`suggestion:session:${sessionId}`, 5, 3600);
