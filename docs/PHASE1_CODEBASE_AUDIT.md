@@ -166,3 +166,42 @@ These are not to be hardcoded by engineering assumptions.
 - No live Edge Function deployment or Auth dashboard configuration was changed.
 - No destructive database operation or business-row ownership assignment was performed.
 - Existing 123 published businesses remain unlinked to owners pending evidence and owner policy.
+
+
+## 10. Six-document specification conformance and cross-document conflicts
+
+The uploaded `Hello SDK.zip` contains the six source documents (PRD, TRD, App Flow, UI/UX Brief, Backend Schema and Implementation Plan). `Website_Builder_Master_Prompt_v5` defines the original workflow. The repository has been compared against those documents as well as the newer handover supplied in this conversation.
+
+### Confirmed implementation matches
+- React + TypeScript + Vite, React Router lazy routes, Supabase browser client via public environment variables, Leaflet, QR, bilingual i18n provider, theme provider, SEO/LocalBusiness JSON-LD, search load-more, favorites/recently-viewed, emergency contact local cache, safe Markdown renderer, CSV/XLSX import, Admin/Owner modules and seven planned Edge Function names are present.
+- English/Urdu language state and the `hs_urdu_hints` toggle exist; Urdu hints default to enabled.
+- The original v2 plan catalogue is informational (`free/basic/premium`) and the current database follows that model.
+- No Supabase Storage buckets exist, matching the original PRD/TRD/Backend Schema v2 scope.
+
+### Confirmed specification gaps
+1. **PWA update prompt:** `main.tsx` dispatches the `hs-sw-update` event, but no `PwaUpdateToast` component or listener is present in the repository tree. The TRD and Implementation Plan require an update prompt.
+2. **Cloudflare SPA redirect file:** `public/_redirects` is absent, although TRD/Implementation Plan explicitly require the SPA fallback file. Cloudflare Pages may provide fallback behavior without it when no root 404 exists, but the repository does not meet the documented file-level acceptance check.
+3. **Offline app shell:** `public/sw.js` explicitly caches only `offline.html`, not the app shell. Emergency contacts are stored in localStorage, but the React Emergency route cannot be assumed to load offline if the app JS was never cached. This is below the TRD's app-shell/offline requirement and must be tested on an actual browser.
+4. **Bilingual portal UI:** `src/pages/owner/OwnerPortalPages.tsx` and the Admin component modules contain substantial English-only labels and do not consume the shared i18n context. The i18n dictionary and some public screens are bilingual, but this does not prove every Admin/Owner UI string is bilingual as required by PRD/Implementation Plan.
+5. **Owner preview route discrepancy:** App Flow and Implementation Plan allow staff/Super Admin preview of `/owner`; current `App.tsx` guards Owner routes to role `owner` only. The newer handover says Owner Portal access follows approval and does not clearly authorize staff preview. Treat as a documented policy/spec conflict, not an automatic code change.
+6. **Permission matrix drift:** PRD §4.5 gives `moderator` `business.publish` and `ads.review`; `listing_manager` receives `tiers.manage`, `ads.review`, `analytics.view`; `sales_onboarding` receives only `leads.manage` and `owners.create`. Current frontend `STAFF_TYPE_PERMISSIONS` and live SQL derivation differ from that PRD matrix (for example, frontend grants `tiers.manage`/`ads.review` to sales_onboarding and does not grant publish/ads to moderator). Do not silently choose a matrix; align only after the owner confirms which source version governs.
+7. **Review reply rule:** PRD and App Flow describe one owner reply per review; recent repository changes support editing/updating an existing reply. Confirm whether the newer behavior intentionally supersedes the original one-reply rule.
+8. **Admin create-user input validation:** The shared `isValidEmail` helper has valid-email unit tests, but the Edge Function had a malformed duplicate regex at its call site. PR #9 fixes the call site and bounds the JSON request body; CI is still pending.
+
+### Requirements conflict between the newer handover and the six original project documents
+
+The newer handover in this conversation is more recent, but it intentionally changes several original v2 scope decisions. These must remain visible until the relevant implementation phase; they must not be silently reconciled:
+
+| Topic | Six original documents | Newer handover in this conversation |
+|---|---|---|
+| Payments/subscriptions | PRD §5 and §8, TRD §1/§12 and Implementation Plan §1/§8 explicitly say informational tiers only; no payment, checkout or subscription billing | Requests monthly/quarterly/yearly plan cycles and a subscription lifecycle design; payment method remains undecided |
+| Media storage | PRD/TRD/Backend Schema explicitly say no Supabase Storage buckets; use HTTPS media URLs | Target architecture includes Cloudflare R2 and a future media workflow |
+| AI | PRD/TRD/Implementation Plan say no AI features and no AI Gateway in v2 | Target architecture includes Workers AI and AI Gateway for future expansion |
+| Owner onboarding | PRD/Backend Schema say owner accounts are Admin-created or linked through an approved claim; no public signup | Newer handover describes owner application/registration followed by Admin verification/approval |
+| Release workflow | Master Prompt v5 says future code changes use PRs and owner merges | This remains consistent with the latest handover's phase-wise Git workflow; do not merge without owner approval |
+
+The newer handover is the active execution brief for this conversation. For now, code remains portable and payment collection, AI, R2 provisioning, public signup/Auth dashboard changes and fresh infrastructure are deferred. At the subscription/media/AI/onboarding phases, update the relevant six documents together after owner policy is confirmed.
+
+### Current scope conclusion
+
+Phase 1 inventory and first-pass spec comparison are substantially documented, but Phase 1 is **not complete** until the remaining page/component/API/Edge Function audits, actual browser journeys, responsive/accessibility checks and repeatable DB/RLS tests are complete. The findings above feed the implementation roadmap; they are not a declaration that the features have been fixed.
