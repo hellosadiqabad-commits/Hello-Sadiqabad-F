@@ -48,8 +48,6 @@ async function body(req: Request) {
   }
 }
 
-// Public submissions remain available without login. When an active owner is signed in,
-// preserve that verified account ID so moderator approval can safely link the claimed listing.
 async function authenticatedOwnerId(req: Request): Promise<string | null> {
   const token = (req.headers.get("authorization") ?? "").replace(/^Bearer\\s+/i, "").trim();
   if (!token) return null;
