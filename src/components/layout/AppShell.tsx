@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { RefreshCw, WifiOff } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useOnlineStatus } from '../../lib/hooks';
@@ -42,6 +43,7 @@ export function AppShell({
   children: React.ReactNode;
   hideFooter?: boolean;
 }) {
+  const location = useLocation();
   const isOnline = useOnlineStatus();
   const { t } = useI18n();
   const [maintenanceMode, setMaintenanceMode] = useState(false);
@@ -112,7 +114,9 @@ export function AppShell({
             : 'pb-8'
         }`}
       >
-        {children}
+        <div key={location.pathname} className="hs-page-enter">
+          {children}
+        </div>
       </main>
 
       {showFooter && <AppFooter withBottomNavOffset={showBottomNav} />}
