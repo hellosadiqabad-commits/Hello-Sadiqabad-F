@@ -34,26 +34,37 @@
 - Admin Portal data loading now respects each staff permission before querying protected tables; unauthorized datasets are not fetched. Admin/owner read errors no longer silently fall back to demo records.
 - All seven Edge Function entry points are now type-checked by Deno in CI.
 
+### Backend authorization hardening
+- Applied four additive, non-destructive migrations to the connected testing Supabase project: `20261114202955`, `20261114203132`, `20261114203234`, and `20261114203404`.
+- Staff `business.edit_own` updates are now row-scoped to listings they created or were assigned; the permission no longer bypasses protected-column checks.
+- Only staff with `business.publish` (default: listing_manager) can change protected moderation, ownership, plan, verification, feature, counter, and publication fields.
+- Staff-created listings are database-enforced as their creator's unassigned, unverified, free drafts/pending submissions unless the actor has `business.publish`.
+- The private `owner_edits_require_approval` setting is now enforced by a database trigger; the browser no longer tries to read the private setting. Current setting remains `false`.
+- Owner updates are restricted to the exact fields exposed by the Owner Listing Editor; immutable IDs, city, slug, and creation metadata are blocked.
+- Live rollback-only SQL regression checks passed for all six staff types, staff row isolation, protected fields, owner field allow-list, and owner approval switch ON/OFF behavior.
+- `adminUpsertBusiness` now records `created_by` for new staff-created listings so row scoping works reliably.
+- Existing business rows were not modified; all test fixtures and temporary setting changes were rolled back.
+
 ### CI and deployment verification
 - GitHub Actions uses read-only repository token permissions, concurrency cancellation, 15-minute job timeouts, explicit TypeScript checks, tests, production builds, and a blocking high/critical npm audit gate.
 - A separate Deno CI job type-checks every Supabase Edge Function.
 - Dependabot checks npm packages and GitHub Actions weekly.
-- Latest verified code commit for this batch: `a3962b76f8e97a938e8bd30bcc2fa3019b74e8f3`.
-- Latest verified CI: https://github.com/samt87804-gif/Hello-Sadiqabad/actions/runs/43628591132 — npm install, npm audit, TypeScript, 60/60 tests, production build, and Deno Edge Function type-check all passed. The same commit also passed the connected Cloudflare Pages build.
+- Latest verified application-code commit for this batch: `efe2e9eb708b3f8e19fad3ab4119ba5bd0e54ef2`.
+- Latest verified CI for that code commit: https://github.com/samt87804-gif/Hello-Sadiqabad/actions/runs/43638256514 — npm install, high/critical dependency audit gate, TypeScript, automated tests, production build, and Deno Edge Function type-check all passed.
+- Latest Cloudflare Pages production-environment deployment for the testing project: https://bb881cd7.hello-sadiqabad-2bs.pages.dev — commit `efe2e9e`, build and deploy stages successful.
 - Cloudflare Pages check for the same commit completed successfully.
 
 ## Still open in Phase 1
-- High-priority owner-update RLS gap: current database policy checks row ownership but does not restrict owner-editable columns. The private approval setting is not available to the public client. See `docs/PHASE1_SECURITY_REVIEW.md`; a migration and direct-API tests require approval before applying to Supabase.
 - Full component-by-component audit of every admin and owner route, plus remaining public route actions and data states.
-- Backend/RLS ownership matrix tests and direct unauthorized API regression tests.
+- Repeatable CI automation for database/RLS regression tests; current rollback-only checks were executed directly against the connected testing project.
 - End-to-end browser journeys for the full public directory and portal workflows.
 - Dead/duplicate code audit with proof of non-use before deletion.
 - Accessibility, mobile interaction, broken-link, SEO and resilience passes.
 - Reconcile migration history and clean-project setup instructions without applying migrations to the connected test database.
 
 ## Deliberately not changed
-- No Supabase schema, live records, Auth dashboard settings, Storage buckets, or Worker configuration was changed.
-- No database baseline was replayed and no migration was applied to the connected Supabase project.
-- Existing listings were not bulk-assigned to owners.
-- Main-branch commits trigger the connected Cloudflare Pages build/deployment pipeline. The latest Pages check passed; no custom domain, DNS, or Worker was changed.
-- The existing migration ledger mismatch remains a later backend-integrity task and must be reconciled before any schema deployment.
+- Four additive migrations were applied to the connected testing Supabase project; no baseline replay, table rebuild, destructive data operation, or permanent business-row fixture change was performed.
+- Supabase Auth dashboard settings, Storage buckets, Edge Function deployments, and Cloudflare Worker/R2 infrastructure were not changed.
+- Existing listings were not bulk-assigned to owners. The 123 existing businesses still have 0 owner links.
+- Main-branch commits trigger Cloudflare Pages automatically. The latest application-code deployment passed; no custom domain, DNS, or Worker was changed.
+- The repository still has a consolidated baseline plus a subset of historical migrations, while the live migration ledger contains 25 entries. Reconcile this carefully before clean-project setup or any future schema push.
