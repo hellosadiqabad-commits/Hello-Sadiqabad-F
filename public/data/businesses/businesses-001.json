@@ -1,0 +1,2153 @@
+{
+  "schemaVersion": 1,
+  "chunk": 1,
+  "businessCount": 50,
+  "businesses": [
+    {
+      "title": "Five STAR HOTEL PRODUTION UNIT TILLU ROAD",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "74F9+96J, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 308 8702383",
+      "imagesCount": "0",
+      "totalScore": "5.0",
+      "reviewsCount": "2.0",
+      "location/lat": "28.2734612",
+      "location/lng": "70.1180081",
+      "placeId": "ChIJC2chtS5rNzkR1g-FiBC3adU",
+      "url": "https://www.google.com/maps/search/?api=1&query=Five%20STAR%20HOTEL%20PRODUTION%20UNIT%20TILLU%20ROAD&query_place_id=ChIJC2chtS5rNzkR1g-FiBC3adU",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Muhammad Afzal",
+      "categoryName": "Public bath",
+      "categories/0": "Public bath",
+      "categories/1": "Pakistani restaurant",
+      "address": "Khan, 749P+PXF Rahim, Yar, Tibba Zahir Pir, Sadiqabad, Pakistan",
+      "neighborhood": "Tibba Zahir Pir",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOAERbK_Lk1wYpph4fQs-NEQMnePoncR8NYkbc3dysT8Pz_PbKUuYRb35F5K4k32iyVKyX2J5M2aAwoY-Cmm6kSPmq_0qf6YaqLZduM6In8V9PR7YwF_4fRcsQDO8fRKk-Bc7R5=w408-h306-k-no",
+      "imagesCount": "210",
+      "totalScore": "5.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.2694172",
+      "location/lng": "70.1357041",
+      "placeId": "ChIJb6LVxZFrNzkRX5JUxSNgLTw",
+      "url": "https://www.google.com/maps/search/?api=1&query=Muhammad%20Afzal&query_place_id=ChIJb6LVxZFrNzkRX5JUxSNgLTw",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Chudary House Ashiq Hussain",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "74CQ+2FH, Unnamed Road, Tibba Zahir Pir, Sadiqabad, Pakistan",
+      "neighborhood": "Tibba Zahir Pir",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 305 3005005",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPaxvHyosTJZFqLTf4W6k_P0jCekZwP0a1xrjsDdP_rAdNdeomUYqb-bYG1xrYCr6Fim6F8RIReXtD4iCXi_12nYWTZYuyZlMrq5ig6EM7G5RZGXEZm4s9IsE-FSqlpQukKjLMQO2JCjZcn=w408-h725-k-no",
+      "imagesCount": "11",
+      "totalScore": "5.0",
+      "reviewsCount": "3.0",
+      "location/lat": "28.2700515",
+      "location/lng": "70.1387465",
+      "placeId": "ChIJIxeaVKhrNzkRiAf9roXj3Kk",
+      "url": "https://www.google.com/maps/search/?api=1&query=Chudary%20House%20Ashiq%20Hussain&query_place_id=ChIJIxeaVKhrNzkRiAf9roXj3Kk",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "BROTHERS CAFE",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "74VM+23G Basti Mian Sahab, Manthar Rd, near National Bank, Allama Iqbal Town (Basti Mian Sahib), Sadiqabad, Pakistan",
+      "neighborhood": "Allama Iqbal Town (Basti Mian Sahib)",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 2659092",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNvuZzCDFe0M4At7F6_dgqyLEY2xD1KiuSugVuqY0vSOkv0TbCHjPOXaGTj0eCKGawFxrvvl8XnUOyimrG10SB8Cu4FUY7msMdyCKzKB5JlnxsSYgjXbmUjXWq30j-WQY9poYE=w408-h306-k-no",
+      "imagesCount": "9",
+      "totalScore": "4.6",
+      "reviewsCount": "23.0",
+      "location/lat": "28.2925726",
+      "location/lng": "70.1327016",
+      "placeId": "ChIJb3r69cVrNzkRSWB4-HiDyu4",
+      "url": "https://www.google.com/maps/search/?api=1&query=BROTHERS%20CAFE&query_place_id=ChIJb3r69cVrNzkRSWB4-HiDyu4",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "11 AM to 11:30 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "11 AM to 11:30 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "11 AM to 11:30 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "11 AM to 11:30 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "11 AM to 11:30 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "11 AM to 11:30 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "11 AM to 11:30 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Shalimar Tent",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "74JW+22H, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "totalScore": "4.5",
+      "reviewsCount": "17.0",
+      "location/lat": "28.2800555",
+      "location/lng": "70.1451157",
+      "placeId": "ChIJfU0VLsVrNzkRWmRNZ3V4AZQ",
+      "url": "https://www.google.com/maps/search/?api=1&query=Shalimar%20Tent&query_place_id=ChIJfU0VLsVrNzkRWmRNZ3V4AZQ",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Food bar",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "74XQ+HXH, near cheif residentia, Rasheedabad, Sadiqabad, Pakistan",
+      "neighborhood": "Rasheedabad",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 304 4601670",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMnm6SMSE0sHxCHgXbcLk9x5wPFI_W5qeGiFWlKoaQrNcTYKNBCgyl5dpZDOycmQ2aVxeoUyBWDNX7UjsrucOy1c87tTBMUET_ILmFnhC5vltou3jevlAKhWazRnmzO_aBUr1yF=w521-h240-k-no",
+      "imagesCount": "28",
+      "totalScore": "4.6",
+      "reviewsCount": "10.0",
+      "location/lat": "28.2989384",
+      "location/lng": "70.139979",
+      "placeId": "ChIJFTSgYzJBNzkRSVkVJPsE0iU",
+      "url": "https://www.google.com/maps/search/?api=1&query=Food%20bar&query_place_id=ChIJFTSgYzJBNzkRSVkVJPsE0iU",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "12 PM to 12 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "4 PM to 12 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "3 PM to 12 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "12 PM to 12 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "12 PM to 12 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "12 PM to 12 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "2 PM to 12 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Ghulam Nabi Resturant",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "842M+M5C, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 341 2218945",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOcuo7yD-693oq5g_RpqhDdcma_yYzqH7Wejxz-qDpA7gYmnjmQO9iOzdSmK7NBMlRLeqrbHJ3rNkoInNARvKb3p58-JOg5mkGN8RMJ_dzHMlb2EFLNCd0jjoZHrvVmp1Eqk_9v8g=w408-h306-k-no",
+      "imagesCount": "311",
+      "totalScore": "4.1",
+      "reviewsCount": "1752.0",
+      "location/lat": "28.3016956",
+      "location/lng": "70.1328927",
+      "placeId": "ChIJ_f1aRONBNzkRqunLvvTaP5w",
+      "url": "https://www.google.com/maps/search/?api=1&query=Ghulam%20Nabi%20Resturant&query_place_id=ChIJ_f1aRONBNzkRqunLvvTaP5w",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "6 AM to 12 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "6 AM to 12 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "6 AM to 12 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "6 AM to 12 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "6 AM to 12 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "6 AM to 12 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "6 AM to 12 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Al Tauheed Restaurant & Bar B Q",
+      "categoryName": "Family restaurant",
+      "categories/0": "Family restaurant",
+      "address": "8448+HVF, Arain Colony, Sadiqabad, Pakistan",
+      "neighborhood": "Arain Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 302 9533334",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNUJYCb22noUS0_g7hzRYywPbDdlfTQaSCM282iTWyh3l5pVaEOUd1hYeJZCiJC4re2kTBoJ08VqeSk7hBsE-STFfmhE-4HjcddKVUvZjiOYUJpAtIujUsPn4DOfvI9C5lDhbVr=w408-h900-k-no",
+      "imagesCount": "4",
+      "totalScore": "4.3",
+      "reviewsCount": "15.0",
+      "location/lat": "28.3064399",
+      "location/lng": "70.1171685",
+      "placeId": "ChIJIeSCXMpBNzkRjVU6eO6fGEU",
+      "url": "https://www.google.com/maps/search/?api=1&query=Al%20Tauheed%20Restaurant%20%26%20Bar%20B%20Q&query_place_id=ChIJIeSCXMpBNzkRjVU6eO6fGEU",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "10:04 AM to 1:06 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "10:04 AM to 1:06 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "10:04 AM to 1:06 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "10:04 AM to 1:06 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "10:04 AM to 1:06 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "10:04 AM to 1:06 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "10:04 AM to 1:06 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "DERA SALATEEN FAMILY RESTAURANT",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "Taj Chowk, Road, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 8699762",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPc5kINd8nas_aOwKgqP5xn5jFkDWayidZlXwXchjEYdNvy1Z6VhkELEy189f9oxY22jxdC2qqNbdB7g1twRwdX89Q9hRgYhoGqYobdmOW46f4HfMfQ6OekxCzeJLsqlv5pvfOi=w532-h240-k-no",
+      "imagesCount": "144",
+      "totalScore": "4.0",
+      "reviewsCount": "457.0",
+      "location/lat": "28.3031875",
+      "location/lng": "70.1013281",
+      "placeId": "ChIJTTT5kBRBNzkRgB6CLOhZr00",
+      "url": "https://www.google.com/maps/search/?api=1&query=DERA%20SALATEEN%20FAMILY%20RESTAURANT&query_place_id=ChIJTTT5kBRBNzkRgB6CLOhZr00",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "2 to 11 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "2 to 11 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "2 to 11 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "2 to 11 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "2 to 11 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "2 to 11 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "2 to 11 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Al-Asar Restaurants",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "Taj Chowk, Road, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 333 7416337",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmO71J3p8tZMj87B_TE352Zhf3Uo4S7RI6-25V4k7q9ob3yFhhIQiBUcdwknRQmS8mI8R6yfZqFklem8K96e7gHxpTfROyisboMmKBX3ldI_HqrF3hfSyygrqKdOUTL1B6Yg6jHxiQ=w408-h306-k-no",
+      "imagesCount": "33",
+      "totalScore": "4.2",
+      "reviewsCount": "114.0",
+      "location/lat": "28.3033375",
+      "location/lng": "70.1018281",
+      "placeId": "ChIJAa664ZNBNzkROym0FbLmoHU",
+      "url": "https://www.google.com/maps/search/?api=1&query=Al-Asar%20Restaurants&query_place_id=ChIJAa664ZNBNzkROym0FbLmoHU",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "9 AM to 12 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9:30 AM to 12 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9:30 AM to 12 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9:30 AM to 12 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "9:30 AM to 12 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9:30 AM to 12 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9:30 AM to 12 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Cafe Sajawal Restaurant",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "Ali Town, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Ali Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 68 5704814",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMt2-o_GTl3icCkxS5l0wQlhl2O-WVnKcefedNLVfF4dLmpRQMQ_ZI15pTgU3aWxHVaBy45xYqSXZ9Qz5t-G0TrTrNR4caqVToS6s6JBEfdsYP_YatESvyjvPxBnac8GztfEjwB=w426-h240-k-no",
+      "imagesCount": "299",
+      "totalScore": "4.1",
+      "reviewsCount": "1370.0",
+      "location/lat": "28.3073544",
+      "location/lng": "70.1329209",
+      "placeId": "ChIJ685cT-VBNzkRdPMDwR_SAjk",
+      "url": "https://www.google.com/maps/search/?api=1&query=Cafe%20Sajawal%20Restaurant&query_place_id=ChIJ685cT-VBNzkRdPMDwR_SAjk",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Spice and Grill",
+      "categoryName": "Fast food restaurant",
+      "categories/0": "Fast food restaurant",
+      "address": "74VF+3F7, Tillu Rd, Muslim Colony, Sadiqabad, Pakistan",
+      "neighborhood": "Muslim Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 307 3152052",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmM9oGU2pTASgSDuBiydvgGJHUld2t6jh8n455Jcgco_C8eakWArblICGgy_h33vfSokxaGleBROOYTgaXyoVzhAMETy3KWWhUDa4h3sdXXjFB1dcMCO1Nc0M3A_3b_0eoOAEN81s_k3-Eg-=w410-h240-k-no",
+      "imagesCount": "21",
+      "totalScore": "4.9",
+      "reviewsCount": "7.0",
+      "location/lat": "28.2936846",
+      "location/lng": "70.1231042",
+      "placeId": "ChIJw2Z_bABBNzkRjGk06gV05hg",
+      "url": "https://www.google.com/maps/search/?api=1&query=Spice%20and%20Grill&query_place_id=ChIJw2Z_bABBNzkRjGk06gV05hg",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "5 PM to 2 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "5 PM to 2 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "5 PM to 2 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "5 PM to 2 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "5 PM to 2 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "5 PM to 2 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "5 PM to 2 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Chaaye & Grill",
+      "categoryName": "Fast food restaurant",
+      "categories/0": "Fast food restaurant",
+      "address": "Taj Chowk, Road, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 334 4266555",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNUrCqOyYZ_N9jUUT5DvgTzn3JZ0vXxzzfnauJNEPL8rx2BX0Uhjc0s_Jrz9ML91-T9Myw97wIQCah9BSz5sMrStjk2WO92Hx7GSLTHW5ZiTMJ9UkevOtukA-Z1P-4MjzL2K5U0=w408-h306-k-no",
+      "imagesCount": "1013",
+      "totalScore": "4.2",
+      "reviewsCount": "2080.0",
+      "location/lat": "28.3036061",
+      "location/lng": "70.102732",
+      "placeId": "ChIJx2i73kRBNzkR-Mx7dbZbRYc",
+      "url": "https://www.google.com/maps/search/?api=1&query=Chaaye%20%26%20Grill&query_place_id=ChIJx2i73kRBNzkR-Mx7dbZbRYc",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "12 PM to 4 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "12 PM to 4 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "12 PM to 4 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "12 PM to 4 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "12 PM to 4 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "12 PM to 4 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "12 PM to 4 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Hashim Fish Tikka & Bar Bq",
+      "categoryName": "Barbecue restaurant",
+      "categories/0": "Barbecue restaurant",
+      "categories/1": "Barbecue area",
+      "address": "74XJ+WV4, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 7828017",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMLkC5WxgCNn9oQrznuKRkv9kH6d4I5pZwfTOT4PojCmJl8TI0kf22m1QzXY40_KWdVKRWQTGl-G1OGuGjinhe6ihUQhpfqXWTOWzqHDBwXa9TkNgA_8eQZKj3sPWp0IfeLgWAw=w408-h544-k-no",
+      "imagesCount": "153",
+      "totalScore": "4.0",
+      "reviewsCount": "134.0",
+      "location/lat": "28.2997388",
+      "location/lng": "70.1322898",
+      "placeId": "ChIJjbcDOLlBNzkR54AfemYyUzU",
+      "url": "https://www.google.com/maps/search/?api=1&query=Hashim%20Fish%20Tikka%20%26%20Bar%20Bq&query_place_id=ChIJjbcDOLlBNzkR54AfemYyUzU",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "10 AM to 12:30 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "10 AM to 12:30 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "10 AM to 12:30 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "10 AM to 12:30 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "10 AM to 12:30 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "10 AM to 12:30 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "10 AM to 12:30 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Cafe Sajawal Sweets",
+      "categoryName": "Candy store",
+      "categories/0": "Candy store",
+      "categories/1": "Sweets and dessert buffet",
+      "address": "Hospital Rd, Sadiqabad, 64350, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 68 5704713",
+      "website": "https://cafesajawal.pk/",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmP0c2c3NBxFbxJDulFm9W2v0pu-FTtkSq7H3_ClfkQ9p-DLwyYCci6SxtTaXRIA32AQFLVsyDvFdgqvFLfkeZ6rr_ZM55Zkb1jXrdJxetJ95wucB7__78Dn-yAm3y7_UzcleXU_=w408-h306-k-no",
+      "imagesCount": "620",
+      "totalScore": "4.4",
+      "reviewsCount": "3666.0",
+      "location/lat": "28.3072737",
+      "location/lng": "70.1326917",
+      "placeId": "ChIJ-5sJROVBNzkRsyT_rUpJFXY",
+      "url": "https://www.google.com/maps/search/?api=1&query=Cafe%20Sajawal%20Sweets&query_place_id=ChIJ-5sJROVBNzkRsyT_rUpJFXY",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "5:30 AM to 11 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "5:30 AM to 11 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "5:30 AM to 11 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "5:30 AM to 11 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "5:30 AM to 11 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "5:30 AM to 11 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "5:30 AM to 11 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Arfat Restaurant",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "845J+HMC, Hospital Rd, opposite Arfat Restaurant, Sadiqabad, 64350, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 335 5552570",
+      "website": "https://cafearfat.com/",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPfNnGkT2LvpFCMjvOCRc15pCkAw_tm3fDD9dcm7bIKDXoW_l4TALZu1fkHcl6n8CAdHvjRirKPMqNiUvhpDqVfo5IkEOp-9xaxwR_mhDetTucxDcxSmBXrg_Lo1bDYhGj-5WrfeA=w408-h544-k-no",
+      "imagesCount": "117",
+      "totalScore": "4.1",
+      "reviewsCount": "584.0",
+      "location/lat": "28.3089446",
+      "location/lng": "70.1316307",
+      "placeId": "ChIJp2sNdDxBNzkRfOdMlZmO-OM",
+      "url": "https://www.google.com/maps/search/?api=1&query=Arfat%20Restaurant&query_place_id=ChIJp2sNdDxBNzkRfOdMlZmO-OM",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "9 AM to 12:30 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "10 AM to 12:30 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "10 AM to 12:30 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "10 AM to 12:30 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "10 AM to 12:30 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "10 AM to 12:30 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM to 12 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Qaswa Cafe",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "categories/1": "Cafe",
+      "address": "Zorkot Pul, Sadiqabad, 64450, Pakistan",
+      "neighborhood": "Sadiqabad",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 325 1110103",
+      "website": "https://zaiqarestaurant.pk/qaswa-cafe/",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOdiQXnpOVc0IU7h98WgyE1ECW83Kd-a6CdS7YEROoicBCuIOR29kMAzPvpsbT92pg7MlPDBd1P7m_fct2r4kYPvXNHy6HpaRhD27bl6ZGLjsY3XyjkgedMnx1spHjI-3kOX_MwA7jI7u0=w408-h544-k-no",
+      "imagesCount": "163",
+      "totalScore": "4.2",
+      "reviewsCount": "144.0",
+      "location/lat": "28.3018302",
+      "location/lng": "70.1196824",
+      "placeId": "ChIJ8QG6wFRBNzkRUSAK7jMW3Sk",
+      "url": "https://www.google.com/maps/search/?api=1&query=Qaswa%20Cafe&query_place_id=ChIJ8QG6wFRBNzkRUSAK7jMW3Sk",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "12 PM to 1 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "12 PM to 1 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "12 PM to 1 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "12 PM to 1 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "12 PM to 1 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "12 PM to 1 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "12 PM to 1 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Karachi Wala Restaurant & Carters",
+      "categoryName": "Asian restaurant",
+      "categories/0": "Asian restaurant",
+      "address": "Shop No: 3 & 4, Main Allama Iqbal Rd, near Hbl microfinance bank, Al Falah Town, Sadiqabad, Pakistan",
+      "neighborhood": "Al Falah Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPXo8pdhSl0W3-krjKMVc06XClQP5mfOKz5PPJjZxwSI-dUELhg1X6VNXzexp-S2N4NvQEbXPNBhCNkJl62BwViUG3Mp9K8vXaduyALwcFiaRl-C97iOL0I0GI5jt06AVg8XKYw=w408-h544-k-no",
+      "imagesCount": "5",
+      "totalScore": "5.0",
+      "reviewsCount": "4.0",
+      "location/lat": "28.3011976",
+      "location/lng": "70.1357193",
+      "placeId": "ChIJ1e1VXgBBNzkR9jxMnAiApSw",
+      "url": "https://www.google.com/maps/search/?api=1&query=Karachi%20Wala%20Restaurant%20%26%20Carters&query_place_id=ChIJ1e1VXgBBNzkR9jxMnAiApSw",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Karachi Refreshment",
+      "categoryName": "Family restaurant",
+      "categories/0": "Family restaurant",
+      "address": "842J+MWH, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 8777909",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPTnAyiWMJFc2zweIaR4fDGdQduurs7TVGB7IUhGwrdXRKEH2tIgqKie7dhABMSWEUmEJ2-wdiYkrR1NAqh2mV77Hjm7cAxhDcwFOXYJQ5Wieihuhdy7Qc6JIPLcZRe4dIEV52fMA=w519-h240-k-no",
+      "imagesCount": "143",
+      "totalScore": "3.9",
+      "reviewsCount": "439.0",
+      "location/lat": "28.3016797",
+      "location/lng": "70.1323481",
+      "placeId": "ChIJlfU-scNBNzkRp3rpmwHVEuY",
+      "url": "https://www.google.com/maps/search/?api=1&query=Karachi%20Refreshment&query_place_id=ChIJlfU-scNBNzkRp3rpmwHVEuY",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "9 AM to 2 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9 AM to 2 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9 AM to 2 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9 AM to 2 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "9 AM to 2 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9 AM to 2 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM to 2 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Zaiqa Restaurant SDK",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "categories/1": "Barbecue restaurant",
+      "categories/2": "Breakfast restaurant",
+      "address": "N-5, near Taj Chowk, Sadiqabad, 64350, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 8674949",
+      "website": "https://zaiqarestaurant.pk/",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOQBh1AZs34tD-wu6mh-WnkVtxRPf8GtM5W_zO5NaQWpj7teH_ATu_iTfn_dT8XbaSpxFWEGIGLg6Ow6PNfX3Rf3RRuSM2L0Az9vJot0r7uy92lhldNuOK2SD0FDEzYV7TtjuAM=w520-h240-k-no",
+      "imagesCount": "1224",
+      "totalScore": "4.1",
+      "reviewsCount": "2186.0",
+      "location/lat": "28.3086006",
+      "location/lng": "70.0974121",
+      "placeId": "ChIJD4nJqTRANzkRH9o5nFVrQBA",
+      "url": "https://www.google.com/maps/search/?api=1&query=Zaiqa%20Restaurant%20SDK&query_place_id=ChIJD4nJqTRANzkRH9o5nFVrQBA",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "New Age Restaurant",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "84VR+3J9, Bypass, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "totalScore": "5.0",
+      "reviewsCount": "4.0",
+      "location/lat": "28.3426692",
+      "location/lng": "70.1416099",
+      "placeId": "ChIJaRamHmpBNzkRZFWvkIQscAg",
+      "url": "https://www.google.com/maps/search/?api=1&query=New%20Age%20Restaurant&query_place_id=ChIJaRamHmpBNzkRZFWvkIQscAg",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Naz Restaurant",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "Bypass, Dhaka Colony Kachi Abadi, Sadiqabad, Pakistan",
+      "neighborhood": "Dhaka Colony Kachi Abadi",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 302 5292860",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWntJpZURUB30SVR8GWKCHcHDOxb5TTDTxaXZLBeAk2BBzDnxovsAaAGEI3g2NjVN4FwbLqr3yGnWgucNUS3d4GrJua_URbdiEKH_e-4Beyr2WpXs3zoQEWAZvdzn4Ll8TPfWYQ=w408-h725-k-no",
+      "imagesCount": "3",
+      "totalScore": "4.3",
+      "reviewsCount": "12.0",
+      "location/lat": "28.3168277",
+      "location/lng": "70.1015646",
+      "placeId": "ChIJBVvIp7VBNzkRVH1qQ_0YzR4",
+      "url": "https://www.google.com/maps/search/?api=1&query=Naz%20Restaurant&query_place_id=ChIJBVvIp7VBNzkRVH1qQ_0YzR4",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Al Barkat Pulao and Tea Restaurant",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "84RQ+WQ8, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmrCgRKQC4vW49wNSqSl6Ly-7TWzme8Gcedc5h7SOmNKa4nga63kd81J0H2PeKQOlEwL_X1P-VOseeemUXbNPJf-MwiN9KseqvXiMjPeOCt-vvEp8k8qwoEMEbCAGLWhNzmnuy37Q=w408-h306-k-no",
+      "imagesCount": "10",
+      "totalScore": "4.5",
+      "reviewsCount": "4.0",
+      "location/lat": "28.3422927",
+      "location/lng": "70.1394482",
+      "placeId": "ChIJnyDhZQFBNzkRQNeulI_hL6Q",
+      "url": "https://www.google.com/maps/search/?api=1&query=Al%20Barkat%20Pulao%20and%20Tea%20Restaurant&query_place_id=ChIJnyDhZQFBNzkRQNeulI_hL6Q",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Kashmir Mahal Restaurant",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "KLP Rd, Chungi No 12, Zafar Syed Town, Sadiqabad, Punjab, Mujahid Colony, Pakistan",
+      "neighborhood": "Mujahid Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlhgf3LwmFx-P9E_y1qpV0BfB1So2Mn5D5_Bd2LtQNfveJf9xYo-SFRX6NqgjTIOGqV4fKZ5x4g527HKzedQUvXx_u76qthGz6R-hp7ixmbbKK0QersdB8jZYZb6QNp1Kp3OphJ=w426-h240-k-no",
+      "imagesCount": "3",
+      "totalScore": "3.2",
+      "reviewsCount": "12.0",
+      "location/lat": "28.3156886",
+      "location/lng": "70.1282796",
+      "placeId": "ChIJUS6IfOxBNzkR7xdiqpYDwck",
+      "url": "https://www.google.com/maps/search/?api=1&query=Kashmir%20Mahal%20Restaurant&query_place_id=ChIJUS6IfOxBNzkR7xdiqpYDwck",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "MIDWAY HOTEL & RESTAURANT",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "categories/1": "Hotel",
+      "address": "Al-Jannat CNG, Klp Rd, Near Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Near",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 331 2411153",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmIH-26ZIPo_MGmnCsY77TQTVEZNfuZ_AmLfMG3nJJLX-rVaxC2QPUWGloQ5TLl3gbPJ2KjhYl_Y865nKr74mr04W3gAPEsVJLMex9r4O5YW-1haybV4u-9vV4suozuttv1DeD3UZeg91UH=w408-h272-k-no",
+      "imagesCount": "944",
+      "totalScore": "4.0",
+      "reviewsCount": "1403.0",
+      "location/lat": "28.2967512",
+      "location/lng": "70.0904107",
+      "placeId": "ChIJAzAGyS5ANzkRQCvMybFQ138",
+      "description": "Unassuming hotel offering a casual lobby eatery, plus a guest kitchen, meeting space & a playground.",
+      "url": "https://www.google.com/maps/search/?api=1&query=MIDWAY%20HOTEL%20%26%20RESTAURANT&query_place_id=ChIJAzAGyS5ANzkRQCvMybFQ138",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Tom n Jerry Ice Bar & Restaurant",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "KLP Rd, opposite Model Avenue Enterece, Sadiqabad, 63500, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 305 6815948",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkCbNiD-imx7erKw1hAj7Pl-vCWycKsyYk8YCDL7Fz7gWGc0ZuaXdSQIpliuGWhx9AXqB5tejacLE2KZ5m6wZqqP1e_ykFkjihzhocndZ5NZaj0XoKXJprC9Pgc5tYixslkfxn2hcDpevuo=w426-h240-k-no",
+      "imagesCount": "26",
+      "totalScore": "5.0",
+      "reviewsCount": "10.0",
+      "location/lat": "28.2990346",
+      "location/lng": "70.0977634",
+      "placeId": "ChIJe9v3BS1BNzkR7XKK8WzyOm4",
+      "url": "https://www.google.com/maps/search/?api=1&query=Tom%20n%20Jerry%20Ice%20Bar%20%26%20Restaurant&query_place_id=ChIJe9v3BS1BNzkR7XKK8WzyOm4",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "5:30 PM to 12 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "5:30 PM to 12 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "5:30 PM to 12 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "5:30 PM to 12 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "5:30 PM to 12 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "5:30 PM to 12 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "5:30 PM to 12 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Paradise BBQ & Restaurant",
+      "categoryName": "Fast food restaurant",
+      "categories/0": "Fast food restaurant",
+      "address": "74XG+W87, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 306 3040888",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkrUvHSDhls0KCC4qPQ7mGhk-hoCnKj_WJ8kJcFWju7uURbsBBAF-LAB6PNLKY3A_qtCbTeIpGILfYEwvgAm25VScPNLNspOL4hv0w7OdZi084pKmPkvmbEiL_p4ZweM3eUM6XCA2_RqBY=w408-h544-k-no",
+      "imagesCount": "12",
+      "totalScore": "4.0",
+      "reviewsCount": "45.0",
+      "location/lat": "28.2997983",
+      "location/lng": "70.1257948",
+      "placeId": "ChIJlZ4sGABBNzkRyth9EY9ILy8",
+      "url": "https://www.google.com/maps/search/?api=1&query=Paradise%20BBQ%20%26%20Restaurant&query_place_id=ChIJlZ4sGABBNzkRyth9EY9ILy8",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "3 PM to 1 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "3 PM to 1 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "3 PM to 1 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "3 PM to 1 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "3 PM to 1 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "3 PM to 1 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "3 PM to 1 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Al Madina Karahi Gosht",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "Taj Chowk, Road, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 2829498",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMwzu2gzJUsM3QrH8anZdfC7N51JlMG6TsYv2Hm7Wq4Hv_lsgdjUU8YXTnrkkcht0fmaPVSIhw_ActMCc9mYGlRuQC52uX40j0xmeyJAy_5_Bt_32muwHeN2cvlQlXOF1N0-idH6w=w426-h240-k-no",
+      "imagesCount": "121",
+      "totalScore": "4.1",
+      "reviewsCount": "492.0",
+      "location/lat": "28.3033125",
+      "location/lng": "70.1023594",
+      "placeId": "ChIJj7Bec9JBNzkRCkIwnqW4q24",
+      "url": "https://www.google.com/maps/search/?api=1&query=Al%20Madina%20Karahi%20Gosht&query_place_id=ChIJj7Bec9JBNzkRCkIwnqW4q24",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "6:30 PM to 2 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "6:30 PM to 2 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "6:30 PM to 2 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "6:30 PM to 2 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "6:30 PM to 2 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "6:30 PM to 2 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "6:30 PM to 12 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "The food cafe pizza press",
+      "categoryName": "Pizza restaurant",
+      "categories/0": "Pizza restaurant",
+      "address": "chungi number, 10 KLP Rd, opposite Modle Town, Sadiqabad, 64350, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 302 8210336",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMLSu2gYFX0t6fE65icyHSVtLbjfmi8MEdq2S3ULSeDRAkSG37kvDVJ6idM6eDU-8IhnWWCjzIAdzqikBXmCPXYPeVTpJWpeVpjEoRtViKTpT_5fwhQZIpLPu2fUSNlB-kHnyN3=w408-h544-k-no",
+      "imagesCount": "235",
+      "totalScore": "4.2",
+      "reviewsCount": "333.0",
+      "location/lat": "28.3031023",
+      "location/lng": "70.1082589",
+      "placeId": "ChIJjV8t4mdBNzkRmCNtsQzU8Eg",
+      "url": "https://www.google.com/maps/search/?api=1&query=The%20food%20cafe%20pizza%20press&query_place_id=ChIJjV8t4mdBNzkRmCNtsQzU8Eg",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Al-Mashoor Guddu Karahi Gosht & Barbecue Restaurant",
+      "categoryName": "Restaurant supply store",
+      "categories/0": "Restaurant supply store",
+      "categories/1": "Barbecue restaurant",
+      "address": "Empire Marquee، Ahmed Pur Lamma Road, Maqbool Market Near, Sadiqabad, 64350, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 8773728",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOzfAKJDy1pqmMt3KiGzozp3R1VmflZaOYCbIgmRNiYV0gHnDrCyN_3tmt-v4vkgmtxi0rlGwJy8nL-HUdN9FgsipEP8L5vd8xoz111MG4p1wlBD59Rzudee9i74-jOaOpbpNCc=w426-h240-k-no",
+      "imagesCount": "16",
+      "totalScore": "4.1",
+      "reviewsCount": "16.0",
+      "location/lat": "28.303296",
+      "location/lng": "70.1022498",
+      "placeId": "ChIJWWTx--hBNzkREpcbu_871O0",
+      "url": "https://www.google.com/maps/search/?api=1&query=Al-Mashoor%20Guddu%20Karahi%20Gosht%20%26%20Barbecue%20Restaurant&query_place_id=ChIJWWTx--hBNzkREpcbu_871O0",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "4 AM to 1 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "4 AM to 1 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "4 AM to 1 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "4 AM to 1 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "4 AM to 1 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "4 AM to 1 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "4 AM to 1 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Mohammad Irfan Restaurant",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "843C+M7F, Nishtar Rd, Nishtar Chowk Madina Colony, Sadiqabad, Pakistan",
+      "neighborhood": "Nishtar Chowk Madina Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 301 7628340",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNuRg6zPgkjqOeWt0SN9jnbalrZCwngPrQVN9aHlBZzfDaH1N-GK97CAFgfRopkyPJV7xRg74IU70W1ThaNVsCyOjvxTHKLjQCbmCKWEV1e1XKv15j7FYOTEp37rHUZVYFI_2N6=w408-h861-k-no",
+      "imagesCount": "1",
+      "totalScore": "3.8",
+      "reviewsCount": "12.0",
+      "location/lat": "28.304187",
+      "location/lng": "70.120669",
+      "placeId": "ChIJ4aGHcd1BNzkRSm3FUcRFxOw",
+      "url": "https://www.google.com/maps/search/?api=1&query=Mohammad%20Irfan%20Restaurant&query_place_id=ChIJ4aGHcd1BNzkRSm3FUcRFxOw",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "10:30 AM to 12 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "10:30 AM to 12 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "10:30 AM to 12 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "10:30 AM to 12 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "10:30 AM to 12 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "10:30 AM to 12 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM to 12 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Turkish Wrap",
+      "categoryName": "Turkish restaurant",
+      "categories/0": "Turkish restaurant",
+      "address": "74XQ+9VV, Allama Iqbal Rd, Ajmal Town, Sadiqabad, Pakistan",
+      "neighborhood": "Ajmal Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "location/lat": "28.2984944",
+      "location/lng": "70.1396735",
+      "placeId": "ChIJ2b8XGgBBNzkRqNDhi01KqBg",
+      "url": "https://www.google.com/maps/search/?api=1&query=Turkish%20Wrap&query_place_id=ChIJ2b8XGgBBNzkRqNDhi01KqBg",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "POTATOPIA",
+      "categoryName": "Fast food restaurant",
+      "categories/0": "Fast food restaurant",
+      "address": "Allama Iqbal Rd, near Chen Bakers, Al Falah Town, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Al Falah Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 315 2907791",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlio2hmsj0EZN2HPNVV4t3TprYCukuG0ICcH9jZhnYvXaV93DUPCUOPRZHGycQK2-qoxsXYRSs_hokHtEC7NV1KTmGho-HRR9BQuiQvbVmjIp2R7nWT8oHL48-atgBHuSNmNz8_Uiqaskg7=w408-h554-k-no",
+      "imagesCount": "22",
+      "totalScore": "4.2",
+      "reviewsCount": "103.0",
+      "location/lat": "28.3015643",
+      "location/lng": "70.1354025",
+      "placeId": "ChIJi0RGDudBNzkRRnxn9RMG_IQ",
+      "url": "https://www.google.com/maps/search/?api=1&query=POTATOPIA&query_place_id=ChIJi0RGDudBNzkRRnxn9RMG_IQ",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "2 PM to 2 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "2 PM to 2 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "2 PM to 2 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "2 PM to 2 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "2 PM to 2 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "2 PM to 2 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "2 PM to 2 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "The Food Capital",
+      "categoryName": "Fast food restaurant",
+      "categories/0": "Fast food restaurant",
+      "address": "M.A. Jinnah Rd, near Chief Residencia, Rustam Colony, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Rustam Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 305 3790521",
+      "website": "https://www.thefoodcapital.pk/",
+      "imagesCount": "0",
+      "location/lat": "28.3013089",
+      "location/lng": "70.1397966",
+      "placeId": "ChIJlYqwEqBBNzkRIGSSK2w8KWQ",
+      "url": "https://www.google.com/maps/search/?api=1&query=The%20Food%20Capital&query_place_id=ChIJlYqwEqBBNzkRIGSSK2w8KWQ",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "5 PM to 1 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "5 PM to 1 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "5 PM to 1 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "5 PM to 1 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "5 PM to 1 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "5 PM to 1 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "5 PM to 1 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Chaaye Pani",
+      "categoryName": "Hamburger restaurant",
+      "categories/0": "Hamburger restaurant",
+      "address": "842P+J2V, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkGbkUeTmnd0SO4GVA7FqzJrJL8hQ7e3NgBfr0YBEn21z8D5G_wLtFFGOZm9qtvYysuuGqD3FpV7OuxwQshe6AzvPzc0Ab1PCp68g_x5UpIjKxFybVeveTKQAtXx6RJz0yiQ2A=w408-h725-k-no",
+      "imagesCount": "3",
+      "totalScore": "5.0",
+      "reviewsCount": "2.0",
+      "location/lat": "28.3016181",
+      "location/lng": "70.1350503",
+      "placeId": "ChIJQVsTT79BNzkRqTNOh0C9n2Q",
+      "url": "https://www.google.com/maps/search/?api=1&query=Chaaye%20Pani&query_place_id=ChIJQVsTT79BNzkRqTNOh0C9n2Q",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "1 PM to 1 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "1 PM to 1 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "1 PM to 1 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "1 PM to 1 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "1 PM to 1 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "1 PM to 1 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "1 PM to 1 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "RedRoster",
+      "categoryName": "Fast food restaurant",
+      "categories/0": "Fast food restaurant",
+      "address": "Bismillah School, Road, opposite National Savings Bank, Al Falah Town, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Al Falah Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 309 0052555",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmfcjCTzyqBCAvbDcyb4lYcd5RkCKPYjQDG7i8crA0sjPgKRO0YqeTyK_K6GxZhJ3IFDavNaQO8HEWSygHFylLc3VZChLOXEl4kU03XVzrcTZ4Cj3Ow4shOY9kDZpSQhDtPz3GCqXPocaI=w408-h306-k-no",
+      "imagesCount": "3",
+      "totalScore": "5.0",
+      "reviewsCount": "4.0",
+      "location/lat": "28.302283",
+      "location/lng": "70.1363489",
+      "placeId": "ChIJN6qxRZtBNzkRqbVr3O-71Ek",
+      "url": "https://www.google.com/maps/search/?api=1&query=RedRoster&query_place_id=ChIJN6qxRZtBNzkRqbVr3O-71Ek",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "12 PM to 1 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "12 PM to 1 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "12 PM to 1 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "12 PM to 1 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "12 PM to 1 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "12 PM to 1 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "12 PM to 1 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Hot Chicks Sadiqabad",
+      "categoryName": "Fast food restaurant",
+      "categories/0": "Fast food restaurant",
+      "address": "842M+MVF, Allama Iqbal Rd, Baldia Chowk New Town، Sadiqabad, 64200, Pakistan",
+      "neighborhood": "Baldia Chowk New Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 335 5703400",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnpDLrEXPfiQbbm1yFZQLS9pzxc_en-k7mAYf8xqxE0AcVJn4EV-jl0r6wGgfuRQa70d5UTeUIwNNok7IkteRojo7Zig4cEWxunIYixhauVMLp7SuNSgyYOKoB4-ElSy9hu-m8E=w426-h240-k-no",
+      "imagesCount": "124",
+      "totalScore": "3.7",
+      "reviewsCount": "558.0",
+      "location/lat": "28.3016937",
+      "location/lng": "70.1346773",
+      "placeId": "ChIJN4a-u_xBNzkR6PzhIAeAJzo",
+      "url": "https://www.google.com/maps/search/?api=1&query=Hot%20Chicks%20Sadiqabad&query_place_id=ChIJN4a-u_xBNzkR6PzhIAeAJzo",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "2 PM to 12 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "2 PM to 12 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "2 PM to 12 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "2 PM to 12 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "2 PM to 12 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "2 PM to 12 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "2 PM to 12:40 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "GN BBq & sijji house",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "842M+M52, Sadiqabad Tehsil, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 6702022",
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmUnRS-XjphwhFtyDoQiE4LbG8sE-PAR2JptVQGJluUAJQ_EmEb4Y1__CNaTLTJT0KIGxKKdyEOdVwb51stYhm1F0P35qyceG9b0rTJhG58uuTDSeVC2hCVK0CcTs8WNTYtyt051Q=w533-h240-k-no",
+      "imagesCount": "20",
+      "totalScore": "3.7",
+      "reviewsCount": "27.0",
+      "location/lat": "28.3016371",
+      "location/lng": "70.1328825",
+      "placeId": "ChIJxwVPCWlrNzkRCIHEPTI1kh8",
+      "url": "https://www.google.com/maps/search/?api=1&query=GN%20BBq%20%26%20sijji%20house&query_place_id=ChIJxwVPCWlrNzkRCIHEPTI1kh8",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "9 AM to 12 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9 AM to 12 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9 AM to 12 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9 AM to 12 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "9 AM to 12 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9 AM to 12 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM to 12 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Cafe noor",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "842M+P9W, Club Rd, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 332 7297650",
+      "imagesCount": "0",
+      "totalScore": "5.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.3018503",
+      "location/lng": "70.1334609",
+      "placeId": "ChIJJbVLSgRBNzkR8PNlPqlby8I",
+      "url": "https://www.google.com/maps/search/?api=1&query=Cafe%20noor&query_place_id=ChIJJbVLSgRBNzkR8PNlPqlby8I",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Bismillah Hotel",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "8435+42G, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 301 2072676",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLeq3cGWwd9FX1aQ65xBvVNqonKJ97O43m1ktyCm6gmVX-7A5_Ijs_qNYSHYqwgRvS3Tm_SG93WKMYXMw99H-ss6YFVtEBkUbWkuzdun-z8lYX2grOBT0GBV4bceWajlWBTL8Qm9Y_s0k5Xr=w408-h544-k-no",
+      "imagesCount": "7",
+      "totalScore": "4.0",
+      "reviewsCount": "8.0",
+      "location/lat": "28.3028135",
+      "location/lng": "70.1075752",
+      "placeId": "ChIJs6xjSHZBNzkRicXNB1uaS1Y",
+      "url": "https://www.google.com/maps/search/?api=1&query=Bismillah%20Hotel&query_place_id=ChIJs6xjSHZBNzkRicXNB1uaS1Y",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Thursday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Friday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Saturday",
+          "hours": "Open 24 hours"
+        },
+        {
+          "day": "Sunday",
+          "hours": "Open 24 hours"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Al Rahman car AC",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "Street No 4, Nishtar Chowk, Mustafa Waraich Town, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "totalScore": "3.8",
+      "reviewsCount": "4.0",
+      "location/lat": "28.3054446",
+      "location/lng": "70.1153253",
+      "placeId": "ChIJfZnwHABBNzkRy9wUaaCTTBo",
+      "url": "https://www.google.com/maps/search/?api=1&query=Al%20Rahman%20car%20AC&query_place_id=ChIJfZnwHABBNzkRy9wUaaCTTBo",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Lazat cafe",
+      "categoryName": "Fast food restaurant",
+      "categories/0": "Fast food restaurant",
+      "address": "8433+573, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imagesCount": "0",
+      "totalScore": "2.5",
+      "reviewsCount": "2.0",
+      "location/lat": "28.3028971",
+      "location/lng": "70.1031699",
+      "placeId": "ChIJ1z37eQBBNzkRDoDZnT5lloA",
+      "url": "https://www.google.com/maps/search/?api=1&query=Lazat%20cafe&query_place_id=ChIJ1z37eQBBNzkRDoDZnT5lloA",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "New Solangi hotel(dhaba)",
+      "categoryName": "Asian restaurant",
+      "categories/0": "Asian restaurant",
+      "address": "832X+2X4, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLeaJmJQ-VNcnR2182GX7lGNEU1SjJYsogXoklHRw3FX8eVOKhF8eEFplcV3XkcaY07ukLxWOD5ZWS3Puqpq8opT1ALNBJvbQgxt_P0kDLI55-w5utcsRIqBe6dmALdnPFNKXNjRlJYeoaVL=w408-h544-k-no",
+      "imagesCount": "4",
+      "totalScore": "3.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.2999742",
+      "location/lng": "70.0998957",
+      "placeId": "ChIJ7UIeF5tBNzkRXroK_M8UgCU",
+      "url": "https://www.google.com/maps/search/?api=1&query=New%20Solangi%20hotel(dhaba)&query_place_id=ChIJ7UIeF5tBNzkRXroK_M8UgCU",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Habib Pizza Hot",
+      "categoryName": "Fast food restaurant",
+      "categories/0": "Fast food restaurant",
+      "address": "JDW Road, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Sadiqabad",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 306 5703392",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmM_A1V_K4mfW8oJdbOlY2Z9khJHqaM9y9aEmJ5sFWvQlqM331ZFawD0ouvOFOSbhmYK3NDJ-FTsfDLACkKS9VL-JzciKSVlxhKa_1FkbnZaMnlA7v3t80801Ri_LIkmiVdgmorNWQ=w428-h240-k-no",
+      "imagesCount": "2",
+      "totalScore": "5.0",
+      "reviewsCount": "1.0",
+      "location/lat": "28.3074011",
+      "location/lng": "70.0919659",
+      "placeId": "ChIJQX9o0BJBNzkRrClalcQjlc4",
+      "url": "https://www.google.com/maps/search/?api=1&query=Habib%20Pizza%20Hot&query_place_id=ChIJQX9o0BJBNzkRrClalcQjlc4",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Qalandri saraye Haq Bahoo hotel",
+      "categoryName": "Asian restaurant",
+      "categories/0": "Asian restaurant",
+      "address": "8422+5G8, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLdx3WEmdQdkveyFX_MpkJyLx8gG0gOJ3cSZTU_653pVHukrsrpRVyqN93573CY2KzIM2h-3i1bF5dJW5Ks0CSiXVQgV7BuMfM23AGyFIGwHfV3SMcLdZ_1z9e2LK4giMy5PzXviyngFml59=w408-h306-k-no",
+      "imagesCount": "3",
+      "location/lat": "28.3004575",
+      "location/lng": "70.1013575",
+      "placeId": "ChIJA0jABQBBNzkRXewmf9kdP44",
+      "url": "https://www.google.com/maps/search/?api=1&query=Qalandri%20saraye%20Haq%20Bahoo%20hotel&query_place_id=ChIJA0jABQBBNzkRXewmf9kdP44",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Amjad Malik Cafe Club",
+      "categoryName": "Restaurant",
+      "categories/0": "Restaurant",
+      "address": "near Taj Chok, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 317 6571817",
+      "website": "https://www.facebook.com/profile.php?id=100053616377485",
+      "imagesCount": "0",
+      "location/lat": "28.3038307",
+      "location/lng": "70.0923443",
+      "placeId": "ChIJZ_6Lcz5BNzkR2F-J8GHi6Rg",
+      "url": "https://www.google.com/maps/search/?api=1&query=Amjad%20Malik%20Cafe%20Club&query_place_id=ChIJZ_6Lcz5BNzkR2F-J8GHi6Rg",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Dream burger",
+      "categoryName": "Hamburger restaurant",
+      "categories/0": "Hamburger restaurant",
+      "address": "8436+47C, Zorkot Road, Model Town, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Model Town",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 306 9404131",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLdE9r3EHjZKSvtiqUCjg5Eizp6bWpDtYO7n6k61AiZHQgs0HkrEi3wpFvDLkeuZP4QtllccPGOYb1fdM24dlcB6g965rxe0b3b6hfA6zbHrnBaY1BAVRbLX7BuwQW7nWXMicGVdJA=w507-h240-k-no",
+      "imagesCount": "6",
+      "location/lat": "28.3028549",
+      "location/lng": "70.1108",
+      "placeId": "ChIJ4UXyagBBNzkRMywRHNM6P7k",
+      "url": "https://www.google.com/maps/search/?api=1&query=Dream%20burger&query_place_id=ChIJ4UXyagBBNzkRMywRHNM6P7k",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "4 PM to 2 AM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "4 PM to 2 AM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "4 PM to 2 AM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "4 PM to 2 AM"
+        },
+        {
+          "day": "Friday",
+          "hours": "4 PM to 2 AM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "4 PM to 2 AM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "4 PM to 2 AM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "AL HASEEB JAAN BANNU BEEF PULAO ❤️.",
+      "categoryName": "Rice restaurant",
+      "categories/0": "Rice restaurant",
+      "address": "Zero point, Sadiqabad, Pakistan",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 300 5215353",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOWnRvE0PsqwRTg16tzTrG5rFLo0_lVSo8MRCkfPqzhE8aAHi74lxMKFSiMwYqzk47bMmGbHnrT4zOtBbNQ7sfqV_FxjcQZbIRnRXjAXZCmWvbhw6wmkA6clVCi_qLw8ZKY2AM=w408-h725-k-no",
+      "imagesCount": "28",
+      "totalScore": "4.1",
+      "reviewsCount": "38.0",
+      "location/lat": "28.3026057",
+      "location/lng": "70.1211029",
+      "placeId": "ChIJ041KYe5BNzkRDDGGjrvBUMo",
+      "url": "https://www.google.com/maps/search/?api=1&query=AL%20HASEEB%20JAAN%20BANNU%20BEEF%20PULAO%20%E2%9D%A4%EF%B8%8F.&query_place_id=ChIJ041KYe5BNzkRDDGGjrvBUMo",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "9 AM to 11 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9 AM to 11 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9 AM to 11 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9 AM to 10 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "9 AM to 10 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9 AM to 10 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM to 11 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "AL rehman hotel",
+      "categoryName": "Continental restaurant",
+      "categories/0": "Continental restaurant",
+      "address": "Madina Colony, Sadiqabad, Pakistan",
+      "neighborhood": "Madina Colony",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 302 2339709",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPpTac1s2_dksyKIaLEWlu63w91DETbkMjj5aZOMKFIcQ0pWTmMyimqkZGQXSfwySqOOlx9V0uSAbEkWhIeh2QDN2n-tqIwZSmCLnKn4i5qXz1XzXwH6u0oQURiRIUs_ZNnLUOv=w408-h306-k-no",
+      "imagesCount": "18",
+      "totalScore": "4.4",
+      "reviewsCount": "5.0",
+      "location/lat": "28.3046875",
+      "location/lng": "70.1123125",
+      "placeId": "ChIJZ9m3QxlBNzkRS0Koa3BYTws",
+      "url": "https://www.google.com/maps/search/?api=1&query=AL%20rehman%20hotel&query_place_id=ChIJZ9m3QxlBNzkRS0Koa3BYTws",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "6:30 AM to 10 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "6 AM to 10 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "6 AM to 10 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "6 AM to 10 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "Closed"
+        },
+        {
+          "day": "Saturday",
+          "hours": "6 AM to 10 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "6 AM to 10 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    },
+    {
+      "title": "Bonfire Pizza kitchen",
+      "categoryName": "Pizza restaurant",
+      "categories/0": "Pizza restaurant",
+      "address": "Ghazi Rd, near Jinnah sports complex, Azizabad, Sadiqabad, 64350, Pakistan",
+      "neighborhood": "Azizabad",
+      "city": "Sadiqabad",
+      "countryCode": "PK",
+      "phone": "+92 336 5577708",
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOtU7VTFWj0JYXJY_QUoyDMb0DXO--aa-9MNx3G1smHi9TvtWLl61r_MPXHXlePeFJivJR15fXJJZNYLjE6e5lDW51TQiD1ELfgQ04Rco2Xkv8gmglxPdZiUsZYAApmViVh01AoVdX6mXQ=w408-h543-k-no",
+      "imagesCount": "56",
+      "totalScore": "4.0",
+      "reviewsCount": "165.0",
+      "location/lat": "28.2956021",
+      "location/lng": "70.12858",
+      "placeId": "ChIJhVptIABrNzkR2qxrIRJP0Ao",
+      "url": "https://www.google.com/maps/search/?api=1&query=Bonfire%20Pizza%20kitchen&query_place_id=ChIJhVptIABrNzkR2qxrIRJP0Ao",
+      "temporarilyClosed": "False",
+      "permanentlyClosed": "False",
+      "isAdvertisement": "False",
+      "openingHours": [
+        {
+          "day": "Monday",
+          "hours": "10 AM to 10 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "10 AM to 10 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "10 AM to 10 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "10 AM to 10 PM"
+        },
+        {
+          "day": "Friday",
+          "hours": "10 AM to 10 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "10 AM to 10 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "10 AM to 10 PM"
+        }
+      ],
+      "sourceFiles": [
+        "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx"
+      ]
+    }
+  ]
+}
