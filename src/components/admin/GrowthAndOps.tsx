@@ -224,13 +224,23 @@ export function OwnersManager({
     setEmail('');
     setFullName('');
     setPhone('');
+    setPassword('');
     await onReload();
   };
 
   const handleReset = async () => {
     if (!resetUserId) return;
-    await adminResetUserPassword(resetUserId, newPassword, actorId);
-    showToast('Temporary password set!', 'success');
+    if (newPassword.length < 12) {
+      showToast('Password must be at least 12 characters.', 'error');
+      return;
+    }
+    const result = await adminResetUserPassword(resetUserId, newPassword, actorId);
+    if (!result.ok) {
+      showToast(result.error ?? 'Could not reset password.', 'error');
+      return;
+    }
+    showToast('Temporary password set. User must change it at next login.', 'success');
+    setNewPassword('');
     setResetUserId(null);
   };
 
@@ -338,6 +348,7 @@ export function OwnersManager({
             type="password"
             autoComplete="new-password"
             minLength={12}
+            hint="Use at least 12 characters. The user must change it at next login."
             dir="ltr"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
