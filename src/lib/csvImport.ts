@@ -45,6 +45,8 @@ export interface ParsedCsvRow {
   isValid: boolean;
 }
 
+export const MAX_IMPORT_FILE_SIZE_BYTES = 20 * 1024 * 1024;
+
 export interface SpreadsheetParseResult {
   sheetName: string;
   rows: string[][];
@@ -77,6 +79,9 @@ export function parseSpreadsheetBuffer(
 ): SpreadsheetParseResult {
   if (!buffer || buffer.byteLength === 0) {
     throw new Error('The uploaded spreadsheet file is empty.');
+  }
+  if (buffer.byteLength > MAX_IMPORT_FILE_SIZE_BYTES) {
+    throw new Error('The Excel file is too large. Maximum supported size is 20 MB.');
   }
 
   let workbook: XLSX.WorkBook;

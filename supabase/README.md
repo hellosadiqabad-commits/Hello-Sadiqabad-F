@@ -1,7 +1,7 @@
 # Hello Sadiqabad — Supabase
 
 Project ref: efwohfzqitevkuybnyif  
-Region: ap-southeast-2 (Singapore)  
+Region: ap-southeast-2 (Sydney, Australia)  
 Database: PostgreSQL 17
 
 ## Database setup

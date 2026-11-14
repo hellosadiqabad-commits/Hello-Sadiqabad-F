@@ -32,6 +32,7 @@ import { daysUntil, formatDateShort } from '../../lib/format';
 import { isValidHttpsUrl } from '../../lib/phone';
 import {
   autoMapCsvHeaders,
+  MAX_IMPORT_FILE_SIZE_BYTES,
   detectImportFileType,
   parseCsvText,
   parseSpreadsheetBuffer,
@@ -187,14 +188,14 @@ export function OwnersManager({
   const { showToast } = useToast();
   const [modalOpen, setModalOpen] = useState(false);
   const [resetUserId, setResetUserId] = useState<string | null>(null);
-  const [newPassword, setNewPassword] = useState('Sadiqabad@2026');
+  const [newPassword, setNewPassword] = useState('');
   const [confirmDeactivateOwner, setConfirmDeactivateOwner] = useState<{
     id: string;
     name: string;
   } | null>(null);
 
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('Owner@1234');
+  const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
   const [assignBizId, setAssignBizId] = useState('');
@@ -223,13 +224,23 @@ export function OwnersManager({
     setEmail('');
     setFullName('');
     setPhone('');
+    setPassword('');
     await onReload();
   };
 
   const handleReset = async () => {
     if (!resetUserId) return;
-    await adminResetUserPassword(resetUserId, newPassword, actorId);
-    showToast('Temporary password set!', 'success');
+    if (newPassword.length < 12) {
+      showToast('Password must be at least 12 characters.', 'error');
+      return;
+    }
+    const result = await adminResetUserPassword(resetUserId, newPassword, actorId);
+    if (!result.ok) {
+      showToast(result.error ?? 'Could not reset password.', 'error');
+      return;
+    }
+    showToast('Temporary password set. User must change it at next login.', 'success');
+    setNewPassword('');
     setResetUserId(null);
   };
 
@@ -316,7 +327,7 @@ export function OwnersManager({
           <Input label="Full Name" required value={fullName} onChange={(e) => setFullName(e.target.value)} />
           <Input label="Email" type="email" required dir="ltr" value={email} onChange={(e) => setEmail(e.target.value)} />
           <Input label="Mobile Phone" dir="ltr" value={phone} onChange={(e) => setPhone(e.target.value)} />
-          <Input label="Temporary Password" required dir="ltr" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <Input label="Temporary Password" type="password" autoComplete="new-password" minLength={12} required dir="ltr" hint="Use a unique password with at least 12 characters. No preset password is provided." value={password} onChange={(e) => setPassword(e.target.value)} />
           <Select label="Assign Existing Listing (optional)" value={assignBizId} onChange={(e) => setAssignBizId(e.target.value)}>
             <option value="">None</option>
             {businesses.map((b) => (
@@ -334,6 +345,10 @@ export function OwnersManager({
         <div className="space-y-4">
           <Input
             label="New Temporary Password"
+            type="password"
+            autoComplete="new-password"
+            minLength={12}
+            hint="Use at least 12 characters. The user must change it at next login."
             dir="ltr"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
@@ -434,6 +449,13 @@ export function ImportManager({
     const file = e.target.files?.[0];
     e.target.value = '';
     if (!file) return;
+
+    if (file.size > MAX_IMPORT_FILE_SIZE_BYTES) {
+      const msg = 'The selected file is too large. Maximum supported size is 20 MB.';
+      setParseError(msg);
+      showToast(msg, 'error');
+      return;
+    }
 
     const fileType = detectImportFileType(file.name, file.type);
     if (!fileType) {

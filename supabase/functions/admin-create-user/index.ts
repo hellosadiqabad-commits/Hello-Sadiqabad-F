@@ -1,19 +1,171 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
-const db=createClient(Deno.env.get("SUPABASE_URL")!,Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,{auth:{persistSession:false,autoRefreshToken:false}});
-const allow=(Deno.env.get("ALLOWED_ORIGINS")??"https://hello-sadiqabad-2bs.pages.dev,https://hellosadiqabad.com,https://www.hellosadiqabad.com,http://localhost:3000").split(",").map(s=>s.trim());
-function response(req:Request,data:unknown,status=200){const o=req.headers.get("origin")??"";if(o&&!allow.includes(o))return Response.json({ok:false,error:"Origin not allowed"},{status:403});return Response.json(data,{status,headers:{"Access-Control-Allow-Origin":o||allow[0],"Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type","Access-Control-Allow-Methods":"POST, OPTIONS","Vary":"Origin"}});}
-async function caller(req:Request){const t=(req.headers.get("authorization")??"").replace(/^Bearer\s+/i,"");if(!t)return null;const {data,error}=await db.auth.getUser(t);return error?null:data.user;}
-async function permission(uid:string){const {data:p}=await db.from("profiles").select("role,is_active").eq("id",uid).single();if(p?.role==="super_admin"&&p.is_active)return {allowed:true,root:true};if(p?.role!=="staff"||!p.is_active)return {allowed:false,root:false};const {data:s}=await db.from("staff_members").select("staff_types,permissions,is_active").eq("user_id",uid).single();if(!s?.is_active)return {allowed:false,root:false};const inferred=(s.staff_types??[]).includes("sales_onboarding");const override=s.permissions?.["owners.create"]??s.permissions?.["all"];return {allowed:override===true||(override!==false&&inferred),root:false};}
-Deno.serve(async(req)=>{if(req.method==="OPTIONS")return response(req,{ok:true});if(req.method!=="POST")return response(req,{ok:false,error:"Method not allowed"},405);const u=await caller(req);if(!u)return response(req,{ok:false,error:"Unauthorized"},401);const p=await permission(u.id);if(!p.allowed)return response(req,{ok:false,error:"Permission denied"},403);let b:any={};try{b=await req.json();}catch{}
-const email=String(b.email??"").trim().toLowerCase(),password=String(b.password??""),role=String(b.role??"owner");
-if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||password.length<8||!["owner","staff","super_admin"].includes(role)||!String(b.full_name??"").trim())return response(req,{ok:false,error:"Invalid user details"},400);
-if((role==="super_admin"||role==="staff")&&!p.root)return response(req,{ok:false,error:"Only a super admin can create staff or admin accounts"},403);
-const {data,error}=await db.auth.admin.createUser({email,password,email_confirm:true,user_metadata:{full_name:String(b.full_name).trim()}});
-if(error||!data.user)return response(req,{ok:false,error:error?.message??"Could not create account"},400);
-const id=data.user.id;
-const {error:pe}=await db.from("profiles").upsert({id,role,full_name:String(b.full_name).trim(),phone:typeof b.phone==="string"?b.phone:null,must_change_password:true});
-if(pe)return response(req,{ok:false,error:pe.message},400);
-if(role==="staff"){const {error:se}=await db.from("staff_members").upsert({user_id:id,staff_types:Array.isArray(b.staff_types)?b.staff_types:[],permissions:b.permissions??{},is_active:true});if(se)return response(req,{ok:false,error:se.message},400);}
-if(typeof b.assign_business_id==="string"){const {error:be}=await db.from("businesses").update({owner_id:id}).eq("id",b.assign_business_id);if(be)return response(req,{ok:false,error:be.message},400);}
-return response(req,{ok:true,data:{user_id:id}});
+
+const supabaseUrl = Deno.env.get("SUPABASE_URL");
+const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+if (!supabaseUrl || !serviceRoleKey) throw new Error("Missing Supabase service configuration");
+
+const db = createClient(supabaseUrl, serviceRoleKey, {
+  auth: { persistSession: false, autoRefreshToken: false },
+});
+const allowedOrigins = (Deno.env.get("ALLOWED_ORIGINS") ??
+  "https://hello-sadiqabad-2bs.pages.dev,https://hellosadiqabad.com,https://www.hellosadiqabad.com,http://localhost:3000")
+  .split(",").map((value) => value.trim()).filter(Boolean);
+
+function response(req: Request, data: unknown, status = 200) {
+  const origin = req.headers.get("origin") ?? "";
+  if (origin && !allowedOrigins.includes(origin)) {
+    return Response.json({ ok: false, error: "Origin not allowed" }, { status: 403 });
+  }
+  return Response.json(data, {
+    status,
+    headers: {
+      "Access-Control-Allow-Origin": origin || allowedOrigins[0],
+      "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Vary": "Origin",
+      "Cache-Control": "no-store",
+    },
+  });
+}
+
+async function caller(req: Request) {
+  const token = (req.headers.get("authorization") ?? "").replace(/^Bearer\\s+/i, "").trim();
+  if (!token) return null;
+  const { data, error } = await db.auth.getUser(token);
+  return error ? null : data.user;
+}
+
+async function permission(userId: string) {
+  const { data: profile, error: profileError } = await db
+    .from("profiles").select("role,is_active").eq("id", userId).maybeSingle();
+  if (profileError || !profile || profile.is_active !== true) {
+    return { allowed: false, root: false };
+  }
+  if (profile.role === "super_admin") return { allowed: true, root: true };
+  if (profile.role !== "staff") return { allowed: false, root: false };
+
+  const { data: staff, error: staffError } = await db
+    .from("staff_members").select("staff_types,permissions,is_active")
+    .eq("user_id", userId).maybeSingle();
+  if (staffError || !staff || staff.is_active !== true) {
+    return { allowed: false, root: false };
+  }
+  const inferred = Array.isArray(staff.staff_types) && staff.staff_types.includes("sales_onboarding");
+  const overrides = staff.permissions && typeof staff.permissions === "object" ? staff.permissions : {};
+  const override = overrides["owners.create"] ?? overrides["all"];
+  return { allowed: override === true || (override !== false && inferred), root: false };
+}
+
+function validUuid(value: unknown): value is string {
+  return typeof value === "string" &&
+    /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(value);
+}
+
+async function rollbackCreatedUser(userId: string) {
+  // Best-effort compensation: avoid leaving a login behind when provisioning fails.
+  await db.auth.admin.deleteUser(userId);
+}
+
+Deno.serve(async (req: Request) => {
+  if (req.method === "OPTIONS") return response(req, { ok: true });
+  if (req.method !== "POST") return response(req, { ok: false, error: "Method not allowed" }, 405);
+
+  try {
+    const actor = await caller(req);
+    if (!actor) return response(req, { ok: false, error: "Unauthorized" }, 401);
+    const actorPermission = await permission(actor.id);
+    if (!actorPermission.allowed) return response(req, { ok: false, error: "Permission denied" }, 403);
+
+    let body: Record<string, unknown>;
+    try {
+      const parsed = await req.json();
+      if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+        return response(req, { ok: false, error: "Invalid request body" }, 400);
+      }
+      body = parsed as Record<string, unknown>;
+    } catch {
+      return response(req, { ok: false, error: "Invalid JSON body" }, 400);
+    }
+
+    const email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
+    const password = typeof body.password === "string" ? body.password : "";
+    const fullName = typeof body.full_name === "string" ? body.full_name.trim() : "";
+    const role = typeof body.role === "string" ? body.role : "owner";
+    const phone = typeof body.phone === "string" ? body.phone.trim().slice(0, 30) : null;
+    const assignBusinessId = body.assign_business_id;
+
+    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email) || email.length > 254 ||
+      password.length < 12 || password.length > 128 ||
+      fullName.length < 2 || fullName.length > 120 ||
+      !["owner", "staff", "super_admin"].includes(role) ||
+      (phone !== null && phone.length < 5)) {
+      return response(req, { ok: false, error: "Invalid user details. Password must be at least 12 characters." }, 400);
+    }
+    if ((role === "super_admin" || role === "staff") && !actorPermission.root) {
+      return response(req, { ok: false, error: "Only a super admin can create staff or admin accounts" }, 403);
+    }
+    if (assignBusinessId !== undefined &&
+      (role !== "owner" || !validUuid(assignBusinessId))) {
+      return response(req, { ok: false, error: "A valid business can only be assigned to an owner account" }, 400);
+    }
+    if (role === "staff" && body.staff_types !== undefined &&
+      (!Array.isArray(body.staff_types) || body.staff_types.some((item) =>
+        !["data_entry", "importer", "sales_onboarding", "listing_manager", "moderator", "support"].includes(String(item))
+      ))) {
+      return response(req, { ok: false, error: "Invalid staff types" }, 400);
+    }
+    if (role === "staff" && body.permissions !== undefined &&
+      (!body.permissions || typeof body.permissions !== "object" || Array.isArray(body.permissions))) {
+      return response(req, { ok: false, error: "Invalid staff permissions" }, 400);
+    }
+
+    const { data: created, error: createError } = await db.auth.admin.createUser({
+      email,
+      password,
+      email_confirm: true,
+      user_metadata: { full_name: fullName },
+    });
+    if (createError || !created.user) {
+      return response(req, { ok: false, error: createError?.message ?? "Could not create account" }, 400);
+    }
+
+    const userId = created.user.id;
+    const { error: profileError } = await db.from("profiles").upsert({
+      id: userId,
+      role,
+      full_name: fullName,
+      phone,
+      must_change_password: true,
+    });
+    if (profileError) {
+      await rollbackCreatedUser(userId);
+      return response(req, { ok: false, error: "Account profile could not be created; account creation was rolled back." }, 500);
+    }
+
+    if (role === "staff") {
+      const { error: staffError } = await db.from("staff_members").upsert({
+        user_id: userId,
+        staff_types: Array.isArray(body.staff_types) ? body.staff_types : [],
+        permissions: body.permissions ?? {},
+        is_active: true,
+      });
+      if (staffError) {
+        await rollbackCreatedUser(userId);
+        return response(req, { ok: false, error: "Staff permissions could not be saved; account creation was rolled back." }, 500);
+      }
+    }
+
+    if (typeof assignBusinessId === "string") {
+      const { data: business, error: businessError } = await db.from("businesses")
+        .update({ owner_id: userId }).eq("id", assignBusinessId).select("id").maybeSingle();
+      if (businessError || !business) {
+        await rollbackCreatedUser(userId);
+        return response(req, { ok: false, error: "Business assignment failed; account creation was rolled back." }, 400);
+      }
+    }
+
+    return response(req, { ok: true, data: { user_id: userId } });
+  } catch {
+    return response(req, { ok: false, error: "Account provisioning failed unexpectedly." }, 500);
+  }
 });

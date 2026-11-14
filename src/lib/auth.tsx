@@ -71,16 +71,34 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setUser(authUser);
     const client = getSupabaseClient();
     if (client) {
-      const [profRes, permsRes] = await Promise.all([
-        client.from('profiles').select('*').eq('id', authUser.id).single(),
-        fetchMyPermissions(authUser.id),
-      ]);
-      const prof = (profRes.data as ProfileRow | null) ?? null;
-      setProfile(prof);
-      setRole(permsRes.role ?? prof?.role ?? 'owner');
-      setStaffTypes(permsRes.staff_types ?? []);
-      setPermissions(permsRes.permissions ?? []);
-      setIsActiveUser(permsRes.is_active);
+      try {
+        const [profRes, permsRes] = await Promise.all([
+          client.from('profiles').select('*').eq('id', authUser.id).single(),
+          fetchMyPermissions(authUser.id),
+        ]);
+        if (profRes.error) throw profRes.error;
+        const prof = (profRes.data as ProfileRow | null) ?? null;
+        if (!prof || !permsRes.role || permsRes.is_active !== true) {
+          setProfile(prof);
+          setRole(null);
+          setStaffTypes([]);
+          setPermissions([]);
+          setIsActiveUser(false);
+          return;
+        }
+        setProfile(prof);
+        setRole(permsRes.role);
+        setStaffTypes(permsRes.staff_types ?? []);
+        setPermissions(permsRes.permissions ?? []);
+        setIsActiveUser(true);
+      } catch {
+        // Fail closed if the profile or permission service cannot be verified.
+        setProfile(null);
+        setRole(null);
+        setStaffTypes([]);
+        setPermissions([]);
+        setIsActiveUser(false);
+      }
       return;
     }
 
@@ -108,16 +126,22 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const client = getSupabaseClient();
 
     if (client) {
-      client.auth.getSession().then(async ({ data }) => {
-        if (!active) return;
-        const supaUser = data.session?.user;
-        if (supaUser) {
-          await hydrateUser({ id: supaUser.id, email: supaUser.email ?? '' });
-        } else {
-          await hydrateUser(null);
-        }
-        if (active) setLoading(false);
-      });
+      void client.auth.getSession()
+        .then(async ({ data }) => {
+          if (!active) return;
+          const supaUser = data.session?.user;
+          if (supaUser) {
+            await hydrateUser({ id: supaUser.id, email: supaUser.email ?? '' });
+          } else {
+            await hydrateUser(null);
+          }
+        })
+        .catch(async () => {
+          if (active) await hydrateUser(null);
+        })
+        .finally(() => {
+          if (active) setLoading(false);
+        });
 
       const { data: sub } = client.auth.onAuthStateChange(async (_evt, session) => {
         if (!active) return;
@@ -246,7 +270,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (!isDemoMode) {
       return { ok: false, redirectPath: '/login' };
     }
-    if (!isDemoMode) return { ok: false, redirectPath: '/login' };
     const db = loadDemoDb();
     const prof =
       db.profiles.find((p) => p.role === targetRole) ??

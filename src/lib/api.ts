@@ -1737,6 +1737,9 @@ export async function adminCreateUser(
   },
   actorId: string
 ): Promise<EdgeFunctionResult<{ user_id: string }>> {
+  if (input.password.length < 12 || input.password.length > 128) {
+    return { ok: false, error: 'Temporary passwords must be between 12 and 128 characters.' };
+  }
   const client = getSupabaseClient();
   if (client) {
     const { data, error } = await client.functions.invoke('admin-create-user', { body: input });
@@ -1791,6 +1794,9 @@ export async function adminResetUserPassword(
   newPassword: string,
   actorId: string
 ): Promise<EdgeFunctionResult> {
+  if (newPassword.length < 12 || newPassword.length > 128) {
+    return { ok: false, error: 'Temporary passwords must be between 12 and 128 characters.' };
+  }
   const client = getSupabaseClient();
   if (client) {
     const { data, error } = await client.functions.invoke('admin-reset-password', {

@@ -89,28 +89,38 @@ export function ErrorState({
 
 interface ErrorBoundaryState {
   hasError: boolean;
-  errorMessage: string;
 }
 
 export class ErrorBoundary extends React.Component<
   { children: React.ReactNode },
   ErrorBoundaryState
 > {
-  state: ErrorBoundaryState = { hasError: false, errorMessage: '' };
+  state: ErrorBoundaryState = { hasError: false };
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, errorMessage: error?.message ?? 'Unexpected UI error' };
+  static getDerivedStateFromError(): ErrorBoundaryState {
+    return { hasError: true };
   }
 
   render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen bg-surface flex items-center justify-center p-6">
-          <div className="max-w-md w-full rounded-2xl bg-surface-container-lowest border border-outline-variant/40 p-6 text-center shadow-lg">
+          <div
+            role="alert"
+            aria-live="assertive"
+            className="max-w-md w-full rounded-2xl bg-surface-container-lowest border border-outline-variant/40 p-6 text-center shadow-lg"
+          >
             <AlertTriangle className="w-10 h-10 text-error mx-auto mb-3" />
             <h1 className="text-lg font-bold text-on-surface">Something went wrong</h1>
-            <p className="text-sm text-on-surface-variant mt-1 mb-4">{this.state.errorMessage}</p>
-            <Button onClick={() => window.location.reload()}>Reload App</Button>
+            <p className="text-sm text-on-surface-variant mt-1 mb-4">
+              The page could not be displayed. Try again, or reload the website if the problem continues.
+            </p>
+            <div className="flex flex-wrap justify-center gap-2">
+              <Button onClick={() => this.setState({ hasError: false })}>Try Again</Button>
+              <Button variant="outline" onClick={() => window.location.reload()}>
+                Reload Website
+              </Button>
+            </div>
           </div>
         </div>
       );
