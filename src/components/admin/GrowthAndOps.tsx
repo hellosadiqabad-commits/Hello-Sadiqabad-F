@@ -188,14 +188,14 @@ export function OwnersManager({
   const { showToast } = useToast();
   const [modalOpen, setModalOpen] = useState(false);
   const [resetUserId, setResetUserId] = useState<string | null>(null);
-  const [newPassword, setNewPassword] = useState('Sadiqabad@2026');
+  const [newPassword, setNewPassword] = useState('');
   const [confirmDeactivateOwner, setConfirmDeactivateOwner] = useState<{
     id: string;
     name: string;
   } | null>(null);
 
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('Owner@1234');
+  const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
   const [assignBizId, setAssignBizId] = useState('');
@@ -317,7 +317,7 @@ export function OwnersManager({
           <Input label="Full Name" required value={fullName} onChange={(e) => setFullName(e.target.value)} />
           <Input label="Email" type="email" required dir="ltr" value={email} onChange={(e) => setEmail(e.target.value)} />
           <Input label="Mobile Phone" dir="ltr" value={phone} onChange={(e) => setPhone(e.target.value)} />
-          <Input label="Temporary Password" required dir="ltr" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <Input label="Temporary Password" type="password" autoComplete="new-password" minLength={12} required dir="ltr" hint="Use a unique password with at least 12 characters. No preset password is provided." value={password} onChange={(e) => setPassword(e.target.value)} />
           <Select label="Assign Existing Listing (optional)" value={assignBizId} onChange={(e) => setAssignBizId(e.target.value)}>
             <option value="">None</option>
             {businesses.map((b) => (
@@ -335,6 +335,9 @@ export function OwnersManager({
         <div className="space-y-4">
           <Input
             label="New Temporary Password"
+            type="password"
+            autoComplete="new-password"
+            minLength={12}
             dir="ltr"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
