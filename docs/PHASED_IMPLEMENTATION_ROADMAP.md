@@ -28,6 +28,7 @@ A green build alone is not proof that every user-facing feature works.
 - Add reliable test utilities and quality gates without weakening existing checks.
 - Remove dead/duplicate code only after proving it is unused.
 - Audit every public/admin/owner route and all seven Supabase Edge Functions.
+- Record the owner-update RLS/approval enforcement gap and obtain approval for the required migration before declaring authorization complete.
 - Add role/ownership tests and regression tests for server-side validation.
 - Acceptance: clean install, lint/type-check, test suite, production build, Deno function checks, and documented baseline.
 
@@ -58,6 +59,7 @@ A green build alone is not proof that every user-facing feature works.
 
 ### Phase 6 — Supabase backend integrity
 - Reconcile repository migrations with the actual fresh-project baseline strategy.
+- Add database-level owner-update column restrictions and approval enforcement; see `docs/PHASE1_SECURITY_REVIEW.md`.
 - Verify table/column/type parity with generated TypeScript types and all frontend queries.
 - Review RLS policies, grants, SECURITY DEFINER functions, triggers, indexes, Edge Function auth/CORS/rate limits, and error contracts.
 - Add repeatable local/test database setup and regression coverage.
