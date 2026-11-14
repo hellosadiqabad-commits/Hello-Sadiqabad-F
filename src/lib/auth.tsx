@@ -67,9 +67,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setStaffTypes([]);
       setPermissions([]);
       setIsActiveUser(true);
+      setLoading(false);
       return;
     }
 
+    setLoading(true);
     setUser(authUser);
     // Clear prior-user privileges while the new session is being verified.
     setProfile(null);
@@ -108,6 +110,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         setStaffTypes([]);
         setPermissions([]);
         setIsActiveUser(false);
+      } finally {
+        if (version === hydrationVersion.current) setLoading(false);
       }
       return;
     }
@@ -119,6 +123,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setStaffTypes([]);
       setPermissions([]);
       setIsActiveUser(false);
+      setLoading(false);
       return;
     }
     const db = loadDemoDb();
@@ -130,6 +135,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setStaffTypes(permsRes.staff_types ?? []);
     setPermissions(permsRes.permissions ?? []);
     setIsActiveUser(permsRes.is_active);
+    setLoading(false);
   }, []);
 
   useEffect(() => {
