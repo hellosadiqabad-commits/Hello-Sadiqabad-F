@@ -29,17 +29,21 @@
 - Reworked public inquiry and review functions with bounded JSON bodies, strict UUID and field validation, published-listing checks, fail-closed plan/rate-limit checks, and layered session plus hashed phone/author rate limits.
 - Reworked public suggestion/claim intake with bounded object payloads, validated business/contact fields, hashed phone rate limiting, authenticated owner linking, and safe error responses.
 - Reworked event tracking with bounded JSON, strict event/business/ad validation, checked RPC failures, and safer search-filter validation.
+- Request-body limits are enforced while streaming Edge Function bodies, rather than after loading an unbounded body into memory.
+- Edge Function CORS defaults now include Vite development origins (`localhost:5173` and `127.0.0.1:5173`) in addition to the configured Pages/custom hosts.
+- Admin Portal data loading now respects each staff permission before querying protected tables; unauthorized datasets are not fetched. Admin/owner read errors no longer silently fall back to demo records.
 - All seven Edge Function entry points are now type-checked by Deno in CI.
 
 ### CI and deployment verification
 - GitHub Actions uses read-only repository token permissions, concurrency cancellation, 15-minute job timeouts, explicit TypeScript checks, tests, production builds, and a blocking high/critical npm audit gate.
 - A separate Deno CI job type-checks every Supabase Edge Function.
 - Dependabot checks npm packages and GitHub Actions weekly.
-- Latest verified commit for this batch: `d51e1053a12725af0957860e2dbf1240054ac4bf`.
-- Latest verified CI: https://github.com/samt87804-gif/Hello-Sadiqabad/actions/runs/43627453013 — npm install, npm audit, TypeScript, 60/60 tests, production build, and Deno Edge Function type-check all passed.
+- Latest verified code commit for this batch: `a3962b76f8e97a938e8bd30bcc2fa3019b74e8f3`.
+- Latest verified CI: https://github.com/samt87804-gif/Hello-Sadiqabad/actions/runs/43628486819 — npm install, npm audit, TypeScript, 60/60 tests, production build, and Deno Edge Function type-check all passed. Subsequent documentation and CORS-only commits are awaiting their own final CI/Pages confirmation.
 - Cloudflare Pages check for the same commit completed successfully.
 
 ## Still open in Phase 1
+- High-priority owner-update RLS gap: current database policy checks row ownership but does not restrict owner-editable columns. The private approval setting is not available to the public client. See `docs/PHASE1_SECURITY_REVIEW.md`; a migration and direct-API tests require approval before applying to Supabase.
 - Full component-by-component audit of every admin and owner route, plus remaining public route actions and data states.
 - Backend/RLS ownership matrix tests and direct unauthorized API regression tests.
 - End-to-end browser journeys for the full public directory and portal workflows.
