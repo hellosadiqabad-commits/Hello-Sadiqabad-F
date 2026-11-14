@@ -688,9 +688,13 @@ export async function fetchBusinessBySlug(slug: string): Promise<BusinessPublicV
   const client = getSupabaseClient();
   if (client) {
     const { data, error } = await client.rpc('get_business_public', { p_slug: slug });
-    if (!error && data) {
-      return data as BusinessPublicView;
-    }
+    if (!error && data) return data as BusinessPublicView;
+  }
+  try {
+    const imported = (await fetchGitHubBusinesses()).find((business) => business.slug === slug);
+    if (imported) return imported;
+  } catch (error) {
+    console.warn('GitHub business profile could not be loaded.', error);
   }
   const db = loadDemoDb();
   const found = db.businesses.find((b) => b.slug === slug && b.status === 'published');
@@ -712,6 +716,14 @@ export async function fetchRelatedBusinesses(
     if (!error && Array.isArray(data)) {
       return data as BusinessPublicView[];
     }
+  }
+  try {
+    const imported = (await fetchGitHubBusinesses())
+      .filter((business) => business.id !== businessId && business.category_id === categoryId)
+      .slice(0, limit);
+    if (imported.length > 0) return imported;
+  } catch (error) {
+    console.warn('GitHub related business listings could not be loaded.', error);
   }
   const db = loadDemoDb();
   return db.businesses
