@@ -32,6 +32,7 @@ import { daysUntil, formatDateShort } from '../../lib/format';
 import { isValidHttpsUrl } from '../../lib/phone';
 import {
   autoMapCsvHeaders,
+  MAX_IMPORT_FILE_SIZE_BYTES,
   detectImportFileType,
   parseCsvText,
   parseSpreadsheetBuffer,
@@ -434,6 +435,13 @@ export function ImportManager({
     const file = e.target.files?.[0];
     e.target.value = '';
     if (!file) return;
+
+    if (file.size > MAX_IMPORT_FILE_SIZE_BYTES) {
+      const msg = 'The selected file is too large. Maximum supported size is 20 MB.';
+      setParseError(msg);
+      showToast(msg, 'error');
+      return;
+    }
 
     const fileType = detectImportFileType(file.name, file.type);
     if (!fileType) {
