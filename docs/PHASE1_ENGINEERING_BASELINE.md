@@ -10,7 +10,8 @@
 - Added a 20 MB upload limit for both CSV and Excel import files before reading them into browser memory.
 - Hardened Supabase auth hydration: missing profile data, permission RPC denial, or profile/permission network failures now fail closed instead of retaining a portal role. Session bootstrap always clears its loading state after failure.
 - Improved the global React error boundary: raw exception messages are no longer shown to visitors; the fallback has accessible alert semantics and both retry and full-reload actions.
-- CI now has read-only repository token permissions, concurrency cancellation, a 15-minute job timeout, an explicit TypeScript check, automated tests, and a production build.
+- CI now has read-only repository token permissions, concurrency cancellation, a 15-minute job timeout, an explicit TypeScript check, automated tests, a production build, and a blocking high/critical npm audit gate.
+- Dependabot is configured to check npm packages and GitHub Actions weekly.
 - Replaced the vulnerable npm-registry SheetJS 0.18.5 release with the official patched SheetJS 0.20.3 tarball; existing spreadsheet import/export API and tests are retained. CI dependency audit now reports zero advisories and blocks high/critical findings.
 - Added the phased completion roadmap and corrected the Supabase region documentation.
 
@@ -23,7 +24,7 @@ The PR checks must pass on the latest head commit before this phase is considere
 3. `npm test`
 4. `npm run build`
 
-The npm audit report is diagnostic only at this stage. Any high/critical advisory must be investigated, documented, and fixed or explicitly accepted with a reason before final production readiness.
+The npm audit gate must remain green: high and critical advisories fail CI. Any newly surfaced advisory must be investigated and resolved before merge.
 
 ## Deliberately not changed
 
