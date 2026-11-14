@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import { extractBearerToken, isValidEmail, isValidUuid } from '../../supabase/functions/_shared/validation';
+import { extractBearerToken, hashRateKey, isValidEmail, isValidUuid, readJsonObject } from '../../supabase/functions/_shared/validation';
 
 describe('Edge Function request validation helpers', () => {
   it('extracts bearer tokens case-insensitively and trims whitespace', () => {
@@ -23,5 +23,34 @@ describe('Edge Function request validation helpers', () => {
     assert.equal(isValidUuid('550e8400-e29b-41d4-a716-446655440000'), true);
     assert.equal(isValidUuid('not-a-uuid'), false);
     assert.equal(isValidUuid(null), false);
+  });
+
+  it('hashes rate-limit identities without exposing the original value', async () => {
+    const first = await hashRateKey('business:phone:123456789');
+    const second = await hashRateKey('business:phone:123456789');
+    assert.equal(first, second);
+    assert.match(first, /^[a-f0-9]{64}$/);
+    assert.notEqual(first, 'business:phone:123456789');
+  });
+
+  it('accepts only bounded JSON objects', async () => {
+    const valid = await readJsonObject(new Request('https://example.test', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ name: 'Test' }),
+    }));
+    assert.deepEqual(valid, { name: 'Test' });
+
+    const array = await readJsonObject(new Request('https://example.test', {
+      method: 'POST',
+      body: '[]',
+    }));
+    assert.equal(array, null);
+
+    const tooLarge = await readJsonObject(new Request('https://example.test', {
+      method: 'POST',
+      body: JSON.stringify({ data: 'x'.repeat(100) }),
+    }), 32);
+    assert.equal(tooLarge, null);
   });
 });
