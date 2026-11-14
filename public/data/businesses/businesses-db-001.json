@@ -1,0 +1,1676 @@
+{
+  "schemaVersion": 2,
+  "source": "Supabase published business snapshot (public fields only)",
+  "chunk": 1,
+  "businessCount": 25,
+  "businesses": [
+    {
+      "title": "A2Z Mobile Shop",
+      "nameUr": null,
+      "slug": "a2z-mobile-shop-vfjbuw",
+      "categoryName": "Mobile Shops",
+      "categorySlug": "mobile-shops",
+      "categoryIcon": "smartphone",
+      "categoryColor": "blue",
+      "categorySortOrder": 8,
+      "address": "Awami Colony, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 308 1516811",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Mobile phone repair shop in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.312984",
+      "location/lng": "70.108571",
+      "placeId": "directory-a2z-mobile-shop-vfjbuw",
+      "openingHours": {},
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Afzal chicken shop",
+      "nameUr": null,
+      "slug": "afzal-chicken-shop",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "74WJ+72R, Manthar Rd, JInnah Town, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 304 8808886",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMtLRFvtfExMuauKMaGHXnTq3kXq0YuQ6D_Zhfwa0VJViOGanlhq3w6qZXlUhQj9Yfy_d5nzIEHJmyVTAt328rQ1uEE1stGEmWuz4lgLbyeZa_ugNgBvCfN8ST6TIhrWJj3RuQOHw=w408-h856-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmMtLRFvtfExMuauKMaGHXnTq3kXq0YuQ6D_Zhfwa0VJViOGanlhq3w6qZXlUhQj9Yfy_d5nzIEHJmyVTAt328rQ1uEE1stGEmWuz4lgLbyeZa_ugNgBvCfN8ST6TIhrWJj3RuQOHw=w408-h856-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.295757",
+      "location/lng": "70.130031",
+      "placeId": "directory-afzal-chicken-shop",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Al Barkat Pulao and Tea Restaurant",
+      "nameUr": null,
+      "slug": "al-barkat-pulao-and-tea-restaurant",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "84RQ+WQ8, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.5/5 from 4 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmrCgRKQC4vW49wNSqSl6Ly-7TWzme8Gcedc5h7SOmNKa4nga63kd81J0H2PeKQOlEwL_X1P-VOseeemUXbNPJf-MwiN9KseqvXiMjPeOCt-vvEp8k8qwoEMEbCAGLWhNzmnuy37Q=w408-h306-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmrCgRKQC4vW49wNSqSl6Ly-7TWzme8Gcedc5h7SOmNKa4nga63kd81J0H2PeKQOlEwL_X1P-VOseeemUXbNPJf-MwiN9KseqvXiMjPeOCt-vvEp8k8qwoEMEbCAGLWhNzmnuy37Q=w408-h306-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.342293",
+      "location/lng": "70.139448",
+      "placeId": "directory-al-barkat-pulao-and-tea-restaurant",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "AL HASEEB JAAN BANNU BEEF PULAO ❤️.",
+      "nameUr": null,
+      "slug": "al-haseeb-jaan-bannu-beef-pulao",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Zero point, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 300 5215353",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.1/5 from 38 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOWnRvE0PsqwRTg16tzTrG5rFLo0_lVSo8MRCkfPqzhE8aAHi74lxMKFSiMwYqzk47bMmGbHnrT4zOtBbNQ7sfqV_FxjcQZbIRnRXjAXZCmWvbhw6wmkA6clVCi_qLw8ZKY2AM=w408-h725-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOWnRvE0PsqwRTg16tzTrG5rFLo0_lVSo8MRCkfPqzhE8aAHi74lxMKFSiMwYqzk47bMmGbHnrT4zOtBbNQ7sfqV_FxjcQZbIRnRXjAXZCmWvbhw6wmkA6clVCi_qLw8ZKY2AM=w408-h725-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.302606",
+      "location/lng": "70.121103",
+      "placeId": "directory-al-haseeb-jaan-bannu-beef-pulao",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "09:00",
+            "close": "22:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "09:00",
+            "close": "23:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "09:00",
+            "close": "22:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "09:00",
+            "close": "23:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "09:00",
+            "close": "22:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "09:00",
+            "close": "23:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "09:00",
+            "close": "23:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Al Haseeb Jan beef pulao",
+      "nameUr": null,
+      "slug": "al-haseeb-jan-beef-pulao",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "842M+M8F, Melad Chowk, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.301693",
+      "location/lng": "70.133299",
+      "placeId": "directory-al-haseeb-jan-beef-pulao",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Al Madina Karahi Gosht",
+      "nameUr": null,
+      "slug": "al-madina-karahi-gosht",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Taj Chowk, Road, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 300 2829498",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.1/5 from 492 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMwzu2gzJUsM3QrH8anZdfC7N51JlMG6TsYv2Hm7Wq4Hv_lsgdjUU8YXTnrkkcht0fmaPVSIhw_ActMCc9mYGlRuQC52uX40j0xmeyJAy_5_Bt_32muwHeN2cvlQlXOF1N0-idH6w=w426-h240-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmMwzu2gzJUsM3QrH8anZdfC7N51JlMG6TsYv2Hm7Wq4Hv_lsgdjUU8YXTnrkkcht0fmaPVSIhw_ActMCc9mYGlRuQC52uX40j0xmeyJAy_5_Bt_32muwHeN2cvlQlXOF1N0-idH6w=w426-h240-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.303313",
+      "location/lng": "70.102359",
+      "placeId": "directory-al-madina-karahi-gosht",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "18:30",
+            "close": "02:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "18:30",
+            "close": "02:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "18:30",
+            "close": "02:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "18:30",
+            "close": "00:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "18:30",
+            "close": "02:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "18:30",
+            "close": "02:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "18:30",
+            "close": "02:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants",
+        "wheelchair-accessible-entrance",
+        "wheelchair-accessible-parking-lot",
+        "wheelchair-accessible-seating"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "AL rehman hotel",
+      "nameUr": null,
+      "slug": "al-rehman-hotel",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Madina Colony, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 302 2339709",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.4/5 from 5 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPpTac1s2_dksyKIaLEWlu63w91DETbkMjj5aZOMKFIcQ0pWTmMyimqkZGQXSfwySqOOlx9V0uSAbEkWhIeh2QDN2n-tqIwZSmCLnKn4i5qXz1XzXwH6u0oQURiRIUs_ZNnLUOv=w408-h306-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmPpTac1s2_dksyKIaLEWlu63w91DETbkMjj5aZOMKFIcQ0pWTmMyimqkZGQXSfwySqOOlx9V0uSAbEkWhIeh2QDN2n-tqIwZSmCLnKn4i5qXz1XzXwH6u0oQURiRIUs_ZNnLUOv=w408-h306-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.304688",
+      "location/lng": "70.112313",
+      "placeId": "directory-al-rehman-hotel",
+      "openingHours": {
+        "mon": [
+          {
+            "open": "06:30",
+            "close": "22:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "06:00",
+            "close": "22:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "06:00",
+            "close": "22:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "06:00",
+            "close": "22:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "06:00",
+            "close": "22:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "06:00",
+            "close": "22:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Al Tauheed Restaurant & Bar B Q",
+      "nameUr": null,
+      "slug": "al-tauheed-restaurant-bar-b-q",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "8448+HVF, Arain Colony, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 302 9533334",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.3/5 from 15 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [
+        "Delivery",
+        "Dine-in",
+        "Takeout"
+      ],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNUJYCb22noUS0_g7hzRYywPbDdlfTQaSCM282iTWyh3l5pVaEOUd1hYeJZCiJC4re2kTBoJ08VqeSk7hBsE-STFfmhE-4HjcddKVUvZjiOYUJpAtIujUsPn4DOfvI9C5lDhbVr=w408-h900-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmNUJYCb22noUS0_g7hzRYywPbDdlfTQaSCM282iTWyh3l5pVaEOUd1hYeJZCiJC4re2kTBoJ08VqeSk7hBsE-STFfmhE-4HjcddKVUvZjiOYUJpAtIujUsPn4DOfvI9C5lDhbVr=w408-h900-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.30644",
+      "location/lng": "70.117169",
+      "placeId": "directory-al-tauheed-restaurant-bar-b-q",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "10:04",
+            "close": "01:06"
+          }
+        ],
+        "mon": [
+          {
+            "open": "10:04",
+            "close": "01:06"
+          }
+        ],
+        "sat": [
+          {
+            "open": "10:04",
+            "close": "01:06"
+          }
+        ],
+        "sun": [
+          {
+            "open": "10:04",
+            "close": "01:06"
+          }
+        ],
+        "thu": [
+          {
+            "open": "10:04",
+            "close": "01:06"
+          }
+        ],
+        "tue": [
+          {
+            "open": "10:04",
+            "close": "01:06"
+          }
+        ],
+        "wed": [
+          {
+            "open": "10:04",
+            "close": "01:06"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": true,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants",
+        "delivery",
+        "dine-in",
+        "takeout",
+        "casual",
+        "good-for-kids",
+        "groups",
+        "lunch",
+        "dinner",
+        "table-service",
+        "late-night-food"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Al-Asar Restaurants",
+      "nameUr": null,
+      "slug": "al-asar-restaurants",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Taj Chowk, Road, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 333 7416337",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.2/5 from 114 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [
+        "Dine-in",
+        "Outdoor seating",
+        "Takeout"
+      ],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmO71J3p8tZMj87B_TE352Zhf3Uo4S7RI6-25V4k7q9ob3yFhhIQiBUcdwknRQmS8mI8R6yfZqFklem8K96e7gHxpTfROyisboMmKBX3ldI_HqrF3hfSyygrqKdOUTL1B6Yg6jHxiQ=w408-h306-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmO71J3p8tZMj87B_TE352Zhf3Uo4S7RI6-25V4k7q9ob3yFhhIQiBUcdwknRQmS8mI8R6yfZqFklem8K96e7gHxpTfROyisboMmKBX3ldI_HqrF3hfSyygrqKdOUTL1B6Yg6jHxiQ=w408-h306-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.303338",
+      "location/lng": "70.101828",
+      "placeId": "directory-al-asar-restaurants",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "09:30",
+            "close": "00:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "09:00",
+            "close": "00:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "09:30",
+            "close": "00:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "09:30",
+            "close": "00:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "09:30",
+            "close": "00:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "09:30",
+            "close": "00:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "09:30",
+            "close": "00:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants",
+        "dine-in",
+        "outdoor-seating",
+        "takeout",
+        "casual",
+        "quiet",
+        "trendy",
+        "good-for-kids",
+        "groups",
+        "tourists",
+        "lunch"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Al-Jannat Food Point",
+      "nameUr": null,
+      "slug": "al-jannat-food-point",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "845M+62V, Hospital Rd, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 303 2462270",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 3.7/5 from 10 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOsP5fNuMmCfzklsKtbk2LeOaComm9mzT3vMV3ILpDpai0fNPrBDqAT_zNJQDu96FvOyKrnTmK7O9f8eOhmMlBkEMuEOaNJ0XDnCmRek6JMBiO1BaXaeizaLeqeEWrj4RSQcGVa-g=w408-h544-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOsP5fNuMmCfzklsKtbk2LeOaComm9mzT3vMV3ILpDpai0fNPrBDqAT_zNJQDu96FvOyKrnTmK7O9f8eOhmMlBkEMuEOaNJ0XDnCmRek6JMBiO1BaXaeizaLeqeEWrj4RSQcGVa-g=w408-h544-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.308101",
+      "location/lng": "70.132541",
+      "placeId": "directory-al-jannat-food-point",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Al-Mashoor Guddu Karahi Gosht & Barbecue Restaurant",
+      "nameUr": null,
+      "slug": "al-mashoor-guddu-karahi-gosht-barbecue-restaurant",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Empire Marquee، Ahmed Pur Lamma Road, Maqbool Market Near, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 300 8773728",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.1/5 from 16 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOzfAKJDy1pqmMt3KiGzozp3R1VmflZaOYCbIgmRNiYV0gHnDrCyN_3tmt-v4vkgmtxi0rlGwJy8nL-HUdN9FgsipEP8L5vd8xoz111MG4p1wlBD59Rzudee9i74-jOaOpbpNCc=w426-h240-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOzfAKJDy1pqmMt3KiGzozp3R1VmflZaOYCbIgmRNiYV0gHnDrCyN_3tmt-v4vkgmtxi0rlGwJy8nL-HUdN9FgsipEP8L5vd8xoz111MG4p1wlBD59Rzudee9i74-jOaOpbpNCc=w426-h240-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.303296",
+      "location/lng": "70.10225",
+      "placeId": "directory-al-mashoor-guddu-karahi-gosht-barbecue-restaurant",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "04:00",
+            "close": "01:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "04:00",
+            "close": "01:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "04:00",
+            "close": "01:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "04:00",
+            "close": "01:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "04:00",
+            "close": "01:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "04:00",
+            "close": "01:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "04:00",
+            "close": "01:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Al-Noor Garden Hotel & Restaurant Sdk",
+      "nameUr": null,
+      "slug": "al-noor-garden-hotel-restaurant-sdk",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Dhaka Colony Kachi Abadi, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 300 9615888",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.1/5 from 202 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [
+        "Delivery",
+        "Dine-in",
+        "Drive-through",
+        "Outdoor seating",
+        "Takeout"
+      ],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMd4YnIH28b9NyjpGCb8Mt4hCp6DZUSlJXK38LVY-H5MmyVS5U9bbvgNz4RdMrLbjhs7-YDRR1Ch9KaxZdfb2OuVoiqeNaUyB7gAZnZZ5Iy1JL5D1yzRn-u980OrPiA1jVI0Lk=w408-h272-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmMd4YnIH28b9NyjpGCb8Mt4hCp6DZUSlJXK38LVY-H5MmyVS5U9bbvgNz4RdMrLbjhs7-YDRR1Ch9KaxZdfb2OuVoiqeNaUyB7gAZnZZ5Iy1JL5D1yzRn-u980OrPiA1jVI0Lk=w408-h272-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.316792",
+      "location/lng": "70.101219",
+      "placeId": "directory-al-noor-garden-hotel-restaurant-sdk",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": true,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants",
+        "delivery",
+        "dine-in",
+        "drive-through",
+        "outdoor-seating",
+        "takeout",
+        "wheelchair-accessible-entrance",
+        "wheelchair-accessible-parking-lot",
+        "wheelchair-accessible-restroom",
+        "wheelchair-accessible-seating",
+        "restroom"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Ali refreshment",
+      "nameUr": null,
+      "slug": "ali-refreshment",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "842H+FQH, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 300 3261506",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.301195",
+      "location/lng": "70.129412",
+      "placeId": "directory-ali-refreshment",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Altaj hotel",
+      "nameUr": null,
+      "slug": "altaj-hotel",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Railway Rd, Sadiqabad, 64300, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 303 7900074",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 5/5 from 1 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOuvXLJSVGlXUpxtNvPkvyj4xHTPH7laQ02qE8alL9QW0iR9z8my2DKQwrL_oi9RIwC7AUhMEAe2rzY9rUH2hBhEdQNLfYVqnTJAvPaJLRRxHPdUjOglsk9D39UxNa91MYn5ephRA=w408-h306-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOuvXLJSVGlXUpxtNvPkvyj4xHTPH7laQ02qE8alL9QW0iR9z8my2DKQwrL_oi9RIwC7AUhMEAe2rzY9rUH2hBhEdQNLfYVqnTJAvPaJLRRxHPdUjOglsk9D39UxNa91MYn5ephRA=w408-h306-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.302107",
+      "location/lng": "70.13039",
+      "placeId": "directory-altaj-hotel",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Amjad Malik Cafe Club",
+      "nameUr": null,
+      "slug": "amjad-malik-cafe-club",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "near Taj Chok, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 317 6571817",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "https://www.facebook.com/profile.php?id=100053616377485",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.303831",
+      "location/lng": "70.092344",
+      "placeId": "directory-amjad-malik-cafe-club",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants",
+        "wheelchair-accessible-parking-lot",
+        "wheelchair-accessible-restroom"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Arfat Restaurant",
+      "nameUr": null,
+      "slug": "arfat-restaurant",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "845J+HMC, Hospital Rd, opposite Arfat Restaurant, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 335 5552570",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "https://cafearfat.com/",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.1/5 from 584 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [
+        "Delivery",
+        "Dine-in",
+        "No-contact delivery",
+        "Takeout"
+      ],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPfNnGkT2LvpFCMjvOCRc15pCkAw_tm3fDD9dcm7bIKDXoW_l4TALZu1fkHcl6n8CAdHvjRirKPMqNiUvhpDqVfo5IkEOp-9xaxwR_mhDetTucxDcxSmBXrg_Lo1bDYhGj-5WrfeA=w408-h544-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmPfNnGkT2LvpFCMjvOCRc15pCkAw_tm3fDD9dcm7bIKDXoW_l4TALZu1fkHcl6n8CAdHvjRirKPMqNiUvhpDqVfo5IkEOp-9xaxwR_mhDetTucxDcxSmBXrg_Lo1bDYhGj-5WrfeA=w408-h544-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.308945",
+      "location/lng": "70.131631",
+      "placeId": "directory-arfat-restaurant",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "10:00",
+            "close": "00:30"
+          }
+        ],
+        "mon": [
+          {
+            "open": "09:00",
+            "close": "00:30"
+          }
+        ],
+        "sat": [
+          {
+            "open": "10:00",
+            "close": "00:30"
+          }
+        ],
+        "sun": [
+          {
+            "open": "09:00",
+            "close": "00:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "10:00",
+            "close": "00:30"
+          }
+        ],
+        "tue": [
+          {
+            "open": "10:00",
+            "close": "00:30"
+          }
+        ],
+        "wed": [
+          {
+            "open": "10:00",
+            "close": "00:30"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": true,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants",
+        "delivery",
+        "dine-in",
+        "no-contact-delivery",
+        "takeout",
+        "wheelchair-accessible-restroom",
+        "wheelchair-accessible-seating",
+        "restroom",
+        "casual",
+        "cozy",
+        "quiet"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "ASUM of Taste",
+      "nameUr": null,
+      "slug": "asum-of-taste",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Bank, Canal Road, Shimla Point, near Alnoor Pharmacy Shimla Point, Canal, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 323 9798114",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.2/5 from 6 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNSmMLODapx3tlpX2eQ49W-prVvXbEwTfVicz0tHXW4_XGv8G6KmDigT53WzumtyY3i21YyTkyljOfc6hHVMasfku8ycqQjMMPlPQy-SRrbD4Llu1M2gIHsuXqiw8cDjpk6nJfLVmbAB-AZ=w408-h336-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmNSmMLODapx3tlpX2eQ49W-prVvXbEwTfVicz0tHXW4_XGv8G6KmDigT53WzumtyY3i21YyTkyljOfc6hHVMasfku8ycqQjMMPlPQy-SRrbD4Llu1M2gIHsuXqiw8cDjpk6nJfLVmbAB-AZ=w408-h336-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.302678",
+      "location/lng": "70.121092",
+      "placeId": "directory-asum-of-taste",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "17:00",
+            "close": "00:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "17:00",
+            "close": "00:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "17:00",
+            "close": "00:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "17:00",
+            "close": "00:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "17:00",
+            "close": "00:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "17:00",
+            "close": "00:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "17:00",
+            "close": "00:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "AZ Mobile Shop",
+      "nameUr": null,
+      "slug": "az-mobile-shop-o7fxr8",
+      "categoryName": "Mobile Shops",
+      "categorySlug": "mobile-shops",
+      "categoryIcon": "smartphone",
+      "categoryColor": "blue",
+      "categorySortOrder": 8,
+      "address": "8474+658, Dhaka Colony Kachi Abadi, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 324 0862517",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Cell phone store in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.313063",
+      "location/lng": "70.105438",
+      "placeId": "directory-az-mobile-shop-o7fxr8",
+      "openingHours": {},
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Bilal Mobile and Net Cafe",
+      "nameUr": null,
+      "slug": "bilal-mobile-and-net-cafe-2yyhs4",
+      "categoryName": "Electronics",
+      "categorySlug": "electronics",
+      "categoryIcon": "tv",
+      "categoryColor": "purple",
+      "categorySortOrder": 7,
+      "address": "8456+6XM, Unnamed Road, Shoaib Colony, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 308 7972586",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Imported from Google Places dataset (scraped 2026-10-08). Google rating is not a customer review on this site.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.308092",
+      "location/lng": "70.112412",
+      "placeId": "directory-bilal-mobile-and-net-cafe-2yyhs4",
+      "openingHours": {
+        "Friday": "Open 24 hours",
+        "Monday": "Open 24 hours",
+        "Sunday": "Open 24 hours",
+        "Tuesday": "Open 24 hours",
+        "Saturday": "Open 24 hours",
+        "Thursday": "Open 24 hours",
+        "Wednesday": "Open 24 hours"
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "Electronics store",
+        "Google Places import"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Bilal Mobile Shop",
+      "nameUr": null,
+      "slug": "bilal-mobile-shop-kzx594",
+      "categoryName": "Mobile Shops",
+      "categorySlug": "mobile-shops",
+      "categoryIcon": "smartphone",
+      "categoryColor": "blue",
+      "categorySortOrder": 8,
+      "address": "Bilal Mobiles Shop JDW Road Pulli jmal din wali, 2, Ilyas Colony, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 305 7010823",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Cell phone store in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.315085",
+      "location/lng": "70.12432",
+      "placeId": "directory-bilal-mobile-shop-kzx594",
+      "openingHours": {},
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Bilal shoe..",
+      "nameUr": null,
+      "slug": "bilal-shoe-qvvjue",
+      "categoryName": "Clothing",
+      "categorySlug": "clothing",
+      "categoryIcon": "shirt",
+      "categoryColor": "pink",
+      "categorySortOrder": 9,
+      "address": "8462+XG8, Bypass, Dhaka Colony Kachi Abadi, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Shoe store in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.312165",
+      "location/lng": "70.100412",
+      "placeId": "directory-bilal-shoe-qvvjue",
+      "openingHours": {},
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Bin Taj Food Point",
+      "nameUr": null,
+      "slug": "bin-taj-food-point",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Sadiqabad - Rahimyar Khan Road, Main Street, Sadiqabad, Chandrami, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 300 9674992",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 3.9/5 from 13 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlyPc3oY2xwUaE2h5HQReJt8BQbWdatCAZpY3f8d67F43ldwnjoJSJWt_GmakdMHYoZLMWZ1owStSQUc2EB-WgucZbvU5DwzJuKAktaZd8aL-YtBJs5rQ4WvBvhM7GUrMKAfWU=w408-h306-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlyPc3oY2xwUaE2h5HQReJt8BQbWdatCAZpY3f8d67F43ldwnjoJSJWt_GmakdMHYoZLMWZ1owStSQUc2EB-WgucZbvU5DwzJuKAktaZd8aL-YtBJs5rQ4WvBvhM7GUrMKAfWU=w408-h306-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.328555",
+      "location/lng": "70.16652",
+      "placeId": "directory-bin-taj-food-point",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "11:00",
+            "close": "23:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "11:00",
+            "close": "23:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "11:00",
+            "close": "23:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "11:00",
+            "close": "23:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "11:00",
+            "close": "23:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "11:00",
+            "close": "23:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "11:00",
+            "close": "23:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Bismillah cafy",
+      "nameUr": null,
+      "slug": "bismillah-cafy",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "near hafiz burger and pratha houes, sadiqabad, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 327 7074472",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmM4KkkvGHng3rszjAZKoVOzQi17EMAK5p0fHdknlh4_xLUpPv2cOhuezWerGrHCrowdoqyAIZLI5EvUtaJF0Ag_2oHSyu1ps91jx177SGPm8LlnF0HzwPz-MuJhWmxgHP9gAk5TvxrrduFP=w430-h240-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmM4KkkvGHng3rszjAZKoVOzQi17EMAK5p0fHdknlh4_xLUpPv2cOhuezWerGrHCrowdoqyAIZLI5EvUtaJF0Ag_2oHSyu1ps91jx177SGPm8LlnF0HzwPz-MuJhWmxgHP9gAk5TvxrrduFP=w430-h240-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.30162",
+      "location/lng": "70.124774",
+      "placeId": "directory-bismillah-cafy",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Bismillah Chicken Shawarma",
+      "nameUr": null,
+      "slug": "bismillah-chicken-shawarma",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "842M+M7G, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 308 7615441",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 5/5 from 2 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMOE0QyD4-_HpzJFV7fLvKRfy64umTP32Jdo3Ww7Oy-reBv4tLSqhmxapmaRofLopsE5HzpQaJVk_dH4EgMz8ETIhyBzLPeD71q65t1EROK9D7DEb5y8pHETShUMsrhPYt81_lp=w408-h544-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmMOE0QyD4-_HpzJFV7fLvKRfy64umTP32Jdo3Ww7Oy-reBv4tLSqhmxapmaRofLopsE5HzpQaJVk_dH4EgMz8ETIhyBzLPeD71q65t1EROK9D7DEb5y8pHETShUMsrhPYt81_lp=w408-h544-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.301677",
+      "location/lng": "70.1332",
+      "placeId": "directory-bismillah-chicken-shawarma",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Bismillah Hotel",
+      "nameUr": null,
+      "slug": "bismillah-hotel",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "8435+42G, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 301 2072676",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4/5 from 8 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLeq3cGWwd9FX1aQ65xBvVNqonKJ97O43m1ktyCm6gmVX-7A5_Ijs_qNYSHYqwgRvS3Tm_SG93WKMYXMw99H-ss6YFVtEBkUbWkuzdun-z8lYX2grOBT0GBV4bceWajlWBTL8Qm9Y_s0k5Xr=w408-h544-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/AABkmLeq3cGWwd9FX1aQ65xBvVNqonKJ97O43m1ktyCm6gmVX-7A5_Ijs_qNYSHYqwgRvS3Tm_SG93WKMYXMw99H-ss6YFVtEBkUbWkuzdun-z8lYX2grOBT0GBV4bceWajlWBTL8Qm9Y_s0k5Xr=w408-h544-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.302814",
+      "location/lng": "70.107575",
+      "placeId": "directory-bismillah-hotel",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    }
+  ]
+}

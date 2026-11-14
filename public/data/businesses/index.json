@@ -1,9 +1,9 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "city": "Sadiqabad",
   "country": "Pakistan",
-  "businessCount": 333,
-  "imageUrlCount": 233,
+  "businessCount": 456,
+  "imageUrlCount": 310,
   "chunkSize": 50,
   "chunks": [
     {
@@ -33,12 +33,40 @@
     {
       "file": "businesses-007.json",
       "count": 33
+    },
+    {
+      "file": "businesses-db-001.json",
+      "count": 25
+    },
+    {
+      "file": "businesses-db-002.json",
+      "count": 25
+    },
+    {
+      "file": "businesses-db-003.json",
+      "count": 25
+    },
+    {
+      "file": "businesses-db-004.json",
+      "count": 25
+    },
+    {
+      "file": "businesses-db-005.json",
+      "count": 23
     }
   ],
   "imageField": "imageUrl",
-  "note": "imageUrl values are original remote Google Places image URLs; image binaries are not vendored into this repository.",
+  "note": "Public directory data is loaded from GitHub JSON. Google-hosted images are served through a same-origin Cloudflare Pages cache proxy; private owner and user fields are excluded from the public snapshot.",
   "generatedFrom": [
     "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx",
-    "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+    "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx",
+    "Supabase published businesses snapshot 2026-11-14 (private owner and internal fields excluded)"
+  ],
+  "imageFields": [
+    "imageUrl",
+    "imageUrls",
+    "logoUrl",
+    "coverUrl",
+    "galleryUrls"
   ]
 }

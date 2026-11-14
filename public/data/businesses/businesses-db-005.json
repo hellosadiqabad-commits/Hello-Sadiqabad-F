@@ -1,0 +1,1422 @@
+{
+  "schemaVersion": 2,
+  "source": "Supabase published business snapshot (public fields only)",
+  "chunk": 5,
+  "businessCount": 23,
+  "businesses": [
+    {
+      "title": "Rehan Burger Shop",
+      "nameUr": null,
+      "slug": "rehan-burger-shop",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "845H+32J, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 3/5 from 2 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.30771",
+      "location/lng": "70.127501",
+      "placeId": "directory-rehan-burger-shop",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Roshan shoes shop",
+      "nameUr": null,
+      "slug": "roshan-shoes-shop-bs0rrq",
+      "categoryName": "Clothing",
+      "categorySlug": "clothing",
+      "categoryIcon": "shirt",
+      "categoryColor": "pink",
+      "categorySortOrder": 9,
+      "address": "847C+8P3, Shehzad Colony, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 301 7756471",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Shoe store in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.313254",
+      "location/lng": "70.121789",
+      "placeId": "directory-roshan-shoes-shop-bs0rrq",
+      "openingHours": {},
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Saeedi Burger & Shawarma",
+      "nameUr": null,
+      "slug": "saeedi-burger-shawarma",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "844M+V4J, Hospital Rd, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 306 6391019",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 3.5/5 from 2 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPq9iRnkLWFJw23zj5B-rkpZJI9V36MSTsBeFLhuaZFRkH70CyyGxcus6pg7JBhIMGt1WEgd60qH3xOPvLLj-xyYllB7-xUb890bh1v1yb5hnypmTLF0U0k00aNCR68uz8u1B_8=w426-h240-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmPq9iRnkLWFJw23zj5B-rkpZJI9V36MSTsBeFLhuaZFRkH70CyyGxcus6pg7JBhIMGt1WEgd60qH3xOPvLLj-xyYllB7-xUb890bh1v1yb5hnypmTLF0U0k00aNCR68uz8u1B_8=w426-h240-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.307224",
+      "location/lng": "70.132766",
+      "placeId": "directory-saeedi-burger-shawarma",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Sajawal Lawn Restaurant",
+      "nameUr": null,
+      "slug": "sajawal-lawn-restaurant",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "845M+7MF, Ali Town, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 303 0525900",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "https://www.instagram.com/cafe_sajawal?igsh=MXg1a3dkYjNwOGJ1aQ==&utm_source=qr",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 3.8/5 from 12 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOCwJ0XTps-QrXhOjqsnjEkjXrjuk3NV6B6eZXY3Tg7jeOM0cYDTa1vChOuBgnbm1wsQLRFjrr9_oh8-uCmsl7M2kHc5xrzuS3Z0tawnHUY2KRgDgdc-kG0Z5kOPNxt9aKgAWfUXWxv4aLo=w408-h725-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOCwJ0XTps-QrXhOjqsnjEkjXrjuk3NV6B6eZXY3Tg7jeOM0cYDTa1vChOuBgnbm1wsQLRFjrr9_oh8-uCmsl7M2kHc5xrzuS3Z0tawnHUY2KRgDgdc-kG0Z5kOPNxt9aKgAWfUXWxv4aLo=w408-h725-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.307868",
+      "location/lng": "70.133985",
+      "placeId": "directory-sajawal-lawn-restaurant",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "19:00",
+            "close": "01:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "19:00",
+            "close": "01:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "19:00",
+            "close": "01:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "19:00",
+            "close": "01:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "19:00",
+            "close": "01:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "19:00",
+            "close": "01:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "19:00",
+            "close": "01:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants",
+        "assistive-hearing-loop",
+        "wheelchair-accessible-entrance",
+        "wheelchair-accessible-parking-lot",
+        "wheelchair-accessible-seating"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "SALAR FOODS & CATERING SERVICES",
+      "nameUr": null,
+      "slug": "salar-foods-catering-services",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Club Rd, near Hafiz Paint, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 308 7618845",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4/5 from 1 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmODV6BJjMc_6yopRKLeND0mxdk_GirTNOlhVHXneHFZ8mMOA3Iuk2nnSaGCrMyW08CAGoxgDZGbClW4BbRGdJDeZXau5jFNj0uLiKp4f_iZWl27HNuD-aK05VTXPK63MWECTzu1=w408-h545-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmODV6BJjMc_6yopRKLeND0mxdk_GirTNOlhVHXneHFZ8mMOA3Iuk2nnSaGCrMyW08CAGoxgDZGbClW4BbRGdJDeZXau5jFNj0uLiKp4f_iZWl27HNuD-aK05VTXPK63MWECTzu1=w408-h545-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.300342",
+      "location/lng": "70.131172",
+      "placeId": "directory-salar-foods-catering-services",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "10:00",
+            "close": "23:30"
+          }
+        ],
+        "mon": [
+          {
+            "open": "10:00",
+            "close": "23:30"
+          }
+        ],
+        "sat": [
+          {
+            "open": "10:00",
+            "close": "23:30"
+          }
+        ],
+        "sun": [
+          {
+            "open": "10:00",
+            "close": "22:30"
+          }
+        ],
+        "thu": [
+          {
+            "open": "10:00",
+            "close": "23:30"
+          }
+        ],
+        "tue": [
+          {
+            "open": "10:00",
+            "close": "23:30"
+          }
+        ],
+        "wed": [
+          {
+            "open": "10:00",
+            "close": "23:30"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Shalimar Tent",
+      "nameUr": null,
+      "slug": "shalimar-tent",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "74JW+22H, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.5/5 from 17 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [
+        "Dine-in",
+        "Takeout"
+      ],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.280056",
+      "location/lng": "70.145116",
+      "placeId": "directory-shalimar-tent",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants",
+        "dine-in",
+        "takeout",
+        "casual",
+        "good-for-kids",
+        "groups",
+        "table-service",
+        "halal-food",
+        "late-night-food",
+        "small-plates",
+        "free-parking-lot"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Shama Juice Point",
+      "nameUr": null,
+      "slug": "shama-juice-point",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Shama Juice point, near nishter chownk, Hussainabad, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 302 3732829",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 5/5 from 8 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNWC6UkQA8yCqebjy1Gi4v9ihu51_o1hCCpU_ot0TDtW6Kp42Mk98kZVWjgLZ6H_SHnDaNFDxTtvR3ynqUWiksInSQ9lAhYrsZywZTVE7tSwPU5TNsIHcqaoMHtDcmPKowFsGFl8cOiljQ=w408-h725-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmNWC6UkQA8yCqebjy1Gi4v9ihu51_o1hCCpU_ot0TDtW6Kp42Mk98kZVWjgLZ6H_SHnDaNFDxTtvR3ynqUWiksInSQ9lAhYrsZywZTVE7tSwPU5TNsIHcqaoMHtDcmPKowFsGFl8cOiljQ=w408-h725-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.307234",
+      "location/lng": "70.12018",
+      "placeId": "directory-shama-juice-point",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Sheeren Mehal Hotel and Resturant",
+      "nameUr": null,
+      "slug": "sheeren-mehal-hotel-and-resturant",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "842J+R63, Railway Rd, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 300 0184370",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 3.5/5 from 30 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNPh_cyia7MNtKuvEAdrGdRnyKONDlMTOzLsBo0v4mpz36CIk4aId38NjI2SgbgiPLU8qK_k6CxaCwnZTFHgrkhAdNe_n9aEARNqq6XN1KrIZoS6WuWBNhdzqjLydfUiWzi3N1-=w408-h306-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmNPh_cyia7MNtKuvEAdrGdRnyKONDlMTOzLsBo0v4mpz36CIk4aId38NjI2SgbgiPLU8qK_k6CxaCwnZTFHgrkhAdNe_n9aEARNqq6XN1KrIZoS6WuWBNhdzqjLydfUiWzi3N1-=w408-h306-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.302004",
+      "location/lng": "70.130559",
+      "placeId": "directory-sheeren-mehal-hotel-and-resturant",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Shoes Club",
+      "nameUr": null,
+      "slug": "shoes-club-ufxn74",
+      "categoryName": "Clothing",
+      "categorySlug": "clothing",
+      "categoryIcon": "shirt",
+      "categoryColor": "pink",
+      "categorySortOrder": 9,
+      "address": "Faysal bazar, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 68 5801988",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Shoe store in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.301082",
+      "location/lng": "70.132074",
+      "placeId": "directory-shoes-club-ufxn74",
+      "openingHours": {},
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Spice and Grill",
+      "nameUr": null,
+      "slug": "spice-and-grill",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "74VF+3F7, Tillu Rd, Muslim Colony, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 307 3152052",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.9/5 from 7 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [
+        "Dine-in",
+        "Takeout"
+      ],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmM9oGU2pTASgSDuBiydvgGJHUld2t6jh8n455Jcgco_C8eakWArblICGgy_h33vfSokxaGleBROOYTgaXyoVzhAMETy3KWWhUDa4h3sdXXjFB1dcMCO1Nc0M3A_3b_0eoOAEN81s_k3-Eg-=w410-h240-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmM9oGU2pTASgSDuBiydvgGJHUld2t6jh8n455Jcgco_C8eakWArblICGgy_h33vfSokxaGleBROOYTgaXyoVzhAMETy3KWWhUDa4h3sdXXjFB1dcMCO1Nc0M3A_3b_0eoOAEN81s_k3-Eg-=w410-h240-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.293685",
+      "location/lng": "70.123104",
+      "placeId": "directory-spice-and-grill",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "17:00",
+            "close": "02:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "17:00",
+            "close": "02:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "17:00",
+            "close": "02:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "17:00",
+            "close": "02:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "17:00",
+            "close": "02:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "17:00",
+            "close": "02:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "17:00",
+            "close": "02:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants",
+        "dine-in",
+        "takeout",
+        "casual",
+        "good-for-kids",
+        "groups",
+        "dinner",
+        "table-service",
+        "late-night-food",
+        "quick-bite",
+        "free-parking-lot"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Teapot",
+      "nameUr": null,
+      "slug": "teapot",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "842M+C95, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 305 9670000",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 3.7/5 from 23 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLdVRFWm-l6iYzkZn3WxPw5TthJQtLXC6vVEwmglKHXxICjImwEvBRcbYn-KaVMx1oFP2lqcwIzkSOtE7sYDQOMIcK_mK-GOjpnWFp3JcHtI0sVDHCQX9-TR3lHd2l9qcIgMskxQ_A=w408-h544-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/AABkmLdVRFWm-l6iYzkZn3WxPw5TthJQtLXC6vVEwmglKHXxICjImwEvBRcbYn-KaVMx1oFP2lqcwIzkSOtE7sYDQOMIcK_mK-GOjpnWFp3JcHtI0sVDHCQX9-TR3lHd2l9qcIgMskxQ_A=w408-h544-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.301074",
+      "location/lng": "70.133394",
+      "placeId": "directory-teapot",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "The food cafe pizza press",
+      "nameUr": null,
+      "slug": "the-food-cafe-pizza-press",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "chungi number, 10 KLP Rd, opposite Modle Town, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 302 8210336",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.2/5 from 333 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMLSu2gYFX0t6fE65icyHSVtLbjfmi8MEdq2S3ULSeDRAkSG37kvDVJ6idM6eDU-8IhnWWCjzIAdzqikBXmCPXYPeVTpJWpeVpjEoRtViKTpT_5fwhQZIpLPu2fUSNlB-kHnyN3=w408-h544-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmMLSu2gYFX0t6fE65icyHSVtLbjfmi8MEdq2S3ULSeDRAkSG37kvDVJ6idM6eDU-8IhnWWCjzIAdzqikBXmCPXYPeVTpJWpeVpjEoRtViKTpT_5fwhQZIpLPu2fUSNlB-kHnyN3=w408-h544-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.303102",
+      "location/lng": "70.108259",
+      "placeId": "directory-the-food-cafe-pizza-press",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants",
+        "wheelchair-accessible-parking-lot"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "The Food Capital",
+      "nameUr": null,
+      "slug": "the-food-capital",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "M.A. Jinnah Rd, near Chief Residencia, Rustam Colony, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 305 3790521",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "https://www.thefoodcapital.pk/",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.301309",
+      "location/lng": "70.139797",
+      "placeId": "directory-the-food-capital",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "17:00",
+            "close": "01:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "17:00",
+            "close": "01:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "17:00",
+            "close": "01:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "17:00",
+            "close": "01:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "17:00",
+            "close": "01:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "17:00",
+            "close": "01:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "17:00",
+            "close": "01:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "The Pie Pizza",
+      "nameUr": null,
+      "slug": "the-pie-pizza",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "74XG+Q88, Tillu Rd, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 302 3193110",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.5/5 from 2 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOeB6P-USbv9R6wzL6frrxGobGMk9bNjXP7Vt--oAcK0Q2vjQAcszt7bNasdYPRgsMf9YeWRVMoY55MxQ6BASd4IvTBhwCyhkprnoek4HiZLElBlpcTVm8Ik8WcupRM8g5Al1xBmvIyGj37=w408-h544-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOeB6P-USbv9R6wzL6frrxGobGMk9bNjXP7Vt--oAcK0Q2vjQAcszt7bNasdYPRgsMf9YeWRVMoY55MxQ6BASd4IvTBhwCyhkprnoek4HiZLElBlpcTVm8Ik8WcupRM8g5Al1xBmvIyGj37=w408-h544-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.299409",
+      "location/lng": "70.125827",
+      "placeId": "directory-the-pie-pizza",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "17:00",
+            "close": "00:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "17:00",
+            "close": "00:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "17:00",
+            "close": "00:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "17:00",
+            "close": "00:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "17:00",
+            "close": "00:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "17:00",
+            "close": "00:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "17:00",
+            "close": "00:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Tom n Jerry Ice Bar & Restaurant",
+      "nameUr": null,
+      "slug": "tom-n-jerry-ice-bar-restaurant",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "KLP Rd, opposite Model Avenue Enterece, Sadiqabad, 63500, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 305 6815948",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 5/5 from 10 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkCbNiD-imx7erKw1hAj7Pl-vCWycKsyYk8YCDL7Fz7gWGc0ZuaXdSQIpliuGWhx9AXqB5tejacLE2KZ5m6wZqqP1e_ykFkjihzhocndZ5NZaj0XoKXJprC9Pgc5tYixslkfxn2hcDpevuo=w426-h240-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkCbNiD-imx7erKw1hAj7Pl-vCWycKsyYk8YCDL7Fz7gWGc0ZuaXdSQIpliuGWhx9AXqB5tejacLE2KZ5m6wZqqP1e_ykFkjihzhocndZ5NZaj0XoKXJprC9Pgc5tYixslkfxn2hcDpevuo=w426-h240-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.299035",
+      "location/lng": "70.097763",
+      "placeId": "directory-tom-n-jerry-ice-bar-restaurant",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "17:30",
+            "close": "00:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "17:30",
+            "close": "00:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "17:30",
+            "close": "00:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "17:30",
+            "close": "00:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "17:30",
+            "close": "00:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "17:30",
+            "close": "00:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "17:30",
+            "close": "00:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Turkish Wrap",
+      "nameUr": null,
+      "slug": "turkish-wrap",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "74XQ+9VV, Allama Iqbal Rd, Ajmal Town, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.298494",
+      "location/lng": "70.139674",
+      "placeId": "directory-turkish-wrap",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Usama",
+      "nameUr": null,
+      "slug": "usama",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "842J+PG5, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.5/5 from 2 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.301865",
+      "location/lng": "70.131343",
+      "placeId": "directory-usama",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Welcome shoes and cgeneral stor",
+      "nameUr": null,
+      "slug": "welcome-shoes-and-cgeneral-stor-uvvwfi",
+      "categoryName": "Groceries",
+      "categorySlug": "groceries",
+      "categoryIcon": "shopping-basket",
+      "categoryColor": "green",
+      "categorySortOrder": 6,
+      "address": "8466+FG7, Haider Colony, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "General store in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.311156",
+      "location/lng": "70.11131",
+      "placeId": "directory-welcome-shoes-and-cgeneral-stor-uvvwfi",
+      "openingHours": {},
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Zainab Tandoori Cafe",
+      "nameUr": null,
+      "slug": "zainab-tandoori-cafe",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "843J+6M2, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 300 0762641",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4/5 from 2 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOToVEEpE6pLNPtZo8Vxx3e6xXPGYC_hwPedh9_UdGavYfTT-K1X7p87H3dGJCafTIfLwzc_0-rAVELd4NE79WInxLFZ8sa021L18gI8TCBQk_LfAj5JbGp4ooJJJSRGrP-Dac=w539-h240-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOToVEEpE6pLNPtZo8Vxx3e6xXPGYC_hwPedh9_UdGavYfTT-K1X7p87H3dGJCafTIfLwzc_0-rAVELd4NE79WInxLFZ8sa021L18gI8TCBQk_LfAj5JbGp4ooJJJSRGrP-Dac=w539-h240-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.303002",
+      "location/lng": "70.131637",
+      "placeId": "directory-zainab-tandoori-cafe",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Zaiqa Restaurant SDK",
+      "nameUr": null,
+      "slug": "zaiqa-restaurant-sdk",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "N-5, near Taj Chowk, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 300 8674949",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "https://zaiqarestaurant.pk/",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.1/5 from 2186 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [
+        "Delivery",
+        "Dine-in",
+        "Onsite services",
+        "Outdoor seating",
+        "Takeout"
+      ],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOQBh1AZs34tD-wu6mh-WnkVtxRPf8GtM5W_zO5NaQWpj7teH_ATu_iTfn_dT8XbaSpxFWEGIGLg6Ow6PNfX3Rf3RRuSM2L0Az9vJot0r7uy92lhldNuOK2SD0FDEzYV7TtjuAM=w520-h240-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOQBh1AZs34tD-wu6mh-WnkVtxRPf8GtM5W_zO5NaQWpj7teH_ATu_iTfn_dT8XbaSpxFWEGIGLg6Ow6PNfX3Rf3RRuSM2L0Az9vJot0r7uy92lhldNuOK2SD0FDEzYV7TtjuAM=w520-h240-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.308601",
+      "location/lng": "70.097412",
+      "placeId": "directory-zaiqa-restaurant-sdk",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": true,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants",
+        "delivery",
+        "dine-in",
+        "onsite-services",
+        "outdoor-seating",
+        "takeout",
+        "wheelchair-accessible-entrance",
+        "wheelchair-accessible-parking-lot",
+        "wheelchair-accessible-restroom",
+        "wheelchair-accessible-seating",
+        "gender-neutral-restroom"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Zia mobile shope and cold corner",
+      "nameUr": null,
+      "slug": "zia-mobile-shope-and-cold-corner-fqodye",
+      "categoryName": "Mobile Shops",
+      "categorySlug": "mobile-shops",
+      "categoryIcon": "smartphone",
+      "categoryColor": "blue",
+      "categorySortOrder": 8,
+      "address": "8482+M9C Alnoor garden, bypass, Dhaka Colony Kachi Abadi, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 305 8145145",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Cell phone store in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.31669",
+      "location/lng": "70.100901",
+      "placeId": "directory-zia-mobile-shope-and-cold-corner-fqodye",
+      "openingHours": {},
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Zubair Mobile Shop",
+      "nameUr": null,
+      "slug": "zubair-mobile-shop-qngktw",
+      "categoryName": "Mobile Shops",
+      "categorySlug": "mobile-shops",
+      "categoryIcon": "smartphone",
+      "categoryColor": "blue",
+      "categorySortOrder": 8,
+      "address": "8464+89F, Haider Colony, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Mobile phone repair shop in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.311182",
+      "location/lng": "70.106567",
+      "placeId": "directory-zubair-mobile-shop-qngktw",
+      "openingHours": {},
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "علی ہجویری نان شاپ",
+      "nameUr": null,
+      "slug": "ali-hajveri-naan-shop",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "842J+3PW, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOlB6Mrlcz0b_zsKIXoYiWMegzey8jkoaXLCUsrktnTByredZb8AEZR976ESS6sX26cw2IFE6B5N-xT1iTIuwsHCh70anBG8M76Ex1D3CGzEw6NBhC4g704B3-cNXvU5B0htOCRhBVX7f4=w408-h906-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOlB6Mrlcz0b_zsKIXoYiWMegzey8jkoaXLCUsrktnTByredZb8AEZR976ESS6sX26cw2IFE6B5N-xT1iTIuwsHCh70anBG8M76Ex1D3CGzEw6NBhC4g704B3-cNXvU5B0htOCRhBVX7f4=w408-h906-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.300237",
+      "location/lng": "70.131841",
+      "placeId": "directory-ali-hajveri-naan-shop",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "05:00",
+            "close": "16:30"
+          }
+        ],
+        "mon": [
+          {
+            "open": "05:00",
+            "close": "16:30"
+          }
+        ],
+        "sat": [
+          {
+            "open": "05:00",
+            "close": "16:30"
+          }
+        ],
+        "sun": [
+          {
+            "open": "05:00",
+            "close": "16:30"
+          }
+        ],
+        "thu": [
+          {
+            "open": "05:00",
+            "close": "16:30"
+          }
+        ],
+        "tue": [
+          {
+            "open": "05:00",
+            "close": "16:30"
+          }
+        ],
+        "wed": [
+          {
+            "open": "05:00",
+            "close": "16:30"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    }
+  ]
+}

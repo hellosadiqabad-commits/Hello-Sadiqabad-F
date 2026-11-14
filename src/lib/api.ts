@@ -295,606 +295,263 @@ function appendAuditDemo(
 // ---------------------------------------------------------------------------
 
 export async function fetchSiteSettings(): Promise<SiteSettingsMap> {
-  const client = getSupabaseClient();
-  if (client) {
-    const { data, error } = await client
-      .from('site_settings')
-      .select('key, value, description, is_public')
-      .eq('is_public', true);
-    if (!error && data) {
-      return parseSiteSettings(data as SiteSettingRow[]);
-    }
-  }
-  const db = loadDemoDb();
-  return parseSiteSettings(db.site_settings);
+  // Public site settings are versioned with the GitHub seed.
+  return parseSiteSettings(SEED_SITE_SETTINGS.filter((setting) => setting.is_public));
 }
 
 export const fetchPublicSiteSettings = fetchSiteSettings;
 
 export async function fetchCity(): Promise<CityRow> {
-  const client = getSupabaseClient();
-  if (client) {
-    const { data, error } = await client
-      .from('cities')
-      .select('*')
-      .eq('slug', supabaseConfig.defaultCitySlug)
-      .single();
-    if (!error && data) return data as CityRow;
-  }
-  return loadDemoDb().city;
+  return SEED_CITY;
 }
 
 export async function fetchCategoriesWithCounts(): Promise<CategoryWithChildren[]> {
-  const db = loadDemoDb();
-  let categories: CategoryRow[] = db.categories.filter((c) => c.is_active);
-  let businesses: BusinessRow[] = db.businesses.filter((b) => b.status === 'published');
-
-  const client = getSupabaseClient();
-  if (client) {
-    const [catRes, bizRes] = await Promise.all([
-      client.from('categories').select('*').eq('is_active', true).order('sort_order'),
-      client.from('businesses').select('id, category_id').eq('status', 'published'),
-    ]);
-    if (!catRes.error && catRes.data) categories = catRes.data as CategoryRow[];
-    if (!bizRes.error && bizRes.data) businesses = bizRes.data as BusinessRow[];
-  }
-
+  const [categories, businesses] = await Promise.all([fetchAllCategories(), fetchGitHubBusinesses()]);
   const counts = new Map<string, number>();
-  for (const b of businesses) {
-    counts.set(b.category_id, (counts.get(b.category_id) ?? 0) + 1);
-  }
-
-  const parents = categories
-    .filter((c) => !c.parent_id)
-    .sort((a, b) => a.sort_order - b.sort_order);
-
-  return parents.map((parent) => {
-    const children = categories
-      .filter((c) => c.parent_id === parent.id)
-      .sort((a, b) => a.sort_order - b.sort_order);
-    const totalCount =
-      (counts.get(parent.id) ?? 0) +
-      children.reduce((acc, ch) => acc + (counts.get(ch.id) ?? 0), 0);
-    return {
-      ...parent,
-      children,
-      listing_count: totalCount,
-    };
+  for (const business of businesses) counts.set(business.category_id,(counts.get(business.category_id)||0)+1);
+  return categories.filter((category)=>!category.parent_id).sort((a,b)=>a.sort_order-b.sort_order).map((parent)=>{
+    const children=categories.filter((category)=>category.parent_id===parent.id).sort((a,b)=>a.sort_order-b.sort_order);
+    return {...parent,children,listing_count:(counts.get(parent.id)||0)+children.reduce((sum,child)=>sum+(counts.get(child.id)||0),0)};
   });
 }
 
 export async function fetchAllCategories(includeInactive = false): Promise<CategoryRow[]> {
-  const client = getSupabaseClient();
-  if (client) {
-    const q = client.from('categories').select('*').order('sort_order');
-    const { data, error } = includeInactive ? await q : await q.eq('is_active', true);
-    if (!error && data) return data as CategoryRow[];
-  }
-  const db = loadDemoDb();
-  return db.categories
-    .filter((c) => includeInactive || c.is_active)
-    .sort((a, b) => a.sort_order - b.sort_order);
+  const businesses=await fetchGitHubBusinesses();
+  const bySlug=new Map<string,CategoryRow>();
+  for(const category of SEED_CATEGORIES)bySlug.set(category.slug,category);
+  for(const business of businesses)if(business.category&&!bySlug.has(business.category.slug))bySlug.set(business.category.slug,business.category);
+  return [...bySlug.values()].filter((category)=>includeInactive||category.is_active).sort((a,b)=>a.sort_order-b.sort_order||a.name_en.localeCompare(b.name_en));
 }
 
 export async function fetchAllAreas(includeInactive = false): Promise<AreaRow[]> {
-  const client = getSupabaseClient();
-  if (client) {
-    const q = client.from('areas').select('*').order('name_en');
-    const { data, error } = includeInactive ? await q : await q.eq('is_active', true);
-    if (!error && data) return data as AreaRow[];
-  }
-  const db = loadDemoDb();
-  return db.areas
-    .filter((a) => includeInactive || a.is_active)
-    .sort((a, b) => a.name_en.localeCompare(b.name_en));
+  const businesses=await fetchGitHubBusinesses();
+  const bySlug=new Map<string,AreaRow>();
+  for(const area of SEED_AREAS)bySlug.set(area.slug,area);
+  for(const business of businesses)if(business.area&&!bySlug.has(business.area.slug))bySlug.set(business.area.slug,business.area);
+  return [...bySlug.values()].filter((area)=>includeInactive||area.is_active).sort((a,b)=>a.name_en.localeCompare(b.name_en));
 }
 
 export async function fetchPlans(): Promise<PlanRow[]> {
-  const client = getSupabaseClient();
-  if (client) {
-    const { data, error } = await client.from('plans').select('*').order('sort_order');
-    if (!error && data) return data as PlanRow[];
-  }
-  return [...loadDemoDb().plans].sort((a, b) => a.sort_order - b.sort_order);
+  return [...SEED_PLANS].filter((plan)=>plan.is_active).sort((a,b)=>a.sort_order-b.sort_order);
 }
 
 type GitHubBusinessRecord = {
-  title?: string;
-  categoryName?: string;
-  "categories/0"?: string;
-  address?: string;
-  neighborhood?: string;
-  phone?: string;
-  website?: string;
-  imageUrl?: string;
-  totalScore?: string | number;
-  reviewsCount?: string | number;
-  "location/lat"?: string | number;
-  "location/lng"?: string | number;
-  placeId?: string;
-  url?: string;
-  description?: string;
-  openingHours?: Array<{ day?: string; hours?: string | null }>;
+  title?:string;nameUr?:string|null;slug?:string;
+  categoryName?:string;categorySlug?:string;categoryIcon?:string;categoryColor?:string;categorySortOrder?:number;
+  "categories/0"?:string;address?:string;addressUr?:string|null;landmark?:string|null;
+  neighborhood?:string;areaSlug?:string;phone?:string;phoneSecondary?:string|null;whatsapp?:string|null;
+  website?:string;facebook?:string|null;instagram?:string|null;youtube?:string|null;tiktok?:string|null;
+  imageUrl?:string;imageUrls?:string[];logoUrl?:string|null;coverUrl?:string|null;galleryUrls?:string[];
+  totalScore?:string|number;reviewsCount?:string|number;"location/lat"?:string|number;"location/lng"?:string|number;
+  placeId?:string;description?:string;descriptionUr?:string|null;servicesEn?:string[];servicesUr?:string[];
+  openingHours?:Array<{day?:string;hours?:string|null}>|BusinessRow["opening_hours"];
+  isOpen24h?:boolean;homeDelivery?:boolean;establishedYear?:number|null;planCode?:string;
+  isVerified?:boolean;isFeatured?:boolean;tags?:string[];source?:string;createdAt?:string;updatedAt?:string;
 };
+type GitHubBusinessIndex={chunks:Array<{file:string;count:number}>};
+let githubBusinessCache:BusinessPublicView[]|null=null;
+let githubBusinessRequest:Promise<BusinessPublicView[]>|null=null;
 
-type GitHubBusinessIndex = {
-  chunks: Array<{ file: string; count: number }>;
-};
-
-let githubBusinessCache: BusinessPublicView[] | null = null;
-
-function slugifyDirectoryValue(value: string): string {
-  return value.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+function slugifyDirectoryValue(value:string):string {
+  return value.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 }
-
-async function fetchGitHubBusinesses(): Promise<BusinessPublicView[]> {
-  if (githubBusinessCache) return githubBusinessCache;
-  const basePath = import.meta.env.BASE_URL || '/';
-  const base = basePath.endsWith('/') ? basePath : `${basePath}/`;
-  const indexResponse = await fetch(`${base}data/businesses/index.json`);
-  if (!indexResponse.ok) throw new Error('Unable to load the GitHub business index.');
-  const index = (await indexResponse.json()) as GitHubBusinessIndex;
-  const batches = await Promise.all(index.chunks.map(async ({ file }) => {
-    const response = await fetch(`${base}data/businesses/${file}`);
-    if (!response.ok) throw new Error(`Unable to load business data: ${file}`);
-    const batch = await response.json() as { businesses: GitHubBusinessRecord[] };
-    return batch.businesses ?? [];
+function uniqueImageUrls(values:Array<string|null|undefined>):string[] {
+  return [...new Set(values.filter((value):value is string=>typeof value==='string'&&value.trim().length>0).map((value)=>value.trim()))];
+}
+function parseDirectoryOpeningHours(record:GitHubBusinessRecord):BusinessRow['opening_hours'] {
+  const source=record.openingHours;if(!source)return null;if(!Array.isArray(source))return source as BusinessRow['opening_hours'];
+  const keys:Record<string,string>={monday:'mon',tuesday:'tue',wednesday:'wed',thursday:'thu',friday:'fri',saturday:'sat',sunday:'sun'};
+  const result:Record<string,Array<{open:string;close:string}>>={};
+  const toTime=(value:string):string|null=>{
+    const match=value.trim().match(/^([0-9]{1,2})(?::([0-9]{2}))?\s*(AM|PM)$/i);if(!match)return null;
+    let hour=Number(match[1])%12;if(match[3].toUpperCase()==='PM')hour+=12;
+    return String(hour).padStart(2,'0')+':'+String(Number(match[2]||0)).padStart(2,'0');
+  };
+  for(const row of source){
+    const day=keys[(row.day||'').toLowerCase()],hours=(row.hours||'').replace(/\s+/g,' ').trim();
+    if(!day||!hours||/closed/i.test(hours))continue;
+    if(/24\s*hours/i.test(hours)){result[day]=[{open:'00:00',close:'23:59'}];continue;}
+    const parts=hours.split(/\s+(?:to|–|—|-)\s+/i);if(parts.length!==2)continue;
+    const open=toTime(parts[0]),close=toTime(parts[1]);if(open&&close)result[day]=[{open,close}];
+  }
+  return Object.keys(result).length?result as BusinessRow['opening_hours']:null;
+}
+function isDirectoryBusinessOpenNow(business:BusinessPublicView):boolean {
+  if(business.is_open_24h||business.opening_hours?.is_24_7)return true;
+  const parts=new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Karachi',weekday:'long',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+  const get=(key:string)=>parts.find((part)=>part.type===key)?.value||'';
+  const days=['mon','tue','wed','thu','fri','sat','sun'];
+  const dayMap:Record<string,string>={Monday:'mon',Tuesday:'tue',Wednesday:'wed',Thursday:'thu',Friday:'fri',Saturday:'sat',Sunday:'sun'};
+  const today=dayMap[get('weekday')],index=days.indexOf(today),minuteNow=Number(get('hour'))*60+Number(get('minute'));
+  const schedule=business.opening_hours;if(!schedule)return false;
+  const toMinutes=(time:string)=>{const [hour,minute]=time.split(':').map(Number);return hour*60+minute;};
+  const todayRanges=(schedule[today as keyof typeof schedule] as Array<{open:string;close:string}>|undefined)||[];
+  for(const range of todayRanges){const open=toMinutes(range.open),close=toMinutes(range.close);if(close>=open?minuteNow>=open&&minuteNow<close:minuteNow>=open||minuteNow<close)return true;}
+  const previous=days[(index+6)%7] as keyof typeof schedule;
+  const previousRanges=(schedule[previous] as Array<{open:string;close:string}>|undefined)||[];
+  return previousRanges.some((range)=>toMinutes(range.close)<toMinutes(range.open)&&minuteNow<toMinutes(range.close));
+}
+async function fetchGitHubBusinesses():Promise<BusinessPublicView[]> {
+  if(githubBusinessCache)return githubBusinessCache;
+  if(!githubBusinessRequest)githubBusinessRequest=loadGitHubBusinesses();
+  try{return await githubBusinessRequest;}finally{githubBusinessRequest=null;}
+}
+async function loadGitHubBusinesses():Promise<BusinessPublicView[]> {
+  const basePath=import.meta.env.BASE_URL||'/',base=basePath.endsWith('/')?basePath:basePath+'/';
+  const indexResponse=await fetch(base+'data/businesses/index.json');
+  if(!indexResponse.ok)throw new Error('Unable to load the GitHub business index.');
+  const index=await indexResponse.json() as GitHubBusinessIndex;
+  const batches=await Promise.all(index.chunks.map(async({file})=>{
+    const response=await fetch(base+'data/businesses/'+file);
+    if(!response.ok)throw new Error('Unable to load business data: '+file);
+    return (await response.json() as {businesses:GitHubBusinessRecord[]}).businesses||[];
   }));
-
-  const records = batches.flat();
-  githubBusinessCache = records.map((record, index) => {
-    const name = record.title?.trim() || 'Unnamed business';
-    const categoryName = record.categoryName || record['categories/0'] || 'Other';
-    const areaName = record.neighborhood?.trim() || 'Sadiqabad';
-    const lat = Number(record['location/lat']);
-    const lng = Number(record['location/lng']);
-    const rating = Number(record.totalScore);
-    const ratingCount = Number(record.reviewsCount);
-    const placeId = record.placeId || `record-${index + 1}`;
-    const categorySlug = slugifyDirectoryValue(categoryName);
-    const areaSlug = slugifyDirectoryValue(areaName);
-    const id = `google-${placeId}`;
-    const category = {
-      id: `google-category-${categorySlug}`, city_id: '', parent_id: null,
-      name_en: categoryName, name_ur: '', slug: categorySlug, icon: 'Store',
-      sort_order: 999, is_active: true, created_at: '', updated_at: '',
-    };
-    const area = {
-      id: `google-area-${areaSlug}`, city_id: '', name_en: areaName,
-      name_ur: '', slug: areaSlug, is_active: true, created_at: '', updated_at: '',
-    };
+  const byKey=new Map<string,GitHubBusinessRecord>();
+  for(const record of batches.flat()){
+    const name=(record.title||'').trim().toLowerCase().replace(/\s+/g,' ');
+    const address=(record.address||'').trim().toLowerCase().replace(/\s+/g,' ');
+    const key=name+'|'+address,previous=byKey.get(key);
+    if(!previous){byKey.set(key,record);continue;}
+    const merged={...previous};
+    for(const [field,value] of Object.entries(record)){
+      if(value===null||value===undefined||value==='')continue;
+      if(Array.isArray(value)&&value.length===0)continue;
+      (merged as Record<string,unknown>)[field]=value;
+    }
+    merged.imageUrl=previous.imageUrl||record.imageUrl;
+    merged.imageUrls=uniqueImageUrls([...(previous.imageUrls||[]),...(record.imageUrls||[]),previous.imageUrl,record.imageUrl]);
+    merged.galleryUrls=uniqueImageUrls([...(previous.galleryUrls||[]),...(record.galleryUrls||[]),...(previous.imageUrls||[]),...(record.imageUrls||[])]);
+    byKey.set(key,merged);
+  }
+  const records=[...byKey.values()];
+  githubBusinessCache=records.map((record,index)=>{
+    const name=record.title?.trim()||'Unnamed business',categoryName=record.categoryName||record['categories/0']||'Other';
+    const areaName=record.neighborhood?.trim()||'Sadiqabad',lat=Number(record['location/lat']),lng=Number(record['location/lng']);
+    const rating=Number(record.totalScore),ratingCount=Number(record.reviewsCount),placeId=record.placeId||'record-'+(index+1);
+    const categorySlug=record.categorySlug||slugifyDirectoryValue(categoryName),areaSlug=record.areaSlug||slugifyDirectoryValue(areaName);
+    const images=uniqueImageUrls([record.logoUrl,record.coverUrl,record.imageUrl,...(record.imageUrls||[]),...(record.galleryUrls||[])]);
+    const mainImage=record.logoUrl||record.imageUrl||record.coverUrl||images[0]||null,coverImage=record.coverUrl||record.imageUrl||record.logoUrl||images[0]||null;
+    const category={id:'google-category-'+categorySlug,city_id:'',parent_id:null,name_en:categoryName,name_ur:'',slug:categorySlug,
+      icon:record.categoryIcon||'Store',color:record.categoryColor||'#006948',sort_order:record.categorySortOrder??999,
+      synonyms:[],is_active:true,created_at:'',updated_at:''};
+    const area={id:'google-area-'+areaSlug,city_id:'',name_en:areaName,name_ur:'',slug:areaSlug,is_active:true,created_at:'',updated_at:''};
     return {
-      id, city_id: '', owner_id: null, name_en: name, name_ur: null,
-      slug: `${slugifyDirectoryValue(name) || 'business'}-${slugifyDirectoryValue(placeId).slice(-10)}`,
-      category_id: category.id, area_id: area.id, address_en: record.address || null,
-      address_ur: null, landmark_en: null, landmark_ur: null,
-      lat: Number.isFinite(lat) ? lat : null, lng: Number.isFinite(lng) ? lng : null,
-      phone_primary: record.phone || '', phone_secondary: null, phone_normalized: record.phone || '',
-      whatsapp: null, email: null, website_url: record.website || null,
-      facebook_url: null, instagram_url: null, youtube_url: null, tiktok_url: null,
-      description_en: record.description || null, description_ur: null,
-      services_en: [], services_ur: [], logo_url: record.imageUrl || null,
-      cover_url: record.imageUrl || null, owner_name: null, owner_photo_url: null,
-      gallery_urls: record.imageUrl ? [record.imageUrl] : [], video_urls: [],
-      opening_hours: null, is_open_24h: false, home_delivery: false, established_year: null,
-      status: 'published', rejection_reason: null, plan_code: 'free', plan_expires_at: null,
-      is_verified: false, is_featured: false, tags: [categoryName, areaName],
-      meta_title_en: null, meta_description_en: null,
-      rating_avg: Number.isFinite(rating) && rating > 0 ? rating : null,
-      rating_count: Number.isFinite(ratingCount) ? ratingCount : 0,
-      view_count: 0, call_count: 0, whatsapp_count: 0, source: 'google_places_github',
-      created_by: null, assigned_to: null, published_at: null, claimed_at: null,
-      created_at: '', updated_at: '',
-      category, area, plan: null, active_offers: [], approved_reviews: [],
+      id:'github-'+(slugifyDirectoryValue(record.slug||placeId)||String(index+1)),city_id:'',owner_id:null,
+      name_en:name,name_ur:record.nameUr||null,
+      slug:record.slug||(slugifyDirectoryValue(name)||'business')+'-'+slugifyDirectoryValue(placeId).slice(-10),
+      category_id:category.id,area_id:area.id,address_en:record.address||null,address_ur:record.addressUr||null,
+      landmark_en:record.landmark||null,landmark_ur:null,lat:Number.isFinite(lat)?lat:null,lng:Number.isFinite(lng)?lng:null,
+      phone_primary:record.phone||'',phone_secondary:record.phoneSecondary||null,phone_normalized:record.phone||'',
+      whatsapp:record.whatsapp||null,email:null,website_url:record.website||null,facebook_url:record.facebook||null,
+      instagram_url:record.instagram||null,youtube_url:record.youtube||null,tiktok_url:record.tiktok||null,
+      description_en:record.description||null,description_ur:record.descriptionUr||null,services_en:record.servicesEn||[],services_ur:record.servicesUr||[],
+      logo_url:mainImage,cover_url:coverImage,owner_name:null,owner_photo_url:null,gallery_urls:images,video_urls:[],
+      opening_hours:parseDirectoryOpeningHours(record),is_open_24h:Boolean(record.isOpen24h),home_delivery:Boolean(record.homeDelivery),
+      established_year:record.establishedYear??null,status:'published',rejection_reason:null,plan_code:(record.planCode||'free') as BusinessRow['plan_code'],
+      plan_expires_at:null,is_verified:Boolean(record.isVerified),is_featured:Boolean(record.isFeatured),tags:record.tags?.length?record.tags:[categoryName,areaName],
+      meta_title_en:null,meta_description_en:null,rating_avg:Number.isFinite(rating)&&rating>0?rating:null,
+      rating_count:Number.isFinite(ratingCount)?ratingCount:0,view_count:0,call_count:0,whatsapp_count:0,
+      source:record.source||'github_directory',created_by:null,assigned_to:null,published_at:null,claimed_at:null,
+      created_at:record.createdAt||'',updated_at:record.updatedAt||'',category,area,plan:null,active_offers:[],approved_reviews:[],
     } as unknown as BusinessPublicView;
   });
   return githubBusinessCache;
 }
-
-function matchesGitHubBusiness(business: BusinessPublicView, filters: Partial<SearchFiltersState>): boolean {
-  const record = business as BusinessPublicView & { tags: string[] };
-  const q = filters.q?.trim().toLowerCase();
-  if (q && ![
-    business.name_en, business.address_en || '', business.phone_primary || '',
-    business.category?.name_en || '', business.area?.name_en || '',
-  ].join(' ').toLowerCase().includes(q)) return false;
-  if (filters.category && slugifyDirectoryValue(business.category?.slug || '') !== filters.category) return false;
-  if (filters.area && slugifyDirectoryValue(business.area?.slug || '') !== filters.area) return false;
-  if (filters.verified || filters.open || filters.offer || filters.delivery) return false;
-  if (filters.rating && (business.rating_avg ?? 0) < filters.rating) return false;
+function matchesGitHubBusiness(business:BusinessPublicView,filters:Partial<SearchFiltersState>):boolean {
+  const query=filters.q?.trim().toLowerCase();
+  if(query&&![business.name_en,business.name_ur||'',business.address_en||'',business.phone_primary||'',business.category?.name_en||'',business.area?.name_en||'',...(business.tags||[])].join(' ').toLowerCase().includes(query))return false;
+  if(filters.category&&business.category?.slug!==filters.category)return false;
+  if(filters.area&&business.area?.slug!==filters.area)return false;
+  if(filters.verified&&!business.is_verified)return false;
+  if(filters.open&&!isDirectoryBusinessOpenNow(business))return false;
+  if(filters.offer&&!(business.active_offers?.length))return false;
+  if(filters.delivery&&!business.home_delivery)return false;
+  if(filters.rating&&(business.rating_avg??0)<filters.rating)return false;
   return true;
 }
 
 export async function searchBusinesses(
-  filters: Partial<SearchFiltersState>,
-  options: {
-    page?: number;
-    limit?: number;
-    userCoords?: { lat: number; lng: number } | null;
-    logSearch?: boolean;
-    signal?: AbortSignal;
-  } = {}
-): Promise<{ items: BusinessPublicView[]; total: number }> {
-  if (options.signal?.aborted) throw new DOMException('The user aborted a request.', 'AbortError');
-
-  const page = options.page ?? 1;
-  const limit = options.limit ?? 20;
-  const client = getSupabaseClient();
-  let databaseRows: BusinessPublicView[] = [];
-
-  if (client) {
-    const { data, error } = await client.rpc('search_businesses', {
-      p_query: filters.q?.trim() || null,
-      p_category: filters.category || null,
-      p_area: filters.area || null,
-      p_open_now: Boolean(filters.open),
-      p_verified: Boolean(filters.verified),
-      p_has_offer: Boolean(filters.offer),
-      p_min_rating: filters.rating ?? null,
-      p_delivery: Boolean(filters.delivery),
-      p_sort: filters.sort ?? 'relevance',
-      p_lat: options.userCoords?.lat ?? null,
-      p_lng: options.userCoords?.lng ?? null,
-      p_limit: 1000,
-      p_offset: 0,
-    });
-    if (options.signal?.aborted) throw new DOMException('The user aborted a request.', 'AbortError');
-    if (!error && Array.isArray(data)) databaseRows = data as BusinessPublicView[];
-
-    if (options.logSearch !== false) {
-      const searchTerm = filters.q?.trim() || (filters.category ? `category:${filters.category}` : filters.area ? `area:${filters.area}` : 'browse');
-      void client.functions.invoke('track-event', {
-        body: {
-          event_type: 'search', query: searchTerm.slice(0, 120),
-          filters: {
-            category: filters.category ?? null, area: filters.area ?? null,
-            open: Boolean(filters.open), verified: Boolean(filters.verified),
-            offer: Boolean(filters.offer), rating: filters.rating ?? null,
-            delivery: Boolean(filters.delivery), sort: filters.sort ?? 'relevance',
-          },
-          results_count: databaseRows[0]?.total_count ?? databaseRows.length,
-          session_id: getOrCreateSessionId(),
-        },
-      });
-    }
+  filters:Partial<SearchFiltersState>,
+  options:{page?:number;limit?:number;userCoords?:{lat:number;lng:number}|null;logSearch?:boolean;signal?:AbortSignal}={}
+):Promise<{items:BusinessPublicView[];total:number}> {
+  if(options.signal?.aborted)throw new DOMException('The user aborted a request.','AbortError');
+  const page=options.page??1,limit=options.limit??20;
+  const allBusinesses=await fetchGitHubBusinesses();
+  if(options.signal?.aborted)throw new DOMException('The user aborted a request.','AbortError');
+  const combined=allBusinesses.filter((business)=>matchesGitHubBusiness(business,filters));
+  const client=getSupabaseClient();
+  if(client&&options.logSearch!==false){
+    const term=filters.q?.trim()||(filters.category?'category:'+filters.category:filters.area?'area:'+filters.area:'browse');
+    void client.functions.invoke('track-event',{body:{event_type:'search',query:term.slice(0,120),
+      filters:{category:filters.category??null,area:filters.area??null,open:Boolean(filters.open),verified:Boolean(filters.verified),
+        offer:Boolean(filters.offer),rating:filters.rating??null,delivery:Boolean(filters.delivery),sort:filters.sort??'relevance'},
+      results_count:combined.length,session_id:getOrCreateSessionId()}});
   }
-
-  let githubRows: BusinessPublicView[] = [];
-  try {
-    githubRows = await fetchGitHubBusinesses();
-  } catch (error) {
-    console.warn('GitHub business directory could not be loaded; showing database listings only.', error);
-  }
-  if (options.signal?.aborted) throw new DOMException('The user aborted a request.', 'AbortError');
-
-  const existingKeys = new Set(databaseRows.map((business) =>
-    `${business.name_en.trim().toLowerCase()}|${(business.address_en || '').trim().toLowerCase()}`
-  ));
-  const importedRows = githubRows.filter((business) =>
-    !existingKeys.has(`${business.name_en.trim().toLowerCase()}|${(business.address_en || '').trim().toLowerCase()}`)
-    && matchesGitHubBusiness(business, filters)
-  );
-  const combined = [...databaseRows, ...importedRows];
-
-  if (filters.sort === 'rating') {
-    combined.sort((a, b) => (b.rating_avg ?? 0) - (a.rating_avg ?? 0));
-  } else if (filters.sort === 'nearest' && options.userCoords) {
-    const distance = (business: BusinessPublicView) => {
-      if (business.lat == null || business.lng == null) return Number.POSITIVE_INFINITY;
-      const toRad = (value: number) => (value * Math.PI) / 180;
-      const dLat = toRad(business.lat - options.userCoords!.lat);
-      const dLng = toRad(business.lng - options.userCoords!.lng);
-      const h = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(options.userCoords!.lat)) *
-        Math.cos(toRad(business.lat)) * Math.sin(dLng / 2) ** 2;
-      return 6371 * 2 * Math.asin(Math.sqrt(h));
-    };
-    combined.sort((a, b) => distance(a) - distance(b));
-  } else if (filters.sort === 'newest') {
-    combined.sort((a, b) => (b.created_at || '').localeCompare(a.created_at || ''));
-  } else {
-    combined.sort((a, b) => Number(b.is_featured) - Number(a.is_featured) ||
-      (b.rating_avg ?? 0) - (a.rating_avg ?? 0) || a.name_en.localeCompare(b.name_en));
-  }
-
-  if (options.signal?.aborted) throw new DOMException('The user aborted a request.', 'AbortError');
-  const offset = Math.max(0, (page - 1) * limit);
-  return { items: combined.slice(offset, offset + limit), total: combined.length };
+  if(filters.sort==='rating')combined.sort((a,b)=>(b.rating_avg??0)-(a.rating_avg??0));
+  else if(filters.sort==='nearest'&&options.userCoords){
+    const distance=(business:BusinessPublicView)=>{
+      if(business.lat==null||business.lng==null)return Number.POSITIVE_INFINITY;
+      const rad=(v:number)=>(v*Math.PI)/180,dLat=rad(business.lat-options.userCoords!.lat),dLng=rad(business.lng-options.userCoords!.lng);
+      const h=Math.sin(dLat/2)**2+Math.cos(rad(options.userCoords!.lat))*Math.cos(rad(business.lat))*Math.sin(dLng/2)**2;
+      return 6371*2*Math.asin(Math.sqrt(h));
+    };combined.sort((a,b)=>distance(a)-distance(b));
+  }else if(filters.sort==='newest')combined.sort((a,b)=>(b.created_at||'').localeCompare(a.created_at||''));
+  else combined.sort((a,b)=>Number(b.is_featured)-Number(a.is_featured)||(b.rating_avg??0)-(a.rating_avg??0)||a.name_en.localeCompare(b.name_en));
+  if(options.signal?.aborted)throw new DOMException('The user aborted a request.','AbortError');
+  const offset=Math.max(0,(page-1)*limit);
+  return {items:combined.slice(offset,offset+limit),total:combined.length};
 }
 
-export async function fetchSearchSuggestions(
-  query: string,
-  options: { signal?: AbortSignal } = {}
-): Promise<SearchSuggestionItem[]> {
-  if (options.signal?.aborted) {
-    throw new DOMException('The user aborted a request.', 'AbortError');
-  }
-
-  const trimmed = query.trim().toLowerCase();
-  if (trimmed.length < 2) return [];
-
-  const client = getSupabaseClient();
-  if (client) {
-    const { data, error } = await client.rpc('search_suggestions', {
-      p_query: trimmed,
-      p_limit: 8,
-    });
-    if (options.signal?.aborted) {
-      throw new DOMException('The user aborted a request.', 'AbortError');
-    }
-    if (!error && Array.isArray(data)) {
-      return data as SearchSuggestionItem[];
-    }
-  }
-
-  if (options.signal?.aborted) {
-    throw new DOMException('The user aborted a request.', 'AbortError');
-  }
-
-  const db = loadDemoDb();
-  const results: SearchSuggestionItem[] = [];
-
-  for (const cat of db.categories) {
-    if (!cat.is_active) continue;
-    const match =
-      cat.name_en.toLowerCase().includes(trimmed) ||
-      cat.name_ur.includes(trimmed) ||
-      cat.synonyms.some((s) => s.toLowerCase().includes(trimmed));
-    if (match) {
-      results.push({
-        kind: 'category',
-        label_en: cat.name_en,
-        label_ur: cat.name_ur,
-        slug: cat.slug,
-        subtitle: 'Category',
-      });
-    }
-  }
-
-  for (const area of db.areas) {
-    if (!area.is_active) continue;
-    if (area.name_en.toLowerCase().includes(trimmed) || area.name_ur.includes(trimmed)) {
-      results.push({
-        kind: 'area',
-        label_en: area.name_en,
-        label_ur: area.name_ur,
-        slug: area.slug,
-        subtitle: 'Neighborhood',
-      });
-    }
-  }
-
-  for (const biz of db.businesses) {
-    if (biz.status !== 'published') continue;
-    const match =
-      biz.name_en.toLowerCase().includes(trimmed) ||
-      (biz.name_ur ?? '').includes(trimmed) ||
-      biz.tags.some((t) => t.toLowerCase().includes(trimmed));
-    if (match) {
-      const area = db.areas.find((a) => a.id === biz.area_id);
-      results.push({
-        kind: 'business',
-        label_en: biz.name_en,
-        label_ur: biz.name_ur ?? biz.name_en,
-        slug: biz.slug,
-        subtitle: area?.name_en ?? 'Sadiqabad',
-      });
-    }
-  }
-
-  return results.slice(0, 8);
+export async function fetchSearchSuggestions(query:string,options:{signal?:AbortSignal}={}):Promise<SearchSuggestionItem[]> {
+  if(options.signal?.aborted)throw new DOMException('The user aborted a request.','AbortError');
+  const term=query.trim().toLowerCase();if(term.length<2)return [];
+  const [categories,areas,businesses]=await Promise.all([fetchAllCategories(),fetchAllAreas(),fetchGitHubBusinesses()]);
+  if(options.signal?.aborted)throw new DOMException('The user aborted a request.','AbortError');
+  const results:SearchSuggestionItem[]=[];
+  for(const c of categories)if(c.is_active&&(c.name_en.toLowerCase().includes(term)||c.name_ur.includes(term)||c.synonyms.some((v)=>v.toLowerCase().includes(term))))
+    results.push({kind:'category',label_en:c.name_en,label_ur:c.name_ur,slug:c.slug,subtitle:'Category'});
+  for(const a of areas)if(a.is_active&&(a.name_en.toLowerCase().includes(term)||a.name_ur.includes(term)))
+    results.push({kind:'area',label_en:a.name_en,label_ur:a.name_ur,slug:a.slug,subtitle:'Neighborhood'});
+  for(const b of businesses)if(b.name_en.toLowerCase().includes(term)||(b.name_ur||'').includes(term)||(b.tags||[]).some((tag)=>tag.toLowerCase().includes(term)))
+    results.push({kind:'business',label_en:b.name_en,label_ur:b.name_ur||b.name_en,slug:b.slug,subtitle:b.area?.name_en||'Sadiqabad'});
+  const unique=new Map<string,SearchSuggestionItem>();for(const item of results)unique.set(item.kind+':'+item.slug,item);
+  return [...unique.values()].slice(0,8);
 }
 
-export async function fetchBusinessBySlug(slug: string): Promise<BusinessPublicView | null> {
-  const client = getSupabaseClient();
-  if (client) {
-    const { data, error } = await client.rpc('get_business_public', { p_slug: slug });
-    if (!error && data) return data as BusinessPublicView;
-  }
-  try {
-    const imported = (await fetchGitHubBusinesses()).find((business) => business.slug === slug);
-    if (imported) return imported;
-  } catch (error) {
-    console.warn('GitHub business profile could not be loaded.', error);
-  }
-  const db = loadDemoDb();
-  const found = db.businesses.find((b) => b.slug === slug && b.status === 'published');
-  if (!found) return null;
-  return enrichBusiness(found, db);
+export async function fetchBusinessBySlug(slug:string):Promise<BusinessPublicView|null> {
+  return (await fetchGitHubBusinesses()).find((business)=>business.slug===slug)??null;
 }
 
-export async function fetchRelatedBusinesses(
-  businessId: string,
-  categoryId: string,
-  limit = 6
-): Promise<BusinessPublicView[]> {
-  const client = getSupabaseClient();
-  if (client) {
-    const { data, error } = await client.rpc('related_businesses', {
-      p_business_id: businessId,
-      p_limit: limit,
-    });
-    if (!error && Array.isArray(data)) {
-      return data as BusinessPublicView[];
-    }
-  }
-  try {
-    const imported = (await fetchGitHubBusinesses())
-      .filter((business) => business.id !== businessId && business.category_id === categoryId)
-      .slice(0, limit);
-    if (imported.length > 0) return imported;
-  } catch (error) {
-    console.warn('GitHub related business listings could not be loaded.', error);
-  }
-  const db = loadDemoDb();
-  return db.businesses
-    .filter((b) => b.status === 'published' && b.id !== businessId && b.category_id === categoryId)
-    .slice(0, limit)
-    .map((b) => enrichBusiness(b, db));
+export async function fetchRelatedBusinesses(businessId:string,categoryId:string,limit=6):Promise<BusinessPublicView[]> {
+  return (await fetchGitHubBusinesses()).filter((business)=>business.id!==businessId&&business.category_id===categoryId).slice(0,limit);
 }
 
-export async function fetchEmergencyContacts(): Promise<{
-  items: EmergencyContactRow[];
-  fromCache: boolean;
-  cachedAt: string | null;
-}> {
-  const client = getSupabaseClient();
-  if (client) {
-    try {
-      const { data, error } = await client
-        .from('emergency_contacts')
-        .select('*')
-        .eq('is_active', true)
-        .order('sort_order');
-      if (!error && data) {
-        const items = data as EmergencyContactRow[];
-        cacheEmergencyContacts(items);
-        return { items, fromCache: false, cachedAt: nowIso() };
-      }
-    } catch {
-      const cached = getCachedEmergencyContacts();
-      if (cached.items.length > 0) {
-        return { items: cached.items, fromCache: true, cachedAt: cached.updated_at };
-      }
-    }
-  }
-
-  if (typeof navigator !== 'undefined' && !navigator.onLine) {
-    const cached = getCachedEmergencyContacts();
-    if (cached.items.length > 0) {
-      return { items: cached.items, fromCache: true, cachedAt: cached.updated_at };
-    }
-  }
-
-  const items = [...loadDemoDb().emergency_contacts]
-    .filter((e) => e.is_active)
-    .sort((a, b) => a.sort_order - b.sort_order);
-  cacheEmergencyContacts(items);
-  return { items, fromCache: false, cachedAt: nowIso() };
+export async function fetchEmergencyContacts():Promise<{items:EmergencyContactRow[];fromCache:boolean;cachedAt:string|null}> {
+  const items=[...SEED_EMERGENCY_CONTACTS].filter((item)=>item.is_active).sort((a,b)=>a.sort_order-b.sort_order);
+  cacheEmergencyContacts(items);return {items,fromCache:false,cachedAt:nowIso()};
 }
 
-export async function fetchActiveOffers(): Promise<
-  Array<OfferRow & { business: BusinessPublicView | null }>
-> {
-  const today = todayDateStr();
-  const client = getSupabaseClient();
-  if (client) {
-    const { data, error } = await client
-      .from('offers')
-      .select('*, businesses(*, categories(*), areas(*))')
-      .eq('status', 'active')
-      .lte('valid_from', today)
-      .gte('valid_to', today)
-      .order('created_at', { ascending: false });
-    if (!error && data) {
-      type JoinedOffer = OfferRow & {
-        businesses: (BusinessRow & { categories?: CategoryRow | null; areas?: AreaRow | null }) | null;
-      };
-      return (data as JoinedOffer[]).map((row) => ({
-        ...row,
-        business: row.businesses
-          ? {
-              ...row.businesses,
-              category: row.businesses.categories ?? null,
-              area: row.businesses.areas ?? null,
-            }
-          : null,
-      }));
-    }
-  }
-  const db = loadDemoDb();
-  return db.offers
-    .filter((o) => isOfferCurrentlyValid(o, today))
-    .map((o) => {
-      const biz = db.businesses.find((b) => b.id === o.business_id && b.status === 'published');
-      return {
-        ...o,
-        business: biz ? enrichBusiness(biz, db) : null,
-      };
-    })
-    .filter((o) => o.business !== null);
+export async function fetchActiveOffers():Promise<Array<OfferRow&{business:BusinessPublicView|null}>> {
+  // Publish approved public offers by adding them to the GitHub seed.
+  return [];
 }
 
-export async function fetchAnnouncements(activeOnly = true): Promise<AnnouncementRow[]> {
-  const client = getSupabaseClient();
-  if (client) {
-    const q = client.from('announcements').select('*').order('created_at', { ascending: false });
-    const { data, error } = activeOnly ? await q.eq('is_active', true) : await q;
-    if (!error && data) return data as AnnouncementRow[];
-  }
-  const db = loadDemoDb();
-  const now = Date.now();
-  return db.announcements
-    .filter((a) => {
-      if (!activeOnly) return true;
-      return (
-        a.is_active &&
-        new Date(a.start_date).getTime() <= now &&
-        new Date(a.end_date).getTime() >= now
-      );
-    })
-    .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+export async function fetchAnnouncements(activeOnly=true):Promise<AnnouncementRow[]> {
+  const now=Date.now();return [...SEED_ANNOUNCEMENTS].filter((item)=>!activeOnly||(item.is_active&&new Date(item.start_date).getTime()<=now&&new Date(item.end_date).getTime()>=now))
+    .sort((a,b)=>new Date(b.created_at).getTime()-new Date(a.created_at).getTime());
 }
 
-export async function fetchActiveAds(placement?: AdPlacement): Promise<AdRow[]> {
-  const today = todayDateStr();
-  const client = getSupabaseClient();
-  if (client) {
-    let q = client
-      .from('ads')
-      .select('*')
-      .eq('status', 'active')
-      .lte('start_date', today)
-      .gte('end_date', today);
-    if (placement) q = q.eq('placement', placement);
-    const { data, error } = await q;
-    if (!error && data) return data as AdRow[];
-  }
-  const db = loadDemoDb();
-  return db.ads.filter(
-    (ad) =>
-      ad.status === 'active' &&
-      ad.start_date <= today &&
-      ad.end_date >= today &&
-      (!placement || ad.placement === placement)
-  );
+export async function fetchActiveAds(placement?:AdPlacement):Promise<AdRow[]> {
+  const today=todayDateStr();return [...SEED_ADS].filter((ad)=>ad.status==='active'&&ad.start_date<=today&&ad.end_date>=today&&(!placement||ad.placement===placement));
 }
 
-export async function fetchPageBySlug(slug: string): Promise<PageRow | null> {
-  const client = getSupabaseClient();
-  if (client) {
-    const { data, error } = await client
-      .from('pages')
-      .select('*')
-      .eq('slug', slug)
-      .eq('is_published', true)
-      .single();
-    if (!error && data) return data as PageRow;
-  }
-  const db = loadDemoDb();
-  return db.pages.find((p) => p.slug === slug && p.is_published) ?? null;
+export async function fetchPageBySlug(slug:string):Promise<PageRow|null> {
+  return SEED_PAGES.find((page)=>page.slug===slug&&page.is_published)??null;
 }
 
-export async function fetchBusinessesByIds(ids: string[]): Promise<BusinessPublicView[]> {
-  if (ids.length === 0) return [];
-  const client = getSupabaseClient();
-  if (client) {
-    const { data, error } = await client
-      .from('businesses')
-      .select('*, categories(*), areas(*), plans(*)')
-      .in('id', ids)
-      .eq('status', 'published');
-    if (!error && data) {
-      return (
-        data as Array<BusinessRow & { categories?: CategoryRow | null; areas?: AreaRow | null; plans?: PlanRow | null }>
-      ).map((row) => enrichBusiness(row, loadDemoDb()));
-    }
-  }
-  const db = loadDemoDb();
-  return ids
-    .map((id) => db.businesses.find((b) => b.id === id && b.status === 'published'))
-    .filter((b): b is BusinessRow => Boolean(b))
-    .map((b) => enrichBusiness(b, db));
+export async function fetchBusinessesByIds(ids:string[]):Promise<BusinessPublicView[]> {
+  if(!ids.length)return [];const requested=new Set(ids);
+  return (await fetchGitHubBusinesses()).filter((business)=>requested.has(business.id));
 }
 
 // ---------------------------------------------------------------------------
@@ -908,12 +565,12 @@ export async function trackBusinessEvent(
 ): Promise<void> {
   const sessionId = getOrCreateSessionId();
   const client = getSupabaseClient();
-  if (client) {
-    await client.functions.invoke('track-event', {
-      body: { business_id: businessId, event_type: eventType, ad_id: adId, session_id: sessionId },
-    });
+  const isDatabaseBusinessId = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(businessId);
+  if (client && isDatabaseBusinessId) {
+    await client.functions.invoke('track-event', { body: { business_id: businessId, event_type: eventType, ad_id: adId, session_id: sessionId } });
     return;
   }
+  if (client && !isDatabaseBusinessId) return;
 
   const db = loadDemoDb();
   const biz = db.businesses.find((b) => b.id === businessId);

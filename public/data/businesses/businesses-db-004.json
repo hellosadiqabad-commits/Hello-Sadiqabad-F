@@ -1,0 +1,1620 @@
+{
+  "schemaVersion": 2,
+  "source": "Supabase published business snapshot (public fields only)",
+  "chunk": 4,
+  "businessCount": 25,
+  "businesses": [
+    {
+      "title": "Mobile World",
+      "nameUr": null,
+      "slug": "mobile-world-ysom3g",
+      "categoryName": "Mobile Shops",
+      "categorySlug": "mobile-shops",
+      "categoryIcon": "smartphone",
+      "categoryColor": "blue",
+      "categorySortOrder": 8,
+      "address": "842J+WQ4، Khalid Bazar, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 300 6727560",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Mobile home dealer in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.302268",
+      "location/lng": "70.131949",
+      "placeId": "directory-mobile-world-ysom3g",
+      "openingHours": {},
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Mohammad Irfan Restaurant",
+      "nameUr": null,
+      "slug": "mohammad-irfan-restaurant",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "843C+M7F, Nishtar Rd, Nishtar Chowk Madina Colony, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 301 7628340",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 3.8/5 from 12 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNuRg6zPgkjqOeWt0SN9jnbalrZCwngPrQVN9aHlBZzfDaH1N-GK97CAFgfRopkyPJV7xRg74IU70W1ThaNVsCyOjvxTHKLjQCbmCKWEV1e1XKv15j7FYOTEp37rHUZVYFI_2N6=w408-h861-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmNuRg6zPgkjqOeWt0SN9jnbalrZCwngPrQVN9aHlBZzfDaH1N-GK97CAFgfRopkyPJV7xRg74IU70W1ThaNVsCyOjvxTHKLjQCbmCKWEV1e1XKv15j7FYOTEp37rHUZVYFI_2N6=w408-h861-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.304187",
+      "location/lng": "70.120669",
+      "placeId": "directory-mohammad-irfan-restaurant",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "10:30",
+            "close": "00:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "10:30",
+            "close": "00:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "10:30",
+            "close": "00:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "09:00",
+            "close": "00:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "10:30",
+            "close": "00:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "10:30",
+            "close": "00:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "10:30",
+            "close": "00:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Mr.Vada Pav Main Branch Melad Chock",
+      "nameUr": null,
+      "slug": "mr-vada-pav-main-branch-melad-chock",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Melad Chowk, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 334 7111197",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOXx6YDnuTHQU0zsSkt9LeI-j8yzEhd6pd64BsyAY-US9m0T4eHw_Q6A8FpIqAg-0Zci_2F6UERhh8nE38x1VRVgbkC1UV67BSOyljFPmiAJ7Xd1BVKlPA9aQJG_xqEB6TgXNvHnQ=w426-h240-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOXx6YDnuTHQU0zsSkt9LeI-j8yzEhd6pd64BsyAY-US9m0T4eHw_Q6A8FpIqAg-0Zci_2F6UERhh8nE38x1VRVgbkC1UV67BSOyljFPmiAJ7Xd1BVKlPA9aQJG_xqEB6TgXNvHnQ=w426-h240-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.30132",
+      "location/lng": "70.13309",
+      "placeId": "directory-mr-vada-pav-main-branch-melad-chock",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "12:00",
+            "close": "02:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "12:00",
+            "close": "02:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "12:00",
+            "close": "02:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "12:00",
+            "close": "02:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "12:00",
+            "close": "02:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "12:00",
+            "close": "02:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "12:00",
+            "close": "02:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Mudaser Bilal shose",
+      "nameUr": null,
+      "slug": "mudaser-bilal-shose-sp7utk",
+      "categoryName": "Clothing",
+      "categorySlug": "clothing",
+      "categoryIcon": "shirt",
+      "categoryColor": "pink",
+      "categorySortOrder": 9,
+      "address": "Awami colony, Dhaka Colony Kachi Abadi, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 300 8475425",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Shoe store in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.313119",
+      "location/lng": "70.104666",
+      "placeId": "directory-mudaser-bilal-shose-sp7utk",
+      "openingHours": {},
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Naz Restaurant",
+      "nameUr": null,
+      "slug": "naz-restaurant",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Bypass, Dhaka Colony Kachi Abadi, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 302 5292860",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.3/5 from 12 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWntJpZURUB30SVR8GWKCHcHDOxb5TTDTxaXZLBeAk2BBzDnxovsAaAGEI3g2NjVN4FwbLqr3yGnWgucNUS3d4GrJua_URbdiEKH_e-4Beyr2WpXs3zoQEWAZvdzn4Ll8TPfWYQ=w408-h725-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWntJpZURUB30SVR8GWKCHcHDOxb5TTDTxaXZLBeAk2BBzDnxovsAaAGEI3g2NjVN4FwbLqr3yGnWgucNUS3d4GrJua_URbdiEKH_e-4Beyr2WpXs3zoQEWAZvdzn4Ll8TPfWYQ=w408-h725-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.316828",
+      "location/lng": "70.101565",
+      "placeId": "directory-naz-restaurant",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "New Age Restaurant",
+      "nameUr": null,
+      "slug": "new-age-restaurant",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "84VR+3J9, Bypass, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 5/5 from 4 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.342669",
+      "location/lng": "70.14161",
+      "placeId": "directory-new-age-restaurant",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "New Almaida Fast Food",
+      "nameUr": null,
+      "slug": "new-almaida-fast-food",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Near Over Bridge, Haq Town, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOzUL7UPKn3eeehPXWpLXZ5_QtgPwZhovZ2f4haew6ympp1z8p1Y0XcSvwDusO6HCUy4q4J9jGWJvgSg30tnaPbL77TYczgxZL6LBSkX1GArCNkbGEDf1a6qzcT2hsJqyKL7oRhqfj-k_I=w408-h544-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOzUL7UPKn3eeehPXWpLXZ5_QtgPwZhovZ2f4haew6ympp1z8p1Y0XcSvwDusO6HCUy4q4J9jGWJvgSg30tnaPbL77TYczgxZL6LBSkX1GArCNkbGEDf1a6qzcT2hsJqyKL7oRhqfj-k_I=w408-h544-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.301588",
+      "location/lng": "70.121493",
+      "placeId": "directory-new-almaida-fast-food",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "15:00",
+            "close": "00:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "15:00",
+            "close": "00:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "15:00",
+            "close": "00:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "15:00",
+            "close": "00:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "15:00",
+            "close": "00:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "15:00",
+            "close": "00:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "15:00",
+            "close": "00:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "New Solangi hotel(dhaba)",
+      "nameUr": null,
+      "slug": "new-solangi-hotel-dhaba",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "832X+2X4, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 3/5 from 1 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLeaJmJQ-VNcnR2182GX7lGNEU1SjJYsogXoklHRw3FX8eVOKhF8eEFplcV3XkcaY07ukLxWOD5ZWS3Puqpq8opT1ALNBJvbQgxt_P0kDLI55-w5utcsRIqBe6dmALdnPFNKXNjRlJYeoaVL=w408-h544-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/AABkmLeaJmJQ-VNcnR2182GX7lGNEU1SjJYsogXoklHRw3FX8eVOKhF8eEFplcV3XkcaY07ukLxWOD5ZWS3Puqpq8opT1ALNBJvbQgxt_P0kDLI55-w5utcsRIqBe6dmALdnPFNKXNjRlJYeoaVL=w408-h544-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.299974",
+      "location/lng": "70.099896",
+      "placeId": "directory-new-solangi-hotel-dhaba",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Own cold corner",
+      "nameUr": null,
+      "slug": "own-cold-corner",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Sarafa bazar, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 300 6730818",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcBVFssZjcW5Il-UWvcBFHZponZOXtXKvIv7P1UL-gVlE_5RnL33rabvFuQ9xG7Up-smV-ccituqv3v8W6krMaABkMvpGJ2tlniV6u0i0hx4TZb-XFBVP1sbNr_Qx0ReT-SHmG7iw=w408-h306-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/AABkmLcBVFssZjcW5Il-UWvcBFHZponZOXtXKvIv7P1UL-gVlE_5RnL33rabvFuQ9xG7Up-smV-ccituqv3v8W6krMaABkMvpGJ2tlniV6u0i0hx4TZb-XFBVP1sbNr_Qx0ReT-SHmG7iw=w408-h306-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.300383",
+      "location/lng": "70.131125",
+      "placeId": "directory-own-cold-corner",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "08:00",
+            "close": "22:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Owxome Mirza Mobile Shop",
+      "nameUr": null,
+      "slug": "owxome-mirza-mobile-shop-oasng4",
+      "categoryName": "Mobile Shops",
+      "categorySlug": "mobile-shops",
+      "categoryIcon": "smartphone",
+      "categoryColor": "blue",
+      "categorySortOrder": 8,
+      "address": "Main street, Owxome Mirza Mobile shop, 1, near chota qabarstan, shadman city, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Mobile phone repair shop in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.314523",
+      "location/lng": "70.112192",
+      "placeId": "directory-owxome-mirza-mobile-shop-oasng4",
+      "openingHours": {
+        "Friday": "Closed",
+        "Monday": "Open 24 hours",
+        "Sunday": "Open 24 hours",
+        "Tuesday": "Open 24 hours",
+        "Saturday": "Open 24 hours",
+        "Thursday": "Open 24 hours",
+        "Wednesday": "Open 24 hours"
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Pakiza REFRESHMENT",
+      "nameUr": null,
+      "slug": "pakiza-refreshment",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "844H+Q25, Punjab Cenima Rd, Ghafoorabad, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 5/5 from 1 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.306972",
+      "location/lng": "70.127535",
+      "placeId": "directory-pakiza-refreshment",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Paradise BBQ & Restaurant",
+      "nameUr": null,
+      "slug": "paradise-bbq-restaurant",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "74XG+W87, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 306 3040888",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4/5 from 45 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkrUvHSDhls0KCC4qPQ7mGhk-hoCnKj_WJ8kJcFWju7uURbsBBAF-LAB6PNLKY3A_qtCbTeIpGILfYEwvgAm25VScPNLNspOL4hv0w7OdZi084pKmPkvmbEiL_p4ZweM3eUM6XCA2_RqBY=w408-h544-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkrUvHSDhls0KCC4qPQ7mGhk-hoCnKj_WJ8kJcFWju7uURbsBBAF-LAB6PNLKY3A_qtCbTeIpGILfYEwvgAm25VScPNLNspOL4hv0w7OdZi084pKmPkvmbEiL_p4ZweM3eUM6XCA2_RqBY=w408-h544-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.299798",
+      "location/lng": "70.125795",
+      "placeId": "directory-paradise-bbq-restaurant",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "15:00",
+            "close": "01:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "15:00",
+            "close": "01:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "15:00",
+            "close": "01:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "15:00",
+            "close": "01:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "15:00",
+            "close": "01:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "15:00",
+            "close": "01:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "15:00",
+            "close": "01:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Parwana Refresment shop",
+      "nameUr": null,
+      "slug": "parwana-refresment-shop",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "844C+X3F, KLP Rd, nashtar chok Hussainabad, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 300 3194075",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 3/5 from 3 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPXpAraGF2TJX832dV8AIeRzte4WQ038f1diSp1TEYVjY_anq8mu3WPPPnBW55W5JVlUfXjsx3YZrACgLsQQSKgdyctfV0cza4uMLiCv59Wxr1Bp3rZGRhveHBD49k9M-vlEDyVmwUFOj0=w426-h240-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmPXpAraGF2TJX832dV8AIeRzte4WQ038f1diSp1TEYVjY_anq8mu3WPPPnBW55W5JVlUfXjsx3YZrACgLsQQSKgdyctfV0cza4uMLiCv59Wxr1Bp3rZGRhveHBD49k9M-vlEDyVmwUFOj0=w426-h240-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.307442",
+      "location/lng": "70.120183",
+      "placeId": "directory-parwana-refresment-shop",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Pizza Burger King",
+      "nameUr": null,
+      "slug": "pizza-burger-king",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "844M+W34, Link Road, near Cafe Sajawal Sweet, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.307274",
+      "location/lng": "70.132692",
+      "placeId": "directory-pizza-burger-king",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Pizza in Town",
+      "nameUr": null,
+      "slug": "pizza-in-town",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "opposite Jamia Masjid, Model Town, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 303 2040123",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "https://www.facebook.com/share/16m3sfja4D/?mibextid=wwXIfr",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.4/5 from 30 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmNSWLRNsEv7nMoxvGv9ynWs0n_thzLCNBpJ8j9WwwuIhGfAa_hBAsHkKEuLfHiyw4DDaapVgEUzmxPmcHhT2zQ42BLIkUWW2pNsrR5CZTc3Q3S_zvz9k_yrm3c07wFF_xkON3CT6XHTnZ_B=w408-h510-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmNSWLRNsEv7nMoxvGv9ynWs0n_thzLCNBpJ8j9WwwuIhGfAa_hBAsHkKEuLfHiyw4DDaapVgEUzmxPmcHhT2zQ42BLIkUWW2pNsrR5CZTc3Q3S_zvz9k_yrm3c07wFF_xkON3CT6XHTnZ_B=w408-h510-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.301391",
+      "location/lng": "70.108342",
+      "placeId": "directory-pizza-in-town",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Pizza King by Qadri Refreshment",
+      "nameUr": null,
+      "slug": "pizza-king-by-qadri-refreshment",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Chowk Fawara, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 306 1233636",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Relaxed, family-friendly chain serving up pizza & sandwiches, plus salads & desserts. Google Places rating: 3.8/5 from 41 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmMd5TcW6hxxUh3_wmWzl7wkUmzEwqzoyRjguB0he2ptybhQ3q-YXEDdHVTQji1yiZS-aqlHg4SEzn7Y6bIQ-D1IToZyyWs-JeZnH5C9cX6W-XFbZ0pyY4H9yzTXBtdiJsWLiiV9=w533-h240-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmMd5TcW6hxxUh3_wmWzl7wkUmzEwqzoyRjguB0he2ptybhQ3q-YXEDdHVTQji1yiZS-aqlHg4SEzn7Y6bIQ-D1IToZyyWs-JeZnH5C9cX6W-XFbZ0pyY4H9yzTXBtdiJsWLiiV9=w533-h240-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.301052",
+      "location/lng": "70.131982",
+      "placeId": "directory-pizza-king-by-qadri-refreshment",
+      "openingHours": {
+        "mon": [
+          {
+            "open": "10:00",
+            "close": "23:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "10:00",
+            "close": "23:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "10:00",
+            "close": "23:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "10:00",
+            "close": "23:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "10:00",
+            "close": "23:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "10:00",
+            "close": "23:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "POTATOPIA",
+      "nameUr": null,
+      "slug": "potatopia",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Allama Iqbal Rd, near Chen Bakers, Al Falah Town, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 315 2907791",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.2/5 from 103 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlio2hmsj0EZN2HPNVV4t3TprYCukuG0ICcH9jZhnYvXaV93DUPCUOPRZHGycQK2-qoxsXYRSs_hokHtEC7NV1KTmGho-HRR9BQuiQvbVmjIp2R7nWT8oHL48-atgBHuSNmNz8_Uiqaskg7=w408-h554-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlio2hmsj0EZN2HPNVV4t3TprYCukuG0ICcH9jZhnYvXaV93DUPCUOPRZHGycQK2-qoxsXYRSs_hokHtEC7NV1KTmGho-HRR9BQuiQvbVmjIp2R7nWT8oHL48-atgBHuSNmNz8_Uiqaskg7=w408-h554-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.301564",
+      "location/lng": "70.135403",
+      "placeId": "directory-potatopia",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "14:00",
+            "close": "02:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "14:00",
+            "close": "02:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "14:00",
+            "close": "02:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "14:00",
+            "close": "02:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "14:00",
+            "close": "02:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "14:00",
+            "close": "02:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "14:00",
+            "close": "02:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Prince Mobile & Repairing Lab",
+      "nameUr": null,
+      "slug": "prince-mobile-repairing-lab-i6agbi",
+      "categoryName": "Mobile Shops",
+      "categorySlug": "mobile-shops",
+      "categoryIcon": "smartphone",
+      "categoryColor": "blue",
+      "categorySortOrder": 8,
+      "address": "Ghalla Mandi, Railway Rd, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 327 9228364",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Mobile phone repair shop in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.302262",
+      "location/lng": "70.131804",
+      "placeId": "directory-prince-mobile-repairing-lab-i6agbi",
+      "openingHours": {},
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Qadri Burger & Refreshment Shop",
+      "nameUr": null,
+      "slug": "qadri-burger-refreshment-shop",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Main St, Faisal Bazar, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 306 1233636",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 3.8/5 from 102 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmP7RsK6C3OFW1zFeZWdvCPqBe6fs0ifGC0jwoJOtpGow_N1SdtQAkblOCwB2-XdK7buAwIDGQz1yWGYSKRu46NpJxHwrWe2r7RRWAyt-esgeJOByQ32rkAlmY95GiGPHB_0N73n=w533-h240-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmP7RsK6C3OFW1zFeZWdvCPqBe6fs0ifGC0jwoJOtpGow_N1SdtQAkblOCwB2-XdK7buAwIDGQz1yWGYSKRu46NpJxHwrWe2r7RRWAyt-esgeJOByQ32rkAlmY95GiGPHB_0N73n=w533-h240-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.301002",
+      "location/lng": "70.131908",
+      "placeId": "directory-qadri-burger-refreshment-shop",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "10:00",
+            "close": "22:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "10:00",
+            "close": "23:30"
+          }
+        ],
+        "sat": [
+          {
+            "open": "10:00",
+            "close": "23:30"
+          }
+        ],
+        "sun": [
+          {
+            "open": "10:00",
+            "close": "23:30"
+          }
+        ],
+        "thu": [
+          {
+            "open": "10:00",
+            "close": "22:30"
+          }
+        ],
+        "tue": [
+          {
+            "open": "10:00",
+            "close": "23:30"
+          }
+        ],
+        "wed": [
+          {
+            "open": "10:00",
+            "close": "23:30"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Qalandri saraye Haq Bahoo hotel",
+      "nameUr": null,
+      "slug": "qalandri-saraye-haq-bahoo-hotel",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "8422+5G8, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLdx3WEmdQdkveyFX_MpkJyLx8gG0gOJ3cSZTU_653pVHukrsrpRVyqN93573CY2KzIM2h-3i1bF5dJW5Ks0CSiXVQgV7BuMfM23AGyFIGwHfV3SMcLdZ_1z9e2LK4giMy5PzXviyngFml59=w408-h306-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/AABkmLdx3WEmdQdkveyFX_MpkJyLx8gG0gOJ3cSZTU_653pVHukrsrpRVyqN93573CY2KzIM2h-3i1bF5dJW5Ks0CSiXVQgV7BuMfM23AGyFIGwHfV3SMcLdZ_1z9e2LK4giMy5PzXviyngFml59=w408-h306-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.300458",
+      "location/lng": "70.101358",
+      "placeId": "directory-qalandri-saraye-haq-bahoo-hotel",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Qaswa Cafe",
+      "nameUr": null,
+      "slug": "qaswa-cafe",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Zorkot Pul, Sadiqabad, 64450, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 325 1110103",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "https://zaiqarestaurant.pk/qaswa-cafe/",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 4.2/5 from 144 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [
+        "Delivery",
+        "Dine-in",
+        "Takeout"
+      ],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmOdiQXnpOVc0IU7h98WgyE1ECW83Kd-a6CdS7YEROoicBCuIOR29kMAzPvpsbT92pg7MlPDBd1P7m_fct2r4kYPvXNHy6HpaRhD27bl6ZGLjsY3XyjkgedMnx1spHjI-3kOX_MwA7jI7u0=w408-h544-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmOdiQXnpOVc0IU7h98WgyE1ECW83Kd-a6CdS7YEROoicBCuIOR29kMAzPvpsbT92pg7MlPDBd1P7m_fct2r4kYPvXNHy6HpaRhD27bl6ZGLjsY3XyjkgedMnx1spHjI-3kOX_MwA7jI7u0=w408-h544-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.30183",
+      "location/lng": "70.119682",
+      "placeId": "directory-qaswa-cafe",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "12:00",
+            "close": "01:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "12:00",
+            "close": "01:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "12:00",
+            "close": "01:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "12:00",
+            "close": "01:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "12:00",
+            "close": "01:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "12:00",
+            "close": "01:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "12:00",
+            "close": "01:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": true,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants",
+        "delivery",
+        "dine-in",
+        "takeout",
+        "restroom",
+        "casual",
+        "good-for-kids",
+        "groups",
+        "dessert",
+        "table-service",
+        "great-dessert"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Quetta Chacha Hotel and nashta Point",
+      "nameUr": null,
+      "slug": "quetta-chacha-hotel-and-nashta-point",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "842M+H85, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 3.8/5 from 475 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs/ACvplmPaDv-5PJrr7mMmihsqNLeZ3p6jJt_wxGZL7vlyF5jZEBhSSm5RqovH1vjMAtHySuZrllCfUGAtnzeZI9aiZEKNYGHzqBHqHDnKhlbdSmd2FLwOSTYPgjZizzJ-Q_xxVael_tVO=w408-h544-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs/ACvplmPaDv-5PJrr7mMmihsqNLeZ3p6jJt_wxGZL7vlyF5jZEBhSSm5RqovH1vjMAtHySuZrllCfUGAtnzeZI9aiZEKNYGHzqBHqHDnKhlbdSmd2FLwOSTYPgjZizzJ-Q_xxVael_tVO=w408-h544-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.30138",
+      "location/lng": "70.133364",
+      "placeId": "directory-quetta-chacha-hotel-and-nashta-point",
+      "openingHours": null,
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants"
+      ],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Raza mobile shop",
+      "nameUr": null,
+      "slug": "raza-mobile-shop-tcv4fm",
+      "categoryName": "Real Estate",
+      "categorySlug": "real-estate",
+      "categoryIcon": "house",
+      "categoryColor": "amber",
+      "categorySortOrder": 12,
+      "address": "8474+R5Q, Dhaka Colony Kachi Abadi, Sadiqabad, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 318 6488312",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Housing society in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.314631",
+      "location/lng": "70.10556",
+      "placeId": "directory-raza-mobile-shop-tcv4fm",
+      "openingHours": {},
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "Raza Mobiles shop & Gaming Zone",
+      "nameUr": null,
+      "slug": "raza-mobiles-shop-gaming-zone-5wnc8w",
+      "categoryName": "Electronics",
+      "categorySlug": "electronics",
+      "categoryIcon": "tv",
+      "categoryColor": "purple",
+      "categorySortOrder": 7,
+      "address": "Dhaka Colony Kachi Abadi, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 300 0614285",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Internet cafe in Sadiqabad. Imported from Google Places.",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "",
+      "imageUrls": [],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.314344",
+      "location/lng": "70.105273",
+      "placeId": "directory-raza-mobiles-shop-gaming-zone-5wnc8w",
+      "openingHours": {},
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [],
+      "source": "supabase-public-directory"
+    },
+    {
+      "title": "RedRoster",
+      "nameUr": null,
+      "slug": "redroster",
+      "categoryName": "Restaurants",
+      "categorySlug": "restaurants",
+      "categoryIcon": "utensils",
+      "categoryColor": "orange",
+      "categorySortOrder": 5,
+      "address": "Bismillah School, Road, opposite National Savings Bank, Al Falah Town, Sadiqabad, 64350, Pakistan",
+      "addressUr": null,
+      "landmark": null,
+      "neighborhood": "",
+      "areaSlug": null,
+      "phone": "+92 309 0052555",
+      "phoneSecondary": null,
+      "whatsapp": null,
+      "website": "",
+      "facebook": null,
+      "instagram": null,
+      "youtube": null,
+      "tiktok": null,
+      "description": "Google Places rating: 5/5 from 4 Google reviews (data collected 2026-10-08).",
+      "descriptionUr": null,
+      "servicesEn": [],
+      "servicesUr": [],
+      "imageUrl": "https://lh3.googleusercontent.com/grass-cs-s/AHRPTWmfcjCTzyqBCAvbDcyb4lYcd5RkCKPYjQDG7i8crA0sjPgKRO0YqeTyK_K6GxZhJ3IFDavNaQO8HEWSygHFylLc3VZChLOXEl4kU03XVzrcTZ4Cj3Ow4shOY9kDZpSQhDtPz3GCqXPocaI=w408-h306-k-no",
+      "imageUrls": [
+        "https://lh3.googleusercontent.com/grass-cs-s/AHRPTWmfcjCTzyqBCAvbDcyb4lYcd5RkCKPYjQDG7i8crA0sjPgKRO0YqeTyK_K6GxZhJ3IFDavNaQO8HEWSygHFylLc3VZChLOXEl4kU03XVzrcTZ4Cj3Ow4shOY9kDZpSQhDtPz3GCqXPocaI=w408-h306-k-no"
+      ],
+      "totalScore": "",
+      "reviewsCount": "0",
+      "location/lat": "28.302283",
+      "location/lng": "70.136349",
+      "placeId": "directory-redroster",
+      "openingHours": {
+        "fri": [
+          {
+            "open": "12:00",
+            "close": "01:00"
+          }
+        ],
+        "mon": [
+          {
+            "open": "12:00",
+            "close": "01:00"
+          }
+        ],
+        "sat": [
+          {
+            "open": "12:00",
+            "close": "01:00"
+          }
+        ],
+        "sun": [
+          {
+            "open": "12:00",
+            "close": "01:00"
+          }
+        ],
+        "thu": [
+          {
+            "open": "12:00",
+            "close": "01:00"
+          }
+        ],
+        "tue": [
+          {
+            "open": "12:00",
+            "close": "01:00"
+          }
+        ],
+        "wed": [
+          {
+            "open": "12:00",
+            "close": "01:00"
+          }
+        ]
+      },
+      "isOpen24h": false,
+      "homeDelivery": false,
+      "establishedYear": null,
+      "planCode": "free",
+      "isVerified": false,
+      "isFeatured": false,
+      "tags": [
+        "google-places-import",
+        "restaurants",
+        "wheelchair-accessible-parking-lot",
+        "wheelchair-accessible-seating"
+      ],
+      "source": "supabase-public-directory"
+    }
+  ]
+}
