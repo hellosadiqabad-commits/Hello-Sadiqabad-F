@@ -42,6 +42,7 @@ import type {
 } from '../types/directory';
 import { AppShell } from '../components/layout/AppShell';
 import { InstallAppButton } from '../components/layout/InstallAppButton';
+import { Button } from '../components/ui/Button';
 import { AdBanner } from '../components/directory/AdBanner';
 import { BusinessCard } from '../components/directory/BusinessCard';
 import { CategoryChip, CategoryIcon } from '../components/ui/CategoryIcon';
@@ -83,6 +84,8 @@ export function Home() {
   const [recentItems, setRecentItems] = useState<RecentViewedItem[]>([]);
   const [favorites, setFavorites] = useState<string[]>(() => getFavorites());
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
+  const [retryKey, setRetryKey] = useState(0);
 
   useEffect(() => {
     updatePageSeo({
@@ -94,6 +97,8 @@ export function Home() {
 
     setRecentItems(getRecentlyViewed());
 
+    setLoading(true);
+    setLoadError(false);
     Promise.all([
       fetchCategoriesWithCounts(),
       fetchAllAreas(),
@@ -112,8 +117,17 @@ export function Home() {
         setOffers(activeOffers.slice(0, 4));
         setAdsEnabled(settings.ads_enabled);
       })
+      .catch(() => {
+        setCategories([]);
+        setAreas([]);
+        setFeaturedBusinesses([]);
+        setNewestBusinesses([]);
+        setAds([]);
+        setOffers([]);
+        setLoadError(true);
+      })
       .finally(() => setLoading(false));
-  }, []);
+  }, [retryKey]);
 
   useEffect(() => {
     const onMouseDown = (e: MouseEvent) => {
@@ -184,6 +198,16 @@ export function Home() {
   return (
     <AppShell>
       <div className="space-y-8 py-5 sm:py-7">
+        {loadError && (
+          <Container>
+            <div role="alert" className="p-3 rounded-xl border border-error/30 bg-error/5 text-sm text-on-surface flex flex-wrap items-center justify-between gap-3">
+              <span>{lang === 'ur' ? 'ہوم پیج کا ڈیٹا لوڈ نہیں ہو سکا۔' : 'Some homepage data could not be loaded.'}</span>
+              <Button size="sm" variant="outline" onClick={() => setRetryKey((value) => value + 1)}>
+                {lang === 'ur' ? 'دوبارہ کوشش' : 'Retry'}
+              </Button>
+            </div>
+          </Container>
+        )}
         {/* Hero Search Section */}
         <section>
           <Container>
