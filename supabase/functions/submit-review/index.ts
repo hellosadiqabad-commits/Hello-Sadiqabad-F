@@ -73,12 +73,17 @@ Deno.serve(async (req: Request) => {
       return reply(req, { ok: false, error: "Business not found" }, 404);
     }
 
+    const { data: reviewSetting, error: settingError } = await db.from("site_settings")
+      .select("value").eq("key", "reviews_require_approval").maybeSingle();
+    if (settingError) return reply(req, { ok: false, error: "Could not verify review moderation settings" }, 503);
+    const requiresApproval = reviewSetting?.value !== false;
+
     const { error: insertError } = await db.from("reviews").insert({
       business_id: business.id,
       author_name: body.author_name.trim(),
       rating: Number(body.rating),
       comment: body.comment.trim(),
-      status: "pending",
+      status: requiresApproval ? "pending" : "approved",
     });
     if (insertError) return reply(req, { ok: false, error: "Could not submit review" }, 400);
     return reply(req, { ok: true });
