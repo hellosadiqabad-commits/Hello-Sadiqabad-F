@@ -153,7 +153,7 @@ Deno.serve(async (req: Request) => {
 
     if (typeof assignBusinessId === "string") {
       const { data: business, error: businessError } = await db.from("businesses")
-        .update({ owner_id: userId }).eq("id", assignBusinessId).select("id").maybeSingle();
+        .update({ owner_id: userId }).eq("id", assignBusinessId).is("owner_id", null).select("id").maybeSingle();
       if (businessError || !business) {
         await rollbackCreatedUser(userId);
         return response(req, { ok: false, error: "Business assignment failed; account creation was rolled back." }, 400);
