@@ -32,7 +32,7 @@ import {
 import { effectivePlanCode, filterAndRankBusinesses } from './searchFilter';
 import { normalizePkPhone } from './phone';
 import { daysUntil, slugify } from './format';
-import { getPakistanDateString, isOfferCurrentlyValid } from './offers';
+import { attachPublicOffers, getPakistanDateString, isOfferCurrentlyValid } from './offers';
 import { parseSiteSettings, type SiteSettingsMap } from './siteSettings';
 import type {
   AdPlacement,
@@ -563,14 +563,7 @@ export async function fetchActiveOffers(): Promise<Array<OfferRow & { business: 
     fetchGitHubBusinesses(),
   ]);
 
-  const businessById = new Map(businesses.map((business) => [business.id, business]));
-  return offers
-    .filter((offer) => isOfferCurrentlyValid(offer, today))
-    .map((offer) => ({
-      ...offer,
-      business: businessById.get(offer.business_id) ?? null,
-    }))
-    .filter((offer) => offer.business !== null);
+  return attachPublicOffers(offers, businesses, today);
 }
 
 export async function fetchAnnouncements(activeOnly=true):Promise<AnnouncementRow[]> {
