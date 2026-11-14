@@ -81,6 +81,7 @@ import { DemoModeNotice } from '../../components/ui/DemoModeNotice';
 
 function useOwnerPortalData(days = 30, routeListingId?: string) {
   const { user } = useAuth();
+  const { showToast } = useToast();
   const [listings, setListings] = useState<BusinessPublicView[]>([]);
   const [selectedId, setSelectedId] = useState<string>(routeListingId ?? '');
   const [categories, setCategories] = useState<CategoryRow[]>([]);
@@ -141,10 +142,15 @@ function useOwnerPortalData(days = 30, routeListingId?: string) {
         setStats(st);
         setOffers(offs);
       }
+    } catch (error) {
+      showToast(
+        error instanceof Error ? error.message : 'Owner portal data could not be loaded.',
+        'error'
+      );
     } finally {
       setLoading(false);
     }
-  }, [user, selectedId, routeListingId, days]);
+  }, [user, selectedId, routeListingId, days, showToast]);
 
   useEffect(() => {
     reload();
