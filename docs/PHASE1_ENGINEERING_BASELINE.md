@@ -12,6 +12,10 @@
 - Hardened auth hydration against stale asynchronous session responses. Prior-user roles and permissions are cleared while a new session is verified; out-of-order responses cannot restore old privileges.
 - Sign-in now fails closed if the profile row or permissions RPC cannot be verified.
 - Owner Portal routes now require the `owner` role. Staff/Super Admin preview access is intentionally not exposed until a separate, read-only preview mode is implemented.
+- Added explicit loading, failure, cancellation, and retry handling to Category, Area, Map, Favorites, Business Profile, Add Business, and Offers public routes. Non-critical search telemetry failures no longer become unhandled promise rejections.
+- Connected public categories, areas, plans, emergency contacts, announcements, ads, and static pages to Supabase reads, retaining seed/cache fallbacks for offline/demo behavior.
+- Implemented the previously empty public Offers data path using active, date-valid Supabase offers and their published business profiles.
+- Public directory data now merges published Supabase business rows with crawl-only static Google Places records. Database-backed static snapshots are replaced by live published records; if publication status cannot be verified, stale database-backed snapshot rows are withheld. Public business hydration omits internal moderation assignment/creator fields.
 - Improved the global React error boundary: raw exception messages are no longer shown to visitors; the fallback has accessible alert semantics and retry/reload actions.
 - Replaced the vulnerable npm-registry SheetJS 0.18.5 release with the official patched SheetJS 0.20.3 tarball; existing spreadsheet import/export API and tests are retained.
 - Removed unused direct app dependencies after scanning source imports. The lockfile retains transitive metadata required for deterministic installs.
@@ -31,12 +35,12 @@
 - GitHub Actions uses read-only repository token permissions, concurrency cancellation, 15-minute job timeouts, explicit TypeScript checks, tests, production builds, and a blocking high/critical npm audit gate.
 - A separate Deno CI job type-checks every Supabase Edge Function.
 - Dependabot checks npm packages and GitHub Actions weekly.
-- Latest verified commit for this batch: `c3560b76b6fcf2328dc48f86faeb596b80d1e9bc`.
-- Latest verified CI: https://github.com/samt87804-gif/Hello-Sadiqabad/actions/runs/43626262783 — npm install, npm audit, TypeScript, 58/58 tests, production build, and Deno Edge Function type-check all passed.
+- Latest verified commit for this batch: `d51e1053a12725af0957860e2dbf1240054ac4bf`.
+- Latest verified CI: https://github.com/samt87804-gif/Hello-Sadiqabad/actions/runs/43627453013 — npm install, npm audit, TypeScript, 60/60 tests, production build, and Deno Edge Function type-check all passed.
 - Cloudflare Pages check for the same commit completed successfully.
 
 ## Still open in Phase 1
-- Full component-by-component audit of every public, admin, and owner route.
+- Full component-by-component audit of every admin and owner route, plus remaining public route actions and data states.
 - Backend/RLS ownership matrix tests and direct unauthorized API regression tests.
 - End-to-end browser journeys for the full public directory and portal workflows.
 - Dead/duplicate code audit with proof of non-use before deletion.
