@@ -9,7 +9,7 @@
 - Hardened Supabase auth hydration: missing profile data, permission RPC denial, or profile/permission network failures now fail closed instead of retaining a portal role. Session bootstrap always clears its loading state after failure.
 - Improved the global React error boundary: raw exception messages are no longer shown to visitors; the fallback has accessible alert semantics and both retry and full-reload actions.
 - CI now has read-only repository token permissions, concurrency cancellation, a 15-minute job timeout, an explicit TypeScript check, automated tests, and a production build.
-- Added a non-blocking npm audit report to CI so dependency advisories are visible without hiding or silently auto-fixing them.
+- Replaced the vulnerable npm-registry SheetJS 0.18.5 release with the official patched SheetJS 0.20.3 tarball; existing spreadsheet import/export API and tests are retained. CI dependency audit now reports zero advisories and blocks high/critical findings.
 - Added the phased completion roadmap and corrected the Supabase region documentation.
 
 ## Verification
