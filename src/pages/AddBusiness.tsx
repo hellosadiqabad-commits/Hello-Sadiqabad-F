@@ -47,8 +47,8 @@ export function AddBusiness() {
   useEffect(() => {
     let active = true;
     updatePageSeo({
-      title: 'Add Your Business Free — Hello Sadiqabad',
-      description: 'Submit your shop, clinic, or local service to the Sadiqabad local business directory for free.',
+      title: 'Submit Your Business — Hello Sadiqabad',
+      description: 'Submit your shop, clinic, or local service for review in the Sadiqabad local business directory.',
       canonicalPath: '/add-business',
     });
     setMetadataError(false);
@@ -215,11 +215,11 @@ export function AddBusiness() {
       <Container size="md" className="py-6 space-y-6">
         <SectionHeading
           title={lang === 'ur' ? 'اپنا کاروبار ہیلو صادق آباد میں شامل کریں' : 'Add Your Business to Hello Sadiqabad'}
-          titleUr={lang === 'en' ? 'اپنا کاروبار مفت میں شامل کریں' : undefined}
+          titleUr={lang === 'en' ? 'اپنا کاروبار شامل کرنے کی درخواست دیں' : undefined}
           subtitle={
             lang === 'ur'
-              ? 'تحصیل صادق آباد کی دکانوں، ڈاکٹرز، ورکشاپس اور سروسز کے لیے مفت بنیادی لسٹنگ۔'
-              : 'Free basic directory listing for shops, doctors, workshops, and services in Tehsil Sadiqabad.'
+              ? 'تحصیل صادق آباد کی دکانوں، ڈاکٹرز، ورکشاپس اور سروسز کی لسٹنگ کے لیے درخواست جمع کروائیں۔'
+              : 'Submit a listing request for shops, doctors, workshops, and services in Tehsil Sadiqabad.'
           }
         />
 
@@ -227,7 +227,7 @@ export function AddBusiness() {
           <Sparkles className="w-5 h-5 text-primary shrink-0 mt-0.5" />
           <div className="text-xs text-on-surface space-y-1">
             <p className="font-bold">
-              {lang === 'ur' ? 'مقامی کاروباروں کے لیے ہمیشہ مفت' : 'Always Free for Local Businesses'}
+              {lang === 'ur' ? 'لسٹنگ کی درخواست اور پلان کا جائزہ' : 'Listing Request & Plan Review'}
             </p>
             <p className="text-on-surface-variant">
               {lang === 'ur'
@@ -438,7 +438,7 @@ export function AddBusiness() {
                 loading={submitting}
                 leftIcon={<PlusCircle className="w-5 h-5" />}
               >
-                {lang === 'ur' ? 'مفت لسٹنگ جمع کروائیں' : 'Submit Free Listing'}
+                {lang === 'ur' ? 'لسٹنگ کی درخواست جمع کروائیں' : 'Submit Listing Request'}
               </Button>
             </form>
           </Card>
