@@ -651,24 +651,18 @@ export async function fetchEmergencyContacts(): Promise<{ items: EmergencyContac
 
 export async function fetchActiveOffers(): Promise<Array<OfferRow & { business: BusinessPublicView | null }>> {
   const today = todayDateStr();
+  const businesses = await fetchGitHubBusinesses();
   const client = getSupabaseClient();
-  const [offers, businesses] = await Promise.all([
-    client
-      ? client.from('offers')
-          .select('*')
-          .eq('status', 'active')
-          .lte('valid_from', today)
-          .gte('valid_to', today)
-          .order('created_at', { ascending: false })
-          .then(({ data, error }) => {
-            if (error) throw error;
-            return (data ?? []) as OfferRow[];
-          })
-      : Promise.resolve(loadDemoDb().offers.filter((offer) => isOfferCurrentlyValid(offer, today))),
-    fetchGitHubBusinesses(),
-  ]);
 
-  return attachPublicOffers(offers, businesses, today);
+  if (!client) {
+    return attachPublicOffers(loadDemoDb().offers, businesses, today);
+  }
+
+  return businesses.flatMap((business) =>
+    (business.active_offers ?? [])
+      .filter((offer) => isOfferCurrentlyValid(offer, today))
+      .map((offer) => ({ ...offer, business }))
+  );
 }
 
 export async function fetchAnnouncements(activeOnly = true): Promise<AnnouncementRow[]> {
