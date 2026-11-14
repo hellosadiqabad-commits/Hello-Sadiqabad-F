@@ -42,11 +42,17 @@ export function resolvePublicRuntimeConfig(
   if (supabaseUrl && !isValidHttpUrl(supabaseUrl, allowLocalHttp)) {
     issues.push('VITE_SUPABASE_URL must be a valid HTTPS URL (localhost HTTP is allowed in development).');
   }
-  if (isProductionBuild && !supabaseUrl) {\n    issues.push('VITE_SUPABASE_URL is not configured for this production build.');\n  }\n  if (supabaseUrl && !supabasePublishableKey) {
+  if (isProductionBuild && !supabaseUrl) {
+    issues.push('VITE_SUPABASE_URL is not configured for this production build.');
+  }
+  if (supabaseUrl && !supabasePublishableKey) {
     issues.push('VITE_SUPABASE_PUBLISHABLE_KEY is required when Supabase URL is configured.');
   }
 
-  if (isProductionBuild && !supabasePublishableKey) {\n    issues.push('VITE_SUPABASE_PUBLISHABLE_KEY is not configured for this production build.');\n  }\n  const configuredUrlIsValid = Boolean(supabaseUrl && isValidHttpUrl(supabaseUrl, allowLocalHttp));
+  if (isProductionBuild && !supabasePublishableKey) {
+    issues.push('VITE_SUPABASE_PUBLISHABLE_KEY is not configured for this production build.');
+  }
+  const configuredUrlIsValid = Boolean(supabaseUrl && isValidHttpUrl(supabaseUrl, allowLocalHttp));
   const siteUrlInput = readString(values.VITE_SITE_URL);
   const siteUrl = siteUrlInput && isValidHttpUrl(siteUrlInput, allowLocalHttp)
     ? siteUrlInput.replace(/\/+$/, '')
