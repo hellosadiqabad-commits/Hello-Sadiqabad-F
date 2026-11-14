@@ -544,9 +544,33 @@ export async function fetchEmergencyContacts():Promise<{items:EmergencyContactRo
   cacheEmergencyContacts(items);return {items,fromCache:false,cachedAt:nowIso()};
 }
 
-export async function fetchActiveOffers():Promise<Array<OfferRow&{business:BusinessPublicView|null}>> {
-  // Publish approved public offers by adding them to the GitHub seed.
-  return [];
+export async function fetchActiveOffers(): Promise<Array<OfferRow & { business: BusinessPublicView | null }>> {
+  const today = todayDateStr();
+  const client = getSupabaseClient();
+  const [offers, businesses] = await Promise.all([
+    client
+      ? client.from('offers')
+          .select('*')
+          .eq('status', 'active')
+          .lte('valid_from', today)
+          .gte('valid_to', today)
+          .order('created_at', { ascending: false })
+          .then(({ data, error }) => {
+            if (error) throw error;
+            return (data ?? []) as OfferRow[];
+          })
+      : Promise.resolve(loadDemoDb().offers.filter((offer) => isOfferCurrentlyValid(offer, today))),
+    fetchGitHubBusinesses(),
+  ]);
+
+  const businessById = new Map(businesses.map((business) => [business.id, business]));
+  return offers
+    .filter((offer) => isOfferCurrentlyValid(offer, today))
+    .map((offer) => ({
+      ...offer,
+      business: businessById.get(offer.business_id) ?? null,
+    }))
+    .filter((offer) => offer.business !== null);
 }
 
 export async function fetchAnnouncements(activeOnly=true):Promise<AnnouncementRow[]> {
