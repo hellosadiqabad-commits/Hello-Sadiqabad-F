@@ -106,3 +106,25 @@ export function countEffectiveActiveOffers(
 ): number {
   return offers.filter((o) => getEffectiveOfferStatus(o, todayStr) === 'active').length;
 }
+
+/**
+ * Joins currently valid public offers to published businesses supplied by the
+ * public directory source. Orphaned offers are omitted rather than displayed
+ * without a trustworthy business profile.
+ */
+export function attachPublicOffers<
+  T extends { business_id: string; status: string; valid_from: string; valid_to: string },
+  B extends { id: string },
+>(
+  offers: T[],
+  businesses: B[],
+  todayStr: string = getPakistanDateString(),
+): Array<T & { business: B }> {
+  const businessById = new Map(businesses.map((business) => [business.id, business]));
+  return offers
+    .filter((offer) => isOfferCurrentlyValid(offer, todayStr))
+    .flatMap((offer) => {
+      const business = businessById.get(offer.business_id);
+      return business ? [{ ...offer, business }] : [];
+    });
+}
