@@ -1414,6 +1414,9 @@ export async function adminUpsertBusiness(
   if (client) {
     const payload = {
       ...input,
+      // Record staff ownership for newly created drafts so the database can
+      // enforce the business.edit_own row scope. Omit this field on updates.
+      ...(!input.id ? { created_by: actorId } : {}),
       slug,
       city_id: input.city_id ?? (await getDefaultCityId()),
       phone_normalized: normalized,
