@@ -246,7 +246,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (!isDemoMode) {
       return { ok: false, redirectPath: '/login' };
     }
-    if (!isDemoMode) return { ok: false, redirectPath: '/login' };
     const db = loadDemoDb();
     const prof =
       db.profiles.find((p) => p.role === targetRole) ??
