@@ -35,15 +35,22 @@ export function CategoryDetail() {
   const [ads, setAds] = useState<AdRow[]>([]);
   const [favorites, setFavorites] = useState<string[]>(() => getFavorites());
   const [loading, setLoading] = useState(true);
+  const [metaError, setMetaError] = useState(false);
+  const [loadError, setLoadError] = useState(false);
+  const [retryKey, setRetryKey] = useState(0);
 
   useEffect(() => {
+    let active = true;
     setPage(1);
     setSelectedArea('');
+    setMetaLoaded(false);
+    setMetaError(false);
     Promise.all([
       fetchAllCategories(),
       fetchAllAreas(),
       fetchActiveAds('category_banner'),
     ]).then(([cats, ar, catAds]) => {
+      if (!active) return;
       const found = cats.find((c) => c.slug === slug) ?? null;
       setCategory(found);
       setSubcategories(found ? cats.filter((c) => c.parent_id === found.id) : []);
@@ -57,20 +64,28 @@ export function CategoryDetail() {
           canonicalPath: `/category/${found.slug}`,
         });
       }
+    }).catch(() => {
+      if (!active) return;
+      setMetaError(true);
+      setMetaLoaded(true);
     });
-  }, [slug]);
+    return () => { active = false; };
+  }, [slug, retryKey]);
 
   useEffect(() => {
+    const controller = new AbortController();
     setLoading(true);
+    setLoadError(false);
     searchBusinesses(
       {
         category: slug,
         area: selectedArea,
         open: openOnly,
       },
-      { page, limit: 20 }
+      { page, limit: 20, signal: controller.signal }
     )
       .then((res) => {
+        if (controller.signal.aborted) return;
         setBusinesses((prev) =>
           page === 1
             ? res.items
@@ -78,10 +93,32 @@ export function CategoryDetail() {
         );
         setTotal(res.total);
       })
-      .finally(() => setLoading(false));
-  }, [slug, selectedArea, openOnly, page]);
+      .catch((error: unknown) => {
+        if (controller.signal.aborted || (error instanceof DOMException && error.name === 'AbortError')) return;
+        setLoadError(true);
+        if (page === 1) setBusinesses([]);
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setLoading(false);
+      });
+    return () => controller.abort();
+  }, [slug, selectedArea, openOnly, page, retryKey]);
 
   const isMedical = /health|hospital|clinic|pharmac|doctor|medical/i.test(slug);
+
+  if (metaError) {
+    return (
+      <AppShell>
+        <Container className="py-10">
+          <EmptyState
+            title="Couldn't load category details"
+            description="Please check your connection and try again."
+            action={<Button onClick={() => setRetryKey((value) => value + 1)}>Retry</Button>}
+          />
+        </Container>
+      </AppShell>
+    );
+  }
 
   if (metaLoaded && !category) {
     return (
@@ -208,6 +245,14 @@ export function CategoryDetail() {
         )}
 
         {ads[0] && <AdBanner ad={ads[0]} />}
+
+        {loadError && (
+          <EmptyState
+            title="Couldn't load listings"
+            description="Your previous results are kept when possible. Please try again."
+            action={<Button onClick={() => setRetryKey((value) => value + 1)}>Retry</Button>}
+          />
+        )}
 
         {loading && page === 1 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
