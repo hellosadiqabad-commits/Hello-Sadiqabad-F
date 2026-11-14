@@ -1,4 +1,4 @@
-import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
+import React, { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { getSupabaseClient, supabaseConfig } from './supabase';
 import { fetchMyPermissions, loadDemoDb, saveDemoDb } from './api';
 import type { PermissionKey, ProfileRow, StaffType, UserRole } from '../types/database';
@@ -54,10 +54,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [permissions, setPermissions] = useState<PermissionKey[]>([]);
   const [isActiveUser, setIsActiveUser] = useState<boolean>(true);
   const [loading, setLoading] = useState<boolean>(true);
+  const hydrationVersion = useRef(0);
 
   const isDemoMode = !supabaseConfig.isConfigured && !supabaseConfig.isProductionBuild;
 
   const hydrateUser = useCallback(async (authUser: AuthUser | null) => {
+    const version = ++hydrationVersion.current;
     if (!authUser) {
       setUser(null);
       setProfile(null);
@@ -69,6 +71,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
 
     setUser(authUser);
+    // Clear prior-user privileges while the new session is being verified.
+    setProfile(null);
+    setRole(null);
+    setStaffTypes([]);
+    setPermissions([]);
+    setIsActiveUser(false);
     const client = getSupabaseClient();
     if (client) {
       try {
@@ -76,6 +84,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           client.from('profiles').select('*').eq('id', authUser.id).single(),
           fetchMyPermissions(authUser.id),
         ]);
+        if (version !== hydrationVersion.current) return;
         if (profRes.error) throw profRes.error;
         const prof = (profRes.data as ProfileRow | null) ?? null;
         if (!prof || !permsRes.role || permsRes.is_active !== true) {
@@ -93,6 +102,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         setIsActiveUser(true);
       } catch {
         // Fail closed if the profile or permission service cannot be verified.
+        if (version !== hydrationVersion.current) return;
         setProfile(null);
         setRole(null);
         setStaffTypes([]);
@@ -114,6 +124,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     const db = loadDemoDb();
     const prof = db.profiles.find((p) => p.id === authUser.id) ?? null;
     const permsRes = await fetchMyPermissions(authUser.id);
+    if (version !== hydrationVersion.current) return;
     setProfile(prof);
     setRole(permsRes.role ?? prof?.role ?? 'owner');
     setStaffTypes(permsRes.staff_types ?? []);
@@ -213,6 +224,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         fetchMyPermissions(data.user.id),
         client.from('profiles').select('must_change_password').eq('id', data.user.id).single(),
       ]);
+      if (profRes.error || !profRes.data || !perms.role || perms.is_active !== true) {
+        await client.auth.signOut();
+        await hydrateUser(null);
+        return { ok: false, error: 'Account profile or permissions could not be verified. Contact Super Admin.' };
+      }
       if (!perms.is_active) {
         await client.auth.signOut();
         await hydrateUser(null);
