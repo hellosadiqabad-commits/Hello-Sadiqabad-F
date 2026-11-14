@@ -1,15 +1,13 @@
 # Hello Sadiqabad — Phased Completion Roadmap
 
 ## Working mode
-
-The currently connected GitHub repository, Supabase project, and Cloudflare Pages project are development/testing resources only. Do not treat them as the final production environment. Do not make the new-account/new-project cutover until the owner explicitly starts that stage.
-
-All code work should be made on a dedicated feature branch and validated through GitHub Actions before it is considered complete. Prefer small, reviewable changes. Never commit secrets, service-role keys, real credentials, or test personal data.
+- The currently connected GitHub repository, Supabase project, and Cloudflare Pages project are development/testing resources only. Do not treat them as the final production environment.
+- Code changes are committed directly to `main`, as explicitly requested. Do not create pull requests or feature branches unless the user changes this instruction.
+- Main-branch commits can trigger the connected Cloudflare Pages deployment. Supabase schema/data/Auth settings and Cloudflare Worker/R2 infrastructure must not be changed without explicit approval.
+- Never commit secrets, service-role keys, real credentials, or test personal data.
 
 ## Completion standard
-
 A feature is complete only when all applicable checks pass:
-
 1. The user journey works from entry point to success and failure states.
 2. Role and ownership boundaries are enforced by the backend/RLS, not only by hidden UI.
 3. Inputs are validated on both client and server where applicable.
@@ -23,13 +21,15 @@ A green build alone is not proof that every user-facing feature works.
 
 ## Phases
 
-### Phase 1 — Repository and engineering foundation
+### Phase 1 — Repository and engineering foundation (in progress)
 - Normalize package metadata and project documentation.
 - Inventory routes, components, data services, migrations, Edge Functions, and tests.
-- Review TypeScript strictness, linting, dependency health, error boundaries, logging, and environment validation.
+- Review TypeScript strictness, dependency health, error boundaries, logging, and environment validation.
 - Add reliable test utilities and quality gates without weakening existing checks.
 - Remove dead/duplicate code only after proving it is unused.
-- Acceptance: clean install, lint/type-check, test suite, production build, and documented baseline.
+- Audit every public/admin/owner route and all seven Supabase Edge Functions.
+- Add role/ownership tests and regression tests for server-side validation.
+- Acceptance: clean install, lint/type-check, test suite, production build, Deno function checks, and documented baseline.
 
 ### Phase 2 — Public directory experience
 - Home, search, filters, categories, areas, business details, offers, announcements, map, emergency contacts, favorites, add-business, legal/static pages.
@@ -40,7 +40,8 @@ A green build alone is not proof that every user-facing feature works.
 ### Phase 3 — Authentication and authorization
 - Login, logout, session restoration, password reset/change, inactive accounts, pending users, role changes, staff permissions, and account provisioning.
 - Ensure unapproved users cannot reach owner tools and missing/failed permission data fails closed.
-- Remove preset/shared passwords and use a secure invitation or temporary-credential process.
+- Owner Portal is currently owner-role-only. A future staff/Super Admin preview must be explicit and read-only.
+- Use a secure invitation or temporary-credential process; never use preset/shared passwords.
 - Acceptance: role/permission matrix tests plus backend/RLS denial tests.
 
 ### Phase 4 — Admin Portal
@@ -74,7 +75,6 @@ A green build alone is not proof that every user-facing feature works.
 - Acceptance: no open critical/high defects; all release gates pass; clean-room deployment succeeds.
 
 ## Current known constraints and deferred decisions
-
 - The existing database migration ledger differs from the repository's consolidated baseline. Never replay the baseline on the current connected database or run an unreviewed schema push.
 - Existing published business records must not be assigned to owners without verified ownership evidence.
 - Payment collection method and the grandfathering treatment of existing listings are not yet specified.
