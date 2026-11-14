@@ -113,6 +113,25 @@ export function AdminPortal() {
   const reload = useCallback(async () => {
     setLoading(true);
     try {
+      const can = (permission: string) => isSuperAdmin || hasPermission(permission);
+      const canViewDashboard = can('business.create') || can('business.publish') ||
+        can('moderation.review') || can('support.read');
+      const emptyCounts: AdminDashboardCounts = {
+        pending_businesses: 0,
+        pending_reviews: 0,
+        new_submissions: 0,
+        open_leads: 0,
+        expiring_plans: 0,
+        published_businesses: 0,
+      };
+      const emptyAnalytics: AdminAnalyticsData = {
+        daily_traffic: [],
+        top_businesses: [],
+        top_categories: [],
+        top_searches: [],
+        zero_result_searches: [],
+        ad_performance: [],
+      };
       const [
         c,
         biz,
@@ -133,24 +152,24 @@ export function AdminPortal() {
         pgs,
         aud,
       ] = await Promise.all([
-        fetchAdminDashboardCounts(),
-        fetchAdminBusinesses(),
-        fetchAllCategories(true),
-        fetchAllAreas(true),
-        fetchPlans(),
-        fetchAllReviewsAdmin(),
-        fetchAllSubmissionsAdmin(),
-        fetchAllInquiriesAdmin(),
-        fetchLeads(),
-        fetchProfilesAdmin(),
-        fetchAllAdsAdmin(),
-        fetchImportBatches(),
+        canViewDashboard ? fetchAdminDashboardCounts() : Promise.resolve(emptyCounts),
+        can('business.create') || can('business.publish') ? fetchAdminBusinesses() : Promise.resolve([]),
+        can('business.create') ? fetchAllCategories(true) : Promise.resolve([]),
+        can('business.create') ? fetchAllAreas(true) : Promise.resolve([]),
+        can('tiers.manage') ? fetchPlans() : Promise.resolve([]),
+        can('moderation.review') ? fetchAllReviewsAdmin() : Promise.resolve([]),
+        can('moderation.review') ? fetchAllSubmissionsAdmin() : Promise.resolve([]),
+        can('support.read') ? fetchAllInquiriesAdmin() : Promise.resolve([]),
+        can('leads.manage') ? fetchLeads() : Promise.resolve([]),
+        can('owners.create') ? fetchProfilesAdmin() : Promise.resolve([]),
+        can('ads.review') ? fetchAllAdsAdmin() : Promise.resolve([]),
+        can('import.run') ? fetchImportBatches() : Promise.resolve([]),
         fetchEmergencyContacts(),
-        fetchAnnouncements(false),
-        fetchAdminAnalytics(analyticsDays),
-        fetchAllSiteSettingsAdmin(),
-        fetchAllPagesAdmin(),
-        fetchAuditLogs(100),
+        fetchAnnouncements(can('announcements.manage') ? false : true),
+        can('analytics.view') ? fetchAdminAnalytics(analyticsDays) : Promise.resolve(emptyAnalytics),
+        can('settings.manage') ? fetchAllSiteSettingsAdmin() : Promise.resolve([]),
+        can('settings.manage') ? fetchAllPagesAdmin() : Promise.resolve([]),
+        isSuperAdmin ? fetchAuditLogs(100) : Promise.resolve([]),
       ]);
       setCounts(c);
       setBusinesses(biz);
