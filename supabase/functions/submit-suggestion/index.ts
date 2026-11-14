@@ -49,7 +49,7 @@ async function body(req: Request) {
 }
 
 async function authenticatedOwnerId(req: Request): Promise<string | null> {
-  const token = (req.headers.get("authorization") ?? "").replace(/^Bearer\\s+/i, "").trim();
+  const token = (req.headers.get("authorization") ?? "").replace(/^Bearer\s+/i, "").trim();
   if (!token) return null;
 
   const { data: authData, error: authError } = await db.auth.getUser(token);
