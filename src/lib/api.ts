@@ -577,7 +577,7 @@ export async function fetchEmergencyContacts(): Promise<{ items: EmergencyContac
     }
   }
   const cached = getCachedEmergencyContacts();
-  if (cached?.length) return { items: cached, fromCache: true, cachedAt: null };
+  if (cached.items.length) return { items: cached.items, fromCache: true, cachedAt: cached.updated_at };
   const items = [...SEED_EMERGENCY_CONTACTS].filter((item) => item.is_active).sort((a, b) => a.sort_order - b.sort_order);
   cacheEmergencyContacts(items);
   return { items, fromCache: false, cachedAt: nowIso() };
