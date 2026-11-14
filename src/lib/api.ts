@@ -398,6 +398,113 @@ export async function fetchPlans(): Promise<PlanRow[]> {
   return [...loadDemoDb().plans].sort((a, b) => a.sort_order - b.sort_order);
 }
 
+type GitHubBusinessRecord = {
+  title?: string;
+  categoryName?: string;
+  "categories/0"?: string;
+  address?: string;
+  neighborhood?: string;
+  phone?: string;
+  website?: string;
+  imageUrl?: string;
+  totalScore?: string | number;
+  reviewsCount?: string | number;
+  "location/lat"?: string | number;
+  "location/lng"?: string | number;
+  placeId?: string;
+  url?: string;
+  description?: string;
+  openingHours?: Array<{ day?: string; hours?: string | null }>;
+};
+
+type GitHubBusinessIndex = {
+  chunks: Array<{ file: string; count: number }>;
+};
+
+let githubBusinessCache: BusinessPublicView[] | null = null;
+
+function slugifyDirectoryValue(value: string): string {
+  return value.toLowerCase().normalize('NFKD').replace(/[\\u0300-\\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+async function fetchGitHubBusinesses(): Promise<BusinessPublicView[]> {
+  if (githubBusinessCache) return githubBusinessCache;
+  const base = (import.meta.env.BASE_URL || '/').replace(/\\/?$/, '/');
+  const indexResponse = await fetch(`${base}data/businesses/index.json`);
+  if (!indexResponse.ok) throw new Error('Unable to load the GitHub business index.');
+  const index = (await indexResponse.json()) as GitHubBusinessIndex;
+  const batches = await Promise.all(index.chunks.map(async ({ file }) => {
+    const response = await fetch(`${base}data/businesses/${file}`);
+    if (!response.ok) throw new Error(`Unable to load business data: ${file}`);
+    const batch = await response.json() as { businesses: GitHubBusinessRecord[] };
+    return batch.businesses ?? [];
+  }));
+
+  const records = batches.flat();
+  githubBusinessCache = records.map((record, index) => {
+    const name = record.title?.trim() || 'Unnamed business';
+    const categoryName = record.categoryName || record['categories/0'] || 'Other';
+    const areaName = record.neighborhood?.trim() || 'Sadiqabad';
+    const lat = Number(record['location/lat']);
+    const lng = Number(record['location/lng']);
+    const rating = Number(record.totalScore);
+    const ratingCount = Number(record.reviewsCount);
+    const placeId = record.placeId || `record-${index + 1}`;
+    const categorySlug = slugifyDirectoryValue(categoryName);
+    const areaSlug = slugifyDirectoryValue(areaName);
+    const id = `google-${placeId}`;
+    const category = {
+      id: `google-category-${categorySlug}`, city_id: '', parent_id: null,
+      name_en: categoryName, name_ur: '', slug: categorySlug, icon: 'Store',
+      sort_order: 999, is_active: true, created_at: '', updated_at: '',
+    };
+    const area = {
+      id: `google-area-${areaSlug}`, city_id: '', name_en: areaName,
+      name_ur: '', slug: areaSlug, is_active: true, created_at: '', updated_at: '',
+    };
+    return {
+      id, city_id: '', owner_id: null, name_en: name, name_ur: null,
+      slug: `${slugifyDirectoryValue(name) || 'business'}-${slugifyDirectoryValue(placeId).slice(-10)}`,
+      category_id: category.id, area_id: area.id, address_en: record.address || null,
+      address_ur: null, landmark_en: null, landmark_ur: null,
+      lat: Number.isFinite(lat) ? lat : null, lng: Number.isFinite(lng) ? lng : null,
+      phone_primary: record.phone || '', phone_secondary: null, phone_normalized: record.phone || '',
+      whatsapp: null, email: null, website_url: record.website || null,
+      facebook_url: null, instagram_url: null, youtube_url: null, tiktok_url: null,
+      description_en: record.description || null, description_ur: null,
+      services_en: [], services_ur: [], logo_url: record.imageUrl || null,
+      cover_url: record.imageUrl || null, owner_name: null, owner_photo_url: null,
+      gallery_urls: record.imageUrl ? [record.imageUrl] : [], video_urls: [],
+      opening_hours: null, is_open_24h: false, home_delivery: false, established_year: null,
+      status: 'published', rejection_reason: null, plan_code: 'free', plan_expires_at: null,
+      is_verified: false, is_featured: false, tags: [categoryName, areaName],
+      meta_title_en: null, meta_description_en: null,
+      rating_avg: Number.isFinite(rating) && rating > 0 ? rating : null,
+      rating_count: Number.isFinite(ratingCount) ? ratingCount : 0,
+      view_count: 0, call_count: 0, whatsapp_count: 0, source: 'google_places_github',
+      created_by: null, assigned_to: null, published_at: null, claimed_at: null,
+      created_at: '', updated_at: '',
+      category, area, plan: null, active_offers: [], approved_reviews: [],
+    } as unknown as BusinessPublicView;
+  });
+  return githubBusinessCache;
+}
+
+function matchesGitHubBusiness(business: BusinessPublicView, filters: Partial<SearchFiltersState>): boolean {
+  const record = business as BusinessPublicView & { tags: string[] };
+  const q = filters.q?.trim().toLowerCase();
+  if (q && ![
+    business.name_en, business.address_en || '', business.phone_primary || '',
+    business.category?.name_en || '', business.area?.name_en || '',
+  ].join(' ').toLowerCase().includes(q)) return false;
+  if (filters.category && slugifyDirectoryValue(business.category?.slug || '') !== filters.category) return false;
+  if (filters.area && slugifyDirectoryValue(business.area?.slug || '') !== filters.area) return false;
+  if (filters.verified || filters.open || filters.offer || filters.delivery) return false;
+  if (filters.rating && (business.rating_avg ?? 0) < filters.rating) return false;
+  return true;
+}
+
 export async function searchBusinesses(
   filters: Partial<SearchFiltersState>,
   options: {
@@ -408,16 +515,14 @@ export async function searchBusinesses(
     signal?: AbortSignal;
   } = {}
 ): Promise<{ items: BusinessPublicView[]; total: number }> {
-  if (options.signal?.aborted) {
-    throw new DOMException('The user aborted a request.', 'AbortError');
-  }
+  if (options.signal?.aborted) throw new DOMException('The user aborted a request.', 'AbortError');
 
   const page = options.page ?? 1;
   const limit = options.limit ?? 20;
   const client = getSupabaseClient();
+  let databaseRows: BusinessPublicView[] = [];
 
   if (client) {
-    const offset = Math.max(0, (page - 1) * limit);
     const { data, error } = await client.rpc('search_businesses', {
       p_query: filters.q?.trim() || null,
       p_category: filters.category || null,
@@ -430,75 +535,70 @@ export async function searchBusinesses(
       p_sort: filters.sort ?? 'relevance',
       p_lat: options.userCoords?.lat ?? null,
       p_lng: options.userCoords?.lng ?? null,
-      p_limit: limit,
-      p_offset: offset,
+      p_limit: 1000,
+      p_offset: 0,
     });
-    if (options.signal?.aborted) {
-      throw new DOMException('The user aborted a request.', 'AbortError');
-    }
-    if (!error && Array.isArray(data)) {
-      const rows = data as BusinessPublicView[];
-      const total = rows[0]?.total_count ?? rows.length;
-      if (options.logSearch !== false) {
-        const searchTerm = filters.q?.trim() || (filters.category ? `category:${filters.category}` : filters.area ? `area:${filters.area}` : 'browse');
-        void client.functions.invoke('track-event', {
-          body: {
-            event_type: 'search',
-            query: searchTerm.slice(0, 120),
-            filters: {
-              category: filters.category ?? null,
-              area: filters.area ?? null,
-              open: Boolean(filters.open),
-              verified: Boolean(filters.verified),
-              offer: Boolean(filters.offer),
-              rating: filters.rating ?? null,
-              delivery: Boolean(filters.delivery),
-              sort: filters.sort ?? 'relevance',
-            },
-            results_count: total,
-            session_id: getOrCreateSessionId(),
+    if (options.signal?.aborted) throw new DOMException('The user aborted a request.', 'AbortError');
+    if (!error && Array.isArray(data)) databaseRows = data as BusinessPublicView[];
+
+    if (options.logSearch !== false) {
+      const searchTerm = filters.q?.trim() || (filters.category ? `category:${filters.category}` : filters.area ? `area:${filters.area}` : 'browse');
+      void client.functions.invoke('track-event', {
+        body: {
+          event_type: 'search', query: searchTerm.slice(0, 120),
+          filters: {
+            category: filters.category ?? null, area: filters.area ?? null,
+            open: Boolean(filters.open), verified: Boolean(filters.verified),
+            offer: Boolean(filters.offer), rating: filters.rating ?? null,
+            delivery: Boolean(filters.delivery), sort: filters.sort ?? 'relevance',
           },
-        });
-      }
-      return { items: rows, total };
+          results_count: databaseRows[0]?.total_count ?? databaseRows.length,
+          session_id: getOrCreateSessionId(),
+        },
+      });
     }
   }
 
-  if (options.signal?.aborted) {
-    throw new DOMException('The user aborted a request.', 'AbortError');
+  let githubRows: BusinessPublicView[] = [];
+  try {
+    githubRows = await fetchGitHubBusinesses();
+  } catch (error) {
+    console.warn('GitHub business directory could not be loaded; showing database listings only.', error);
   }
+  if (options.signal?.aborted) throw new DOMException('The user aborted a request.', 'AbortError');
 
-  const db = loadDemoDb();
-  const enriched = db.businesses.map((b) => enrichBusiness(b, db));
-  const ranked = filterAndRankBusinesses(
-    enriched,
-    db.categories,
-    db.areas,
-    db.plans,
-    filters,
-    options.userCoords
+  const existingKeys = new Set(databaseRows.map((business) =>
+    `${business.name_en.trim().toLowerCase()}|${(business.address_en || '').trim().toLowerCase()}`
+  ));
+  const importedRows = githubRows.filter((business) =>
+    !existingKeys.has(`${business.name_en.trim().toLowerCase()}|${(business.address_en || '').trim().toLowerCase()}`)
+    && matchesGitHubBusiness(business, filters)
   );
+  const combined = [...databaseRows, ...importedRows];
 
-  if (options.signal?.aborted) {
-    throw new DOMException('The user aborted a request.', 'AbortError');
+  if (filters.sort === 'rating') {
+    combined.sort((a, b) => (b.rating_avg ?? 0) - (a.rating_avg ?? 0));
+  } else if (filters.sort === 'nearest' && options.userCoords) {
+    const distance = (business: BusinessPublicView) => {
+      if (business.lat == null || business.lng == null) return Number.POSITIVE_INFINITY;
+      const toRad = (value: number) => (value * Math.PI) / 180;
+      const dLat = toRad(business.lat - options.userCoords!.lat);
+      const dLng = toRad(business.lng - options.userCoords!.lng);
+      const h = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(options.userCoords!.lat)) *
+        Math.cos(toRad(business.lat)) * Math.sin(dLng / 2) ** 2;
+      return 6371 * 2 * Math.asin(Math.sqrt(h));
+    };
+    combined.sort((a, b) => distance(a) - distance(b));
+  } else if (filters.sort === 'newest') {
+    combined.sort((a, b) => (b.created_at || '').localeCompare(a.created_at || ''));
+  } else {
+    combined.sort((a, b) => Number(b.is_featured) - Number(a.is_featured) ||
+      (b.rating_avg ?? 0) - (a.rating_avg ?? 0) || a.name_en.localeCompare(b.name_en));
   }
 
-  if (options.logSearch && filters.q?.trim()) {
-    db.search_logs.unshift({
-      id: uid('sl'),
-      query: filters.q.trim().slice(0, 120),
-      filters: { ...filters },
-      results_count: ranked.length,
-      created_at: nowIso(),
-    });
-    saveDemoDb(db);
-  }
-
-  const start = (page - 1) * limit;
-  return {
-    items: ranked.slice(start, start + limit),
-    total: ranked.length,
-  };
+  if (options.signal?.aborted) throw new DOMException('The user aborted a request.', 'AbortError');
+  const offset = Math.max(0, (page - 1) * limit);
+  return { items: combined.slice(offset, offset + limit), total: combined.length };
 }
 
 export async function fetchSearchSuggestions(
