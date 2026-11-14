@@ -45,7 +45,9 @@ export interface ParsedCsvRow {
   isValid: boolean;
 }
 
-export const MAX_SPREADSHEET_SIZE_BYTES = 20 * 1024 * 1024;\n\nexport interface SpreadsheetParseResult {
+export const MAX_SPREADSHEET_SIZE_BYTES = 20 * 1024 * 1024;
+
+export interface SpreadsheetParseResult {
   sheetName: string;
   rows: string[][];
 }
