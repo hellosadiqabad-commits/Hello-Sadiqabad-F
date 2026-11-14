@@ -113,6 +113,9 @@ The current private setting `owner_edits_require_approval` is `false`; `reviews_
 - **Admin global search is absent:** the Admin Business Manager has a business-only search and Audit Logs has its own query filter, but there is no single search across businesses, sales leads and owner accounts as specified in PRD §4.4.
 - **PWA update toast exists but is not fully localized:** `PwaUpdateToast` is mounted in `AppShell` and correctly listens for `hs-sw-update`; its visible update/refresh text is English-only.
 
+- **Analytics rollup cron is missing:** the live database has `rollup_business_events(p_date)` and 4 `daily_business_stats` rows, but `cron.job` contains only the plan/offer expiry job and weekly data-retention job; there is no scheduled `rollup_business_events` job. Historical daily owner/admin analytics will not be reliably maintained until the nightly rollup is scheduled and verified. No cron configuration was changed during this audit.
+- **Plan upgrade expiry is hardcoded to one year:** the live private `approve_submission` function sets `plan_expires_at = now() + interval '1 year'` for any approved basic/premium upgrade request. The newer handover explicitly leaves plan expiry behavior and billing cycles undecided. Treat this as a blocked business-policy issue; do not assume yearly expiry for every upgrade.
+
 ## 6. Findings and priorities
 
 ### Critical / high — address before enabling the relevant production workflow
