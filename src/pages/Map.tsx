@@ -39,6 +39,9 @@ export function Map() {
   const [businesses, setBusinesses] = useState<BusinessPublicView[]>([]);
   const [selectedBiz, setSelectedBiz] = useState<BusinessPublicView | null>(null);
   const [userCoords, setUserCoords] = useState<[number, number] | null>(null);
+  const [loadError, setLoadError] = useState(false);
+  const [metaError, setMetaError] = useState(false);
+  const [retryKey, setRetryKey] = useState(0);
 
   useEffect(() => {
     businessesRef.current = businesses;
@@ -49,16 +52,22 @@ export function Map() {
   }, [userCoords]);
 
   useEffect(() => {
+    let active = true;
     updatePageSeo({
       title: 'Sadiqabad Interactive City Map — Hello Sadiqabad',
       description: 'Explore hospitals, super marts, pharmacies, and neighborhoods across Sadiqabad.',
       canonicalPath: '/map',
     });
+    setMetaError(false);
     Promise.all([fetchAllCategories(), fetchAllAreas()]).then(([cats, ar]) => {
+      if (!active) return;
       setCategories(cats);
       setAreas(ar);
+    }).catch(() => {
+      if (active) setMetaError(true);
     });
-  }, []);
+    return () => { active = false; };
+  }, [retryKey]);
 
   useEffect(() => {
     const areaParam = params.get('area') ?? '';
@@ -67,11 +76,13 @@ export function Map() {
 
   useEffect(() => {
     const reqId = ++filterReqIdRef.current;
+    const controller = new AbortController();
+    setLoadError(false);
     searchBusinesses(
       { category: selectedCat, area: selectedArea, open: openOnly },
-      { limit: 50 }
+      { limit: 50, signal: controller.signal }
     ).then((res) => {
-      if (reqId !== filterReqIdRef.current) return;
+      if (controller.signal.aborted || reqId !== filterReqIdRef.current) return;
       const withCoords = res.items.filter(
         (b) => typeof b.lat === 'number' && typeof b.lng === 'number'
       );
@@ -85,8 +96,15 @@ export function Map() {
       if (!userCoordsRef.current && withCoords[0]?.lat && withCoords[0]?.lng && mapInstanceRef.current) {
         mapInstanceRef.current.panTo([withCoords[0].lat, withCoords[0].lng]);
       }
+    }).catch((error: unknown) => {
+      if (controller.signal.aborted || (error instanceof DOMException && error.name === 'AbortError') ||
+        reqId !== filterReqIdRef.current) return;
+      setBusinesses([]);
+      setSelectedBiz(null);
+      setLoadError(true);
     });
-  }, [selectedCat, selectedArea, openOnly]);
+    return () => controller.abort();
+  }, [selectedCat, selectedArea, openOnly, retryKey]);
 
   const renderMarkers = (list: BusinessPublicView[]) => {
     const layer = markersLayerRef.current;
@@ -325,6 +343,19 @@ export function Map() {
             </button>
           </div>
         </div>
+
+        {(metaError || loadError) && (
+          <div role="alert" className="p-3 rounded-xl border border-error/30 bg-error/5 text-sm text-on-surface flex flex-wrap items-center justify-between gap-3">
+            <span>
+              {metaError
+                ? (lang === 'ur' ? 'فلٹرز لوڈ نہیں ہو سکے۔' : 'Map filters could not be loaded.')
+                : (lang === 'ur' ? 'کاروبار لوڈ نہیں ہو سکے۔' : 'Map listings could not be loaded.')}
+            </span>
+            <Button size="sm" variant="outline" onClick={() => setRetryKey((value) => value + 1)}>
+              {lang === 'ur' ? 'دوبارہ کوشش' : 'Retry'}
+            </Button>
+          </div>
+        )}
 
         {viewMode === 'list' ? (
           businesses.length === 0 ? (
