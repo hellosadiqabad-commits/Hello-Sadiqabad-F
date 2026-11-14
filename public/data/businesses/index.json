@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "city": "Sadiqabad",
+  "country": "Pakistan",
+  "businessCount": 333,
+  "imageUrlCount": 233,
+  "chunkSize": 50,
+  "chunks": [
+    {
+      "file": "businesses-001.json",
+      "count": 50
+    },
+    {
+      "file": "businesses-002.json",
+      "count": 50
+    },
+    {
+      "file": "businesses-003.json",
+      "count": 50
+    },
+    {
+      "file": "businesses-004.json",
+      "count": 50
+    },
+    {
+      "file": "businesses-005.json",
+      "count": 50
+    },
+    {
+      "file": "businesses-006.json",
+      "count": 50
+    },
+    {
+      "file": "businesses-007.json",
+      "count": 33
+    }
+  ],
+  "imageField": "imageUrl",
+  "note": "imageUrl values are original remote Google Places image URLs; image binaries are not vendored into this repository.",
+  "generatedFrom": [
+    "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx",
+    "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx"
+  ]
+}
