@@ -495,6 +495,7 @@ export function StaffManager({
     setModalOpen(false);
     setFullName('');
     setEmail('');
+    setPassword('');
     await onReload();
   };
 
