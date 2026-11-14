@@ -37,7 +37,8 @@ export function CategoryDetail() {
   const [loading, setLoading] = useState(true);
   const [metaError, setMetaError] = useState(false);
   const [loadError, setLoadError] = useState(false);
-  const [retryKey, setRetryKey] = useState(0);
+  const [metaRetryKey, setMetaRetryKey] = useState(0);
+  const [searchRetryKey, setSearchRetryKey] = useState(0);
 
   useEffect(() => {
     let active = true;
@@ -70,7 +71,7 @@ export function CategoryDetail() {
       setMetaLoaded(true);
     });
     return () => { active = false; };
-  }, [slug, retryKey]);
+  }, [slug, metaRetryKey]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -102,7 +103,7 @@ export function CategoryDetail() {
         if (!controller.signal.aborted) setLoading(false);
       });
     return () => controller.abort();
-  }, [slug, selectedArea, openOnly, page, retryKey]);
+  }, [slug, selectedArea, openOnly, page, searchRetryKey]);
 
   const isMedical = /health|hospital|clinic|pharmac|doctor|medical/i.test(slug);
 
@@ -113,7 +114,7 @@ export function CategoryDetail() {
           <EmptyState
             title="Couldn't load category details"
             description="Please check your connection and try again."
-            action={<Button onClick={() => setRetryKey((value) => value + 1)}>Retry</Button>}
+            action={<Button onClick={() => setMetaRetryKey((value) => value + 1)}>Retry</Button>}
           />
         </Container>
       </AppShell>
@@ -250,7 +251,7 @@ export function CategoryDetail() {
           <EmptyState
             title="Couldn't load listings"
             description="Your previous results are kept when possible. Please try again."
-            action={<Button onClick={() => setRetryKey((value) => value + 1)}>Retry</Button>}
+            action={<Button onClick={() => setSearchRetryKey((value) => value + 1)}>Retry</Button>}
           />
         )}
 
