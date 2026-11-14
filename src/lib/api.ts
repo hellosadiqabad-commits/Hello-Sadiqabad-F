@@ -670,6 +670,16 @@ export async function fetchActiveOffers(): Promise<Array<OfferRow & { business: 
   );
 }
 
+export async function fetchEmergencyContactsAdmin(): Promise<EmergencyContactRow[]> {
+  const client = getSupabaseClient();
+  if (client) {
+    const { data, error } = await client.from('emergency_contacts').select('*').order('sort_order');
+    if (error) throw error;
+    return (data ?? []) as EmergencyContactRow[];
+  }
+  return loadDemoDb().emergency_contacts;
+}
+
 export async function fetchAnnouncements(activeOnly = true): Promise<AnnouncementRow[]> {
   const client = getSupabaseClient();
   if (client) {
