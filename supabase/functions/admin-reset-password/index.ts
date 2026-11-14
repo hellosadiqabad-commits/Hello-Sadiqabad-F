@@ -1,4 +1,5 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
+import { extractBearerToken, isValidUuid } from "../_shared/validation.ts";
 
 const url = Deno.env.get("SUPABASE_URL");
 const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
@@ -26,15 +27,10 @@ function response(req: Request, data: unknown, status = 200) {
 }
 
 async function caller(req: Request) {
-  const token = (req.headers.get("authorization") ?? "").replace(/^Bearer\\s+/i, "").trim();
+  const token = extractBearerToken(req.headers.get("authorization"));
   if (!token) return null;
   const { data, error } = await db.auth.getUser(token);
   return error ? null : data.user;
-}
-
-function isUuid(value: unknown): value is string {
-  return typeof value === "string" &&
-    /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(value);
 }
 
 Deno.serve(async (req: Request) => {
@@ -64,7 +60,7 @@ Deno.serve(async (req: Request) => {
 
     const userId = body.user_id;
     const password = typeof body.new_password === "string" ? body.new_password : "";
-    if (!isUuid(userId) || password.length < 12 || password.length > 128) {
+    if (!isValidUuid(userId) || password.length < 12 || password.length > 128) {
       return response(req, { ok: false, error: "A valid user ID and password of 12–128 characters are required." }, 400);
     }
 
