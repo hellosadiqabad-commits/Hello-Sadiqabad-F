@@ -1,4 +1,5 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
+import { extractBearerToken, isValidEmail, isValidUuid } from "../_shared/validation.ts";
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL");
 const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
@@ -29,7 +30,7 @@ function response(req: Request, data: unknown, status = 200) {
 }
 
 async function caller(req: Request) {
-  const token = (req.headers.get("authorization") ?? "").replace(/^Bearer\\s+/i, "").trim();
+  const token = extractBearerToken(req.headers.get("authorization"));
   if (!token) return null;
   const { data, error } = await db.auth.getUser(token);
   return error ? null : data.user;
@@ -54,11 +55,6 @@ async function permission(userId: string) {
   const overrides = staff.permissions && typeof staff.permissions === "object" ? staff.permissions : {};
   const override = overrides["owners.create"] ?? overrides["all"];
   return { allowed: override === true || (override !== false && inferred), root: false };
-}
-
-function validUuid(value: unknown): value is string {
-  return typeof value === "string" &&
-    /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(value);
 }
 
 async function rollbackCreatedUser(userId: string) {
@@ -105,7 +101,7 @@ Deno.serve(async (req: Request) => {
       return response(req, { ok: false, error: "Only a super admin can create staff or admin accounts" }, 403);
     }
     if (assignBusinessId !== undefined &&
-      (role !== "owner" || !validUuid(assignBusinessId))) {
+      (role !== "owner" || !isValidUuid(assignBusinessId))) {
       return response(req, { ok: false, error: "A valid business can only be assigned to an owner account" }, 400);
     }
     if (role === "staff" && body.staff_types !== undefined &&
