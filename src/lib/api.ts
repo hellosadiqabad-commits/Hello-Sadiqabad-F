@@ -392,7 +392,7 @@ type GitHubBusinessRecord = {
   isOpen24h?:boolean;homeDelivery?:boolean;establishedYear?:number|null;planCode?:string;
   isVerified?:boolean;isFeatured?:boolean;tags?:string[];source?:string;createdAt?:string;updatedAt?:string;
 };
-type GitHubBusinessIndex={chunks:Array<{file:string;count:number}>};
+type GitHubBusinessIndex={chunks:Array<{file:string;count:number;gzipBase64?:boolean}>};
 let githubBusinessCache:BusinessPublicView[]|null=null;
 let githubBusinessRequest:Promise<BusinessPublicView[]>|null=null;
 
@@ -445,9 +445,18 @@ async function loadGitHubBusinesses():Promise<BusinessPublicView[]> {
   const indexResponse=await fetch(base+'data/businesses/index.json');
   if(!indexResponse.ok)throw new Error('Unable to load the GitHub business index.');
   const index=await indexResponse.json() as GitHubBusinessIndex;
-  const batches=await Promise.all(index.chunks.map(async({file})=>{
+  const batches=await Promise.all(index.chunks.map(async(chunk)=>{
+    const {file}=chunk;
     const response=await fetch(base+'data/businesses/'+file);
     if(!response.ok)throw new Error('Unable to load business data: '+file);
+    if (chunk.gzipBase64) {
+      const encoded = await response.text();
+      const binary = atob(encoded.trim());
+      const bytes = Uint8Array.from(binary, (char) => char.charCodeAt(0));
+      const stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
+      const decoded = await new Response(stream).json() as {businesses:GitHubBusinessRecord[]};
+      return decoded.businesses || [];
+    }
     return (await response.json() as {businesses:GitHubBusinessRecord[]}).businesses||[];
   }));
   const byKey=new Map<string,GitHubBusinessRecord>();
