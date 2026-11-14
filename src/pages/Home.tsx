@@ -41,6 +41,7 @@ import type {
   SearchSuggestionItem,
 } from '../types/directory';
 import { AppShell } from '../components/layout/AppShell';
+import { InstallAppButton } from '../components/layout/InstallAppButton';
 import { AdBanner } from '../components/directory/AdBanner';
 import { BusinessCard } from '../components/directory/BusinessCard';
 import { CategoryChip, CategoryIcon } from '../components/ui/CategoryIcon';
@@ -219,6 +220,8 @@ export function Home() {
                     </p>
                   )}
                 </div>
+
+                <InstallAppButton />
 
                 {/* Search Input & Autocomplete */}
                 <div ref={searchBoxRef} className="relative">
