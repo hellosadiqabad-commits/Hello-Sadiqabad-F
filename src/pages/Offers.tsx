@@ -9,6 +9,7 @@ import { updatePageSeo } from '../lib/seo';
 import type { OfferRow } from '../types/database';
 import type { BusinessPublicView } from '../types/directory';
 import { AppShell } from '../components/layout/AppShell';
+import { Button } from '../components/ui/Button';
 import { ImageWithFallback } from '../components/ui/ImageWithFallback';
 import { EmptyState, Skeleton } from '../components/ui/Feedback';
 import { Badge, Card, Container, SectionHeading } from '../components/ui/Surface';
@@ -18,6 +19,8 @@ export function Offers() {
   const [offers, setOffers] = useState<Array<OfferRow & { business: BusinessPublicView | null }>>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
+  const [retryKey, setRetryKey] = useState(0);
 
   useEffect(() => {
     updatePageSeo({
@@ -25,10 +28,16 @@ export function Offers() {
       description: 'Active discounts, wholesale deals, and seasonal offers from verified Sadiqabad businesses.',
       canonicalPath: '/offers',
     });
+    setLoading(true);
+    setLoadError(false);
     fetchActiveOffers()
       .then(setOffers)
+      .catch(() => {
+        setOffers([]);
+        setLoadError(true);
+      })
       .finally(() => setLoading(false));
-  }, []);
+  }, [retryKey]);
 
   const categoryOptions = useMemo(() => {
     const seen = new Map<string, string>();
@@ -91,7 +100,13 @@ export function Offers() {
           </div>
         )}
 
-        {loading ? (
+        {loadError ? (
+          <EmptyState
+            title={lang === 'ur' ? 'آفرز لوڈ نہیں ہو سکیں' : 'Could not load offers'}
+            description={lang === 'ur' ? 'انٹرنیٹ کنکشن چیک کر کے دوبارہ کوشش کریں۔' : 'Please check your connection and try again.'}
+            action={<Button onClick={() => setRetryKey((value) => value + 1)}>{lang === 'ur' ? 'دوبارہ کوشش' : 'Retry'}</Button>}
+          />
+        ) : loading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[1, 2, 3, 4].map((i) => (
               <Skeleton key={i} className="h-40 rounded-2xl" />
