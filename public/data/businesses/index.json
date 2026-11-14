@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "city": "Sadiqabad",
   "country": "Pakistan",
-  "businessCount": 333,
+  "businessCount": 382,
   "imageUrlCount": 236,
   "chunkSize": 125,
   "chunks": [
@@ -17,6 +17,11 @@
     {
       "file": "businesses-003.json",
       "count": 83
+    },
+    {
+      "file": "new-seed-phase-1-part-1.json.gz.b64",
+      "count": 49,
+      "gzipBase64": true
     }
   ],
   "imageFields": [
@@ -30,6 +35,7 @@
   "generatedFrom": [
     "dataset_crawler-google-places_2026-10-08_09-24-27-160.xlsx",
     "dataset_crawler-google-places_2026-10-08_09-29-51-714.xlsx",
-    "Sanitized public-field snapshot of 123 published Supabase businesses, 2026-11-14"
+    "Sanitized public-field snapshot of 123 published Supabase businesses, 2026-11-14",
+    "New Seed Data.xlsx (phase 1, part 1/4; 49 businesses)"
   ]
 }
