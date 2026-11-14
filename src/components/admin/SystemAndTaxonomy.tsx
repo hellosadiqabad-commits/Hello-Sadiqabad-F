@@ -451,7 +451,7 @@ export function StaffManager({
   const [modalOpen, setModalOpen] = useState(false);
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('Staff@2026');
+  const [password, setPassword] = useState('');
   const [selectedTypes, setSelectedTypes] = useState<StaffType[]>(['moderator']);
 
   const [editingMember, setEditingMember] = useState<{
@@ -722,7 +722,7 @@ export function StaffManager({
         <form onSubmit={createStaff} className="space-y-3">
           <Input label="Staff Name" required value={fullName} onChange={(e) => setFullName(e.target.value)} />
           <Input label="Email" type="email" required dir="ltr" value={email} onChange={(e) => setEmail(e.target.value)} />
-          <Input label="Temporary Password" required dir="ltr" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <Input label="Temporary Password" type="password" autoComplete="new-password" minLength={12} required dir="ltr" hint="Use a unique password with at least 12 characters. No preset password is provided." value={password} onChange={(e) => setPassword(e.target.value)} />
           <div className="space-y-1.5">
             <span className="text-xs font-bold text-on-surface">Assign Staff Roles:</span>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
