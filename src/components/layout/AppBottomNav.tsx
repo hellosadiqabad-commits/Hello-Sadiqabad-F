@@ -28,7 +28,7 @@ export function AppBottomNav() {
               to={tab.to}
               end={tab.end}
               className={({ isActive }) =>
-                `flex flex-col items-center justify-center gap-0.5 px-1 text-[11px] font-semibold transition-colors ${
+                `hs-nav-link flex flex-col items-center justify-center gap-0.5 px-1 text-[11px] font-semibold transition-colors ${
                   tab.urgent
                     ? isActive
                       ? 'text-error font-bold'
