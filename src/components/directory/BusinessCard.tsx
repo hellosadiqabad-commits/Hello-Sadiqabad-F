@@ -34,7 +34,7 @@ export function BusinessCard({
 
   return (
     <article
-      className={`rounded-2xl bg-surface-container-lowest border border-outline-variant/35 shadow-sm hover:shadow-md transition-shadow p-4 flex flex-col justify-between gap-3 ${
+      className={`hs-card-motion rounded-2xl bg-surface-container-lowest border border-outline-variant/35 shadow-sm hover:shadow-md transition-shadow p-4 flex flex-col justify-between gap-3 ${
         effPlan === 'premium' ? 'border-t-4 border-t-secondary-container' : ''
       }`}
     >
@@ -84,13 +84,13 @@ export function BusinessCard({
               type="button"
               aria-label={isSaved ? 'Remove from saved' : 'Save business'}
               onClick={() => onToggleSave(business.id)}
-              className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-colors cursor-pointer ${
+              className={`hs-pressable w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-colors cursor-pointer ${
                 isSaved
                   ? 'bg-secondary-fixed text-secondary'
                   : 'bg-surface-container-low text-on-surface-variant hover:text-secondary'
               }`}
             >
-              <Bookmark className={`w-4 h-4 ${isSaved ? 'fill-current' : ''}`} />
+              <Bookmark className={`hs-favorite-icon w-4 h-4 ${isSaved ? 'is-saved fill-current' : ''}`} />
             </button>
           </div>
 
