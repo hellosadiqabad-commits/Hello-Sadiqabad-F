@@ -105,6 +105,14 @@ The live migration ledger contains 25 entries while the repository contains 11 S
 
 The current private setting `owner_edits_require_approval` is `false`; `reviews_require_approval` is `true`. No existing business was reassigned during this audit.
 
+
+
+### Additional source-level findings
+- **Directory data loading is all-or-nothing:** `loadGitHubBusinesses()` fetches the index and all 12 JSON chunks in one `Promise.all` (about 1.00 MiB in the current repository). A failed/missing chunk rejects the whole directory load before the Supabase published-business query runs. This can hide database-backed listings even when Supabase itself is reachable and makes slow-network startup heavier than necessary. Add partial chunk handling, cache/version strategy and database-first fallback in the search/discovery phase.
+- **Public discovery RPCs are present in the live database but not wired in the current public API layer:** `search_businesses`, `search_suggestions`, `get_business_public` and `related_businesses` exist in Supabase. The frontend instead loads all directory chunks and filters locally for search, suggestions, profile lookup and related listings. This duplicates backend logic and weakens pagination/scalability.
+- **Admin global search is absent:** the Admin Business Manager has a business-only search and Audit Logs has its own query filter, but there is no single search across businesses, sales leads and owner accounts as specified in PRD §4.4.
+- **PWA update toast exists but is not fully localized:** `PwaUpdateToast` is mounted in `AppShell` and correctly listens for `hs-sw-update`; its visible update/refresh text is English-only.
+
 ## 6. Findings and priorities
 
 ### Critical / high — address before enabling the relevant production workflow
