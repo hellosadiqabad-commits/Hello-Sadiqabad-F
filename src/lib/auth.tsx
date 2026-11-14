@@ -229,11 +229,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         await hydrateUser(null);
         return { ok: false, error: 'Account profile or permissions could not be verified. Contact Super Admin.' };
       }
-      if (!perms.is_active) {
-        await client.auth.signOut();
-        await hydrateUser(null);
-        return { ok: false, error: 'Account is suspended. Contact Super Admin.' };
-      }
       if ((profRes.data as { must_change_password?: boolean } | null)?.must_change_password) {
         return { ok: true, redirectPath: '/change-password' };
       }
