@@ -9,7 +9,7 @@ const db = createClient(supabaseUrl, serviceRoleKey, {
   auth: { persistSession: false, autoRefreshToken: false },
 });
 const allowedOrigins = (Deno.env.get("ALLOWED_ORIGINS") ??
-  "https://hello-sadiqabad-2bs.pages.dev,https://hellosadiqabad.com,https://www.hellosadiqabad.com,http://localhost:3000")
+  "https://hello-sadiqabad-2bs.pages.dev,https://hellosadiqabad.com,https://www.hellosadiqabad.com,http://localhost:3000,http://localhost:5173,http://127.0.0.1:5173")
   .split(",").map((value) => value.trim()).filter(Boolean);
 
 function response(req: Request, data: unknown, status = 200) {
