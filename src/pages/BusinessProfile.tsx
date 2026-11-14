@@ -201,6 +201,7 @@ export function BusinessProfile() {
   const canVideos = effPlan === 'basic' || effPlan === 'premium';
   const canQr = effPlan === 'basic' || effPlan === 'premium';
   const canInquiry = effPlan === 'basic' || effPlan === 'premium';
+  const canWriteReview = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(business.id);
   const canSocial = effPlan === 'basic' || effPlan === 'premium';
   const isSaved = favorites.includes(business.id);
   const gallery = canGallery
@@ -553,13 +554,15 @@ export function BusinessProfile() {
                         : 'Feedback from Sadiqabad visitors'}
                     </p>
                   </div>
-                  <Button
-                    size="sm"
-                    onClick={() => setReviewOpen(true)}
-                    leftIcon={<Star className="w-4 h-4" />}
-                  >
-                    {t('action.writeReview', 'Write a Review')}
-                  </Button>
+                  {canWriteReview && (
+                    <Button
+                      size="sm"
+                      onClick={() => setReviewOpen(true)}
+                      leftIcon={<Star className="w-4 h-4" />}
+                    >
+                      {t('action.writeReview', 'Write a Review')}
+                    </Button>
+                  )}
                 </div>
 
                 {reviews.length > 0 && (
