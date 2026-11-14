@@ -424,13 +424,13 @@ type GitHubBusinessIndex = {
 let githubBusinessCache: BusinessPublicView[] | null = null;
 
 function slugifyDirectoryValue(value: string): string {
-  return value.toLowerCase().normalize('NFKD').replace(/[\\u0300-\\u036f]/g, '')
+  return value.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
 async function fetchGitHubBusinesses(): Promise<BusinessPublicView[]> {
   if (githubBusinessCache) return githubBusinessCache;
-  const base = (import.meta.env.BASE_URL || '/').replace(/\\/?$/, '/');
+  const base = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
   const indexResponse = await fetch(`${base}data/businesses/index.json`);
   if (!indexResponse.ok) throw new Error('Unable to load the GitHub business index.');
   const index = (await indexResponse.json()) as GitHubBusinessIndex;
