@@ -308,11 +308,24 @@ export async function fetchCity(): Promise<CityRow> {
 export async function fetchCategoriesWithCounts(): Promise<CategoryWithChildren[]> {
   const [categories, businesses] = await Promise.all([fetchAllCategories(), fetchGitHubBusinesses()]);
   const counts = new Map<string, number>();
-  for (const business of businesses) counts.set(business.category_id,(counts.get(business.category_id)||0)+1);
-  return categories.filter((category)=>!category.parent_id).sort((a,b)=>a.sort_order-b.sort_order).map((parent)=>{
-    const children=categories.filter((category)=>category.parent_id===parent.id).sort((a,b)=>a.sort_order-b.sort_order);
-    return {...parent,children,listing_count:(counts.get(parent.id)||0)+children.reduce((sum,child)=>sum+(counts.get(child.id)||0),0)};
-  });
+  for (const business of businesses) {
+    const categorySlug = business.category?.slug;
+    if (categorySlug) counts.set(categorySlug, (counts.get(categorySlug) ?? 0) + 1);
+  }
+  return categories
+    .filter((category) => !category.parent_id)
+    .sort((a, b) => a.sort_order - b.sort_order)
+    .map((parent) => {
+      const children = categories
+        .filter((category) => category.parent_id === parent.id)
+        .sort((a, b) => a.sort_order - b.sort_order);
+      return {
+        ...parent,
+        children,
+        listing_count: (counts.get(parent.slug) ?? 0) +
+          children.reduce((sum, child) => sum + (counts.get(child.slug) ?? 0), 0),
+      };
+    });
 }
 
 export async function fetchAllCategories(includeInactive = false): Promise<CategoryRow[]> {
