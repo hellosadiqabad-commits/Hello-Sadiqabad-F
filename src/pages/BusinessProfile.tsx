@@ -108,6 +108,7 @@ export function BusinessProfile() {
   const [business, setBusiness] = useState<BusinessPublicView | null>(null);
   const [related, setRelated] = useState<BusinessPublicView[]>([]);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
   const [favorites, setFavorites] = useState<string[]>(() => getFavorites());
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
 
@@ -122,6 +123,7 @@ export function BusinessProfile() {
 
   const loadProfile = useCallback(async () => {
     setLoading(true);
+    setLoadError(false);
     try {
       const found = await fetchBusinessBySlug(slug);
       setBusiness(found);
@@ -137,7 +139,7 @@ export function BusinessProfile() {
         });
         if (viewedSlugRef.current !== found.slug) {
           viewedSlugRef.current = found.slug;
-          trackBusinessEvent(found.id, 'view');
+          void trackBusinessEvent(found.id, 'view').catch(() => {});
         }
         addRecentlyViewed({
           id: found.id,
@@ -149,8 +151,12 @@ export function BusinessProfile() {
           icon: found.category?.icon ?? 'Store',
           logo_url: found.logo_url,
         });
-        fetchRelatedBusinesses(found.id, found.category_id, 3).then(setRelated);
+        fetchRelatedBusinesses(found.id, found.category_id, 3).then(setRelated).catch(() => setRelated([]));
       }
+    } catch {
+      setBusiness(null);
+      setRelated([]);
+      setLoadError(true);
     } finally {
       setLoading(false);
     }
@@ -182,13 +188,17 @@ export function BusinessProfile() {
       <AppShell>
         <Container className="py-10">
           <ErrorState
-            title={lang === 'ur' ? 'کاروبار کی لسٹنگ نہیں ملی' : 'Business listing not found'}
+            title={loadError
+              ? (lang === 'ur' ? 'لسٹنگ لوڈ نہیں ہو سکی' : 'Could not load this listing')
+              : (lang === 'ur' ? 'کاروبار کی لسٹنگ نہیں ملی' : 'Business listing not found')}
             description={
-              lang === 'ur'
-                ? 'ہو سکتا ہے یہ لسٹنگ منتقل ہو گئی ہو یا ماڈریشن کے انتظار میں ہو۔'
-                : 'This listing may have moved or is awaiting moderation.'
+              loadError
+                ? (lang === 'ur' ? 'انٹرنیٹ کنکشن چیک کریں اور دوبارہ کوشش کریں۔' : 'Please check your connection and try again.')
+                : (lang === 'ur'
+                  ? 'ہو سکتا ہے یہ لسٹنگ منتقل ہو گئی ہو یا ماڈریشن کے انتظار میں ہو۔'
+                  : 'This listing may have moved or is awaiting moderation.')
             }
-            onRetry={() => navigate('/search')}
+            onRetry={loadError ? () => { void loadProfile(); } : () => navigate('/search')}
           />
         </Container>
       </AppShell>
