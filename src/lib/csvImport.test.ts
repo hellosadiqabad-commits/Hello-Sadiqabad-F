@@ -5,7 +5,7 @@ import {
   autoMapCsvHeaders,
   detectImportFileType,
   parseCsvText,
-  parseSpreadsheetBuffer,
+  parseSpreadsheetBuffer,\n  MAX_SPREADSHEET_SIZE_BYTES,
   validateCsvRows,
   validateMappings,
 } from './csvImport';
@@ -68,7 +68,7 @@ test('parseSpreadsheetBuffer extracts first sheet of valid .xlsx workbook', () =
   assert.equal(parsed.rows[2][0], 'Sadiqabad Sweets');
 });
 
-test('parseSpreadsheetBuffer throws clear error on empty workbook or empty buffer', () => {
+test('parseSpreadsheetBuffer rejects files larger than the safe upload limit', () => {\n  const oversized = new ArrayBuffer(MAX_SPREADSHEET_SIZE_BYTES + 1);\n  assert.throws(() => parseSpreadsheetBuffer(oversized), /too large/i);\n});\n\ntest('parseSpreadsheetBuffer throws clear error on empty workbook or empty buffer', () => {
   const emptyBuffer = buildXlsxArrayBuffer([], 'EmptySheet');
   assert.throws(() => parseSpreadsheetBuffer(emptyBuffer, 'empty.xlsx'), /is empty/i);
   assert.throws(() => parseSpreadsheetBuffer(new ArrayBuffer(0), 'zero.xlsx'), /empty/i);
