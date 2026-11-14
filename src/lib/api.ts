@@ -329,23 +329,50 @@ export async function fetchCategoriesWithCounts(): Promise<CategoryWithChildren[
 }
 
 export async function fetchAllCategories(includeInactive = false): Promise<CategoryRow[]> {
-  const businesses=await fetchGitHubBusinesses();
-  const bySlug=new Map<string,CategoryRow>();
-  for(const category of SEED_CATEGORIES)bySlug.set(category.slug,category);
-  for(const business of businesses)if(business.category&&!bySlug.has(business.category.slug))bySlug.set(business.category.slug,business.category);
-  return [...bySlug.values()].filter((category)=>includeInactive||category.is_active).sort((a,b)=>a.sort_order-b.sort_order||a.name_en.localeCompare(b.name_en));
+  const client = getSupabaseClient();
+  if (client) {
+    const { data, error } = await client.from('categories').select('*').order('sort_order');
+    if (!error && data) {
+      return (data as CategoryRow[])
+        .filter((category) => includeInactive || category.is_active)
+        .sort((a, b) => a.sort_order - b.sort_order || a.name_en.localeCompare(b.name_en));
+    }
+  }
+  const businesses = await fetchGitHubBusinesses();
+  const bySlug = new Map<string, CategoryRow>();
+  for (const category of SEED_CATEGORIES) bySlug.set(category.slug, category);
+  for (const business of businesses) if (business.category && !bySlug.has(business.category.slug)) bySlug.set(business.category.slug, business.category);
+  return [...bySlug.values()].filter((category) => includeInactive || category.is_active)
+    .sort((a, b) => a.sort_order - b.sort_order || a.name_en.localeCompare(b.name_en));
 }
 
 export async function fetchAllAreas(includeInactive = false): Promise<AreaRow[]> {
-  const businesses=await fetchGitHubBusinesses();
-  const bySlug=new Map<string,AreaRow>();
-  for(const area of SEED_AREAS)bySlug.set(area.slug,area);
-  for(const business of businesses)if(business.area&&!bySlug.has(business.area.slug))bySlug.set(business.area.slug,business.area);
-  return [...bySlug.values()].filter((area)=>includeInactive||area.is_active).sort((a,b)=>a.name_en.localeCompare(b.name_en));
+  const client = getSupabaseClient();
+  if (client) {
+    const { data, error } = await client.from('areas').select('*').order('name_en');
+    if (!error && data) {
+      return (data as AreaRow[])
+        .filter((area) => includeInactive || area.is_active)
+        .sort((a, b) => a.name_en.localeCompare(b.name_en));
+    }
+  }
+  const businesses = await fetchGitHubBusinesses();
+  const bySlug = new Map<string, AreaRow>();
+  for (const area of SEED_AREAS) bySlug.set(area.slug, area);
+  for (const business of businesses) if (business.area && !bySlug.has(business.area.slug)) bySlug.set(business.area.slug, business.area);
+  return [...bySlug.values()].filter((area) => includeInactive || area.is_active)
+    .sort((a, b) => a.name_en.localeCompare(b.name_en));
 }
 
 export async function fetchPlans(): Promise<PlanRow[]> {
-  return [...SEED_PLANS].filter((plan)=>plan.is_active).sort((a,b)=>a.sort_order-b.sort_order);
+  const client = getSupabaseClient();
+  if (client) {
+    const { data, error } = await client.from('plans').select('*').order('sort_order');
+    if (!error && data) {
+      return (data as PlanRow[]).filter((plan) => plan.is_active).sort((a, b) => a.sort_order - b.sort_order);
+    }
+  }
+  return [...SEED_PLANS].filter((plan) => plan.is_active).sort((a, b) => a.sort_order - b.sort_order);
 }
 
 type GitHubBusinessRecord = {
@@ -539,9 +566,21 @@ export async function fetchRelatedBusinesses(businessId:string,categoryId:string
   return (await fetchGitHubBusinesses()).filter((business)=>business.id!==businessId&&business.category_id===categoryId).slice(0,limit);
 }
 
-export async function fetchEmergencyContacts():Promise<{items:EmergencyContactRow[];fromCache:boolean;cachedAt:string|null}> {
-  const items=[...SEED_EMERGENCY_CONTACTS].filter((item)=>item.is_active).sort((a,b)=>a.sort_order-b.sort_order);
-  cacheEmergencyContacts(items);return {items,fromCache:false,cachedAt:nowIso()};
+export async function fetchEmergencyContacts(): Promise<{ items: EmergencyContactRow[]; fromCache: boolean; cachedAt: string | null }> {
+  const client = getSupabaseClient();
+  if (client) {
+    const { data, error } = await client.from('emergency_contacts').select('*').order('sort_order');
+    if (!error && data) {
+      const items = (data as EmergencyContactRow[]).filter((item) => item.is_active);
+      cacheEmergencyContacts(items);
+      return { items, fromCache: false, cachedAt: nowIso() };
+    }
+  }
+  const cached = getCachedEmergencyContacts();
+  if (cached?.length) return { items: cached, fromCache: true, cachedAt: null };
+  const items = [...SEED_EMERGENCY_CONTACTS].filter((item) => item.is_active).sort((a, b) => a.sort_order - b.sort_order);
+  cacheEmergencyContacts(items);
+  return { items, fromCache: false, cachedAt: nowIso() };
 }
 
 export async function fetchActiveOffers(): Promise<Array<OfferRow & { business: BusinessPublicView | null }>> {
@@ -566,17 +605,56 @@ export async function fetchActiveOffers(): Promise<Array<OfferRow & { business: 
   return attachPublicOffers(offers, businesses, today);
 }
 
-export async function fetchAnnouncements(activeOnly=true):Promise<AnnouncementRow[]> {
-  const now=Date.now();return [...SEED_ANNOUNCEMENTS].filter((item)=>!activeOnly||(item.is_active&&new Date(item.start_date).getTime()<=now&&new Date(item.end_date).getTime()>=now))
-    .sort((a,b)=>new Date(b.created_at).getTime()-new Date(a.created_at).getTime());
+export async function fetchAnnouncements(activeOnly = true): Promise<AnnouncementRow[]> {
+  const client = getSupabaseClient();
+  if (client) {
+    const { data, error } = await client.from('announcements').select('*').order('created_at', { ascending: false });
+    if (!error && data) {
+      const now = Date.now();
+      return (data as AnnouncementRow[])
+        .filter((item) => !activeOnly || (
+          item.is_active &&
+          new Date(item.start_date).getTime() <= now &&
+          new Date(item.end_date).getTime() >= now
+        ))
+        .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+    }
+  }
+  const now = Date.now();
+  return [...SEED_ANNOUNCEMENTS]
+    .filter((item) => !activeOnly || (
+      item.is_active &&
+      new Date(item.start_date).getTime() <= now &&
+      new Date(item.end_date).getTime() >= now
+    ))
+    .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
 }
 
-export async function fetchActiveAds(placement?:AdPlacement):Promise<AdRow[]> {
-  const today=todayDateStr();return [...SEED_ADS].filter((ad)=>ad.status==='active'&&ad.start_date<=today&&ad.end_date>=today&&(!placement||ad.placement===placement));
+export async function fetchActiveAds(placement?: AdPlacement): Promise<AdRow[]> {
+  const today = todayDateStr();
+  const client = getSupabaseClient();
+  if (client) {
+    let query = client.from('ads').select('*')
+      .eq('status', 'active')
+      .lte('start_date', today)
+      .gte('end_date', today)
+      .order('created_at', { ascending: false });
+    if (placement) query = query.eq('placement', placement);
+    const { data, error } = await query;
+    if (!error && data) return data as AdRow[];
+  }
+  return [...SEED_ADS]
+    .filter((ad) => ad.status === 'active' && ad.start_date <= today && ad.end_date >= today && (!placement || ad.placement === placement));
 }
 
-export async function fetchPageBySlug(slug:string):Promise<PageRow|null> {
-  return SEED_PAGES.find((page)=>page.slug===slug&&page.is_published)??null;
+export async function fetchPageBySlug(slug: string): Promise<PageRow | null> {
+  const client = getSupabaseClient();
+  if (client) {
+    const { data, error } = await client.from('pages').select('*')
+      .eq('slug', slug).eq('is_published', true).maybeSingle();
+    if (!error) return (data as PageRow | null) ?? null;
+  }
+  return SEED_PAGES.find((page) => page.slug === slug && page.is_published) ?? null;
 }
 
 export async function fetchBusinessesByIds(ids:string[]):Promise<BusinessPublicView[]> {
