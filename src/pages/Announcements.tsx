@@ -7,13 +7,17 @@ import { bilingualText, formatDateShort } from '../lib/format';
 import { updatePageSeo } from '../lib/seo';
 import type { AnnouncementRow } from '../types/database';
 import { AppShell } from '../components/layout/AppShell';
-import { EmptyState } from '../components/ui/Feedback';
+import { EmptyState, Skeleton } from '../components/ui/Feedback';
+import { Button } from '../components/ui/Button';
 import { Card, Container, SectionHeading } from '../components/ui/Surface';
 
 export function Announcements() {
   const { lang, urduHints } = useI18n();
   const [items, setItems] = useState<AnnouncementRow[]>([]);
   const [activeOnly, setActiveOnly] = useState(true);
+  const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
+  const [retryKey, setRetryKey] = useState(0);
 
   useEffect(() => {
     updatePageSeo({
@@ -24,8 +28,15 @@ export function Announcements() {
   }, []);
 
   useEffect(() => {
-    fetchAnnouncements(activeOnly).then(setItems);
-  }, [activeOnly]);
+    let active = true;
+    setLoading(true);
+    setLoadError(false);
+    fetchAnnouncements(activeOnly)
+      .then((data) => { if (active) setItems(data); })
+      .catch(() => { if (active) { setItems([]); setLoadError(true); } })
+      .finally(() => { if (active) setLoading(false); });
+    return () => { active = false; };
+  }, [activeOnly, retryKey]);
 
   return (
     <AppShell>
@@ -58,7 +69,18 @@ export function Announcements() {
           </button>
         </div>
 
-        {items.length === 0 ? (
+        {loadError ? (
+          <EmptyState
+            icon={<Megaphone className="w-6 h-6" />}
+            title={lang === 'ur' ? 'اعلانات لوڈ نہیں ہو سکے' : 'Could not load announcements'}
+            description={lang === 'ur' ? 'انٹرنیٹ کنکشن چیک کر کے دوبارہ کوشش کریں۔' : 'Please check your connection and try again.'}
+            action={<Button onClick={() => setRetryKey((value) => value + 1)}>{lang === 'ur' ? 'دوبارہ کوشش' : 'Retry'}</Button>}
+          />
+        ) : loading ? (
+          <div className="space-y-4">
+            {[1, 2, 3].map((item) => <Skeleton key={item} className="h-32 rounded-2xl" />)}
+          </div>
+        ) : items.length === 0 ? (
           <EmptyState
             icon={<Megaphone className="w-6 h-6" />}
             title={lang === 'ur' ? 'کوئی فعال اعلان موجود نہیں' : 'No active announcements'}
