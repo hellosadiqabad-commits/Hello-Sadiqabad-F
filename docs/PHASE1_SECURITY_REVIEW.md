@@ -12,16 +12,20 @@ This file records the security review and verified fixes applied to the connecte
 - `20261114203132_protect_business_columns_from_edit_own_staff.sql`
   - Removes the `business.edit_own` bypass from the protected-column trigger.
   - Only super admins and staff with `business.publish` can change protected fields such as owner assignment, plan, verification, featured state, counters, source, and publication metadata.
+- `20261114203234_enforce_owner_edit_approval_in_database.sql`
+  - Adds a private security-definer helper to read the private approval setting safely.
+  - When `owner_edits_require_approval=true`, an owner's content edit to a published listing automatically changes its status to `pending_approval` in the database, even if browser code cannot read the private setting.
 
 ### Frontend support
 - `src/lib/api.ts` now sets `created_by` to the signed-in actor when inserting a new business, while omitting it from updates. This gives the database a reliable creator identity for row scoping.
 
 ### Verification
-- Live RLS regression transaction passed:
+- Live regression transactions passed:
   - data-entry staff could not update a business created by someone else;
   - data-entry staff could update a draft they created;
   - data-entry staff could not change `is_verified`;
-  - test fixtures were rolled back.
+  - with the private setting temporarily enabled inside a rolled-back test transaction, an owner editing a published listing was automatically moved to `pending_approval`;
+  - all test fixtures and temporary setting changes were rolled back.
 - Existing business data was not changed by the test.
 - The testing project currently has 123 businesses, 0 linked owner accounts, and 97 rows with `created_by` populated. No owner links were fabricated.
 
@@ -29,8 +33,8 @@ This file records the security review and verified fixes applied to the connecte
 
 ### Owner edit approval setting
 - `owner_edits_require_approval` currently has value `false` and is private in `site_settings`.
-- The current database trigger blocks owners from changing protected fields, but the private setting is not enforced as a database-controlled approval switch for ordinary listing edits.
-- Before changing this setting to true or relying on it, implement and test a database-side approval workflow. Do not expose the private setting to anonymous browser reads.
+- The database-side approval workflow is now implemented and regression-tested. If an Admin later changes this setting to true, published owner edits are automatically sent to moderation.
+- The browser no longer reads this private setting to decide approval; the database is authoritative. Keep the setting private.
 
 ### Public endpoint abuse controls
 - Inquiry and suggestion submissions use session rate limits plus hashed phone identities.
