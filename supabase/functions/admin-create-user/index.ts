@@ -1,5 +1,5 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
-import { extractBearerToken, isValidEmail, isValidUuid } from "../_shared/validation.ts";
+import { extractBearerToken, isValidEmail, isValidUuid, readJsonObject } from "../_shared/validation.ts";
 
 const supabaseUrl = Deno.env.get("SUPABASE_URL");
 const serviceRoleKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
@@ -72,15 +72,9 @@ Deno.serve(async (req: Request) => {
     const actorPermission = await permission(actor.id);
     if (!actorPermission.allowed) return response(req, { ok: false, error: "Permission denied" }, 403);
 
-    let body: Record<string, unknown>;
-    try {
-      const parsed = await req.json();
-      if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
-        return response(req, { ok: false, error: "Invalid request body" }, 400);
-      }
-      body = parsed as Record<string, unknown>;
-    } catch {
-      return response(req, { ok: false, error: "Invalid JSON body" }, 400);
+    const body = await readJsonObject(req, 16_384);
+    if (!body) {
+      return response(req, { ok: false, error: "Invalid or oversized request body" }, 400);
     }
 
     const email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
@@ -90,7 +84,7 @@ Deno.serve(async (req: Request) => {
     const phone = typeof body.phone === "string" ? body.phone.trim().slice(0, 30) : null;
     const assignBusinessId = body.assign_business_id;
 
-    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email) || email.length > 254 ||
+    if (!isValidEmail(email) || email.length > 254 ||
       password.length < 12 || password.length > 128 ||
       fullName.length < 2 || fullName.length > 120 ||
       !["owner", "staff", "super_admin"].includes(role) ||

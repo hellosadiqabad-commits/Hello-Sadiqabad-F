@@ -22,7 +22,7 @@
 
 ### Supabase Edge Function hardening
 - Added shared Edge Function helpers for bearer-token extraction, email/UUID validation, bounded JSON-object parsing, and SHA-256 hashed rate-limit identities.
-- Fixed malformed bearer-token and email validation patterns in Admin account provisioning. These patterns were not caught by the original frontend-only CI; regression tests now cover them.
+- Added and tested shared bearer-token and email validation helpers. The Phase 1 source audit found that `admin-create-user` still duplicated email validation with a malformed inline regex despite importing the shared helper; the audit branch now switches the call site to `isValidEmail` and bounds the request body to 16 KB. The branch is not merged or deployed yet.
 - Hardened Admin user creation: verified actor permissions, strict input validation, owner-only explicit business assignment, safe errors, and best-effort rollback if profile/staff/business provisioning fails.
 - Hardened Admin password reset: strict Super Admin verification, valid target UUID, 12–128 character temporary password, no-store response, and first-login password-change flag.
 - Hardened account activation/deactivation: Super Admin checks, strict UUID/body validation, safe self-protection, checked database updates, and best-effort rollback for partial failures.
