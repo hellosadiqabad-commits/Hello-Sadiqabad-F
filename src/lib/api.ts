@@ -295,8 +295,15 @@ function appendAuditDemo(
 // ---------------------------------------------------------------------------
 
 export async function fetchSiteSettings(): Promise<SiteSettingsMap> {
-  // Public site settings are versioned with the GitHub seed.
-  return parseSiteSettings(SEED_SITE_SETTINGS.filter((setting) => setting.is_public));
+  const client = getSupabaseClient();
+  if (client) {
+    const { data, error } = await client.from('site_settings').select('*').eq('is_public', true);
+    if (error) throw error;
+    const settingsByKey = new Map(SEED_SITE_SETTINGS.map((setting) => [setting.key, setting]));
+    for (const setting of (data ?? []) as SiteSettingRow[]) settingsByKey.set(setting.key, setting);
+    return parseSiteSettings([...settingsByKey.values()]);
+  }
+  return parseSiteSettings(SEED_SITE_SETTINGS);
 }
 
 export const fetchPublicSiteSettings = fetchSiteSettings;
