@@ -75,12 +75,14 @@ import {
 import { Card } from '../../components/ui/Surface';
 import { Skeleton } from '../../components/ui/Feedback';
 import { DemoModeNotice } from '../../components/ui/DemoModeNotice';
+import { useToast } from '../../components/ui/Toast';
 
 export function AdminPortal() {
   const { tab = 'overview' } = useParams();
   const navigate = useNavigate();
   const { user } = useAuth();
   const { hasPermission, isSuperAdmin } = usePermissions();
+  const { showToast } = useToast();
 
   const [analyticsDays, setAnalyticsDays] = useState<7 | 30 | 90>(30);
   const [quickQuery, setQuickQuery] = useState('');
@@ -168,10 +170,15 @@ export function AdminPortal() {
       setSettings(sett);
       setPages(pgs);
       setAuditLogs(aud);
+    } catch (error) {
+      showToast(
+        error instanceof Error ? error.message : 'Admin portal data could not be loaded.',
+        'error'
+      );
     } finally {
       setLoading(false);
     }
-  }, [analyticsDays]);
+  }, [analyticsDays, showToast]);
 
   useEffect(() => {
     reload();
