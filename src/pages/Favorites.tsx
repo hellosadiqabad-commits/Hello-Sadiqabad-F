@@ -28,6 +28,9 @@ export function Favorites() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [confirmClear, setConfirmClear] = useState(false);
   const [recent, setRecent] = useState<RecentViewedItem[]>(() => getRecentlyViewed());
+  const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(false);
+  const [retryKey, setRetryKey] = useState(0);
 
   useEffect(() => {
     updatePageSeo({
@@ -38,8 +41,28 @@ export function Favorites() {
   }, []);
 
   useEffect(() => {
-    fetchBusinessesByIds(favIds).then(setSavedBusinesses);
-  }, [favIds]);
+    let active = true;
+    setLoading(true);
+    setLoadError(false);
+    if (favIds.length === 0) {
+      setSavedBusinesses([]);
+      setLoading(false);
+      return () => { active = false; };
+    }
+    fetchBusinessesByIds(favIds)
+      .then((items) => {
+        if (active) setSavedBusinesses(items);
+      })
+      .catch(() => {
+        if (!active) return;
+        setSavedBusinesses([]);
+        setLoadError(true);
+      })
+      .finally(() => {
+        if (active) setLoading(false);
+      });
+    return () => { active = false; };
+  }, [favIds, retryKey]);
 
   const savedCategories = useMemo(() => {
     const map = new Map<string, string>();
@@ -138,7 +161,19 @@ export function Favorites() {
             </div>
           )}
 
-          {visibleSaved.length === 0 ? (
+          {loadError ? (
+            <EmptyState
+              title="Couldn't load saved businesses"
+              description="Your saved IDs remain on this device. Please try loading them again."
+              action={<Button onClick={() => setRetryKey((value) => value + 1)}>Retry</Button>}
+            />
+          ) : loading ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" aria-label="Loading saved businesses">
+              {[1, 2, 3].map((item) => (
+                <div key={item} className="h-36 rounded-2xl bg-surface-container animate-pulse" />
+              ))}
+            </div>
+          ) : visibleSaved.length === 0 ? (
             <EmptyState
               icon={<Bookmark className="w-6 h-6" />}
               title={lang === 'ur' ? 'ابھی کوئی کاروبار محفوظ نہیں کیا گیا' : 'No saved businesses yet'}
