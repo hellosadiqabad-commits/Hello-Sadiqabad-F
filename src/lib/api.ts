@@ -498,7 +498,7 @@ export async function searchBusinesses(
     void client.functions.invoke('track-event',{body:{event_type:'search',query:term.slice(0,120),
       filters:{category:filters.category??null,area:filters.area??null,open:Boolean(filters.open),verified:Boolean(filters.verified),
         offer:Boolean(filters.offer),rating:filters.rating??null,delivery:Boolean(filters.delivery),sort:filters.sort??'relevance'},
-      results_count:combined.length,session_id:getOrCreateSessionId()}});
+      results_count:combined.length,session_id:getOrCreateSessionId()}}).catch(() => {});
   }
   if(filters.sort==='rating')combined.sort((a,b)=>(b.rating_avg??0)-(a.rating_avg??0));
   else if(filters.sort==='nearest'&&options.userCoords){
