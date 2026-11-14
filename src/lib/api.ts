@@ -956,10 +956,9 @@ export async function fetchOwnerListings(ownerId: string): Promise<BusinessPubli
       .select('*, categories(*), areas(*), plans(*)')
       .eq('owner_id', ownerId)
       .order('updated_at', { ascending: false });
-    if (!error && data) {
-      const db = loadDemoDb();
-      return (data as BusinessRow[]).map((b) => enrichBusiness(b, db));
-    }
+    if (error) throw error;
+    const db = loadDemoDb();
+    return ((data ?? []) as BusinessRow[]).map((b) => enrichBusiness(b, db));
   }
   const db = loadDemoDb();
   return db.businesses
@@ -977,7 +976,9 @@ export async function fetchOwnerDashboardStats(
       p_business_id: businessId,
       p_days: days,
     });
-    if (!error && data) return data as OwnerDashboardStats;
+    if (error) throw error;
+    if (!data) throw new Error('Owner analytics could not be loaded.');
+    return data as OwnerDashboardStats;
   }
 
   const db = loadDemoDb();
@@ -1099,7 +1100,8 @@ export async function fetchBusinessOffers(businessId: string): Promise<OfferRow[
       .select('*')
       .eq('business_id', businessId)
       .order('created_at', { ascending: false });
-    if (!error && data) return data as OfferRow[];
+    if (error) throw error;
+    return (data ?? []) as OfferRow[];
   }
   return loadDemoDb().offers.filter((o) => o.business_id === businessId);
 }
@@ -1167,7 +1169,8 @@ export async function fetchOwnerReviews(businessIds: string[]): Promise<ReviewRo
       .in('business_id', businessIds)
       .eq('status', 'approved')
       .order('created_at', { ascending: false });
-    if (!error && data) return data as ReviewRow[];
+    if (error) throw error;
+    return (data ?? []) as ReviewRow[];
   }
   return loadDemoDb().reviews.filter(
     (r) => businessIds.includes(r.business_id) && r.status === 'approved'
@@ -1209,7 +1212,8 @@ export async function fetchOwnerInquiries(businessIds: string[]): Promise<Inquir
       .select('*')
       .in('business_id', businessIds)
       .order('created_at', { ascending: false });
-    if (!error && data) return data as InquiryRow[];
+    if (error) throw error;
+    return (data ?? []) as InquiryRow[];
   }
   return loadDemoDb().inquiries.filter((i) => businessIds.includes(i.business_id));
 }
@@ -1246,7 +1250,8 @@ export async function fetchNotifications(userId: string): Promise<NotificationRo
       .select('*')
       .eq('user_id', userId)
       .order('created_at', { ascending: false });
-    if (!error && data) return data as NotificationRow[];
+    if (error) throw error;
+    return (data ?? []) as NotificationRow[];
   }
   return loadDemoDb().notifications.filter((n) => n.user_id === userId);
 }
@@ -1347,7 +1352,9 @@ export async function fetchAdminDashboardCounts(): Promise<AdminDashboardCounts>
   const client = getSupabaseClient();
   if (client) {
     const { data, error } = await client.rpc('admin_dashboard_counts');
-    if (!error && data) return data as AdminDashboardCounts;
+    if (error) throw error;
+    if (!data) throw new Error('Admin dashboard counts could not be loaded.');
+    return data as AdminDashboardCounts;
   }
   const db = loadDemoDb();
   return {
@@ -1373,10 +1380,9 @@ export async function fetchAdminBusinesses(): Promise<BusinessPublicView[]> {
       .from('businesses')
       .select('*, categories(*), areas(*), plans(*)')
       .order('updated_at', { ascending: false });
-    if (!error && data) {
-      const db = loadDemoDb();
-      return (data as BusinessRow[]).map((b) => enrichBusiness(b, db));
-    }
+    if (error) throw error;
+    const db = loadDemoDb();
+    return ((data ?? []) as BusinessRow[]).map((b) => enrichBusiness(b, db));
   }
   const db = loadDemoDb();
   return db.businesses.map((b) => enrichBusiness(b, db));
