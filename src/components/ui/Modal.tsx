@@ -31,7 +31,7 @@ export function Modal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/55 backdrop-blur-xs"
+      className="hs-modal-backdrop fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/55 backdrop-blur-xs"
       role="dialog"
       aria-modal="true"
       aria-label={title}
@@ -40,7 +40,7 @@ export function Modal({
       }}
     >
       <div
-        className={`w-full ${maxWidthClass} bg-surface-container-lowest text-on-surface rounded-t-3xl sm:rounded-2xl shadow-2xl border border-outline-variant/40 max-h-[90dvh] flex flex-col overflow-hidden`}
+        className={`hs-modal-panel w-full ${maxWidthClass} bg-surface-container-lowest text-on-surface rounded-t-3xl sm:rounded-2xl shadow-2xl border border-outline-variant/40 max-h-[90dvh] flex flex-col overflow-hidden`}
       >
         <div className="flex items-center justify-between gap-3 px-5 py-4 border-b border-outline-variant/30 shrink-0">
           <div className="min-w-0">
