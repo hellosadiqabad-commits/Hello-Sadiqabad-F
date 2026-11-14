@@ -1,34 +1,51 @@
 # Phase 1 — Engineering Foundation Record
 
-## Implemented on `phase-1/codebase-foundation`
+## Implemented on `main`
 
+### Frontend and repository foundation
 - Normalized npm package identity to `hello-sadiqabad@1.0.0`; package-lock root metadata is synchronized.
-- Removed unused direct frontend dependencies (`@google/genai`, `express`, `dotenv`, and `@types/express`) after scanning application source imports. AI dependencies will be added when the approved AI features are implemented.
+- Removed unused direct frontend dependencies (`@google/genai`, `express`, `dotenv`, and `@types/express`) after scanning application source imports. AI dependencies will be added when approved AI features are implemented.
 - Added a pure public-runtime configuration resolver. It validates Supabase URLs, enforces HTTPS for production, permits localhost HTTP only in development, validates the default city slug, normalizes the site URL, and reports missing production settings.
 - Replaced ad-hoc Supabase environment parsing with the shared resolver. Only the public publishable key is accepted by the browser client; service-role credentials are explicitly prohibited from browser environment variables.
-- Added unit tests for missing configuration, valid production configuration, insecure production URLs, local development URLs, missing publishable keys, malformed site/city values, and oversized spreadsheet files.
+- Added tests for runtime configuration, invalid/valid environments, import file size, Edge Function validation helpers, bounded JSON parsing, and hashed rate-limit identities.
 - Added a 20 MB upload limit for both CSV and Excel import files before reading them into browser memory.
-- Hardened Supabase auth hydration: missing profile data, permission RPC denial, or profile/permission network failures now fail closed instead of retaining a portal role. Session bootstrap always clears its loading state after failure.
-- Improved the global React error boundary: raw exception messages are no longer shown to visitors; the fallback has accessible alert semantics and both retry and full-reload actions.
-- CI now has read-only repository token permissions, concurrency cancellation, a 15-minute job timeout, an explicit TypeScript check, automated tests, a production build, and a blocking high/critical npm audit gate.
-- Dependabot is configured to check npm packages and GitHub Actions weekly.
-- Replaced the vulnerable npm-registry SheetJS 0.18.5 release with the official patched SheetJS 0.20.3 tarball; existing spreadsheet import/export API and tests are retained. CI dependency audit now reports zero advisories and blocks high/critical findings.
-- Added the phased completion roadmap and corrected the Supabase region documentation.
+- Hardened auth hydration against stale asynchronous session responses. Prior-user roles and permissions are cleared while a new session is verified; out-of-order responses cannot restore old privileges.
+- Sign-in now fails closed if the profile row or permissions RPC cannot be verified.
+- Owner Portal routes now require the `owner` role. Staff/Super Admin preview access is intentionally not exposed until a separate, read-only preview mode is implemented.
+- Improved the global React error boundary: raw exception messages are no longer shown to visitors; the fallback has accessible alert semantics and retry/reload actions.
+- Replaced the vulnerable npm-registry SheetJS 0.18.5 release with the official patched SheetJS 0.20.3 tarball; existing spreadsheet import/export API and tests are retained.
+- Removed unused direct app dependencies after scanning source imports. The lockfile retains transitive metadata required for deterministic installs.
 
-## Verification
+### Supabase Edge Function hardening
+- Added shared Edge Function helpers for bearer-token extraction, email/UUID validation, bounded JSON-object parsing, and SHA-256 hashed rate-limit identities.
+- Fixed malformed bearer-token and email validation patterns in Admin account provisioning. These patterns were not caught by the original frontend-only CI; regression tests now cover them.
+- Hardened Admin user creation: verified actor permissions, strict input validation, owner-only explicit business assignment, safe errors, and best-effort rollback if profile/staff/business provisioning fails.
+- Hardened Admin password reset: strict Super Admin verification, valid target UUID, 12–128 character temporary password, no-store response, and first-login password-change flag.
+- Hardened account activation/deactivation: Super Admin checks, strict UUID/body validation, safe self-protection, checked database updates, and best-effort rollback for partial failures.
+- Reworked public inquiry and review functions with bounded JSON bodies, strict UUID and field validation, published-listing checks, fail-closed plan/rate-limit checks, and layered session plus hashed phone/author rate limits.
+- Reworked public suggestion/claim intake with bounded object payloads, validated business/contact fields, hashed phone rate limiting, authenticated owner linking, and safe error responses.
+- Reworked event tracking with bounded JSON, strict event/business/ad validation, checked RPC failures, and safer search-filter validation.
+- All seven Edge Function entry points are now type-checked by Deno in CI.
 
-The PR checks must pass on the latest head commit before this phase is considered ready for review:
+### CI and deployment verification
+- GitHub Actions uses read-only repository token permissions, concurrency cancellation, 15-minute job timeouts, explicit TypeScript checks, tests, production builds, and a blocking high/critical npm audit gate.
+- A separate Deno CI job type-checks every Supabase Edge Function.
+- Dependabot checks npm packages and GitHub Actions weekly.
+- Latest verified commit for this batch: `c3560b76b6fcf2328dc48f86faeb596b80d1e9bc`.
+- Latest verified CI: https://github.com/samt87804-gif/Hello-Sadiqabad/actions/runs/43626262783 — npm install, npm audit, TypeScript, 58/58 tests, production build, and Deno Edge Function type-check all passed.
+- Cloudflare Pages check for the same commit completed successfully.
 
-1. `npm ci`
-2. `npm run typecheck`
-3. `npm test`
-4. `npm run build`
-
-The npm audit gate must remain green: high and critical advisories fail CI. Any newly surfaced advisory must be investigated and resolved before merge.
+## Still open in Phase 1
+- Full component-by-component audit of every public, admin, and owner route.
+- Backend/RLS ownership matrix tests and direct unauthorized API regression tests.
+- End-to-end browser journeys for the full public directory and portal workflows.
+- Dead/duplicate code audit with proof of non-use before deletion.
+- Accessibility, mobile interaction, broken-link, SEO and resilience passes.
+- Reconcile migration history and clean-project setup instructions without applying migrations to the connected test database.
 
 ## Deliberately not changed
-
-- No Supabase schema, live records, Auth dashboard settings, Storage buckets, Cloudflare Worker, Pages settings, or production deployment were modified.
+- No Supabase schema, live records, Auth dashboard settings, Storage buckets, or Worker configuration was changed.
 - No database baseline was replayed and no migration was applied to the connected Supabase project.
-- No dependency was removed merely because a text search did not find a use; dependency removal requires a full import/runtime/build audit.
-- The existing migration ledger mismatch remains a Phase 6 task and must be reconciled before any schema deployment.
+- Existing listings were not bulk-assigned to owners.
+- Main-branch commits trigger the connected Cloudflare Pages build/deployment pipeline. The latest Pages check passed; no custom domain, DNS, or Worker was changed.
+- The existing migration ledger mismatch remains a later backend-integrity task and must be reconciled before any schema deployment.
