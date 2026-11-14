@@ -36,6 +36,7 @@ import type {
   PageRow,
   PlanRow,
   ProfileRow,
+  PermissionKey,
   ReviewRow,
   SiteSettingRow,
   StaffMemberRow,
@@ -113,7 +114,7 @@ export function AdminPortal() {
   const reload = useCallback(async () => {
     setLoading(true);
     try {
-      const can = (permission: string) => isSuperAdmin || hasPermission(permission);
+      const can = (permission: PermissionKey) => isSuperAdmin || hasPermission(permission);
       const canViewDashboard = can('business.create') ||
         can('moderation.review') || can('support.read');
       const emptyCounts: AdminDashboardCounts = {
