@@ -137,7 +137,7 @@ export default function App() {
                       path="/owner"
                       element={
                         <RequireAuth>
-                          <RequireRole roles={['owner', 'staff', 'super_admin']}>
+                          <RequireRole roles={['owner']}>
                             <OwnerDashboard />
                           </RequireRole>
                         </RequireAuth>
@@ -147,7 +147,7 @@ export default function App() {
                       path="/owner/listing"
                       element={
                         <RequireAuth>
-                          <RequireRole roles={['owner', 'staff', 'super_admin']}>
+                          <RequireRole roles={['owner']}>
                             <OwnerListing />
                           </RequireRole>
                         </RequireAuth>
@@ -157,7 +157,7 @@ export default function App() {
                       path="/owner/listings/:id"
                       element={
                         <RequireAuth>
-                          <RequireRole roles={['owner', 'staff', 'super_admin']}>
+                          <RequireRole roles={['owner']}>
                             <OwnerListing />
                           </RequireRole>
                         </RequireAuth>
@@ -167,7 +167,7 @@ export default function App() {
                       path="/owner/offers"
                       element={
                         <RequireAuth>
-                          <RequireRole roles={['owner', 'staff', 'super_admin']}>
+                          <RequireRole roles={['owner']}>
                             <OwnerOffers />
                           </RequireRole>
                         </RequireAuth>
@@ -177,7 +177,7 @@ export default function App() {
                       path="/owner/reviews"
                       element={
                         <RequireAuth>
-                          <RequireRole roles={['owner', 'staff', 'super_admin']}>
+                          <RequireRole roles={['owner']}>
                             <OwnerReviews />
                           </RequireRole>
                         </RequireAuth>
@@ -187,7 +187,7 @@ export default function App() {
                       path="/owner/inquiries"
                       element={
                         <RequireAuth>
-                          <RequireRole roles={['owner', 'staff', 'super_admin']}>
+                          <RequireRole roles={['owner']}>
                             <OwnerInquiries />
                           </RequireRole>
                         </RequireAuth>
@@ -197,7 +197,7 @@ export default function App() {
                       path="/owner/analytics"
                       element={
                         <RequireAuth>
-                          <RequireRole roles={['owner', 'staff', 'super_admin']}>
+                          <RequireRole roles={['owner']}>
                             <OwnerAnalyticsPage />
                           </RequireRole>
                         </RequireAuth>
@@ -207,7 +207,7 @@ export default function App() {
                       path="/owner/plan"
                       element={
                         <RequireAuth>
-                          <RequireRole roles={['owner', 'staff', 'super_admin']}>
+                          <RequireRole roles={['owner']}>
                             <OwnerPlan />
                           </RequireRole>
                         </RequireAuth>
@@ -217,7 +217,7 @@ export default function App() {
                       path="/owner/profile"
                       element={
                         <RequireAuth>
-                          <RequireRole roles={['owner', 'staff', 'super_admin']}>
+                          <RequireRole roles={['owner']}>
                             <OwnerProfile />
                           </RequireRole>
                         </RequireAuth>
@@ -227,7 +227,7 @@ export default function App() {
                       path="/owner/notifications"
                       element={
                         <RequireAuth>
-                          <RequireRole roles={['owner', 'staff', 'super_admin']}>
+                          <RequireRole roles={['owner']}>
                             <OwnerNotifications />
                           </RequireRole>
                         </RequireAuth>
