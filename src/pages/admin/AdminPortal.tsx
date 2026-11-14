@@ -184,7 +184,7 @@ export function AdminPortal() {
       setProfiles(profs);
       setAds(adList);
       setBatches(imp);
-      setEmergencyContacts(em.items);
+      setEmergencyContacts(em);
       setAnnouncements(anns);
       setAnalytics(anl);
       setSettings(sett);
