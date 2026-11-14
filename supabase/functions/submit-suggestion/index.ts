@@ -81,7 +81,10 @@ Deno.serve(async (req: Request) => {
     return reply(req, { ok: false, error: "Please try again later" }, 429);
   }
 
-  const submittedBy = b.type === "claim" ? await authenticatedOwnerId(req) : null;
+  const submittedBy = ["claim", "new_business"].includes(b.type)
+    ? await authenticatedOwnerId(req)
+    : null;
+
   const { data, error } = await db.from("submissions").insert({
     type: b.type,
     business_id: b.business_id ?? null,
