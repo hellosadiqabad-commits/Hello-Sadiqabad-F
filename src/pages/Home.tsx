@@ -212,26 +212,14 @@ export function Home() {
         <section>
           <Container>
             <div className="overflow-hidden rounded-3xl border border-outline-variant/35 bg-surface-container-lowest shadow-lg">
-              {/* Locally hosted Jahaz Chowk-inspired artwork keeps the homepage banner fast and reliable. */}
-              <div
-                className="relative isolate flex min-h-[220px] items-center justify-end overflow-hidden bg-[#087ec4] bg-cover bg-center px-5 py-7 sm:min-h-[285px] sm:px-9 sm:py-9"
-                style={{ backgroundImage: "url('/assets/hero-sadiqabad.svg')" }}
-              >
-                <div className="absolute inset-0 -z-10 bg-gradient-to-l from-[#032e70]/95 via-[#064b91]/75 to-transparent" />
-                <div className="pointer-events-none absolute -right-12 -top-16 h-56 w-56 rounded-full border border-sky-100/20 sm:h-72 sm:w-72" />
-                <div className="relative z-10 ml-auto max-w-[58%] space-y-2 text-right sm:max-w-[55%] sm:space-y-3">
-                  <div className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-bold text-white shadow-sm backdrop-blur-sm">
-                    <MapPin className="h-3.5 w-3.5" />
-                    <span>Sadiqabad, Punjab</span>
-                  </div>
-                  <h1 className="text-2xl font-black leading-tight tracking-tight text-white drop-shadow-[0_3px_5px_rgba(0,0,0,0.55)] sm:text-4xl md:text-5xl lg:text-6xl">
-                    Sadiqabad<br />Phone Directory
-                  </h1>
-                  <p className="font-urdu text-base font-bold leading-[2] text-white drop-shadow sm:text-xl md:text-2xl" dir="rtl">
-                    اپنی مطلوبہ معلومات کے لیے یہاں سرچ کریں
-                  </p>
-                </div>
-              </div>
+              {/* Exact approved banner hosted in the public Supabase Storage bucket. */}
+              <img
+                src="https://efwohfzqitevkuybnyif.supabase.co/storage/v1/object/public/Hello%20Sadiqabad/Sadiqabad%20Phone%20Directory%20Banner.png"
+                alt="Sadiqabad Phone Directory — Jahaz Chowk banner"
+                className="block h-auto w-full"
+                fetchPriority="high"
+                decoding="async"
+              />
 
               <div className="max-w-3xl space-y-4 p-5 sm:p-8">
                 <InstallAppButton />
