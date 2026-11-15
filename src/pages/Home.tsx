@@ -211,50 +211,48 @@ export function Home() {
         {/* Hero Search Section */}
         <section>
           <Container>
-            <div className="rounded-3xl bg-gradient-to-br from-surface-container-low via-surface-container-lowest to-primary-fixed/30 border border-outline-variant/35 p-5 sm:p-8 shadow-sm">
-              <div className="max-w-3xl space-y-4">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary text-xs font-bold">
-                  <MapPin className="w-3.5 h-3.5" />
-                  <span>
+            <div className="overflow-hidden rounded-3xl border border-outline-variant/35 bg-surface-container-lowest shadow-lg">
+              {/* Decorative city artwork is stored locally in the repository for fast, reliable loading. */}
+              <div
+                className="relative isolate flex min-h-[190px] items-center overflow-hidden bg-[#064638] bg-cover bg-center px-5 py-7 sm:min-h-[230px] sm:px-9 sm:py-9"
+                style={{ backgroundImage: "url('/assets/hero-sadiqabad.svg')" }}
+              >
+                <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#032f29]/95 via-[#064638]/75 to-[#075b45]/20" />
+                <div className="pointer-events-none absolute -right-12 -top-16 h-56 w-56 rounded-full border border-lime-100/15 sm:h-72 sm:w-72" />
+                <div className="pointer-events-none absolute -right-3 -top-7 h-40 w-40 rounded-full border border-lime-100/10 sm:h-52 sm:w-52" />
+                <div className="relative z-10 max-w-3xl space-y-2.5">
+                  <div className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-bold text-white shadow-sm backdrop-blur-sm">
+                    <MapPin className="h-3.5 w-3.5" />
+                    <span>
+                      {lang === 'ur'
+                        ? 'صادق آباد، پنجاب • آپ کا مقامی رہنما'
+                        : 'Sadiqabad, Punjab • Your Local City Guide'}
+                    </span>
+                  </div>
+                  <h1 className="font-urdu text-[1.55rem] font-extrabold leading-[2.05] tracking-tight text-white drop-shadow sm:text-3xl md:text-4xl" dir="rtl">
                     {lang === 'ur'
-                      ? 'صادق آباد، پنجاب • سمارٹ سٹی گائیڈ'
-                      : 'Sadiqabad, Punjab • Smart City Guide'}
-                  </span>
-                </div>
-
-                <div>
-                  <h1 className="text-2xl sm:text-4xl font-extrabold text-on-surface tracking-tight leading-tight">
-                    {lang === 'ur' ? (
-                      <span className="font-urdu leading-[2.0]" dir="rtl">
-                        صادق آباد میں ہر کاروبار، ڈاکٹر اور سروس تلاش کریں
-                      </span>
-                    ) : (
-                      <>
-                        Find Any Business or Service in{' '}
-                        <span className="text-primary">Sadiqabad</span>
-                      </>
-                    )}
+                      ? 'اپنی مطلوبہ معلومات کے لیے یہاں سرچ کریں'
+                      : 'Search here for the information you need'}
                   </h1>
-                  {(lang === 'ur' || urduHints) && (
-                    <p
-                      className="font-urdu text-sm sm:text-base text-on-surface-variant mt-1.5 leading-[2.0]"
-                      dir="rtl"
-                    >
-                      صادق آباد کی تمام دکانیں، ڈاکٹرز، ہسپتال اور سروسز ایک جگہ
-                    </p>
-                  )}
+                  <p className="font-urdu text-sm leading-[2] text-white/85 sm:text-base" dir="rtl">
+                    {lang === 'ur'
+                      ? 'صادق آباد کے کاروبار، ڈاکٹرز، دکانیں اور ضروری سہولیات — سب ایک جگہ'
+                      : 'Discover local businesses, doctors, shops and essential services in one place'}
+                  </p>
                 </div>
+              </div>
 
+              <div className="max-w-3xl space-y-4 p-5 sm:p-8">
                 <InstallAppButton />
 
                 {/* Search Input & Autocomplete */}
                 <div ref={searchBoxRef} className="relative">
                   <form
                     onSubmit={submitSearch}
-                    className="flex items-center bg-surface-container-lowest rounded-2xl border border-outline-variant/60 shadow-md p-1.5 gap-1.5"
+                    className="flex items-center gap-1.5 rounded-2xl border border-outline-variant/60 bg-surface-container-lowest p-1.5 shadow-md"
                   >
-                    <div className="w-10 h-10 flex items-center justify-center text-outline shrink-0">
-                      <Search className="w-5 h-5" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center text-outline">
+                      <Search className="h-5 w-5" />
                     </div>
                     <input
                       type="text"
@@ -269,7 +267,7 @@ export function Home() {
                         'Search shops, doctors, emergency... (تلاش کریں)'
                       )}
                       aria-label="Search Sadiqabad directory"
-                      className="flex-1 bg-transparent border-0 outline-none text-sm sm:text-base text-on-surface placeholder:text-on-surface-variant min-w-0 px-1"
+                      className="min-w-0 flex-1 border-0 bg-transparent px-1 text-sm text-on-surface outline-none placeholder:text-on-surface-variant sm:text-base"
                     />
                     {query && (
                       <button
@@ -279,23 +277,23 @@ export function Home() {
                           setQuery('');
                           setSuggestions([]);
                         }}
-                        className="w-9 h-9 rounded-full flex items-center justify-center text-outline hover:text-on-surface cursor-pointer shrink-0"
+                        className="flex h-9 w-9 shrink-0 cursor-pointer items-center justify-center rounded-full text-outline hover:text-on-surface"
                       >
-                        <X className="w-4 h-4" />
+                        <X className="h-4 w-4" />
                       </button>
                     )}
                     <button
                       type="submit"
-                      className="h-11 px-4 sm:px-5 rounded-xl bg-primary text-on-primary text-sm font-bold flex items-center gap-1.5 hover:bg-primary-container transition-colors cursor-pointer shrink-0"
+                      className="flex h-11 shrink-0 cursor-pointer items-center gap-1.5 rounded-xl bg-primary px-4 text-sm font-bold text-on-primary transition-colors hover:bg-primary-container sm:px-5"
                     >
                       <span>{lang === 'ur' ? 'تلاش' : 'Search'}</span>
-                      <ArrowRight className="w-4 h-4 rtl:rotate-180" />
+                      <ArrowRight className="h-4 w-4 rtl:rotate-180" />
                     </button>
                   </form>
 
                   {/* Autocomplete Dropdown */}
                   {showSuggestions && suggestions.length > 0 && (
-                    <div className="absolute inset-x-0 top-full mt-2 z-30 rounded-2xl bg-surface-container-lowest border border-outline-variant/50 shadow-xl p-2 space-y-1">
+                    <div className="absolute inset-x-0 top-full z-30 mt-2 space-y-1 rounded-2xl border border-outline-variant/50 bg-surface-container-lowest p-2 shadow-xl">
                       {suggestions.map((s) => {
                         const dest =
                           s.kind === 'business'
@@ -308,15 +306,15 @@ export function Home() {
                             key={`${s.kind}-${s.slug}`}
                             to={dest}
                             onClick={() => setShowSuggestions(false)}
-                            className="flex items-center justify-between gap-3 px-3 py-2.5 rounded-xl hover:bg-surface-container-low text-sm"
+                            className="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-sm hover:bg-surface-container-low"
                           >
                             <div className="min-w-0">
-                              <p className="font-semibold text-on-surface truncate">
+                              <p className="truncate font-semibold text-on-surface">
                                 {bilingualText(lang, s.label_en, s.label_ur)}
                               </p>
                               <p className="text-xs text-on-surface-variant">{s.subtitle}</p>
                             </div>
-                            <span className="px-2 py-0.5 rounded-md bg-surface-container text-[11px] font-bold text-primary capitalize shrink-0">
+                            <span className="shrink-0 rounded-md bg-surface-container px-2 py-0.5 text-[11px] font-bold capitalize text-primary">
                               {lang === 'ur'
                                 ? s.kind === 'business'
                                   ? 'کاروبار'
@@ -334,15 +332,15 @@ export function Home() {
 
                 {/* Popular Pills */}
                 <div className="flex flex-wrap items-center gap-2 py-0.5">
-                  <span className="text-xs font-semibold text-outline flex items-center gap-1 shrink-0">
-                    <History className="w-3.5 h-3.5" /> {lang === 'ur' ? 'مقبول:' : 'Popular:'}
+                  <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-outline">
+                    <History className="h-3.5 w-3.5" /> {lang === 'ur' ? 'مقبول:' : 'Popular:'}
                   </span>
                   {POPULAR_QUERIES.map((pq) => (
                     <button
                       key={pq}
                       type="button"
                       onClick={() => submitSearch(undefined, pq)}
-                      className="shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface text-xs font-medium hover:bg-surface-container-high transition-colors cursor-pointer"
+                      className="shrink-0 cursor-pointer rounded-full bg-surface-container px-3 py-1.5 text-xs font-medium text-on-surface transition-colors hover:bg-surface-container-high"
                     >
                       {pq}
                     </button>
