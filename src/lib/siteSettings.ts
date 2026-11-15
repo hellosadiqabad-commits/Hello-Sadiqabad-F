@@ -1,7 +1,10 @@
 import { SEED_SITE_SETTINGS } from './seedData';
 import type { SiteSettingRow } from '../types/database';
 
+export const DEFAULT_HERO_BANNER_URL = 'https://efwohfzqitevkuybnyif.supabase.co/storage/v1/object/public/Hello%20Sadiqabad/Sadiqabad%20Phone%20Directory%20Landmark%20Banner.png';
+
 export interface SiteSettingsMap {
+  hero_banner_url: string;
   site_name: string;
   contact_phone: string;
   contact_whatsapp: string;
@@ -17,6 +20,7 @@ export interface SiteSettingsMap {
 export function parseSiteSettings(rows: SiteSettingRow[] = SEED_SITE_SETTINGS): SiteSettingsMap {
   const map = new Map(rows.map((r) => [r.key, r.value]));
   return {
+    hero_banner_url: String(map.get('hero_banner_url') ?? DEFAULT_HERO_BANNER_URL),
     site_name: String(map.get('site_name') ?? 'Hello Sadiqabad'),
     contact_phone: String(map.get('contact_phone') ?? '0300-8671234'),
     contact_whatsapp: String(map.get('contact_whatsapp') ?? '0300-8671234'),
