@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#052E2B"/><stop offset=".52" stop-color="#075B45"/><stop offset="1" stop-color="#0B8060"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="980" y1="0" x2="1450" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D5F5C9" stop-opacity=".24"/><stop offset="1" stop-color="#D5F5C9" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="dots" width="42" height="42" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#D9F99D" fill-opacity=".2"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="520" fill="url(#bg)"/>
+  <circle cx="1280" cy="100" r="330" fill="url(#glow)"/>
+  <rect width="1600" height="520" fill="url(#dots)" opacity=".65"/>
+  <g stroke="#D9F99D" stroke-opacity=".12" stroke-width="2">
+    <path d="M1050 0v520M1150 0v520M1250 0v520M1350 0v520M1450 0v520"/>
+    <path d="M950 100h650M950 200h650M950 300h650M950 400h650"/>
+  </g>
+  <g fill="#D9F99D" fill-opacity=".10">
+    <circle cx="1390" cy="120" r="88"/><circle cx="1390" cy="120" r="62"/>
+  </g>
+  <g fill="#E8F7D8" fill-opacity=".18">
+    <path d="M900 520V350h95v-65h80v65h55v-95h78v95h54v-45h70v45h100v170H900Z"/>
+    <path d="M1045 350v-90l48-52 48 52v90h-28v-67h-40v67h-28Z"/>
+    <path d="M1215 350V225l42-44 42 44v125h-25v-74h-34v74h-25Z"/>
+    <path d="M1380 350V245l36-38 36 38v105h-22v-62h-28v62h-22Z"/>
+  </g>
+  <g fill="#D9F99D" fill-opacity=".42">
+    <path d="M1190 520V315h28V210h14V145h10v65h14v105h28v205h-94Z"/>
+    <path d="M1234 145c-28-18-28-45 3-59 31 14 31 41 3 59h-6Z"/>
+    <path d="M1226 86c-24-20-15-39 12-45 27 6 36 25 12 45h-24Z"/>
+  </g>
+  <g fill="#D9F99D" fill-opacity=".28">
+    <path d="M1510 520V380h-22v-35h22v-35h20v35h22v35h-22v140h-20Z"/>
+    <path d="M1498 310c-32-14-32-38 0-52 32 14 32 38 0 52Z"/>
+  </g>
+  <path d="M0 450c210-48 360 12 540-8 190-21 300-54 480-18 190 38 350 32 580-14v110H0V450Z" fill="#032D27" fill-opacity=".5"/>
+  <g fill="#F4FCEB" fill-opacity=".65">
+    <circle cx="1010" cy="90" r="4"/><circle cx="1080" cy="55" r="3"/><circle cx="1480" cy="80" r="4"/>
+    <path d="m950 145 5 13 13 5-13 5-5 13-5-13-13-5 13-5 5-13Z"/>
+    <path d="m1435 190 4 10 10 4-10 4-4 10-4-10-10-4 10-4 4-10Z"/>
+  </g>
+</svg>
