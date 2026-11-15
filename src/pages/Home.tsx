@@ -230,14 +230,10 @@ export function Home() {
                     </span>
                   </div>
                   <h1 className="font-urdu text-[1.55rem] font-extrabold leading-[2.05] tracking-tight text-white drop-shadow sm:text-3xl md:text-4xl" dir="rtl">
-                    {lang === 'ur'
-                      ? 'اپنی مطلوبہ معلومات کے لیے یہاں سرچ کریں'
-                      : 'Search here for the information you need'}
+                    اپنی مطلوبہ معلومات کے لیے یہاں سرچ کریں
                   </h1>
                   <p className="font-urdu text-sm leading-[2] text-white/85 sm:text-base" dir="rtl">
-                    {lang === 'ur'
-                      ? 'صادق آباد کے کاروبار، ڈاکٹرز، دکانیں اور ضروری سہولیات — سب ایک جگہ'
-                      : 'Discover local businesses, doctors, shops and essential services in one place'}
+                    صادق آباد کے کاروبار، ڈاکٹرز، دکانیں اور ضروری سہولیات — سب ایک جگہ
                   </p>
                 </div>
               </div>
