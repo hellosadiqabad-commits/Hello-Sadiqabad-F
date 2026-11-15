@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123b35">
+<title>Hello Sadiqabad — Partner Proposal</title>
+<style>
+:root{--ink:#142b27;--muted:#62736e;--green:#123b35;--green2:#1d6556;--gold:#e6b95d;--paper:#f5f7f3;--white:#fff;--line:#dce5df;--shadow:0 24px 70px #0d2b241c}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#e9efeb}
+.deck{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px}.slide{display:none;position:relative;width:min(1100px,100%);min-height:min(680px,calc(100vh - 56px));padding:clamp(28px,6vw,76px);background:var(--paper);border:1px solid #fff;border-radius:28px;box-shadow:var(--shadow);overflow:hidden}.slide.active{display:flex;flex-direction:column;justify-content:center;animation:enter .28s ease}
+@keyframes enter{from{opacity:.4;transform:translateY(8px)}to{opacity:1;transform:none}}
+.kicker{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--green2)}h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-.055em;margin:18px 0;color:var(--green)}h2{font-size:clamp(30px,4.6vw,48px);line-height:1.08;letter-spacing:-.04em;color:var(--green);margin:14px 0 22px}p{font-size:clamp(16px,2vw,20px);line-height:1.55;color:var(--muted);max-width:780px}.lead{font-size:clamp(20px,2.5vw,27px);color:var(--ink);max-width:850px}.gold{color:#a97819}.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid #d8e5dc;background:#eaf2ec;border-radius:999px;padding:9px 14px;font-weight:750;color:var(--green2);font-size:13px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 6px 20px #102e2410}.card h3{margin:0 0 8px;font-size:20px;color:var(--green)}.card p{font-size:15px;margin:0}.tag{font-size:12px;font-weight:850;letter-spacing:.08em;text-transform:uppercase;color:var(--green2)}.price{font-size:28px;font-weight:900;color:var(--green);margin:8px 0}.free{color:#18764f}.paid{color:#a97819}.list{display:grid;gap:11px;margin:16px 0 0;padding:0;list-style:none}.list li{display:flex;gap:12px;align-items:flex-start;font-size:17px;line-height:1.4}.check{flex:0 0 25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#e2f2e8;color:#18764f;font-weight:900}.cross{background:#fff1d8;color:#a97819}.flow{display:flex;align-items:stretch;gap:10px;margin-top:28px;flex-wrap:wrap}.step{flex:1 1 145px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}.step b{display:block;color:var(--green);margin:8px 0}.num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:white;font-weight:800}.arrow{align-self:center;color:#a97819;font-size:24px;font-weight:900}.banner{margin-top:24px;padding:20px 22px;background:var(--green);border-radius:18px;color:white;font-size:19px;font-weight:750;line-height:1.45}.banner span{color:#f3cc75}.foot{position:absolute;bottom:22px;left:clamp(28px,6vw,76px);right:clamp(28px,6vw,76px);display:flex;justify-content:space-between;align-items:center;color:#80918a;font-size:12px}.controls{position:fixed;bottom:20px;right:24px;display:flex;gap:8px;z-index:5}.controls button{border:0;border-radius:999px;padding:12px 17px;background:var(--green);color:white;font-weight:750;cursor:pointer;box-shadow:0 8px 22px #102e2430}.controls button:disabled{opacity:.35;cursor:not-allowed}.progress{position:fixed;top:0;left:0;height:4px;background:var(--gold);width:0;z-index:10;transition:width .2s}.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--green);font-size:15px}.brand-mark{width:38px;height:38px;border-radius:12px;background:var(--green);color:white;display:grid;place-items:center}
+@media(max-width:700px){.deck{padding:10px}.slide{min-height:calc(100vh - 20px);border-radius:20px;padding:30px 22px 74px}.grid,.grid.three{grid-template-columns:1fr}.flow{display:grid;grid-template-columns:1fr 1fr}.arrow{display:none}.controls{bottom:12px;right:12px}.foot{bottom:18px}.list li{font-size:15px}}
+@media print{body{background:white}.deck{display:block;padding:0}.slide,.slide.active{display:flex!important;min-height:100vh;width:100%;border:0;border-radius:0;box-shadow:none;page-break-after:always}.controls,.progress{display:none}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<main class="deck" aria-label="Hello Sadiqabad partner proposal slides">
+<section class="slide active">
+  <div class="brand"><span class="brand-mark">HS</span> HELLO SADIQABAD</div>
+  <div style="margin-top:clamp(50px,10vh,100px)" class="kicker">Partner Discussion · Business Model Proposal</div>
+  <h1>A directory<br>that starts <span class="gold">free.</span></h1>
+  <p class="lead">Sadiqabad ke har resident ke liye local businesses discover karna asaan. Har business owner ke liye basic online presence muft. Revenue advanced business features se.</p>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px"><span class="pill">✓ Free public access</span><span class="pill">✓ Free basic listing</span><span class="pill">✓ Admin-approved owners</span></div>
+  <div class="foot"><span>Proposed model — for discussion and approval</span><span>01 / 07</span></div>
+</section>
+<section class="slide">
+  <div class="kicker">The core idea</div>
+  <h2>Keep the directory open to everyone.</h2>
+  <p class="lead">Public visitors ko account banane ya login karne ki zaroorat na ho. Basic business listing ke liye owner se bhi koi fee na li jaye.</p>
+  <div class="grid three">
+    <article class="card"><div class="tag free">Public · Free</div><h3>Discover</h3><p>Search, browse, categories, areas aur basic business details — without login.</p></article>
+    <article class="card"><div class="tag free">Owner · Free</div><h3>Get listed</h3><p>Owner registration aur basic business listing par koi charge nahi.</p></article>
+    <article class="card"><div class="tag">Platform · Trusted</div><h3>Admin approval</h3><p>Owner access aur listing publication verification/moderation ke baad.</p></article>
+  </div>
+  <div class="foot"><span>Hello Sadiqabad · Partner Proposal</span><span>02 / 07</span></div>
+</section>
+<section class="slide">
+  <div class="kicker">For the public</div>
+  <h2>Everything needed to find a business — free.</h2>
+  <ul class="list">
+    <li><span class="check">✓</span><span>Website browse karna aur business search karna.</span></li>
+    <li><span class="check">✓</span><span>Categories aur Sadiqabad ke areas ke zariye businesses explore karna.</span></li>
+    <li><span class="check">✓</span><span>Business ki basic public information dekhna, jaise naam, address aur contact details.</span></li>
+    <li><span class="check">✓</span><span>Directory use karne ke liye visitor login ya registration ki requirement nahi.</span></li>
+  </ul>
+  <div class="banner">Our principle: <span>Local discovery should not be behind a paywall.</span></div>
+  <div class="foot"><span>Hello Sadiqabad · Partner Proposal</span><span>03 / 07</span></div>
+</section>
+<section class="slide">
+  <div class="kicker">For business owners</div>
+  <h2>Basic listing stays free.</h2>
+  <div class="grid">
+    <article class="card"><div class="tag free">FREE · Rs. 0</div><div class="price free">Basic Profile</div><ul class="list"><li><span class="check">✓</span><span>Business name and category</span></li><li><span class="check">✓</span><span>Address and area</span></li><li><span class="check">✓</span><span>Phone / WhatsApp contact details</span></li><li><span class="check">✓</span><span>Basic business information</span></li></ul></article>
+    <article class="card"><div class="tag">OWNER ACCESS</div><h3>Admin-approved registration</h3><p>Owner request submit karega. Admin identity/business association verify karega. Approval ke baad owner ko portal access milega aur woh apni basic listing manage kar sakega.</p><div style="margin-top:18px" class="pill">No registration fee · No basic listing fee</div></article>
+  </div>
+  <div class="foot"><span>Hello Sadiqabad · Partner Proposal</span><span>04 / 07</span></div>
+</section>
+<section class="slide">
+  <div class="kicker">How the platform earns</div>
+  <h2>Charge for enhanced content, not basic presence.</h2>
+  <p>Jo owner apni profile ko zyada informative aur commercially useful banana chahe, woh additional features ke liye paid option choose kar sakega.</p>
+  <div class="grid three">
+    <article class="card"><div class="tag paid">Paid add-on</div><h3>Services</h3><p>Business apni offered services, descriptions aur details add kare.</p></article>
+    <article class="card"><div class="tag paid">Paid add-on</div><h3>Offers</h3><p>Discounts, deals aur promotional offers profile par publish kare.</p></article>
+    <article class="card"><div class="tag paid">Paid add-on</div><h3>Products</h3><p>Products, descriptions, prices ya catalogue details display kare.</p></article>
+  </div>
+  <div class="banner">Basic listing = <span>Free</span> &nbsp; | &nbsp; Enhanced profile content = <span>Paid</span></div>
+  <div class="foot"><span>Exact prices and packages to be agreed</span><span>05 / 07</span></div>
+</section>
+<section class="slide">
+  <div class="kicker">Trust and quality control</div>
+  <h2>Approval before access and publication.</h2>
+  <div class="flow">
+    <div class="step"><span class="num">1</span><b>Owner applies</b><p>Registration / business ownership request submit karta hai.</p></div>
+    <div class="step"><span class="num">2</span><b>Admin verifies</b><p>Details aur business association review hoti hai.</p></div>
+    <div class="step"><span class="num">3</span><b>Access approved</b><p>Approved owner ko Owner Portal access milta hai.</p></div>
+    <div class="step"><span class="num">4</span><b>Listing managed</b><p>Basic profile free; paid add-ons optional.</p></div>
+  </div>
+  <p style="margin-top:24px">Public listing publish karne se pehle moderation/approval bhi apply hogi, taake directory ki quality aur trust maintain rahe.</p>
+  <div class="foot"><span>Hello Sadiqabad · Partner Proposal</span><span>06 / 07</span></div>
+</section>
+<section class="slide">
+  <div class="kicker">Partner discussion</div>
+  <h2>Decisions to agree together.</h2>
+  <ul class="list">
+    <li><span class="check">1</span><span>Basic profile mein kaun kaun se fields hamesha free rahenge?</span></li>
+    <li><span class="check">2</span><span>Services, Offers aur Products ke paid packages alag hon ya combined?</span></li>
+    <li><span class="check">3</span><span>Payment monthly, yearly, per-feature ya kisi aur model par ho?</span></li>
+    <li><span class="check">4</span><span>Admin approval aur content moderation ka operational process kya ho?</span></li>
+    <li><span class="check">5</span><span>Paid feature expire hone par content hide ho, pause ho ya read-only rahe?</span></li>
+  </ul>
+  <div class="banner">Goal: <span>Grow the directory first, then earn by helping businesses do more.</span></div>
+  <div class="foot"><span>Proposal only — final policy requires partner approval</span><span>07 / 07</span></div>
+</section>
+</main>
+<nav class="controls" aria-label="Slide controls">
+  <button id="prev" type="button" disabled>← Back</button><button id="next" type="button">Next →</button>
+</nav>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let index=0;
+const prev=document.getElementById('prev'),next=document.getElementById('next'),progress=document.getElementById('progress');
+function show(n){index=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,i)=>s.classList.toggle('active',i===index));prev.disabled=index===0;next.disabled=index===slides.length-1;progress.style.width=((index+1)/slides.length*100)+'%';}
+prev.addEventListener('click',()=>show(index-1));next.addEventListener('click',()=>show(index+1));
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();show(index+1)}if(e.key==='ArrowLeft'){e.preventDefault();show(index-1)}});
+show(0);
+</script>
+</body>
+</html>
