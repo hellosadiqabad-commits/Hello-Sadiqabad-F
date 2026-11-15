@@ -27,6 +27,7 @@ import { useDebounce } from '../lib/hooks';
 import { useI18n } from '../lib/i18n';
 import { bilingualText, formatDateShort } from '../lib/format';
 import { updatePageSeo } from '../lib/seo';
+import { DEFAULT_HERO_BANNER_URL } from '../lib/siteSettings';
 import {
   clearRecentlyViewed,
   getFavorites,
@@ -80,6 +81,7 @@ export function Home() {
   const [newestBusinesses, setNewestBusinesses] = useState<BusinessPublicView[]>([]);
   const [ads, setAds] = useState<AdRow[]>([]);
   const [adsEnabled, setAdsEnabled] = useState(true);
+  const [heroBannerUrl, setHeroBannerUrl] = useState(DEFAULT_HERO_BANNER_URL);
   const [offers, setOffers] = useState<Array<OfferRow & { business: BusinessPublicView | null }>>([]);
   const [recentItems, setRecentItems] = useState<RecentViewedItem[]>([]);
   const [favorites, setFavorites] = useState<string[]>(() => getFavorites());
@@ -116,6 +118,7 @@ export function Home() {
         setAds(topAds);
         setOffers(activeOffers.slice(0, 4));
         setAdsEnabled(settings.ads_enabled);
+        setHeroBannerUrl(settings.hero_banner_url || DEFAULT_HERO_BANNER_URL);
       })
       .catch(() => {
         setCategories([]);
@@ -214,7 +217,7 @@ export function Home() {
             <div className="overflow-hidden rounded-3xl border border-outline-variant/35 bg-surface-container-lowest shadow-lg">
               {/* Exact approved banner hosted in the public Supabase Storage bucket. */}
               <img
-                src="https://efwohfzqitevkuybnyif.supabase.co/storage/v1/object/public/Hello%20Sadiqabad/Sadiqabad%20Phone%20Directory%20Banner.png"
+                src={heroBannerUrl}
                 alt="Sadiqabad Phone Directory — Jahaz Chowk banner"
                 className="block h-auto w-full"
                 fetchPriority="high"
