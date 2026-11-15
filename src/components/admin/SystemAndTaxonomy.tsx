@@ -1302,8 +1302,13 @@ export function SettingsManager({
 
   const saveHeroBanner = async () => {
     const url = heroBannerDraft.trim();
-    if (!/^https?:\\/\\//i.test(url)) {
+    let parsedUrl: URL;
+    try { parsedUrl = new URL(url); } catch {
       showToast('Please enter a valid public image URL (https://...).', 'error');
+      return;
+    }
+    if (parsedUrl.protocol !== 'https:' && parsedUrl.protocol !== 'http:') {
+      showToast('Please use an http:// or https:// image URL.', 'error');
       return;
     }
     await updateSiteSetting('hero_banner_url', url, actorId);
@@ -1361,6 +1366,26 @@ export function SettingsManager({
 
   return (
     <div className="space-y-6">
+      <Card className="p-5 space-y-4">
+        <div>
+          <h2 className="text-base font-bold text-on-surface">Homepage Hero Banner</h2>
+          <p className="text-xs text-on-surface-variant mt-1">Paste a public Supabase Storage image URL. Saving updates the homepage banner without a code deployment.</p>
+        </div>
+        {heroBannerDraft && (
+          <img src={heroBannerDraft} alt="Homepage hero banner preview" className="w-full max-h-56 rounded-xl border border-outline-variant/40 object-cover object-center" />
+        )}
+        <div className="flex flex-col sm:flex-row gap-2">
+          <input
+            type="url"
+            value={heroBannerDraft}
+            onChange={(e) => setDraftValues((previous) => ({ ...previous, hero_banner_url: e.target.value }))}
+            placeholder="https://.../your-banner.png"
+            aria-label="Homepage hero banner image URL"
+            className="min-w-0 flex-1 h-10 rounded-xl border border-outline-variant bg-surface px-3 text-xs"
+          />
+          <Button onClick={saveHeroBanner} disabled={!heroBannerDraft.trim()}>Save Banner</Button>
+        </div>
+      </Card>
       <Card className="p-5 space-y-3">
         <h2 className="text-base font-bold text-on-surface">Site Settings &amp; Feature Flags</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
