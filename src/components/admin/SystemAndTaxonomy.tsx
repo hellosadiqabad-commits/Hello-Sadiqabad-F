@@ -1297,6 +1297,19 @@ export function SettingsManager({
   const [pageEn, setPageEn] = useState(activePage?.body_md_en ?? '');
   const [pageUr, setPageUr] = useState(activePage?.body_md_ur ?? '');
   const [draftValues, setDraftValues] = useState<Record<string, string>>({});
+  const heroBannerSetting = settings.find((setting) => setting.key === 'hero_banner_url');
+  const heroBannerDraft = draftValues.hero_banner_url ?? String(heroBannerSetting?.value ?? '');
+
+  const saveHeroBanner = async () => {
+    const url = heroBannerDraft.trim();
+    if (!/^https?:\\/\\//i.test(url)) {
+      showToast('Please enter a valid public image URL (https://...).', 'error');
+      return;
+    }
+    await updateSiteSetting('hero_banner_url', url, actorId);
+    showToast('Homepage hero banner URL saved.', 'success');
+    await onReload();
+  };
 
   useEffect(() => {
     if (activePage) {
@@ -1351,7 +1364,7 @@ export function SettingsManager({
       <Card className="p-5 space-y-3">
         <h2 className="text-base font-bold text-on-surface">Site Settings &amp; Feature Flags</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {settings.map((s) => (
+          {settings.filter((setting) => setting.key !== 'hero_banner_url').map((s) => (
             <div
               key={s.key}
               className="p-3 rounded-xl bg-surface-container-low flex flex-col gap-2 text-xs"
