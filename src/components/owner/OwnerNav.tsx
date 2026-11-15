@@ -65,6 +65,15 @@ export function OwnerNav({ unreadCount = 0 }: { unreadCount?: number }) {
             </NavLink>
           );
         })}
+        <button
+          type="button"
+          onClick={() => signOut()}
+          aria-label="Sign out of Owner Portal"
+          className="px-3 py-2 rounded-xl text-xs font-semibold inline-flex items-center gap-1.5 whitespace-nowrap shrink-0 bg-error-container/40 text-error hover:bg-error-container"
+        >
+          <LogOut className="w-3.5 h-3.5" />
+          <span>Sign Out</span>
+        </button>
       </div>
 
       {/* Desktop sticky sidebar under frozen header */}
